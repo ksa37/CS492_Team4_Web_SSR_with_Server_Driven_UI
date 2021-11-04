@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/di-uni/CS492_Team4_Web_SSR_with_Server_Driven_UI#readme",
   "dependencies": {
+    "@material-ui/icons": "^4.11.2",
     "i": "^0.3.7",
     "next": "^12.0.2",
     "react": "^17.0.2",

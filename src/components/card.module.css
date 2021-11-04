@@ -6,17 +6,23 @@
 }
 
 .post {
-    border-width: 1px;
-    border-style: solid;
     width: 760px;
     height: 255px;
     margin-top: 16px;
     margin-bottom: 32px;
     margin-right: 16px;
     margin-left: 16px;
-    border-radius: 10px;
-    background-color: rgba( 255, 255, 255, 0.5 );
+    /* border-radius: 10px; */
+    /* background-color: rgba( 255, 255, 255, 0.5 ); */
+    border-width: 1px;
+    border-style: solid;
     border-color: transparent;
+}
+
+.cardHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .publishInfo {
@@ -27,18 +33,26 @@
 .publisher {
     color:rgba( 102, 102, 102, 1 );
     font-size: 18px;
-    font-weight: 800;
+    font-weight: 550;
+    margin-left: 8px; 
+    margin-right: 8px; 
+    /* flex: 1; */
+}
+
+.verticalDivider {
+    border-left: 1px solid rgba( 225, 225, 225, 1 );
+    height: 12px;
+}
+
+.date {
+    font-size: 17px;
+    color:rgba( 143, 143, 143, 1 );
     margin-left: 8px; 
     /* flex: 1; */
 }
 
-.date {
-    /* margin-top: 25px;   */
-    /* margin-left: 40px;   */
-    /* margin-bottom: 6px;   */
-    font-size: 17px;
-    color:rgba( 143, 143, 143, 1 );
-    /* flex: 1; */
+.morevert {
+    color: rgba( 209, 211, 214, 1 );
 }
 
 .title {
@@ -61,4 +75,9 @@
     margin-right: 20px; 
     font-size: 17px;
     line-height: 37px;
+    color:rgba( 106, 106, 106, 1 );
+}
+
+.divider {
+    border-top: 1px solid #EDF0F2;
 }

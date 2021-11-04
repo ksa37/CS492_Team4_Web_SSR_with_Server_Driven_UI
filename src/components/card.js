@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './card.module.css'
 import Image from "next/image"
-import { Divider } from 'semantic-ui-react'
+import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 
 // export default function Card(props) {    
@@ -30,17 +30,21 @@ export default function Card() {
             <br></br>
             // : <img src={props.publisher_image} width="100%" alt="shared-diary-post-card" />}
             : <img src={props.publisher_image} width="100%" />} */}
-            <div className={styles.publishInfo}>
-                <Image className={styles.publisherImg}
-                    src='/images/news_publisher_logos/BTN.jpg'
-                    width={24}
-                    height={24}
-                    layout='fixed'
-                    objectFit='contain'
-                />
-                <div className={styles.publisher}>BTN불교TV</div>
-                <div className={styles.date}>7시간 전</div>
-                <br></br>
+            <div className={styles.cardHeader}>
+                <div className={styles.publishInfo}>
+                    <Image className={styles.publisherImg}
+                        src='/images/news_publisher_logos/BTN.jpg'
+                        width={24}
+                        height={24}
+                        layout='fixed'
+                        objectFit='contain'
+                    />
+                    <div className={styles.publisher}>BTN불교TV</div>
+                    <hr className={styles.verticalDivider}></hr>
+                    <div className={styles.date}>7시간 전</div>
+                </div>
+                <MoreVertIcon className={styles.morevert}>
+                </MoreVertIcon>
             </div>
             <div className={styles.title}>불국사, 신라불교 최초 공인한 법흥왕 기려..다례재 봉행</div>
             <div className={styles.contentsInfo}>
@@ -54,7 +58,7 @@ export default function Card() {
                 /> 
             </div>
             {/* <Divider horizontal></Divider> */}
-            <hr class="solid"></hr>
+            <hr className={styles.divider}></hr>
         </div>
     )
 }
