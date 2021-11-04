@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styles from './card.module.css'
 import Image from "next/image"
 import MoreVertIcon from "@material-ui/icons/MoreVert";
@@ -26,37 +27,42 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 export default function Card() {    
     return (
         <div className={styles.post}> 
-            {/* {(props.publisher_image === "" || props.publisher_image === null) ? 
-            <br></br>
-            // : <img src={props.publisher_image} width="100%" alt="shared-diary-post-card" />}
-            : <img src={props.publisher_image} width="100%" />} */}
             <div className={styles.cardHeader}>
                 <div className={styles.publishInfo}>
-                    <Image className={styles.publisherImg}
-                        src='/images/news_publisher_logos/BTN.jpg'
-                        width={24}
-                        height={24}
-                        layout='fixed'
-                        objectFit='contain'
-                    />
-                    <div className={styles.publisher}>BTN불교TV</div>
+                    <Link href="http://m.btnnews.tv/news/articleView.html?idxno=68717">
+                        <a>
+                            <Image className={styles.publisherImg}
+                                src='/images/news_publisher_logos/BTN.jpg'
+                                width={24}
+                                height={24}
+                                layout='fixed'
+                                objectFit='contain'
+                            />
+                            <div className={styles.publisher}>BTN불교TV</div>
+                        </a>
+                    </Link>
                     <hr className={styles.verticalDivider}></hr>
                     <div className={styles.date}>7시간 전</div>
                 </div>
                 <MoreVertIcon className={styles.morevert}>
                 </MoreVertIcon>
             </div>
-            <div className={styles.title}>불국사, 신라불교 최초 공인한 법흥왕 기려..다례재 봉행</div>
-            <div className={styles.contentsInfo}>
-                <div className={styles.contents}>신라시대 불교를 공인한 법흥왕을 기리는 추모 다례재가 오늘 불국사 신도회 주최로 경주 코모도 호텔 잔디광장에서 봉행됐습니다. 이영숙 / 불국사 신도회장 (신라불교를 최초 공인한 임금으로서 우리들은 그 동안 그 크신 공헌을 까맣게 잊고 살아오지 않았나 반성하며...</div>
-                <Image className={styles.contentsImg}
-                    src="/images/news_images/BTN_1.jpg"
-                    width={88}
-                    height={88}
-                    layout='fixed'
-                    objectFit='contain'
-                /> 
-            </div>
+            <Link href="http://m.btnnews.tv/news/articleView.html?idxno=68717">
+                <a>
+                    <div className={styles.title}>불국사, 신라불교 최초 공인한 법흥왕 기려..다례재 봉행</div>
+                    <div className={styles.contentsInfo}>
+                        <div className={styles.contents}>신라시대 불교를 공인한 법흥왕을 기리는 추모 다례재가 오늘 불국사 신도회 주최로 경주 코모도 호텔 잔디광장에서 봉행됐습니다. 이영숙 / 불국사 신도회장 (신라불교를 최초 공인한 임금으로서 우리들은 그 동안 그 크신 공헌을 까맣게 잊고 살아오지 않았나 반성하며...</div>
+                        <Image className={styles.contentsImg}
+                            src="/images/news_images/BTN_1.jpg"
+                            width={88}
+                            height={88}
+                            layout='fixed'
+                            objectFit='contain'
+                        /> 
+                    </div>
+                </a>
+            </Link>
+            
             {/* <Divider horizontal></Divider> */}
             <hr className={styles.divider}></hr>
         </div>
