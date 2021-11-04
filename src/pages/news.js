@@ -8,7 +8,10 @@ export default function FirstPost() {
             <Head>
                 <title>news</title>
             </Head>
-            <h1>news</h1>
+            <h1>뉴스</h1>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
             <Card></Card>
             <h2>
                 <Link href="/">
