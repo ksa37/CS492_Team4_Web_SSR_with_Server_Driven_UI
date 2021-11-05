@@ -1,0 +1,51 @@
+<li class="bx" id="web_2">
+	<div class="total_wrap">
+		<div class="api_save_group _keep_wrap">
+			<a href="#" role="button" class="btn_save _keep_trigger" data-url="http://encykorea.aks.ac.kr/Contents/Item/E0024933" onclick="tCR('a=web_lis.kep&r=&i=&u=javascript');">
+				<i class="spnew ico_save">
+					문서 저장하기
+				</i>
+			</a>
+			<div class="api_ly_save _keep_save_layer">
+				<a href="#" role="button" class="spnew_af item item_save _keep_save" data-cr-on="a=web_lis.kepon" data-cr-off="a=web_lis.kepoff">
+					Keep에 저장
+				</a>
+				<a href="https://m.keep.naver.com/" class="spnew_af item item_quick" onclick="goOtherCR(this,'a=web_lis.kephome&r=2&i=a00000fa_63e6ed07db3a3c6eb6ca84c7&u='+urlencode(this.href));">
+					Keep 바로가기
+				</a>
+			</div>
+		</div>
+		<div class="total_tit_group">
+			<div class="total_source">
+				<a href="http://encykorea.aks.ac.kr/Contents/Item/E0024933" class="link_source elss" onclick="goOtherCR(this,'a=web_lis*w.link&r=2&i=a00000fa_63e6ed07db3a3c6eb6ca84c7&u='+urlencode(this.href));">
+					<span class="thumb">
+						<img src="https://search.pstatic.net/sunny/?src=http%3A%2F%2Fencykorea.aks.ac.kr%2Ffavicon.ico&type=f30_30_png_expire24" width="15" height="15" alt="">
+					</span>
+					<span class="url">
+						encykorea.aks.ac.kr
+						<i class="bar">
+							›
+						</i>
+						contents
+					</span>
+				</a>
+			</div>
+			<div class="api_txt_lines total_tit">
+				<a href="http://encykorea.aks.ac.kr/Contents/Item/E0024933" class="link_tit" onclick="goOtherCR(this,'a=web_lis*w.link&r=2&i=a00000fa_63e6ed07db3a3c6eb6ca84c7&u='+urlencode(this.href));">
+					<mark>경주 불국사</mark>(慶州 佛國寺) - 한국민족문화대백과사전
+				</a>
+				<span class="ico_wrap">
+				</span>
+			</div>
+		</div>
+		<div class="total_group">
+			<div class="total_dsc_wrap">
+				<a href="http://encykorea.aks.ac.kr/Contents/Item/E0024933" class="total_dsc" onclick="goOtherCR(this,'a=web_lis*w.link&r=2&i=a00000fa_63e6ed07db3a3c6eb6ca84c7&u='+urlencode(this.href));">
+					<div class="api_txt_lines dsc_txt">
+						경상북도 <mark>경주</mark>시 토함산(吐含山) 서쪽 중턱에 있는 남북국시대 통일신라 김대성의 발원으로 창건한 사찰. 사적.대한불교조계종 제11교구 본사이다.
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</li>

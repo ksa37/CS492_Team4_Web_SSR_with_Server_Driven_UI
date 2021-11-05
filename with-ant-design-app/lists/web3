@@ -1,0 +1,51 @@
+<li class="bx" id="web_3">
+	<div class="total_wrap">
+		<div class="api_save_group _keep_wrap">
+			<a href="#" role="button" class="btn_save _keep_trigger" data-url="https://namu.wiki/w/%EB%B6%88%EA%B5%AD%EC%82%AC" onclick="tCR('a=web_lis.kep&r=&i=&u=javascript');">
+				<i class="spnew ico_save">
+					문서 저장하기
+				</i>
+			</a>
+			<div class="api_ly_save _keep_save_layer">
+				<a href="#" role="button" class="spnew_af item item_save _keep_save" data-cr-on="a=web_lis.kepon" data-cr-off="a=web_lis.kepoff">
+					Keep에 저장
+				</a>
+				<a href="https://m.keep.naver.com/" class="spnew_af item item_quick" onclick="goOtherCR(this,'a=web_lis.kephome&r=3&i=a00000fa_fa38b520df4eff84121bdd32&u='+urlencode(this.href));">
+					Keep 바로가기
+				</a>
+			</div>
+		</div>
+		<div class="total_tit_group">
+			<div class="total_source">
+				<a href="https://namu.wiki/w/%EB%B6%88%EA%B5%AD%EC%82%AC" class="link_source elss" onclick="goOtherCR(this,'a=web_lis*w.link&r=3&i=a00000fa_fa38b520df4eff84121bdd32&u='+urlencode(this.href));">
+					<span class="thumb">
+						<img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fnamu.wiki%2Ffavicon-192.png&type=f30_30_png_expire24" width="15" height="15" alt="">
+					</span>
+					<span class="url">
+						namu.wiki
+						<i class="bar">
+							›
+						</i>
+						불국사
+					</span>
+				</a>
+			</div>
+			<div class="api_txt_lines total_tit">
+				<a href="https://namu.wiki/w/%EB%B6%88%EA%B5%AD%EC%82%AC" class="link_tit" onclick="goOtherCR(this,'a=web_lis*w.link&r=3&i=a00000fa_fa38b520df4eff84121bdd32&u='+urlencode(this.href));">
+					<mark>불국사</mark> - 나무위키
+				</a>
+				<span class="ico_wrap">
+				</span>
+			</div>
+		</div>
+		<div class="total_group">
+			<div class="total_dsc_wrap">
+				<a href="https://namu.wiki/w/%EB%B6%88%EA%B5%AD%EC%82%AC" class="total_dsc" onclick="goOtherCR(this,'a=web_lis*w.link&r=3&i=a00000fa_fa38b520df4eff84121bdd32&u='+urlencode(this.href));">
+					<div class="api_txt_lines dsc_txt">
+						<mark>불국사</mark>는 <mark>불국</mark>정토에서 유래한 호국사찰이다. 석굴암도 마찬가지. 황룡사가 거대한 규모로 유명한 절이라면, <mark>불국사</mark>는 치밀한 구성의 완성도와 아름다움으로 유명한 절이다.[3] 대표적인 한국 건축물 중 하나. <mark>경주</mark>시로 소풍 내지 수학여행을 간다면 꼭 들르는 곳.[4] 입장료는 2021년 성인 기준...
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</li>
