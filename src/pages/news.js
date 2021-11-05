@@ -18,8 +18,8 @@ export default function FirstPost() {
                         <div className={styles.viewSort}>최신순</div>
                     </div>
                 </div>
+                <hr className={styles.divider}></hr>
             </div>
-            <hr className={styles.divider}></hr>
             <Card></Card>
             <Card></Card>
             <Card></Card>
