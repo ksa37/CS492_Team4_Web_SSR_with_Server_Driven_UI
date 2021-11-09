@@ -1,0 +1,35 @@
+{
+    "keywords": [ {
+                    "keyword": "불국사",
+                    "view": [ "basicInfo", "photo", "news" ],
+                    "basicInfo": {
+                                    "지정종목": "사적",
+                                    "지정번호": "제502호" 
+                                },
+                    "photo": [ "url_1", "url_2", "url_3" ],
+                    "news": [
+                                { 
+                                    "title": "[포토뉴스] 만개한 경주 불국사 겹벚꽃",
+                                    "publisher": "영남일보",
+                                    "date": "2021.04.16",
+                                    "contents": "16일 경북 경주시 진현동 불국사 주차장에서 경내로 오르는 야트막한 둔덕에 자리한 겹벚꽃 군락에 꽃이 만개해 시민들의 발길을 붙잡고 있다.",
+                                    "link": "url_4"
+                                },
+                                { 
+                                    "publisherURL": "http://www.btnnews.tv",
+                                    "publisherImgURL": "/images/news_publisher_logos/BTN.jpg",
+                                    "publisher": "BTN불교TV",
+                                    "date": "7시간 전",
+                                    "newsURL": "http://m.btnnews.tv/news/articleView.html?idxno=68717",
+                                    "title": "불국사, 신라불교 최초 공인한 법흥왕 기려..다례재 봉행",
+                                    "contents": "신라시대 불교를 공인한 법흥왕을 기리는 추모 다례재가 오늘 불국사 신도회 주최로 경주 코모도 호텔 잔디광장에서 봉행됐습니다. 이영숙 / 불국사 신도회장 (신라불교를 최초 공인한 임금으로서 우리들은 그 동안 그 크신 공헌을 까맣게 잊고 살아오지 않았나 반성하며...",
+                                    "contentsImgURL": "/images/news_images/BTN_1.jpg"
+                                }
+                            ]
+                        },
+        {
+            "keyword": "모가디슈"
+
+        }
+    ]
+}

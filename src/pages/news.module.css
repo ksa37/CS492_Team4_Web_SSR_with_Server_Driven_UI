@@ -1,12 +1,12 @@
 .news {
     width: 760px;
     height: auto;
-    border-width: 1px;
+    /* border-width: 1px;
     border-style: solid;
-    border-color: transparent;
+    border-color: transparent; */
 }
 
-.newsHeader {
+.viewHeader {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
