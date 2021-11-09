@@ -59,8 +59,6 @@ export default function News() {
                 </div>
                 <hr className={styles.divider}></hr>
             </div>
-            {/* {dummydata["keywords"][0]["news"][0]["publisherURL"]} */}
-            {/* {newsdummy.map((news) => <Card props={news}/>)} */}
             {dummydata["keywords"][0]["news"].map((news) => <Card props={news}/>)}
             <h2>
                 <Link href="/">
