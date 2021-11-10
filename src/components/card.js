@@ -62,15 +62,17 @@ export default function NaverCard({props}) {
         <Card sx={{ maxWidth: 766}} square > 
           <CardHeader
             avatar={
-                <div className={styles.publisherImg}>
-                <Image 
-                    // src={publisherImgURL}
-                    src={contentsImgURL}
-                    width={24}
-                    height={24}
-                    layout='fixed'
-                    objectFit='contain'
-                />
+                <div className={styles.publisherImgBoarder}>
+                    <Image className={styles.publisherImg}
+                        // src={publisherImgURL}
+                        src={contentsImgURL}
+                        // width={24}
+                        // height={24}
+                        width='100%'
+                        height='100%'
+                        // layout='fixed'
+                        objectFit='cover'
+                    />
                 </div>
             }
             action={
@@ -86,25 +88,25 @@ export default function NaverCard({props}) {
                 </div>
             }
           
-            style={{ textAlign: 'left', height:48}}
+            // style={{ textAlign: 'left', height:48}}
           />
-          <CardContent>
-          <Link href={newsURL}>
-                    <a>
-                        <div className={styles.title}>{title}</div>
-                        <div className={styles.contentsInfo}>
-                            <div className={styles.contents}>{contents}</div>
-                            <Image className={styles.contentsImg}
-                                src={contentsImgURL}
-                                width={88}
-                                height={88}
-                                layout='fixed'
-                                objectFit='contain'
-                            /> 
-                        </div>
-                    </a>
-                </Link>
-          </CardContent>                      
+        <CardContent>
+            <Link href={newsURL}>
+                <a>
+                    <div className={styles.title}>{title}</div>
+                    <div className={styles.contentsInfo}>
+                        <div className={styles.contents}>{contents}</div>
+                        <Image className={styles.contentsImg}
+                            src={contentsImgURL}
+                            width={88}
+                            height={88}
+                            layout='fixed'
+                            objectFit='contain'
+                        /> 
+                    </div>
+                </a>
+            </Link>
+        </CardContent>                      
         </Card>
     )
 }
