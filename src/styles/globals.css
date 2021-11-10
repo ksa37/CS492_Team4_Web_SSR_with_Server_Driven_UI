@@ -6,16 +6,27 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   /* font-family: -apple-system, Roboto, NanumSquare, sans-serif; */
   /* font-family: NanumSquare, sans-serif; */
+  font-size: 18px;
 }
 
 a {
   /* color: inherit; */
-  color: rgba(39, 105, 189, 1);
+  color: var(--link_blue);
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --naver_green: #57B93C;
+  --link_blue: #2769BD;
+  --link_purple: #8D3196;    /* (링크 한 번 클릭 후 변하는 보라색) */
+  --dark_gray_1: #020202;    /* (view name)  */
+  --dark_gray_2: #6A6A6A;    /* (contents) */
+  --gray: #666666;           /* (publisher) */
+  --light_gray: #8F8F8F;     /* (date) */
 }
 
 @font-face {
