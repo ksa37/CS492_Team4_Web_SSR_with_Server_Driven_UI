@@ -59,54 +59,49 @@ export default function NaverCard({props}) {
 
     return (
         // <Card sx={{ maxWidth: 766}} variant='outlined' square > 
-        <Card sx={{ maxWidth: 766}} square > 
-          <CardHeader
-            avatar={
-                <div className={styles.publisherImgBoarder}>
-                    <Image className={styles.publisherImg}
-                        // src={publisherImgURL}
-                        src={contentsImgURL}
-                        // width={24}
-                        // height={24}
-                        width='100%'
-                        height='100%'
-                        // layout='fixed'
-                        objectFit='cover'
-                    />
-                </div>
-            }
-            action={
-              <IconButton>
-                <MoreVertIcon style={{color: '#D1D3D6'}}/>
-              </IconButton>
-            }
-            title = {
-                <div className={styles.publishInfo}>
-                    <div className={styles.publisher}>{publisher}</div>
-                    <hr className={styles.verticalDivider}></hr>
-                    <div className={styles.date}>{date}</div>
-                </div>
-            }
-          
-            // style={{ textAlign: 'left', height:48}}
-          />
-        <CardContent>
-            <Link href={newsURL}>
-                <a>
-                    <div className={styles.title}>{title}</div>
-                    <div className={styles.contentsInfo}>
-                        <div className={styles.contents}>{contents}</div>
-                        <Image className={styles.contentsImg}
-                            src={contentsImgURL}
-                            width={88}
-                            height={88}
-                            layout='fixed'
+        <Card sx={{ maxWidth: 766 }} square > 
+            <CardHeader 
+                sx={{ m: 0, p:0, paddingTop: '8px', paddingLeft: '16px', paddingRight: '16px'  }} variant="contained"
+                avatar={
+                    <div className={styles.publisherImgBoarder}>
+                        <Image className={styles.publisherImg}
+                            src={publisherImgURL}
+                            width='100%'
+                            height='100%'
                             objectFit='contain'
-                        /> 
+                        />
                     </div>
-                </a>
-            </Link>
-        </CardContent>                      
+                }
+                action={
+                <IconButton>
+                    <MoreVertIcon style={{color: '#D1D3D6'}}/>
+                </IconButton>
+                }
+                title = {
+                    <div className={styles.publishInfo}>
+                        <div className={styles.publisher}>{publisher}</div>
+                        <hr className={styles.verticalDivider}></hr>
+                        <div className={styles.date}>{date}</div>
+                    </div>
+                }
+            />
+            <CardContent sx={{ m: 0, p: 0, paddingTop: '8px', paddingLeft: '16px', paddingRight: '16px', marginBottom: '10px' }} variant="contained" >
+                <Link href={newsURL}>
+                    <a>
+                        <div className={styles.title}>{title}</div>
+                        <div className={styles.contentsInfo}>
+                            <div className={styles.contents}>{contents}</div>
+                            <Image className={styles.contentsImg}
+                                src={contentsImgURL}
+                                width={88}
+                                height={88}
+                                layout='fixed'
+                                objectFit='contain'
+                            /> 
+                        </div>
+                    </a>
+                </Link>
+            </CardContent>                      
         </Card>
     )
 }

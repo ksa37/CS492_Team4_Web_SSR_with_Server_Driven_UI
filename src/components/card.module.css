@@ -35,12 +35,8 @@
     width: 24px;
     height: 24px; 
     overflow: 'hidden';
-    border: 1px solid var(--light_gray);
-    /* border-color: rgba( 102, 102, 102, 1 ); */
-    /* background-color: #000000; */
+    border: 1px solid #F3F3F3;
     border-radius: 10rem;
-    /* overflow: 'hidden'; */
-    /* border-style: solid; */
 }
 
 .publisherImg {
@@ -48,11 +44,10 @@
 }
 
 .publisher {
-    color: var(--gray);
-    /* color:rgba( 102, 102, 102, 1 ); */
+    color: var(--publisher_gray);
     font-size: 14px;
     font-weight: 500;
-    margin-left: 8px; 
+    /* margin-left: 8px;  */
     margin-right: 8px; 
     /* flex: 1; */
 }
@@ -65,7 +60,7 @@
 
 .date {
     font-size: 14px;
-    color:rgba( 143, 143, 143, 1 );
+    color: var(--date_gray);
     margin-left: 8px; 
     /* flex: 1; */
 }
@@ -93,7 +88,7 @@
     margin-right: 20px; 
     font-size: 16px;
     line-height: 24px;
-    color:rgba( 106, 106, 106, 1 );
+    color: var(--dark_gray_2);
 }
 
 .divider {

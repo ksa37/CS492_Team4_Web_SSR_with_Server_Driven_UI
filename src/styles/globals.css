@@ -22,11 +22,11 @@ a {
 :root {
   --naver_green: #57B93C;
   --link_blue: #2769BD;
-  --link_purple: #8D3196;    /* (링크 한 번 클릭 후 변하는 보라색) */
-  --dark_gray_1: #020202;    /* (view name)  */
-  --dark_gray_2: #6A6A6A;    /* (contents) */
-  --gray: #666666;           /* (publisher) */
-  --light_gray: #8F8F8F;     /* (date) */
+  --link_purple: #8D3196;     /* (링크 한 번 클릭 후 변하는 보라색) */
+  --dark_gray_1: #020202;     /* (view name)  */
+  --dark_gray_2: #6A6A6A;     /* (contents) */
+  --publisher_gray: #666666;          
+  --date_gray: #8F8F8F;     
 }
 
 @font-face {
