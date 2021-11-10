@@ -121,8 +121,8 @@ export default function NaverCard({props}: {props:any}) {
             avatar={
                 <div className={styles.publisherImg}>
                 <Image 
-                    // src={publisherImgURL}
-                    src={contentsImgURL}
+                    src={publisherImgURL}
+                    // src={contentsImgURL}
                     width={24}
                     height={24}
                     layout='fixed'

@@ -21,7 +21,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import Image from "next/image"
 
 
-
+// {props}: {props:any}
 export default function StandardImageList() {
   return (
     <ImageList sx={{ maxWidth: 766, height: 766, m:0}} cols={3} rowHeight={254} gap={2}>
