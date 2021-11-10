@@ -172,18 +172,16 @@ export default function News() {
                 direction="row"
                 alignItems="center"
                 style={{minHeight:66}}
-                
                 >
                 <Stack >
                 {dummydata["keywords"][0]["news"].map((news) => <NaverCard props={news}/>)}
                 </Stack >
-
                 </Grid>
           </Paper>
           </Card>
 
 
-      {/* <div className="section_image">
+      <div className="section_image">
         <Card sx={{ maxWidth: 766}} variant='outlined' square>
           <CardHeader 
             className="api_title_area"
@@ -214,14 +212,14 @@ export default function News() {
             </Stack>
             </Grid>
           </Paper>
-          {/* <StandardImageList /> */}
-          {/* <Paper style={{height: 50, overflow: 'auto', backgroundColor: '#f4f7f8'}}>
+            {/* <StandardImageList /> */}
+          <Paper style={{height: 50, overflow: 'auto', backgroundColor: '#f4f7f8'}}>
             <Typography style={{height:48, fontSize: 16, verticalAlign:'center'}}>
               이미지 더보기 <ArrowForwardIcon sx={{mt:2}} style={{height: 16, width: 20}}/>
             </Typography>
           </Paper>
         </Card>
-      </div>   */}
+      </div>   
       </Grid>
     </div>
     </>
