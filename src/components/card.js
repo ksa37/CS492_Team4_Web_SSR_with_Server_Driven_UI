@@ -58,7 +58,8 @@ export default function NaverCard({props}) {
     // )
 
     return (
-        <Card sx={{ maxWidth: 766}} variant='outlined' square > 
+        // <Card sx={{ maxWidth: 766}} variant='outlined' square > 
+        <Card sx={{ maxWidth: 766}} square > 
           <CardHeader
             avatar={
                 <div className={styles.publisherImg}>
@@ -77,7 +78,13 @@ export default function NaverCard({props}) {
                 <MoreVertIcon style={{color: '#D1D3D6'}}/>
               </IconButton>
             }
-            title = {<div className={styles.publisher}>{publisher}</div>}
+            title = {
+                <div className={styles.publishInfo}>
+                    <div className={styles.publisher}>{publisher}</div>
+                    <hr className={styles.verticalDivider}></hr>
+                    <div className={styles.date}>{date}</div>
+                </div>
+            }
           
             style={{ textAlign: 'left', height:48}}
           />
