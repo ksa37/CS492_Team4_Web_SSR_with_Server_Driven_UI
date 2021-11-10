@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import Link from 'next/link'
-// import Card from '../components/card'
+import NaverCard from '../components/card'
+import Image from "next/image"
 import styles from './news.module.css'
+
 import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+
+
 
 var imgA = "/images/news_publisher_logos/BTN.jpg";
 
@@ -130,72 +134,53 @@ export default function News() {
     <>
       <CssBaseline />
     
-    <div className="App" >
-      <Grid 
-        container
-        justifyContent="center"
-        alignItems="center"
-        direction="column" 
-      >
-
-      <div className="section_view">
-        <Card sx={{ maxWidth: 766}} variant='outlined' square > 
-          <CardHeader
-            avatar={
-              <Avatar src="/images/news_publisher_logos/BTN.jpg" alt="awesome days" />
-            
-            }
-            action={
-              <IconButton aria-label="settings">
-                <MoreVertIcon />
-              </IconButton>
-            }
-            title = {card_header_date}
-          
-            style={{ textAlign: 'left', height:48}}
-          />
-          <CardContent>
-            <Typography variant="body1" gutterBottom align="left">
-              [프랑스 여행 D+7] 파리 여행 마지막날 간 곳들(팡테온,튈르리정원, 퐁피두센터)
-            </Typography>
-            <Typography variant="body2" color="text.secondary" align="left">
-            여행기간 : 170603-170610 프랑스여행/파리여행/파리볼거리/파리관광지/팡테온/튈르리정원/퐁피두센터 어느덧 여행의 마지막날. 
-            여행의 마지막날은 언제나 울적하다.ㅠㅠ 그래서 더욱...
-            </Typography>
-            <CardMedia
-            component="img"
-            sx={{
-              width:87,
-              height:87,
-            }}
-            image="/images/news_images/BTN_1.jpg"
-            alt="[프랑스 여행 D+7] 파리 여행 마지막날 간 곳들(팡테온,튈르리정원, 퐁피두센터)"
-            />
-            <Stack direction="row" spacing={1} m={2} pt={3}>
-              <Chip label="#파리여행" component="a" href="#basic-chip" clickable />
-              <Chip
-                label="#파리관광지"
-                component="a"
-                href="#basic-chip"
-                variant="outlined"
-                clickable
-              />
-            </Stack>
-          </CardContent>                      
+    <div className="App">
+        <Grid 
+            container
+            justifyContent="center"
+            alignItems="center"
+            direction="column" 
+        >
         
-          <Divider />
-          {/* <hr/> */}
-          <CardActions disableSpacing>
-            {/* <IconButton aria-label="add to favorites">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton aria-label="share">
-              <ShareIcon />
-            </IconButton>
-              <ExpandMoreIcon /> */}
-          </CardActions>
-        </Card>
-      </div>
+        {/* <div className="section_view">
+            
+        </div> */}
+        <Card sx={{ maxWidth: 766}} variant='outlined' square>
+
+            <CardHeader 
+                className="api_title_area"
+                title= {
+                    // <Typography variant="h2" display="inline" style={{fontSize: 17}} > 
+                    //     <b>뉴스</b>
+                    // </Typography>
+                    <div className={styles.viewHeader}>
+                    <div className={styles.viewName}>뉴스</div>
+                    <div className={styles.viewOptions}>
+                        <div className={styles.viewSort}>관련도순</div>
+                        <div className={styles.viewSort}>최신순</div>
+                    </div>
+                </div>
+                }
+                style={{ textAlign: 'left'}}
+            />
+            <Paper 
+                className="group_option_tag_wrap" 
+                // style={{height: 83, overflow: 'auto', backgroundColor: '#f5f7f8'}}
+            >
+                <Grid
+                container
+                direction="row"
+                alignItems="center"
+                style={{minHeight:66}}
+                
+                >
+                <Stack >
+                {dummydata["keywords"][0]["news"].map((news) => <NaverCard props={news}/>)}
+                </Stack >
+
+                </Grid>
+          </Paper>
+          </Card>
 
 
       {/* <div className="section_image">

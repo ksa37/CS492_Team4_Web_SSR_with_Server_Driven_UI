@@ -31,8 +31,20 @@
     flex-direction: row;
 }
 
+.publisherImg {
+    width: 24;
+    height: 24; 
+    overflow: 'hidden';
+    border: 5px solid var(--ligth_gray);
+    border-color: var(--ligth_gray);
+    border-radius: '50%';
+    background-color: #FFFFFF;
+    overflow: 'hidden'
+}
+
 .publisher {
-    color:rgba( 102, 102, 102, 1 );
+    color: var(--gray);
+    /* color:rgba( 102, 102, 102, 1 ); */
     font-size: 14px;
     font-weight: 500;
     margin-left: 8px; 
