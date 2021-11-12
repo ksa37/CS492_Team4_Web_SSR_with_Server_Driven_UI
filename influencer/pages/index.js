@@ -2,7 +2,7 @@ import Head from 'next/head'
 import images from '../images/dw.png'
 import Link from "next/link";
 import React, { Component } from "react";
-import { State } from 'react';
+import { useState } from 'react';
 // import Layout from "../components/Layout";
 import axios from "axios";
 
@@ -28,7 +28,7 @@ const index = () => {
     </div>
   );
 };
-// export default index;//
+// export default index;
 
 class trial extends Component {
   constructor () {
@@ -37,11 +37,14 @@ class trial extends Component {
       html: []
     }
   }
+
   componentDidMount() {
-    fetch("http://localhost:8000/getdata").then((res) => {
-            console.log(res.data);
-            return (res.data);
-          })
+    fetch("http://localhost:8000/getdata").then((response) => {
+      return response.text();
+    })
+    .then((html) => {
+      document.body.innerHTML = html     
+    });        
   }
   render() {
     return (
