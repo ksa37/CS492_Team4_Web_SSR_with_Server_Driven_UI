@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import images from '../images/dw.png'
 import Link from "next/link";
+import React, { Component } from "react";
+import { State } from 'react';
 // import Layout from "../components/Layout";
 import axios from "axios";
 
@@ -12,6 +14,7 @@ const index = () => {
   const onClick = () => {
     axios.get("http://localhost:8000/getdata").then((res) => {
       console.log(res.data);
+      return (res.data);
     });
   };
 
@@ -25,8 +28,30 @@ const index = () => {
     </div>
   );
 };
+// export default index;//
 
-export default index;
+class trial extends Component {
+  constructor () {
+    super();
+    this.state = {
+      html: []
+    }
+  }
+  componentDidMount() {
+    fetch("http://localhost:8000/getdata").then((res) => {
+            console.log(res.data);
+            return (res.data);
+          })
+  }
+  render() {
+    return (
+      <div>
+        <h1> HEllo worlds </h1>
+      </div>
+    )
+  }
+}
+export default trial;
 
 // const dummydata = {
 //   "keyword": "불국사",
