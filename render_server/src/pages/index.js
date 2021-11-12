@@ -244,11 +244,11 @@ export default function Home() {
                     style={{backgroundColor: "#ffffff"}}
                   />
               })} */}
-                {itemData.map((item) => (
+                {mockdata["keywords"][1]["photo"]["tags"].map((item) => (
                   <Chip 
-                    key={item.tag_name}
-                    avatar={<Avatar src ={item.img} />}
-                    label={item.tag_name}
+                    key={item["tag_name"]}
+                    avatar={<Avatar src ={item["tag_image_url"]} />}
+                    label={item["tag_name"]}
                     variant="outlined"
                     style={{backgroundColor: "#ffffff"}}
                   />
@@ -256,10 +256,7 @@ export default function Home() {
               </Stack>
               </Grid>
             </Paper>
-            {/* {mockdata["keywords"][1]["photo"]?["images"]?.map((news) => <StandardImageList props={news}/>)} */}
-            
-            {/* {mockdata["keywords"][1]["photo"]?["images"]?.map((image) => <StandardImageList props={image}/>)} */}
-
+            {/* {mockdata["keywords"][1]["photo"]["images"].map((imgs) => <StandardImageList props={imgs}/>)} */}
             <StandardImageList />
             <Link href="https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_nmr&query=%ED%8C%8C%EB%A6%AC">
             <Paper 
