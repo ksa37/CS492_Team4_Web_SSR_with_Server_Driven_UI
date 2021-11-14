@@ -3,6 +3,8 @@ import Grid from '@mui/material/Grid';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Card_Wiki from '../../src/Card_wiki';
+import Influencer from '../../src/influencer.js';
+
 
 export async function getServerSideProps(context) {
   const response = await fetch('http://localhost:5000/wikis')
@@ -35,11 +37,8 @@ export default function Index( wikis ) {
 
       <Grid container alignItems="center" justifyContent="center" sx={{ bgcolor: '#f0f2f5'}}>
         <ImageList cols={1} component="div">
-          {
-            wikis.influencer.map((wiki) => (
-            <ImageListItem key={wiki.names}>
-              <Card_Wiki header_href={wiki.fans} header_src={wiki.types} header_title={wiki.preference} subheader_title={wiki.place} content_links={wiki.images} content_description={wiki.place} content_time={wiki.place}/>
-            </ImageListItem>
+          {wikis.influencer.map((each) => (
+            <Influencer name={each.name} type={each.type} place={each.place} fans={each.fans} blogdetails={each.blogdetails} title={each.title} content={each.content} date={each.date} etc={each.etc} image={each.image}/>
             ))
           }
         </ImageList>
