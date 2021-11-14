@@ -1,0 +1,106 @@
+{
+    "wikis" : [
+        {
+            "header_href": "http://www.bulguksa.or.kr/",
+            "header_src": "/static/images/avatar/avatar_1.png",
+            "header_title": "www.bulguksa.or.kr",
+            "subheader_title": "세계문화유산 불국사",
+            "content_links": [
+                {
+                    "link_name": "관람안내",
+                    "link_url": "http://www.bulguksa.or.kr/bbs/content.php?co_id=application"
+                },
+                {
+                    "link_name": "전각/성보문화재",
+                    "link_url": "http://www.bulguksa.or.kr/bbs/content.php?co_id=palace"
+                },
+                {
+                    "link_name": "성보문화재",
+                    "link_url": "http://www.bulguksa.or.kr/bbs/content.php?co_id=treasure"
+                },
+                {
+                    "link_name": "불국사",
+                    "link_url": "http://www.bulguksa.or.kr/bbs/content.php?co_id=history"
+                },
+                {
+                    "link_name": "찾아오시는 길",
+                    "link_url": "http://www.bulguksa.or.kr/bbs/content.php?co_id=location"
+                },
+                {
+                    "link_name": "지대방",
+                    "link_url": "http://www.bulguksa.or.kr/bbs/board.php?bo_table=notice"
+                }
+            ],
+            "content_description": "1… 행사 사진 BULGUK GALLERY 제49회 신라문화 영산대재와 천… 오시는 길 개인정보처리방침 서비스이용약관 경상북도 경주시 불국로 385 (진현동 15-1) l Tel. 054)746-9913 ㅣ FAX 054)746-1476 ㅣ Email ************@*******.*** 불국사 템플스테이 Tel. 054)746-0983 bulguksa@templestay....",
+            "content_time": ""
+        },
+        {
+            "header_href": "http://encykorea.aks.ac.kr/Contents/Item/E0024933",
+            "header_src": "/static/images/avatar/avatar_2.png",
+            "header_title": "encykorea.aks.ac.kr › contents",
+            "subheader_title": "경주 불국사(慶州 佛國寺) - 한국민족문화대백과사전",
+            "content_links": [],
+            "content_description": "경상북도 경주시 토함산(吐含山) 서쪽 중턱에 있는 남북국시대 통일신라 김대성의 발원으로 창건한 사찰. 사적.대한불교조계종 제11교구 본사이다.",
+            "content_time": ""
+        },
+        {
+            "header_href": "https://namu.wiki/w/%EB%B6%88%EA%B5%AD%EC%82%AC",
+            "header_src": "/static/images/avatar/avatar_3.png",
+            "header_title": "namu.wiki › 불국사",
+            "subheader_title": "불국사 - 나무위키",
+            "content_links": [],
+            "content_description": "불국사는 불국정토에서 유래한 호국사찰이다. 석굴암도 마찬가지. 황룡사가 거대한 규모로 유명한 절이라면, 불국사는 치밀한 구성의 완성도와 아름다움으로 유명한 절이다.[3] 대표적인 한국 건축물 중 하나. 경주시로 소풍 내지 수학여행을 간다면 꼭 들르는 곳.[4] 입장료는 2021년 성인 기준...",
+            "content_time": ""
+        },
+        {
+            "header_href": "https://blog.naver.com/lovemw3/222058511865",
+            "header_src": "/static/images/avatar/avatar_4.png",
+            "header_title": "blog.naver.com › lovemw3",
+            "subheader_title": "경주 불국사 가는방법, 오픈시간, 입장료, 불국사에서 석굴암",
+            "content_links": [],
+            "content_description": "앞으로 경주 불국사 갈 계획 있다면, 오늘 포스팅 끝까지 꼬옥 봐주세요오♥ 경주 시내에서 불국사 가는방법 ① 택시 약 14km / 약 25분 소요 / 약 17,000원 ② 버스 11번, 10번, 700번 버스 이용 약 40분~1시간 10분 소요 버스 이용 시, 11번이 가장 빠르게 가는 루트고 10번과 700번은 보문단지를...",
+            "content_time": "2020.08.12."
+        }
+    ],
+        "influencer": [
+          {
+            "name": "Influencer Name",
+            "fans": "Fan likes 수 ",
+            "type": "Type: 여행 전문 블로거 ",
+            "preference": "경주 가볼만한곳 유적지 역사 여행 코스 볼거리 확실한 가을 단풍 명소 경주 불국사 경주 불국사 주소: 경북 경주시 불국로 385 불국사 관람 시간: 오전 8시 ~ 오후 5시 30분(매표 마감) 입장료: 성인 6000원, 청소년 4000원 주차비: 1000원 우리나라의",
+            "place": " Place: 국내선호",
+            "images": ["이미지", "규격", "확인용"]
+          },
+          {
+            "name": "influencer2",
+            "fans": 22222,
+            "type": "여행 전문 블로거",
+            "preference": "자연 경관 선호",
+            "place": "국내선호",
+            "images": ["url1", "url2", "url3"]
+          },
+          {
+            "name": "influencer3",
+            "fans": 33333,
+            "type": "여행 전문 블로거",
+            "preference": "자연 경관 선호",
+            "place": "국내선호",
+            "images": ["url1", "url2", "url3"]
+          },
+          {
+            "name": "influencer4",
+            "fans": 44444,
+            "type": "여행 전문 블로거",
+            "preference": "자연 경관 선호",
+            "place": "국내선호",
+            "images": ["url1", "url2", "url3"]
+          },
+          {
+            "name": "influencer5",
+            "fans": 55555,
+            "type": "여행 전문 블로거",
+            "preference": "자연 경관 선호",
+            "place": "국내선호",
+            "images": ["url1", "url2", "url3"]
+          }]
+}
