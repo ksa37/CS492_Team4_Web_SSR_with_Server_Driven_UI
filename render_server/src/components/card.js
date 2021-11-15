@@ -2,8 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import styles from './card.module.css'
 import Image from "next/image"
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import BookmarkIcon from "@material-ui/icons/BookmarkBorderOutlined";
+import ArrowForwardIcon from "@material-ui/icons/ArrowForwardIos";
 
 import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
 
@@ -12,6 +16,15 @@ export default function NewsCard({props}) {
     const { publisherURL, publisherImgURL, publisher, date, newsURL, title, contents, contentsImgURL } = props
     const now = Date.now()
     var converted_date = dateConvertor(date)
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
 
     return (
         <Card sx={{ maxWidth: 766 }} square > 
@@ -53,9 +66,39 @@ export default function NewsCard({props}) {
                     </div>
                 }
                 action = {
-                    <IconButton>
-                        <MoreVertIcon style={{color: '#D1D3D6'}}/>
-                    </IconButton>
+                    <div>
+                        <IconButton
+                            onClick={handleClick}
+                        >
+                            <MoreVertIcon style={{color: '#D1D3D6'}}/>
+                        </IconButton>
+                        <Menu
+                            id="basic-menu"
+                            anchorEl={anchorEl}
+                            open={open}
+                            onClose={handleClose}
+                            MenuListProps={{
+                                'aria-labelledby': 'basic-button',
+                            }}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'right',
+                            }}
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'right',
+                            }}
+                            >
+                            <MenuItem onClick={handleClose}>
+                                Keep에 저장
+                                <BookmarkIcon/>
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>
+                                Keep 바로가기
+                                <ArrowForwardIcon/>
+                            </MenuItem>
+                        </Menu>
+                    </div>
                 }
             />
             <CardContent sx={{ m: 0, p: 0, paddingTop: '8px', paddingLeft: '16px', paddingRight: '16px', marginBottom: '10px' }} variant="contained" >
