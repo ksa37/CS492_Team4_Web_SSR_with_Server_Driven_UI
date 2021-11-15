@@ -232,7 +232,7 @@ export default function Home() {
                 style={{minHeight:66}}
               
               >
-                {/* {dummydata["keywords"][1]["news"]?.map((news) => <NaverCard props={news}/>)} */}
+                {/* {dummydata["keywords"][1]["news"]?.map((news) => <NewsCard props={news}/>)} */}
                 <Stack direction="row" spacing={1} style= {{paddingLeft:12, paddingRight:12}}>
                 {/* {mockdata["keywords"][1]["photo"]?["tags"]?.map((item) => {
                   const { tag_name, tag_image_url, tagURL } = {item}: {item:any}

@@ -8,8 +8,9 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
 
 
-export default function NaverCard({props}) {  
+export default function NewsCard({props}) {  
     const { publisherURL, publisherImgURL, publisher, date, newsURL, title, contents, contentsImgURL } = props
+    var defaultPublisherImgURL = "/images/default_publisher.png"  
 
     return (
         <Card sx={{ maxWidth: 766 }} square > 
@@ -19,13 +20,22 @@ export default function NaverCard({props}) {
                     <Link href={publisherURL}>
                         <a>
                             <div className={styles.publisherImgBoarder}>
-                                <Image className={styles.publisherImg}
-                                    src={publisherImgURL}
+                                {publisherImgURL == ""
+                                ? <Image className={styles.publisherImg}
+                                    src={defaultPublisherImgURL}
+                                    // src={publisherImgURL}
                                     // src={contentsImgURL}
                                     width='100%'
                                     height='100%'
                                     objectFit='contain'
                                 />
+                                : <Image className={styles.publisherImg}
+                                    
+                                    src={publisherImgURL}
+                                    width='100%'
+                                    height='100%'
+                                    objectFit='contain'
+                                />}
                             </div>
                         </a>
                     </Link>
@@ -53,7 +63,7 @@ export default function NaverCard({props}) {
                         <div className={styles.title}>{title}</div>
                         <div className={styles.contentsInfo}>
                             <div className={styles.contents}>{contents}</div>
-                            <div className={styles.contentsImgBoarder}>
+                            {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
                                 <Image className={styles.contentsImg}
                                     src={contentsImgURL}
                                     // width='100%'
@@ -62,7 +72,7 @@ export default function NaverCard({props}) {
                                     objectFit='contain'
                                     // onError="this.style.display='none';"
                                 /> 
-                            </div>
+                            </div>}
                         </div>
                     </a>
                 </Link>
