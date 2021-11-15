@@ -5,12 +5,7 @@ import Image from "next/image"
 import styles from './news.module.css'
 
 import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
-// import MoreVertIcon from "@material-ui/icons/MoreVert";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-
-
-
-var imgA = "/images/news_publisher_logos/BTN.jpg";
 
 const dummydata = {
     "keywords": [ {
@@ -109,13 +104,13 @@ const dummydata = {
                         },
                         { 
                             "publisherURL": "http://www.daejonilbo.com/",
-                            "publisherImgURL": "/images/news/news_publisher_logos/paris_2.jpeg",
+                            "publisherImgURL": "/images/news/news_publisher_logos/paris_logo2.png",
                             "publisher": "대전일보",
                             "date": "10시간 전",
                             "newsURL": "http://www.daejonilbo.com/news/newsitem.asp?pk_no=1494047",
                             "title": "파리바게뜨 충북혁신1호점, '장학기금' 기탁",
                             "contents": "꽃동네아동복지시설에 생활하는 약 100여명의 아이들에게 생일마다 케이크 전달 파리바게뜨 충북혁신1호점(대표 김보형, 김효정)은 지난 9일 지역인재 양성을 위해 써달라며 맹동면장학회 추진위원회(위원장 임흥식)에 장학기금 100만 원을 기탁했다. 파리바게뜨 충북혁신1호점은 맹동면...",
-                            "contentsImgURL": "/images/news/news_images/paris_logo2.png"
+                            "contentsImgURL": "/images/news/news_images/paris_2.jpeg"
                         }
                     ]
                 },
@@ -137,8 +132,8 @@ export default function News() {
         >
         
         {/* <div className="section_view">
-            
         </div> */}
+
         <Card sx={{ maxWidth: 766}} variant='outlined' square>
 
             <CardHeader 
@@ -169,7 +164,7 @@ export default function News() {
                 
                 >
                 <Stack >
-                {dummydata["keywords"][1]["news"].map((news) => <NaverCard props={news}/>)}
+                  {dummydata["keywords"][1]["news"].map((news) => <NaverCard props={news}/>)}
                 </Stack >
 
                 </Grid>
