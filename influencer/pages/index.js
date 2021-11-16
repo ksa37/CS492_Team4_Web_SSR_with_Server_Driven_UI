@@ -1,166 +1,117 @@
-import Head from 'next/head'
-import images from '../images/dw.png'
-import Link from "next/link";
-import React, { Component } from "react";
-import { useState } from 'react';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import axios from "axios";
-
-// const Button = ({ onClick }) => (
-//   <button onClick={onClick}>Get Data From Server</button>
-// );
-
-// const index = () => {
-//   const onClick = () => {
-//     axios.get("http://localhost:8000/getdata").then((res) => {
-//       console.log(res.data);
-//       return (res.data);
-//     });
-//   };
-
-//   return (
-//     <div>
-//       <h1>hello world</h1>
-//       <Link href="/hello">
-//         <a title="hello">Hello Page</a>
-//       </Link>
-//       <Button onClick={onClick} />
-//     </div>
-//   );
-// };
-// export default index;
-
-// class trial extends Component {
-//   constructor () {
-//     super();
-//     this.state = {
-//       html: []
-//     }
-//   }
-
-//   componentDidMount() {
-//     fetch("http://localhost:8000/getdata").then((response) => {
-//       return response.text();
-//     })
-//     .then((html) => {
-//       document.body.innerHTML = html     
-//     });        
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <h1> not rendered </h1>
-//       </div>
-//     )
-//   }
-// }
-// export default trial;
+// import ImageList from '@mui/material/ImageList';
+// import ImageListItem from '@mui/material/ImageListItem';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardContent from '@mui/material/CardContent';
+import Avatar from '@mui/material/Avatar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+// import * as React from 'react';//
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import Link from '@mui/material/Link';
 
 const dummydata = {
-  "keyword": "불국사",
-  "view": [ "basicInfo", "photo", "news" ],
-  "basicInfo": {
-                "지정종목": "사적",
-                "지정번호": "제502호"
-                },
-  "photo": [ "url_1", "url_2", "url_3" ],
-  "news": [
-            { 
-              "title": "[포토뉴스] 만개한 경주 불국사 겹벚꽃",
-              "publisher": "영남일보",
-              "date": "2021.04.16",
-              "contents": "16일 경북 경주시 진현동 불국사 주차장에서 경내로 오르는 야트막한 둔덕에 자리한 겹벚꽃 군락에 꽃이 만개해 시민들의 발길을 붙잡고 있다.",
-              "link": "url_4",
+          "influencer": [
+            {
+              "name": "쏠트몬",
+              "type": "여행 작가",
+              "place": "| 국내 전문",
+              "fans": "| 팬 9,163",
+              "blogdetails": "2012 파워블로그",
+              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+              "detailsdepth": "· 도서 출간 3권 · 도심 여행 · 선호 여행 리뷰",
+              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
+              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+              "date": "2021.11.05",
+              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
+              "image" : ""
+            },
+            {
+              "name": "쏠트몬",
+              "type": "여행 작가",
+              "place": "국내 전문",
+              "fans": "팬 9,163",
+              "blogdetails": "2012 파워블로그 도서 출간 3권 도심 여행 선호 여행 리뷰",
+              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
+              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+              "date": "2021.11.05",
+              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
+              "image" : ""
+            },
+            {
+              "name": "쏠트몬",
+              "type": "여행 작가",
+              "place": "국내 전문",
+              "fans": "팬 9,163",
+              "blogdetails": "2012 파워블로그 도서 출간 3권 도심 여행 선호 여행 리뷰",
+              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
+              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+              "date": "2021.11.05",
+              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
+              "image" : ""
+            },
+            {
+              "name": "쏠트몬",
+              "type": "여행 작가",
+              "place": "국내 전문",
+              "fans": "팬 9,163",
+              "blogdetails": "2012 파워블로그 도서 출간 3권 도심 여행 선호 여행 리뷰",
+              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
+              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+              "date": "2021.11.05",
+              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
+              "image" : ""
+            },
+            {
+              "name": "쏠트몬",
+              "type": "여행 작가",
+              "place": "국내 전문",
+              "fans": "팬 9,163",
+              "blogdetails": "2012 파워블로그 도서 출간 3권 도심 여행 선호 여행 리뷰",
+              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
+              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+              "date": "2021.11.05",
+              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
+              "image" : ""
             }
-          ],
-  "influencer": [
-    {
-      "name": "Influencer Name",
-      "fans": "Fan likes 수 ",
-      "type": "Type: 여행 전문 블로거 ",
-      "preference": "경주 가볼만한곳 유적지 역사 여행 코스 볼거리 확실한 가을 단풍 명소 경주 불국사 경주 불국사 주소: 경북 경주시 불국로 385 불국사 관람 시간: 오전 8시 ~ 오후 5시 30분(매표 마감) 입장료: 성인 6000원, 청소년 4000원 주차비: 1000원 우리나라의",
-      "place": " Place: 국내선호",
-      "images": ["이미지", "규격", "확인용"]
-    },
-    {
-      "name": "influencer2",
-      "fans": 22222,
-      "type": "여행 전문 블로거",
-      "preference": "자연 경관 선호",
-      "place": "국내선호",
-      "images": ["url1", "url2", "url3"]
-    },
-    {
-      "name": "influencer3",
-      "fans": 33333,
-      "type": "여행 전문 블로거",
-      "preference": "자연 경관 선호",
-      "place": "국내선호",
-      "images": ["url1", "url2", "url3"]
-    },
-    {
-      "name": "influencer4",
-      "fans": 44444,
-      "type": "여행 전문 블로거",
-      "preference": "자연 경관 선호",
-      "place": "국내선호",
-      "images": ["url1", "url2", "url3"]
-    },
-    {
-      "name": "influencer5",
-      "fans": 55555,
-      "type": "여행 전문 블로거",
-      "preference": "자연 경관 선호",
-      "place": "국내선호",
-      "images": ["url1", "url2", "url3"]
-    }]}
+            ]}
+
+const Item = styled(Paper)(({ theme }) => ({
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'left',
+}));
 
 export default function Home() {
   return (
     <Container>
-      <Grid container alignItems="center" justifyContent="center" sx={{ bgcolor: '#f0f2f5'}}>
-        <ImageList cols={1} component="div">
-          {
-            dummydata['influencer'].map((wiki) => (
-            <ImageListItem key={wiki.header_href}>
-              <Grid header_href={wiki.header_href} header_src={wiki.header_src} header_title={wiki.header_title} subheader_title={wiki.subheader_title} content_links={wiki.content_links} content_description={wiki.content_description} content_time={wiki.content_time}/>
-            </ImageListItem>
-            ))
+      {dummydata['influencer'].map((each) => 
+      <Card sx={{ maxWidth: 1100, my: '15px'}} >
+        <Container sx={{ display: 'flex' }}>
+          <CardHeader
+          avatar={
+            <Link href={each.avatar_name_url}> 
+            <Avatar sx = {{ width: 88, height: 88, ml: '35px', my: '5px', display:'inline-block'}} alt="" src="/static/images/avatar/avatar_1.png"/>
+            </Link>
           }
-        </ImageList>
-      </Grid>
+          title= {<div> <Link href={each.avatar_name_url} underline="none"> <ui className = 'title'>{each.name}</ui> </Link> <ui className = 'header'>{each.type}</ui> <ui className = 'header'>{each.place}</ui> <ui className = 'header'>{each.fans}</ui> </div> }
+          subheader= {<div className = 'magintop'> <img className = "blogicon" src="/static/images/avatar/blogicon.png"/> <ui className = 'subheader'> {each.blogdetails} </ui> <ui className = 'detailsdepth'> {each.detailsdepth} </ui> </div>}
+          />
+          <div> <img className = "fanicon" src="/static/images/avatar/fanicon.png"/> </div>
+        </Container>
+        <Container sx={{ display: 'flex' }}>
+          <Container>
+            <Link href={each.title_content_url} underline="none"> <Container sx={{color: '#0c43b7', fontSize: '1.6rem' }} className = 'content-title'> {each.title} </Container> </Link>
+            <Link href={each.title_content_url} underline="none"> <Container sx={{my: '10px', color: "#404040", fontSize: '1.3rem' }}> {each.content} </Container> </Link>
+            <Container sx={{my: '10px', color: 'grey', fontSize: '1.1rem' }}> {each.date} </Container>
+          </Container>
+          <Link href={each.title_content_url} underline="none"> <img className = 'image'  src="/static/images/avatar/blog_1.png"/> </Link>
+        </Container>
+      </Card>)}
     </Container>
-    // <div>
-    //   <Head>
-    //     <title> Bootstrap </title>
-    //     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
-    //   </Head>
-
-    //   {/* <h1> Next.js </h1>
-    //   <button type="button" className ="btn btn-primary">Primary</button> */}
-    //   {console.log(dummydata['influencer'])}
-
-    //   {dummydata['influencer'].map((each) => 
-    //   <div className = "container-fluid" key = {each['name']}>
-    //     <div className="row">
-    //     <div className={"col-md-4" , "name"}> {each['name']} </div>
-    //     <div className={"col-md-3" , "fans"}> {each['fans']} </div>
-    //     </div>
-    //     <div className="row">
-    //     <div className={"col-sm-3" , "type"}> {each['type']} </div>
-    //     <div className={"col-sm-2" , "place"}> {each['place']} </div>
-    //     </div>
-    //     <div className="row">
-    //     <div className={"col-sm-2" , "preference"}> {each['preference']} </div>
-    //     </div>
-    //     <div> <images/> </div>
-    //     <div className="row">
-    //     {each['images'].map((img) => <div className={"col-sm-3" , "images"} key = {img}> {img} </div>)}
-    //     </div>
-    //   </div>)}
-    // </div>
   )
 }
