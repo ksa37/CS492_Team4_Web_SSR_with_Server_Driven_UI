@@ -75,16 +75,7 @@
     /* flex: 1 88px;  */
 }
 
-.divider {
+/* .divider {
     border-top: 1px solid #EDF0F2;
     margin: 0;
-}
-
-.menuItem {
-    width: 170px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 15px;
-    color: var(--dark_gray_2);
-}
+} */

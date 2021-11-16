@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import NewsCard from '../components/card'
+import NewsCard from '../components/Newscard'
 import Image from "next/image"
 import styles from './news.module.css'
 
