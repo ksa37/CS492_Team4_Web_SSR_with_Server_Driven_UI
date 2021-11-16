@@ -4,13 +4,10 @@ import styles from './card.module.css'
 import Image from "next/image"
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import BookmarkIcon from "@material-ui/icons/BookmarkBorderOutlined";
-import ArrowForwardIcon from "@material-ui/icons/ArrowForwardIos";
 
-import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
+import { Card, CardActions, CardContent, CardHeader, Divider, IconButton } from '@mui/material';
 
 
 export default function NewsCard({props}) {  
@@ -68,49 +65,7 @@ export default function NewsCard({props}) {
                     </div>
                 }
                 action = {
-                    <div>
-                        <IconButton
-                            onClick={handleClick}
-                        >
-                            <MoreVertIcon style={{color: '#D1D3D6'}}/>
-                        </IconButton>
-                        <Menu
-                            id="morevert-menu"
-                            anchorEl={anchorEl}
-                            open={open}
-                            onClose={handleClose}
-                            MenuListProps={{
-                                'aria-labelledby': 'basic-button',
-                            }}
-                            anchorOrigin={{
-                                vertical: 'bottom',
-                                horizontal: 'right',
-                            }}
-                            transformOrigin={{
-                                // vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            PaperProps={{
-                                elevation: 3,
-                            }}
-                            >
-                            <MenuItem className={styles.menuItem} onClick={handleClose}>
-                                Keep에 저장
-                                {/* <ListItemIcon>
-                                    <BookmarkIcon fontSize="small" />
-                                </ListItemIcon> */}
-                                <img src='/icons/bookmark.svg'/>
-                            </MenuItem>
-                            <Divider/>
-                            <MenuItem className={styles.menuItem} onClick={handleClose}>
-                                Keep 바로가기
-                                {/* <ListItemIcon>
-                                    <ArrowForwardIcon fontSize="small" />
-                                </ListItemIcon> */}
-                                <img src='/icons/forward.svg'/>
-                            </MenuItem>
-                        </Menu>
-                    </div>
+                    morevert(open, anchorEl, handleClick, handleClose)
                 }
             />
             <CardContent sx={{ m: 0, p: 0, paddingTop: '8px', paddingLeft: '16px', paddingRight: '16px', marginBottom: '10px' }} variant="contained" >
@@ -172,13 +127,49 @@ function dateFormat(date) {
     return date.getFullYear() + '.' + month + '.' + day + '.'
 }
 
-function customMenuItem(text, icon) {
+function morevert(open, anchorEl, handleClick, handleClose) {  
     return (
-        <MenuItem className={styles.menuItem} onClick={handleClose}>
-            {text}
-            <ListItemIcon>
-                {icon}
-            </ListItemIcon>
-        </MenuItem>
+        <div>
+            <IconButton
+                onClick={handleClick}
+                style={{ backgroundColor: 'transparent' }}
+                disableRipple
+            >
+                { open
+                ? <MoreVertIcon style={{color: '#8F8F8F'}}/>
+                : <MoreVertIcon style={{color: '#D1D3D6'}}/>
+                }
+            </IconButton>
+            <Menu
+                id="morevert-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                    'aria-labelledby': 'basic-button',
+                }}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'right',
+                }}
+                transformOrigin={{
+                    // vertical: 'top',
+                    horizontal: 'right',
+                }}
+                PaperProps={{
+                    elevation: 3,
+                }}
+                >
+                <MenuItem className={styles.menuItem} onClick={handleClose}>
+                    Keep에 저장
+                    <img src='/icons/bookmark.svg'/>
+                </MenuItem>
+                <Divider/>
+                <MenuItem className={styles.menuItem} onClick={handleClose}>
+                    Keep 바로가기
+                    <img src='/icons/forward.svg'/>
+                </MenuItem>
+            </Menu>
+        </div>
     )
 }
