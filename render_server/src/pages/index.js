@@ -132,7 +132,7 @@ const mockdata = {
                                     "publisherURL": "https://media.naver.com/press/366",
                                     "publisherImgURL": "/images/news/news_publisher_logos/paris_logo1.png",
                                     "publisher": "조선비즈",
-                                    "date": "1시간 전",
+                                    "date": "1636405260000",
                                     "newsURL": "https://n.news.naver.com/mnews/article/366/0000772471?sid=101",
                                     "title": "“드디어 파리 간다”… 보복여행 기대감에 날아오른 항공주",
                                     "contents": "항공주, 실적 회복 기대감에 상승 항공 관련주 주가 선반영 정도 높아 투자 유의 지적도 서울에 사는 직장인 김모(33)씨는 이달 프랑스 파리로 가는 비행기 티켓을 끊었다. 이달 우리나라가 ‘위드 코로나(단계적 일상회복)’ 정책을 펼치기에 앞서 프랑스는 지난 6월부터 외국인에 국경을...",
@@ -142,7 +142,7 @@ const mockdata = {
                                     "publisherURL": "http://www.daejonilbo.com/",
                                     "publisherImgURL": "/images/news/news_publisher_logos/paris_2.jpeg",
                                     "publisher": "대전일보",
-                                    "date": "10시간 전",
+                                    "date": "1636518338000",
                                     "newsURL": "http://www.daejonilbo.com/news/newsitem.asp?pk_no=1494047",
                                     "title": "파리바게뜨 충북혁신1호점, '장학기금' 기탁",
                                     "contents": "꽃동네아동복지시설에 생활하는 약 100여명의 아이들에게 생일마다 케이크 전달 파리바게뜨 충북혁신1호점(대표 김보형, 김효정)은 지난 9일 지역인재 양성을 위해 써달라며 맹동면장학회 추진위원회(위원장 임흥식)에 장학기금 100만 원을 기탁했다. 파리바게뜨 충북혁신1호점은 맹동면...",
@@ -232,7 +232,7 @@ export default function Home() {
                 style={{minHeight:66}}
               
               >
-                {/* {dummydata["keywords"][1]["news"]?.map((news) => <NaverCard props={news}/>)} */}
+                {/* {dummydata["keywords"][1]["news"]?.map((news) => <NewsCard props={news}/>)} */}
                 <Stack direction="row" spacing={1} style= {{paddingLeft:12, paddingRight:12}}>
                 {/* {mockdata["keywords"][1]["photo"]?["tags"]?.map((item) => {
                   const { tag_name, tag_image_url, tagURL } = {item}: {item:any}

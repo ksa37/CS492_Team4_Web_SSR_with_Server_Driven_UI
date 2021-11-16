@@ -1,16 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import NaverCard from '../components/card'
+import NewsCard from '../components/Newscard'
 import Image from "next/image"
 import styles from './news.module.css'
 
 import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
-// import MoreVertIcon from "@material-ui/icons/MoreVert";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-
-
-
-var imgA = "/images/news_publisher_logos/BTN.jpg";
 
 const dummydata = {
     "keywords": [ {
@@ -38,7 +33,7 @@ const dummydata = {
                                     "publisher": "매일경제",
                                     "date": "2일 전",
                                     "newsURL": "https://n.news.naver.com/mnews/article/009/0004873767?sid=103",
-                                    "title": "세계 1위 여행출판사 '경주' 콕 찍었다 코로나 풀리면 꼭 가라",
+                                    "title": "세계 1위 여행출판사 '경주' 콕 찍었다 “코로나 풀리면 꼭 가라“",
                                     "contents": "불국사와 석굴암 등 주요 유적지에 대해서도 언급하며 경주를 충분히 즐기기 위해서는 며칠 간 머물러야 한다고 이 책은 조언했다. 론리 플래닛은 이번에 독일의 '환경수도' 프라이부르크(3위), 미국 남부 중심도시 애틀랜타(4위), 멕시코 유카탄주 최대도시 메리다(8위), 유럽 근대 르네상스의...",
                                     "contentsImgURL": "/images/news/news_images/BTN_1.jpg"
                                 }
@@ -97,30 +92,58 @@ const dummydata = {
               "image_more": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_nmr&query=%ED%8C%8C%EB%A6%AC" 
                     },
             "news": [
-                        { 
+                        {
                             "publisherURL": "https://media.naver.com/press/366",
                             "publisherImgURL": "/images/news/news_publisher_logos/paris_logo1.png",
                             "publisher": "조선비즈",
-                            "date": "1시간 전",
+                            "date": "1636405260000",
                             "newsURL": "https://n.news.naver.com/mnews/article/366/0000772471?sid=101",
                             "title": "“드디어 파리 간다”… 보복여행 기대감에 날아오른 항공주",
                             "contents": "항공주, 실적 회복 기대감에 상승 항공 관련주 주가 선반영 정도 높아 투자 유의 지적도 서울에 사는 직장인 김모(33)씨는 이달 프랑스 파리로 가는 비행기 티켓을 끊었다. 이달 우리나라가 ‘위드 코로나(단계적 일상회복)’ 정책을 펼치기에 앞서 프랑스는 지난 6월부터 외국인에 국경을...",
-                            "contentsImgURL": "/images/news/news_images/paris_1.jpeg"
+                            "contentsImgURL": "/images/news/news_images/paris_1.jpeg",
+                            "relation": "0.9"
                         },
                         { 
                             "publisherURL": "http://www.daejonilbo.com/",
-                            "publisherImgURL": "/images/news/news_publisher_logos/paris_2.jpeg",
+                            // "publisherImgURL": "/images/news/news_publisher_logos/paris_logo2.png",
+                            "publisherImgURL": "",
                             "publisher": "대전일보",
-                            "date": "10시간 전",
+                            "date": "1636518338000",
                             "newsURL": "http://www.daejonilbo.com/news/newsitem.asp?pk_no=1494047",
                             "title": "파리바게뜨 충북혁신1호점, '장학기금' 기탁",
                             "contents": "꽃동네아동복지시설에 생활하는 약 100여명의 아이들에게 생일마다 케이크 전달 파리바게뜨 충북혁신1호점(대표 김보형, 김효정)은 지난 9일 지역인재 양성을 위해 써달라며 맹동면장학회 추진위원회(위원장 임흥식)에 장학기금 100만 원을 기탁했다. 파리바게뜨 충북혁신1호점은 맹동면...",
-                            "contentsImgURL": "/images/news/news_images/paris_logo2.png"
+                            // "contentsImgURL": "/images/news/news_images/paris_2.jpeg",
+                            "contentsImgURL": "",
+                            "relation": "0.5"
+                        },
+                        { 
+                          "publisherURL": "https://media.naver.com/press/003",
+                          "publisherImgURL": "/images/news/news_publisher_logos/newsis.jpeg",
+                          "publisher": "뉴시스",
+                          "date": "1636595858000",
+                          "newsURL": "https://n.news.naver.com/sports/general/article/003/0010825963",
+                          "title": "남녀핸드볼, '파리올림픽 겨냥' 최초 외국인감독 선임 예정",
+                          "contents": "기사내용 요약2024 파리올림픽 대비 경쟁력 강화 방안 여자대표팀, 제25회 세계선수권대회 앞두고 11일 진천선수촌 입촌 한국 남녀 핸드볼이 역대 처음으로 외국인감독을 선임할 계획을 밝혔다. 대한핸드볼협회는 11일 “국제 경쟁력 강화와 2024 파리올림픽 준비를 위해 남녀 국가대표팀 모두...",
+                          "contentsImgURL": "/images/news/news_images/paris_3.jpeg",
+                          "relation": "0.8"
+                        },
+                        { 
+                          "publisherURL": "https://media.naver.com/press/421",
+                          "publisherImgURL": "/images/news/news_publisher_logos/news1.jpeg",
+                          "publisher": "뉴스1",
+                          "date": "1636930800000",
+                          "newsURL": "https://n.news.naver.com/mnews/article/421/0005723365?sid=104",
+                          "title": "파리서 냄비 쇼핑하는 해리스 부통령",
+                          "contents": "카멀라 해리스 미국 부통령이 13일 (현지시간) 프랑스 파리의 조리 용품점에서 냄비를 쇼핑하고 있다. © AFP=뉴스1",
+                          "contentsImgURL": "/images/news/news_images/paris_4.jpeg",
+                          "relation": "0.7"
                         }
                     ]
                 },
     ]
 }
+
+// date to millisecond convertor: https://currentmillis.com
 
 
 export default function News() {
@@ -137,8 +160,8 @@ export default function News() {
         >
         
         {/* <div className="section_view">
-            
         </div> */}
+
         <Card sx={{ maxWidth: 766}} variant='outlined' square>
 
             <CardHeader 
@@ -169,7 +192,7 @@ export default function News() {
                 
                 >
                 <Stack >
-                {dummydata["keywords"][1]["news"].map((news) => <NaverCard props={news}/>)}
+                  {dummydata["keywords"][1]["news"].map((news) => <NewsCard props={news}/>)}
                 </Stack >
 
                 </Grid>
