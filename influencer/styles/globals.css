@@ -11,7 +11,9 @@ a {
 }
 .fanicon {
   margin-top: 30px;
-  margin-left: 50px;
+  margin-left: 150px;
+  width: 140px;
+  height: 70px;
 }
 .blogicon {
   margin-top: 3px;

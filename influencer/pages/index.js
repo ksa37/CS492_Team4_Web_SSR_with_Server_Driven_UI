@@ -13,6 +13,10 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 
+function addblogfan() {
+  console.log('a') 
+}
+
 const dummydata = {
           "influencer": [
             {
@@ -90,7 +94,7 @@ export default function Home() {
   return (
     <Container>
       {dummydata['influencer'].map((each) => 
-      <Card sx={{ maxWidth: 1100, my: '15px'}} >
+      <Card sx={{ maxWidth: 1150, my: '15px'}} >
         <Container sx={{ display: 'flex' }}>
           <CardHeader
           avatar={
@@ -99,7 +103,7 @@ export default function Home() {
             </Link>
           }
           title= {<div> <Link href={each.avatar_name_url} underline="none"> <ui className = 'title'>{each.name}</ui> </Link> <ui className = 'header'>{each.type}</ui> <ui className = 'header'>{each.place}</ui> <ui className = 'header'>{each.fans}</ui> </div> }
-          subheader= {<div className = 'magintop'> <img className = "blogicon" src="/static/images/avatar/blogicon.png"/> <ui className = 'subheader'> {each.blogdetails} </ui> <ui className = 'detailsdepth'> {each.detailsdepth} </ui> </div>}
+          subheader= {<div className = 'magintop'> <img onClick = {addblogfan} className = "blogicon" src="/static/images/avatar/blogicon.png"/> <ui className = 'subheader'> {each.blogdetails} </ui> <ui className = 'detailsdepth'> {each.detailsdepth} </ui> </div>}
           />
           <div> <img className = "fanicon" src="/static/images/avatar/fanicon.png"/> </div>
         </Container>
