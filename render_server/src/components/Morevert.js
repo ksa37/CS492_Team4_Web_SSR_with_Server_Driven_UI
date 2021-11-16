@@ -63,6 +63,7 @@ function MorevertMenuItem({props}) {
             className={styles.menuItem} 
             onClick={handleClose}
             style={{ backgroundColor: 'transparent' }}
+            disableRipple
         >
             {text}
             <img src={srcURL}/>
