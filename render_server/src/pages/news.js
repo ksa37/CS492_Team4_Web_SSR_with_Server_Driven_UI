@@ -33,7 +33,7 @@ const dummydata = {
                                     "publisher": "매일경제",
                                     "date": "2일 전",
                                     "newsURL": "https://n.news.naver.com/mnews/article/009/0004873767?sid=103",
-                                    "title": "세계 1위 여행출판사 '경주' 콕 찍었다 코로나 풀리면 꼭 가라",
+                                    "title": "세계 1위 여행출판사 '경주' 콕 찍었다 “코로나 풀리면 꼭 가라“",
                                     "contents": "불국사와 석굴암 등 주요 유적지에 대해서도 언급하며 경주를 충분히 즐기기 위해서는 며칠 간 머물러야 한다고 이 책은 조언했다. 론리 플래닛은 이번에 독일의 '환경수도' 프라이부르크(3위), 미국 남부 중심도시 애틀랜타(4위), 멕시코 유카탄주 최대도시 메리다(8위), 유럽 근대 르네상스의...",
                                     "contentsImgURL": "/images/news/news_images/BTN_1.jpg"
                                 }
@@ -92,7 +92,7 @@ const dummydata = {
               "image_more": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_nmr&query=%ED%8C%8C%EB%A6%AC" 
                     },
             "news": [
-                        { 
+                        {
                             "publisherURL": "https://media.naver.com/press/366",
                             "publisherImgURL": "/images/news/news_publisher_logos/paris_logo1.png",
                             "publisher": "조선비즈",
@@ -123,7 +123,7 @@ const dummydata = {
                           "date": "1636595858000",
                           "newsURL": "https://n.news.naver.com/sports/general/article/003/0010825963",
                           "title": "남녀핸드볼, '파리올림픽 겨냥' 최초 외국인감독 선임 예정",
-                          "contents": "기사내용 요약2024 파리올림픽 대비 경쟁력 강화 방안 여자대표팀, 제25회 세계선수권대회 앞두고 11일 진천선수촌 입촌 한국 남녀 핸드볼이 역대 처음으로 외국인감독을 선임할 계획을 밝혔다. 대한핸드볼협회는 11일 '국제 경쟁력 강화와 2024 파리올림픽 준비를 위해 남녀 국가대표팀 모두...",
+                          "contents": "기사내용 요약2024 파리올림픽 대비 경쟁력 강화 방안 여자대표팀, 제25회 세계선수권대회 앞두고 11일 진천선수촌 입촌 한국 남녀 핸드볼이 역대 처음으로 외국인감독을 선임할 계획을 밝혔다. 대한핸드볼협회는 11일 “국제 경쟁력 강화와 2024 파리올림픽 준비를 위해 남녀 국가대표팀 모두...",
                           "contentsImgURL": "/images/news/news_images/paris_3.jpeg",
                           "relation": "0.8"
                         },

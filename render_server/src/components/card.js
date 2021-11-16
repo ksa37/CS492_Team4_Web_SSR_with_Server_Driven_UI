@@ -4,6 +4,7 @@ import styles from './card.module.css'
 import Image from "next/image"
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
 
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import BookmarkIcon from "@material-ui/icons/BookmarkBorderOutlined";
@@ -21,6 +22,7 @@ export default function NewsCard({props}) {
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
+        console.log(event.currentTarget)
     };
     const handleClose = () => {
         setAnchorEl(null);
@@ -73,7 +75,7 @@ export default function NewsCard({props}) {
                             <MoreVertIcon style={{color: '#D1D3D6'}}/>
                         </IconButton>
                         <Menu
-                            id="basic-menu"
+                            id="morevert-menu"
                             anchorEl={anchorEl}
                             open={open}
                             onClose={handleClose}
@@ -85,17 +87,27 @@ export default function NewsCard({props}) {
                                 horizontal: 'right',
                             }}
                             transformOrigin={{
-                                vertical: 'top',
+                                // vertical: 'top',
                                 horizontal: 'right',
                             }}
+                            PaperProps={{
+                                elevation: 3,
+                            }}
                             >
-                            <MenuItem onClick={handleClose}>
+                            <MenuItem className={styles.menuItem} onClick={handleClose}>
                                 Keep에 저장
-                                <BookmarkIcon/>
+                                {/* <ListItemIcon>
+                                    <BookmarkIcon fontSize="small" />
+                                </ListItemIcon> */}
+                                <img src='/icons/bookmark.svg'/>
                             </MenuItem>
-                            <MenuItem onClick={handleClose}>
+                            <Divider/>
+                            <MenuItem className={styles.menuItem} onClick={handleClose}>
                                 Keep 바로가기
-                                <ArrowForwardIcon/>
+                                {/* <ListItemIcon>
+                                    <ArrowForwardIcon fontSize="small" />
+                                </ListItemIcon> */}
+                                <img src='/icons/forward.svg'/>
                             </MenuItem>
                         </Menu>
                     </div>
@@ -158,4 +170,15 @@ function dateFormat(date) {
     day = day >= 10 ? day : '0' + day;
 
     return date.getFullYear() + '.' + month + '.' + day + '.'
+}
+
+function customMenuItem(text, icon) {
+    return (
+        <MenuItem className={styles.menuItem} onClick={handleClose}>
+            {text}
+            <ListItemIcon>
+                {icon}
+            </ListItemIcon>
+        </MenuItem>
+    )
 }

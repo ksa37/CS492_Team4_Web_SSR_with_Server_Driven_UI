@@ -58,7 +58,8 @@
 .contents {
     /* width: 620px; */
     /* flex-basis: 626px; */
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 450;
     line-height: 24px;
     color: var(--dark_gray_2);
     /* flex: 200; */
@@ -77,4 +78,16 @@
 .divider {
     border-top: 1px solid #EDF0F2;
     margin: 0;
+}
+
+.menuItem {
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;
+    color: var(--dark_gray_2);
+    /* fill: var(--dark_gray_2); */
+    /* margin-right: 0; */
+    /* padding-right: 0; */
 }
