@@ -58,23 +58,20 @@ import Link from 'next/link';
 export default function StandardImageList({props}) {
   
   return (
-    <ImageList sx={{ maxWidth: 766, maxHeight: 766, m:0}} cols={3} rowHeight={254} gap={2}>
+      <div className={styles.container}>
       {props&&props.map((img) => (
-        <ImageListItem >
-          <img
-            src={img.img_path}
-            style={styles.responsiveImage}
-            layout="fill"
-            // alt={item.title}
-            // width={254}
-            // height={254}
-            // loading="lazy"
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
-  
-
+          <div className={styles.grid_item} >
+            <Link href={img.img_url}>
+              <a>
+              <Image
+                  src={img.img_path}
+                  layout="fill"
+                />
+              </a>
+            </Link>
+          </div>
+        ))}
+    </div>
   );
 
 
