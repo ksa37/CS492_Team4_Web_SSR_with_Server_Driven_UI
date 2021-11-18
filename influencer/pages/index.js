@@ -13,8 +13,15 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 
+const [count, setCount] = useState(0);
+
 function addblogfan() {
-  console.log('a') 
+  var answer = window.confirm("로그인이 필요한 서비스입니다.\n로그인 하시겠습니까?");
+  if (answer) {
+      window.location.href = "https://nid.naver.com/nidlogin.login?svctype=262144&url=https%3A%2F%2Fsearch.naver.com%2Fsearch.naver%3Fwhere%3Dnexearch%26sm%3Dtop_hty%26fbm%3D1%26ie%3Dutf8%26query%3D%25EB%25B6%2588%25EA%25B5%25AD%25EC%2582%25AC";
+  }
+  else {
+  }
 }
 
 const dummydata = {
@@ -103,9 +110,9 @@ export default function Home() {
             </Link>
           }
           title= {<div> <Link href={each.avatar_name_url} underline="none"> <ui className = 'title'>{each.name}</ui> </Link> <ui className = 'header'>{each.type}</ui> <ui className = 'header'>{each.place}</ui> <ui className = 'header'>{each.fans}</ui> </div> }
-          subheader= {<div className = 'magintop'> <img onClick = {addblogfan} className = "blogicon" src="/static/images/avatar/blogicon.png"/> <ui className = 'subheader'> {each.blogdetails} </ui> <ui className = 'detailsdepth'> {each.detailsdepth} </ui> </div>}
+          subheader= {<div className = 'magintop'> <img className = "blogicon" src="/static/images/avatar/blogicon.png"/> <ui className = 'subheader'> {each.blogdetails} </ui> <ui className = 'detailsdepth'> {each.detailsdepth} </ui> </div>}
           />
-          <div> <img className = "fanicon" src="/static/images/avatar/fanicon.png"/> </div>
+          <div> <img onClick = {addblogfan} className = "fanicon" src="/static/images/avatar/fanicon.png"/> </div>
         </Container>
         <Container sx={{ display: 'flex' }}>
           <Container>
