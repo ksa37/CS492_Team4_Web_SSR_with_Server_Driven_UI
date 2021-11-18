@@ -21,6 +21,7 @@ import { Box, minHeight } from '@mui/system';
 
 import News from './news';
 import Photo from './photo';
+import Wiki from './wiki';
 
 const themeLight = createTheme({
   palette: {
@@ -54,6 +55,7 @@ export async function getServerSideProps() {
 export default function Home({data}) {
   const news_view =  data[1]["view"].includes("news");
   const photo_view = data[1]["view"].includes("photo");
+  const wiki_view = data[1]["view"].includes("wiki");
   return (
    
     <ThemeProvider theme={themeLight}>
@@ -68,6 +70,10 @@ export default function Home({data}) {
         {news_view && 
         <div className="section_news">
           <News props={data[1]["news"]}/>
+        </div>}
+        {wiki_view && 
+        <div className="section_wiki">
+          <Wiki props={data[1]["wiki"]}/>
         </div>}
         {photo_view&&
         <div className="section_image">

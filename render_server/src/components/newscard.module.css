@@ -50,15 +50,12 @@
 .contentsInfo {
     display: flex;
     flex-direction: row;
-    /* flex-direction: row-reverse; */
-    justify-content: flex-end;
-    /* align-items: center; */
+    justify-content: flex-start;
     margin-top:7px; 
     /* margin-top: 12px;  */
 }
 
 .contents {
-    /* width: 620px; */
     /* flex-basis: 626px; */
     font-size: 16px;
     font-weight: 450;

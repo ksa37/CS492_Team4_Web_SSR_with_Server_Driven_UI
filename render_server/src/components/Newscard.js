@@ -15,7 +15,7 @@ var ViewType = Object.freeze({
 // typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
 export default function NewsCard({props}) {  
-    const { publisherURL, publisherImgURL, publisher, date, newsURL, title, contents, contentsImgURL } = props
+    const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL } = props
     const now = Date.now()
     var converted_date = DateConvertor(date)
 
@@ -87,7 +87,7 @@ export default function NewsCard({props}) {
                 }
             />
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '16px', paddingRight: '16px', marginBottom: '10px' }} variant="contained" >
-                <Link href={newsURL}>
+                <Link href={postURL}>
                     <a>
                         <div className={styles.title}>{title}</div>
                         { viewType == ViewType.WIKI && <Divider 
