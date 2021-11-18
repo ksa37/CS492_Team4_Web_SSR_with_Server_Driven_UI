@@ -14,8 +14,10 @@ var ViewType = Object.freeze({
 });
 // typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
-export default function NewsCard({props}) {  
+export default function NewsCard({props, view}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL } = props
+    const { viewType } = view
+
     const now = Date.now()
     var converted_date = DateConvertor(date)
 
@@ -32,7 +34,9 @@ export default function NewsCard({props}) {
     // var isWiki = true;
     // var isWiki = false;
     // var viewType = ViewType.NEWS;
-    var viewType = ViewType.WIKI;
+    // var viewType = ViewType.WIKI;
+    console.log(viewType)
+    console.log(props)
 
     return (
         <Card sx={{ maxWidth: 766 }} square > 
@@ -68,7 +72,7 @@ export default function NewsCard({props}) {
                                 <div className={styles.publisher}>{publisher}</div>
                             </a>
                         </Link>
-                        { viewType != ViewType.WIKI &&
+                        { viewType != "WIKI" &&
                             <hr className={styles.verticalDivider}></hr>
                         }
                         { date != "" &&
@@ -90,8 +94,8 @@ export default function NewsCard({props}) {
                 <Link href={postURL}>
                     <a>
                         <div className={styles.title}>{title}</div>
-                        { viewType == ViewType.WIKI && <Divider 
-                            sx={{mt: 1.25, mb: 1.25}} // theme.spacing value (the default for the value is 8px
+                        { viewType == "WIKI" && <Divider 
+                            sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
                         />}
                         <div className={styles.contentsInfo}>
                             <div className={styles.contents}>{contents}</div>

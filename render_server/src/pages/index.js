@@ -27,6 +27,9 @@ const themeLight = createTheme({
   palette: {
     background: {
       default: "#e9ecef"
+    },
+    gray: {
+      light: "#FFFFFF"
     }
   }
 });

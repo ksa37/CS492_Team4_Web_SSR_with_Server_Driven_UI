@@ -5,7 +5,10 @@ import styles from './news.module.css'
 import { Card, CardHeader, Button, Grid, Paper, Stack } from '@mui/material';
 
 // date to millisecond convertor: https://currentmillis.com
-
+var ViewType = Object.freeze({
+  NEWS: 0,
+  WIKI: 1
+});
 
 export default function News({props}) {
   const {news_posts, news_more} = props
@@ -79,7 +82,7 @@ export default function News({props}) {
             >
             <Stack >
               {/* {dummydata["keywords"][1]["news"].map((news) => <NewsCard props={news}/>)} */}
-              {news_posts&&news_posts.map((news) => <NewsCard props={news}/>)}
+              {news_posts&&news_posts.map((news) => <NewsCard props={news} view={{"viewType": "NEWS"}}/>)}
             </Stack >
 
             </Grid>
