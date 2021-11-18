@@ -1,10 +1,10 @@
 import NewsCard from '../components/Newscard'
 import { Box } from '@mui/material';
 
-var ViewType = Object.freeze({
-    NEWS: 0,
-    WIKI: 1
-});
+// var ViewType = Object.freeze({
+//     NEWS: 0,
+//     WIKI: 1
+// });
 
 export default function Wiki({props}) {
     const {wiki_posts, wiki_more} = props

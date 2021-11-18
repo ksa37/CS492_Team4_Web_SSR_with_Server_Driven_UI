@@ -8,10 +8,10 @@ import DateConvertor from './DateConvertor'
 
 import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 
-var ViewType = Object.freeze({
-    NEWS: 0,
-    WIKI: 1
-});
+// var ViewType = Object.freeze({
+//     NEWS: 0,
+//     WIKI: 1
+// });
 // typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
 export default function NewsCard({props, view}) {  
@@ -35,8 +35,8 @@ export default function NewsCard({props, view}) {
     // var isWiki = false;
     // var viewType = ViewType.NEWS;
     // var viewType = ViewType.WIKI;
-    console.log(viewType)
-    console.log(props)
+    // console.log(viewType)
+    // console.log(props)
 
     return (
         <Card sx={{ maxWidth: 766 }} square > 
