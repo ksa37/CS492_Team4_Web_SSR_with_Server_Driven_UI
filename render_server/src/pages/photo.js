@@ -19,11 +19,13 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
 import Link from 'next/link';
+import { Box } from '@mui/system';
 
 export default function Photo({props}) {
     const {tags, images, image_more} = props
     const view_option = "이미지";
     return(
+      <>
         <Card sx={{ maxWidth: 768}} variant='outlined' square>
             <CardHeader 
               className="api_title_area"
@@ -63,7 +65,8 @@ export default function Photo({props}) {
               </Grid>
             </Paper>
             <StandardImageList props={images}/>
-            <Morecontent props={{'view_option':view_option,'more_link':image_more}}/>
         </Card>
+        <Morecontent props={{'view_option':view_option,'more_link':image_more}}/>
+        </>
     )
 }

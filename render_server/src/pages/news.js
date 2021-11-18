@@ -1,6 +1,7 @@
 import React from 'react'
 import NewsCard from '../components/Newscard'
 import styles from './news.module.css'
+import Morecontent from '../components/Morecontent';
 
 import { Card, CardHeader, Button, Grid, Paper, Stack } from '@mui/material';
 
@@ -39,6 +40,7 @@ export default function News({props}) {
   
 
   return (
+    <>
     <Card sx={{ maxWidth: 768}} variant='outlined' square>
         <CardHeader 
             className="api_title_area"
@@ -69,23 +71,9 @@ export default function News({props}) {
             }
             style={{ textAlign: 'left'}}
         />
-        <Paper 
-            className="group_option_tag_wrap" 
-            // style={{height: 83, overflow: 'auto', backgroundColor: '#f5f7f8'}}
-        >
-            <Grid
-            container
-            direction="row"
-            alignItems="center"
-            style={{minHeight:66}}
-            
-            >
-            <Stack >
-              {news_posts&&news_posts.map((news) => <NewsCard props={news} view={{"viewType": "NEWS"}}/>)}
-            </Stack >
-
-            </Grid>
-      </Paper>
+        {news_posts&&news_posts.map((news) => <NewsCard props={news} view={{"viewType": "NEWS"}}/>)}
       </Card>
-  );
+      <Morecontent props={{'view_option': "뉴스",'more_link':news_more}}/>
+      </>
+    );
 }
