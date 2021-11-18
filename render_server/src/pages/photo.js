@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React from 'react';
 import StandardImageList from '../components/StandardImageList';
+import Morecontent from '../components/Morecontent';
 
 
 import { red } from '@mui/material/colors';
@@ -16,12 +17,14 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 // import { withStyles, makeStyles, styled} from "@material-ui/core/styles";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
-import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Link, Paper, Stack, Typography} from '@mui/material';
+import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
+import Link from 'next/link';
 
 export default function Photo({props}) {
     const {tags, images, image_more} = props
+    const view_option = "이미지";
     return(
-        <Card sx={{ maxWidth: 766}} variant='outlined' square>
+        <Card sx={{ maxWidth: 768}} variant='outlined' square>
             <CardHeader 
               className="api_title_area"
               title= {
@@ -44,6 +47,8 @@ export default function Photo({props}) {
               >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:12, paddingRight:12}}>
                 {tags&&tags.map((item) => (
+                  <Link href={item.tagURL}>
+                    <a>
                   <Chip 
                     key={item["tag_name"]}
                     avatar={<Avatar src ={item["tag_image_url"]} />}
@@ -51,19 +56,14 @@ export default function Photo({props}) {
                     variant="outlined"
                     style={{backgroundColor: "#ffffff"}}
                   />
+                    </a>
+                  </Link>
                 ))}
               </Stack>
               </Grid>
             </Paper>
             <StandardImageList props={images}/>
-            <Link href={image_more}>
-            <Paper 
-              style={{height: 50, overflow: 'auto', backgroundColor: '#f4f7f8'}}>
-              <Typography  style={{height:48, fontSize: 16, verticalAlign:'center', textAlign:'center'}}>
-                이미지 더보기 <ArrowForwardIcon sx={{mt:2}} style={{height: 16, width: 20}}/>
-              </Typography>
-            </Paper>
-            </Link>
+            <Morecontent props={{'view_option':view_option,'more_link':image_more}}/>
         </Card>
     )
 }
