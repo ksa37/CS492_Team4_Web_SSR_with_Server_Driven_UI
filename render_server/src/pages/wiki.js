@@ -1,6 +1,6 @@
-import NewsCard from '../components/Newscard'
+import PostCard from '../components/PostCard'
 import { Box } from '@mui/material';
-import Morecontent from '../components/Morecontent';
+import MoreContent from '../components/MoreContent';
 
 // var ViewType = Object.freeze({
 //     NEWS: 0,
@@ -15,11 +15,11 @@ export default function Wiki({props}) {
             (wiki) => 
                 <div>
                     <Box sx={{mb: 1.25}}>
-                        <NewsCard props={wiki} view={{ "viewType": "WIKI" }}/>
+                        <PostCard props={wiki} view={{ "viewType": "WIKI" }}/>
                     </Box>
                 </div>
         )}
-        <Morecontent props={{'view_option': "",'more_link':wiki_more}}/>
+        <MoreContent props={{'view_option': "",'more_link':wiki_more}}/>
         </>
     )
 }

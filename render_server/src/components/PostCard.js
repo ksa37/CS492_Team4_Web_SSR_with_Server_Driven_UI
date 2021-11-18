@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import styles from './newscard.module.css'
+import styles from './postCard.module.css'
 import Image from "next/image"
 import Morevert from './Morevert'
 import DateConvertor from './DateConvertor'
@@ -14,7 +14,7 @@ import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 // });
 // typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
-export default function NewsCard({props, view}) {  
+export default function PostCard({props, view}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL } = props
     const { viewType } = view
 

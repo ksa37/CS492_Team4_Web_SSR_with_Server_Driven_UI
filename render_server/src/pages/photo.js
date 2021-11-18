@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React from 'react';
 import StandardImageList from '../components/StandardImageList';
-import Morecontent from '../components/Morecontent';
+import MoreContent from '../components/MoreContent';
 
 
 import { red } from '@mui/material/colors';
@@ -66,7 +66,7 @@ export default function Photo({props}) {
             </Paper>
             <StandardImageList props={images}/>
         </Card>
-        <Morecontent props={{'view_option':view_option,'more_link':image_more}}/>
+        <MoreContent props={{'view_option':view_option,'more_link':image_more}}/>
         </>
     )
 }

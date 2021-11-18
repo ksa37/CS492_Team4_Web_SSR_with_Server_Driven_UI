@@ -4,7 +4,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Link from 'next/link';
 import styles from './component.module.css'
 
-export default function Morecontent({props}){
+export default function MoreContent({props}){
     const {view_option, more_link} = props;
     console.log(props);
     return(

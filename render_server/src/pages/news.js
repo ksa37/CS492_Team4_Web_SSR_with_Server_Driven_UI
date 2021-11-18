@@ -1,7 +1,7 @@
 import React from 'react'
-import NewsCard from '../components/Newscard'
+import PostCard from '../components/PostCard'
 import styles from './news.module.css'
-import Morecontent from '../components/Morecontent';
+import MoreContent from '../components/MoreContent';
 
 import { Card, CardHeader, Button, Grid, Paper, Stack } from '@mui/material';
 
@@ -71,9 +71,9 @@ export default function News({props}) {
             }
             style={{ textAlign: 'left'}}
         />
-        {news_posts&&news_posts.map((news) => <NewsCard props={news} view={{"viewType": "NEWS"}}/>)}
+        {news_posts&&news_posts.map((news) => <PostCard props={news} view={{"viewType": "NEWS"}}/>)}
       </Card>
-      <Morecontent props={{'view_option': "뉴스",'more_link':news_more}}/>
+      <MoreContent props={{'view_option': "뉴스",'more_link':news_more}}/>
       </>
     );
 }
