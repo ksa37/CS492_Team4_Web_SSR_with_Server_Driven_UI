@@ -36,6 +36,15 @@ a {
   text-decoration: underline;
   color: #0c43b7;
 }
+
+.content-title_rightend {
+  text-align: right;
+}
+.content-title_rightend:hover {
+  text-decoration: underline;
+  color: #0c43b7;
+}
+
 .title {
   font-weight: 700;
   color: #242424;
@@ -69,4 +78,7 @@ a {
 .image img {
   width: 100%;
   transition: 0.5s all ease-in-out;
+}
+.rightend {
+  text-align: right;
 }

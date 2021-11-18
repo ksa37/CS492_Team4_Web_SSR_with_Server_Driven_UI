@@ -1,27 +1,41 @@
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
+// import Grid from '@mui/material/Grid';
 // import ImageList from '@mui/material/ImageList';
 // import ImageListItem from '@mui/material/ImageListItem';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
-import CardContent from '@mui/material/CardContent';
+// import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-// import * as React from 'react';//
+// import IconButton from '@mui/material/IconButton';
+// import Typography from '@mui/material/Typography';
+import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 
-const [count, setCount] = useState(0);
+// require('react-dom');
+// window.React2 = require('react');
+// console.log(window.React1 === window.React2);
 
 function addblogfan() {
+  // const [login, setloggedin] = useState('false');
   var answer = window.confirm("로그인이 필요한 서비스입니다.\n로그인 하시겠습니까?");
   if (answer) {
-      window.location.href = "https://nid.naver.com/nidlogin.login?svctype=262144&url=https%3A%2F%2Fsearch.naver.com%2Fsearch.naver%3Fwhere%3Dnexearch%26sm%3Dtop_hty%26fbm%3D1%26ie%3Dutf8%26query%3D%25EB%25B6%2588%25EA%25B5%25AD%25EC%2582%25AC";
-  }
-  else {
-  }
+    window.location.href = "https://nid.naver.com/nidlogin.login?svctype=262144&url=https%3A%2F%2Fsearch.naver.com%2Fsearch.naver%3Fwhere%3Dnexearch%26sm%3Dtop_hty%26fbm%3D1%26ie%3Dutf8%26query%3D%25EB%25B6%2588%25EA%25B5%25AD%25EC%2582%25AC"
+      // if (login) {
+      //   console.log('찜하기 기능 실행')
+      // }
+      // else {window.location.href = "https://nid.naver.com/nidlogin.login?svctype=262144&url=https%3A%2F%2Fsearch.naver.com%2Fsearch.naver%3Fwhere%3Dnexearch%26sm%3Dtop_hty%26fbm%3D1%26ie%3Dutf8%26query%3D%25EB%25B6%2588%25EA%25B5%25AD%25EC%2582%25AC";
+      // }
+}
+  else {}
+}
+
+function influencer_icon(){
+  console.log('clicked')
+  const togglePopup = () => {
+    setShowPopup(!showPopup)
+  };
 }
 
 const dummydata = {
@@ -42,49 +56,61 @@ const dummydata = {
               "image" : ""
             },
             {
-              "name": "쏠트몬",
+              "name": "쏠트몬1",
               "type": "여행 작가",
-              "place": "국내 전문",
-              "fans": "팬 9,163",
-              "blogdetails": "2012 파워블로그 도서 출간 3권 도심 여행 선호 여행 리뷰",
+              "place": "| 국내 전문",
+              "fans": "| 팬 9,163",
+              "blogdetails": "2012 파워블로그",
+              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+              "detailsdepth": "· 도서 출간 3권 · 도심 여행 · 선호 여행 리뷰",
               "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
               "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
               "date": "2021.11.05",
               "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
               "image" : ""
             },
             {
-              "name": "쏠트몬",
+              "name": "쏠트몬2",
               "type": "여행 작가",
-              "place": "국내 전문",
-              "fans": "팬 9,163",
-              "blogdetails": "2012 파워블로그 도서 출간 3권 도심 여행 선호 여행 리뷰",
+              "place": "| 국내 전문",
+              "fans": "| 팬 9,163",
+              "blogdetails": "2012 파워블로그",
+              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+              "detailsdepth": "· 도서 출간 3권 · 도심 여행 · 선호 여행 리뷰",
               "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
               "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
               "date": "2021.11.05",
               "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
               "image" : ""
             },
             {
-              "name": "쏠트몬",
+              "name": "쏠트몬3",
               "type": "여행 작가",
-              "place": "국내 전문",
-              "fans": "팬 9,163",
-              "blogdetails": "2012 파워블로그 도서 출간 3권 도심 여행 선호 여행 리뷰",
+              "place": "| 국내 전문",
+              "fans": "| 팬 9,163",
+              "blogdetails": "2012 파워블로그",
+              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+              "detailsdepth": "· 도서 출간 3권 · 도심 여행 · 선호 여행 리뷰",
               "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
               "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
               "date": "2021.11.05",
               "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
               "image" : ""
             },
             {
-              "name": "쏠트몬",
+              "name": "쏠트몬4",
               "type": "여행 작가",
-              "place": "국내 전문",
-              "fans": "팬 9,163",
-              "blogdetails": "2012 파워블로그 도서 출간 3권 도심 여행 선호 여행 리뷰",
+              "place": "| 국내 전문",
+              "fans": "| 팬 9,163",
+              "blogdetails": "2012 파워블로그",
+              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+              "detailsdepth": "· 도서 출간 3권 · 도심 여행 · 선호 여행 리뷰",
               "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
               "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
               "date": "2021.11.05",
               "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
               "image" : ""
@@ -100,8 +126,14 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Home() {
   return (
     <Container>
+      <Card sx={{ maxWidth: 1150, my: '1px', lineHeight: "109px"}}>
+       <Container sx={{ display: 'flex' }}>
+          <Container sx={{ fontSize: '1.6rem', fontWeight : "700", display: 'flex'  }}> <div>인플루언서 </div> <div onClick = {influencer_icon}>  Icon </div> </Container>
+          <Container sx={{ color: "#0c43b7", fontSize: '1.3rem' }} className = "content-title_rightend"> <Link href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> </Container>
+        </Container>
+      </Card>
       {dummydata['influencer'].map((each) => 
-      <Card sx={{ maxWidth: 1150, my: '15px'}} >
+      <Card sx={{ maxWidth: 1150, my: '1px'}} key = {each.name}>
         <Container sx={{ display: 'flex' }}>
           <CardHeader
           avatar={
