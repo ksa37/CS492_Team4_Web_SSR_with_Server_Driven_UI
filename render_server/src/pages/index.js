@@ -175,12 +175,12 @@ export default function Home({data}) {
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
     <div className={styles.container}>
-      <Grid 
+      {/* <Grid 
         container
         justifyContent="center"
         alignItems="center"
         direction="column" 
-      >
+      > */}
         {news_view && 
         <div className="section_news">
           <News/>
@@ -189,7 +189,7 @@ export default function Home({data}) {
         <div className="section_image">
           <Photo props={data[1]["photo"]}/>  
         </div>}
-      </Grid>
+      {/* </Grid> */}
 
     </div>
     </ThemeProvider>
