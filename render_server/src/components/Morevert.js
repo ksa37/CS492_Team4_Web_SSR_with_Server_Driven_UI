@@ -32,7 +32,7 @@ export default function Morevert({props}) {
                     horizontal: 'right',
                 }}
                 transformOrigin={{
-                    // vertical: 'top',
+                    vertical: 'top',
                     horizontal: 'right',
                 }}
                 PaperProps={{

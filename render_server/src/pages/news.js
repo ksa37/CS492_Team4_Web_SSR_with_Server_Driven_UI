@@ -1,16 +1,42 @@
+import React from 'react'
 import NewsCard from '../components/Newscard'
 import styles from './news.module.css'
 
-import { Card, CardHeader, Grid, Paper, Stack } from '@mui/material';
+import { Card, CardHeader, Button, Grid, Paper, Stack } from '@mui/material';
 
 // date to millisecond convertor: https://currentmillis.com
 
 
 export default function News({props}) {
   const {news_posts, news_more} = props
-  console.log(props)
+  // console.log(props)
+
+  const [sort, setSort] = React.useState(null);
+  const [sortRelated, setSortRelated] = React.useState(null);
+  const [sortLastest, setSortLastest] = React.useState(null);
+  const isRelated = Boolean(sort);
+  const sortRelatedClick = (event) => {
+    // setSort(event.currentTarget);
+    console.log("--------");
+    console.log(isRelated);
+    setSort(!sort);
+    console.log(event.currentTarget);
+    // console.log(event.target);
+    console.log(isRelated);
+  };
+  const sortLastestClick = (event) => {
+    // setSort(event.currentTarget);
+    console.log("--------");
+    console.log(isRelated);
+    setSort(!sort);
+    console.log(event.currentTarget);
+    // console.log(event.target);
+    console.log(isRelated);
+  };
+  
+
   return (
-    <Card sx={{ maxWidth: 766}} variant='outlined' square>
+    <Card sx={{ maxWidth: 768}} variant='outlined' square>
         <CardHeader 
             className="api_title_area"
             title= {
@@ -20,8 +46,21 @@ export default function News({props}) {
                 <div className={styles.viewHeader}>
                 <div className={styles.viewName}>뉴스</div>
                 <div className={styles.viewOptions}>
-                    <div className={styles.viewSort}>관련도순</div>
-                    <div className={styles.viewSort}>최신순</div>
+                    {/* <div className={styles.viewSort}> */}
+                      <button className={styles.btn}
+                        onClick={sortRelatedClick}
+                      >
+                        관련도순
+                      </button>
+                    {/* </div> */}
+                    {/* <div className={styles.viewSort}> */}
+                      <button className={styles.btn}
+                        onClick={sortLastestClick}
+                      >
+                        최신순
+                      </button>
+                      {/* 최신순 */}
+                    {/* </div> */}
                 </div>
             </div>
             }

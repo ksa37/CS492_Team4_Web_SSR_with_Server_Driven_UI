@@ -6,7 +6,7 @@ import Morevert from './Morevert'
 import DateConvertor from './DateConvertor'
 
 
-import { Card, CardContent, CardHeader } from '@mui/material';
+import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 
 
 export default function NewsCard({props}) {  
@@ -24,6 +24,7 @@ export default function NewsCard({props}) {
         setAnchorEl(null);
     };
 
+    var isWiki = false;
     return (
         <Card sx={{ maxWidth: 766 }} square > 
             <CardHeader 
@@ -76,6 +77,7 @@ export default function NewsCard({props}) {
                 <Link href={newsURL}>
                     <a>
                         <div className={styles.title}>{title}</div>
+                        {isWiki && <Divider margin='10px'/>}
                         <div className={styles.contentsInfo}>
                             <div className={styles.contents}>{contents}</div>
                             {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
