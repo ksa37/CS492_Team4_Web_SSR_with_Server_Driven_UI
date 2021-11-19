@@ -1,23 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React from 'react';
-import StandardImageList from '../components/StandardImageList';
-
-
-import { red } from '@mui/material/colors';
-import { IconButtonProps } from '@mui/material/IconButton';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
-// import { withStyles, makeStyles, styled} from "@material-ui/core/styles";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
-import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Link, Paper, Stack, Typography} from '@mui/material';
-import { Box, minHeight } from '@mui/system';
+import { CssBaseline, Typography} from '@mui/material';
+import { Box } from '@mui/system';
 
 import News from './news';
 import Photo from './photo';
