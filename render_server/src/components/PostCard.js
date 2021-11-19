@@ -1,16 +1,23 @@
 import React from 'react'
 import Link from 'next/link'
-import styles from './newscard.module.css'
+import styles from './postCard.module.css'
 import Image from "next/image"
 import Morevert from './Morevert'
 import DateConvertor from './DateConvertor'
 
 
-import { Card, CardContent, CardHeader } from '@mui/material';
+import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 
+// var ViewType = Object.freeze({
+//     NEWS: 0,
+//     WIKI: 1
+// });
+// typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
-export default function NewsCard({props}) {  
-    const { publisherURL, publisherImgURL, publisher, date, newsURL, title, contents, contentsImgURL } = props
+export default function PostCard({props, view}) {  
+    const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL } = props
+    const { viewType } = view
+
     const now = Date.now()
     var converted_date = DateConvertor(date)
 
@@ -23,6 +30,13 @@ export default function NewsCard({props}) {
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    // var isWiki = true;
+    // var isWiki = false;
+    // var viewType = ViewType.NEWS;
+    // var viewType = ViewType.WIKI;
+    // console.log(viewType)
+    // console.log(props)
 
     return (
         <Card sx={{ maxWidth: 766 }} square > 
@@ -58,9 +72,12 @@ export default function NewsCard({props}) {
                                 <div className={styles.publisher}>{publisher}</div>
                             </a>
                         </Link>
-                        <hr className={styles.verticalDivider}></hr>
-                        <div className={styles.date}>{converted_date}</div>
-                        {/* <div className={styles.date}>{date}</div> */}
+                        { viewType != "WIKI" &&
+                            <hr className={styles.verticalDivider}></hr>
+                        }
+                        { date != "" &&
+                            <div className={styles.date}>{converted_date}</div>
+                        }
                     </div>
                 }
                 action = {
@@ -69,13 +86,17 @@ export default function NewsCard({props}) {
                         "anchorEl": anchorEl, 
                         "handleClick": handleClick, 
                         "handleClose": handleClose
-                    }}/>
+                    }}
+                    />
                 }
             />
-            <CardContent sx={{ m: 0, p: 0, paddingTop: '8px', paddingLeft: '16px', paddingRight: '16px', marginBottom: '10px' }} variant="contained" >
-                <Link href={newsURL}>
+            <CardContent sx={{ m: 0, p: 0, paddingLeft: '16px', paddingRight: '16px', marginBottom: '10px' }} variant="contained" >
+                <Link href={postURL}>
                     <a>
                         <div className={styles.title}>{title}</div>
+                        { viewType == "WIKI" && <Divider 
+                            sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
+                        />}
                         <div className={styles.contentsInfo}>
                             <div className={styles.contents}>{contents}</div>
                             {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
