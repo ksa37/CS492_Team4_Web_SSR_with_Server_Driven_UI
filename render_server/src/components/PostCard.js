@@ -8,10 +8,10 @@ import DateConvertor from './DateConvertor'
 
 import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 
-// var ViewType = Object.freeze({
-//     NEWS: 0,
-//     WIKI: 1
-// });
+var ViewType = Object.freeze({
+    NEWS: 0,
+    WIKI: 1
+});
 // typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
 export default function PostCard({props, view}) {  
@@ -35,7 +35,7 @@ export default function PostCard({props, view}) {
     // var isWiki = false;
     // var viewType = ViewType.NEWS;
     // var viewType = ViewType.WIKI;
-    // console.log(viewType)
+    console.log(viewType)
     // console.log(props)
 
     return (
@@ -72,7 +72,8 @@ export default function PostCard({props, view}) {
                                 <div className={styles.publisher}>{publisher}</div>
                             </a>
                         </Link>
-                        { viewType != "WIKI" &&
+                        { viewType != ViewType.WIKI &&
+                        // { viewType != "WIKI" &&
                             <hr className={styles.verticalDivider}></hr>
                         }
                         { date != "" &&
@@ -94,7 +95,8 @@ export default function PostCard({props, view}) {
                 <Link href={postURL}>
                     <a>
                         <div className={styles.title}>{title}</div>
-                        { viewType == "WIKI" && <Divider 
+                        { viewType == ViewType.WIKI && <Divider 
+                        // { viewType == "WIKI" && <Divider 
                             sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
                         />}
                         <div className={styles.contentsInfo}>
