@@ -10,26 +10,26 @@ export default function MoreContent({props}){
     return(
         <div className={styles.moreContent} >
             <Link href={more_link}>
-                        <a>
-                        <Paper 
-                            style={{ maxWidth:767, height: 50, borderRadius: 0, backgroundColor: '#f4f7f8'}}>
-                            {/* {<Typography  style={{height:48, fontSize: 16, verticalAlign:'center', textAlign:'center'}}>
-                            {view_option} 더보기 <ArrowForwardIcon sx={{mt:2}} style={{height: 16, width: 20}}/>
-                            </Typography>} */}
-                            {<div className={styles.moreContentText}>
-                                <Box sx={{m: 0.5}}/>
-                                <Typography  style={{ fontSize: 16, verticalAlign:'center', textAlign:'center'}}>
-                                    {view_option} 더보기 {<img src="/icons/forward_arrow.svg"/>}
-                                </Typography>
-                                <Box sx={{m: 0.5}}/>
-                            </div> 
-                            }
-                            {/* <div className={styles.moreContent}>
-                                {view_option} 더보기 <img src="/icons/forward_arrow.svg"/>
-                            </div> */}
-                        </Paper>
-                        </a>
-                    </Link>
+                <a>
+                <Paper 
+                    style={{ maxWidth:767, height: 50, borderRadius: 0, backgroundColor: '#f4f7f8'}}>
+                    {/* {<Typography  style={{height:48, fontSize: 16, verticalAlign:'center', textAlign:'center'}}>
+                    {view_option} 더보기 <ArrowForwardIcon sx={{mt:2}} style={{height: 16, width: 20}}/>
+                    </Typography>} */}
+                    {<div className={styles.moreContentText}>
+                        <Box sx={{m: 0.5}}/>
+                        <Typography  style={{ fontSize: 16, verticalAlign:'center', textAlign:'center'}}>
+                            {view_option} 더보기 {<img src="/icons/forward_arrow.svg"/>}
+                        </Typography>
+                        <Box sx={{m: 0.5}}/>
+                    </div> 
+                    }
+                    {/* <div className={styles.moreContent}>
+                        {view_option} 더보기 <img src="/icons/forward_arrow.svg"/>
+                    </div> */}
+                </Paper>
+                </a>
+            </Link>
         </div>
        
     );

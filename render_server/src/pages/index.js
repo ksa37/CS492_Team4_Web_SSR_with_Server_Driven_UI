@@ -64,12 +64,6 @@ export default function Home({data}) {
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
     <div className={styles.container}>
-      {/* <Grid 
-        container
-        justifyContent="center"
-        alignItems="center"
-        direction="column" 
-      > */}
         {news_view && 
         <div className="section_news">
           <News props={data[1]["news"]}/>
@@ -82,8 +76,6 @@ export default function Home({data}) {
         <div className="section_image">
           <Photo props={data[1]["photo"]}/>  
         </div>}
-      {/* </Grid> */}
-
     </div>
     </ThemeProvider>
 
