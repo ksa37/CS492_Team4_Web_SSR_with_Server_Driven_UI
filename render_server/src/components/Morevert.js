@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import styles from './morevert.module.css'
+import styles from './component.module.css'
 
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 
@@ -32,7 +32,7 @@ export default function Morevert({props}) {
                     horizontal: 'right',
                 }}
                 transformOrigin={{
-                    // vertical: 'top',
+                    vertical: 'top',
                     horizontal: 'right',
                 }}
                 PaperProps={{
