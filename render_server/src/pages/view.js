@@ -4,6 +4,7 @@ import MoreContent from '../components/MoreContent';
 import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
 import Link from 'next/link'
 import PostCard from '../components/PostCard';
+import ViewCard from '../components/ViewCard';
 
 export default function View({props}){
     const view_option = "VIEW";
@@ -23,6 +24,7 @@ export default function View({props}){
             <Paper 
                 className="group_option_tag_wrap" 
                 style={{height: 83, overflow: 'auto', backgroundColor:'#f8fafb'}}
+                square
             >
                 <Grid
                 container
@@ -50,7 +52,7 @@ export default function View({props}){
                 </Stack>
                 </Grid>
             </Paper>
-            {view_posts&&view_posts.map((view) => <PostCard props={view} view={{"viewType": "NEWS"}}/>)}
+            {view_posts&&view_posts.map((view) => <ViewCard props={view} view={{"viewType": "NEWS"}}/>)}
         </Card>
         <MoreContent props={{'view_option':view_option,'more_link':view_more}}/>
     </>

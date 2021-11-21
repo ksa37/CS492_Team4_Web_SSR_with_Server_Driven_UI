@@ -37,6 +37,7 @@ export default function Photo({props}) {
             <Paper 
               className="group_option_tag_wrap" 
               style={{height: 83, overflow: 'auto', backgroundColor: '#f5f7f8'}}
+              square
             >
               <Grid
                 container
