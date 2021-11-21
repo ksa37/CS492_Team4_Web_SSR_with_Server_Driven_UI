@@ -2,20 +2,14 @@ export default function DateConvertor(str_postDate) {
     const now = new Date()
     var postDate = new Date(parseInt(str_postDate))
     var dateText = ""
-    
-    // console.log("NOW:", now)
-    // console.log("Post:", postDate)
 
     var dateDiff = Math.floor((now.getTime()-postDate.getTime())/(1000*3600*24))
     
     if (dateDiff == 0) {
-        // console.log("1")
         var hourDiff = Math.floor((now.getTime()-postDate.getTime())/(1000*3600))
         dateText = hourDiff + "시간 전"
     }
     else if (dateDiff < 8) {
-    // else if (dateDiff < 5) {
-        // console.log("2")
         dateText = dateDiff + "일 전"
     }
     else {

@@ -1,18 +1,11 @@
 import React from 'react'
-import Link from 'next/link'
+import Link from '@mui/material/Link';
 import styles from './postCard.module.css'
-import Image from "next/image"
 import Morevert from './Morevert'
 import DateConvertor from './DateConvertor'
-
+import Image from 'material-ui-image'
 
 import { Card, CardContent, CardHeader, Divider } from '@mui/material';
-
-// var ViewType = Object.freeze({
-//     NEWS: 0,
-//     WIKI: 1
-// });
-// typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
 export default function PostCard({props, view}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL } = props
@@ -31,13 +24,6 @@ export default function PostCard({props, view}) {
         setAnchorEl(null);
     };
 
-    // var isWiki = true;
-    // var isWiki = false;
-    // var viewType = ViewType.NEWS;
-    // var viewType = ViewType.WIKI;
-    // console.log(viewType)
-    // console.log(props)
-
     return (
         <Card sx={{ maxWidth: 766 }} square > 
             <CardHeader 
@@ -49,17 +35,20 @@ export default function PostCard({props, view}) {
                                 {publisherImgURL == ""
                                 ? <Image className={styles.publisherImg}
                                     src="/images/default_publisher.png" 
-                                    width='100%'
-                                    height='100%'
-                                    objectFit='contain'
+                                    style={{
+                                        width:'100%',
+                                        height:'100%',
+                                        objectFit:'contain',
+                                    }}
                                 />
                                 : <Image className={styles.publisherImg}
                                     
                                     src={publisherImgURL}
-                                    // src={contentsImgURL}
-                                    width='100%'
-                                    height='100%'
-                                    objectFit='contain'
+                                    style={{
+                                        width:'100%',
+                                        height:'100%',
+                                        objectFit:'contain',
+                                    }}
                                 />}
                             </div>
                         </a>
@@ -102,10 +91,11 @@ export default function PostCard({props, view}) {
                             {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
                                 <Image className={styles.contentsImg}
                                     src={contentsImgURL}
-                                    // width='100%'
-                                    width='88px'
-                                    height='100%'
-                                    objectFit='contain'
+                                    style={{
+                                        width:'88px',
+                                        height:'100%',
+                                        objectFit:'contain',
+                                    }}
                                 /> 
                             </div>}
                         </div>
