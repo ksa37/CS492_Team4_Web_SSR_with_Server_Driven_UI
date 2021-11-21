@@ -1,9 +1,10 @@
 import React from 'react'
-import Link from '@mui/material/Link';
-import styles from './postCard.module.css'
+import Link from '@mui/material/Link'
+import styles from '../styles/postCard.module.css'
+import Box from '@mui/material/Box';
 import Morevert from './Morevert'
 import DateConvertor from './DateConvertor'
-import Image from 'material-ui-image'
+
 
 import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 
@@ -23,7 +24,6 @@ export default function PostCard({props, view}) {
     const handleClose = () => {
         setAnchorEl(null);
     };
-
     return (
         <Card sx={{ maxWidth: 766 }} square > 
             <CardHeader 
@@ -33,22 +33,13 @@ export default function PostCard({props, view}) {
                         <a>
                             <div className={styles.publisherImgBoarder}>
                                 {publisherImgURL == ""
-                                ? <Image className={styles.publisherImg}
-                                    src="/images/default_publisher.png" 
-                                    style={{
-                                        width:'100%',
-                                        height:'100%',
-                                        objectFit:'contain',
-                                    }}
+                                ? <Box className={styles.publisherImg}
+                                    component="img"
+                                    src="/images/default_publisher.png"
                                 />
-                                : <Image className={styles.publisherImg}
-                                    
+                                : <Box className={styles.publisherImg}
+                                    component="img"                                    
                                     src={publisherImgURL}
-                                    style={{
-                                        width:'100%',
-                                        height:'100%',
-                                        objectFit:'contain',
-                                    }}
                                 />}
                             </div>
                         </a>
@@ -89,13 +80,9 @@ export default function PostCard({props, view}) {
                         <div className={styles.contentsInfo}>
                             <div className={styles.contents}>{contents}</div>
                             {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
-                                <Image className={styles.contentsImg}
+                                <Box className={styles.contentsImg}
                                     src={contentsImgURL}
-                                    style={{
-                                        width:'88px',
-                                        height:'100%',
-                                        objectFit:'contain',
-                                    }}
+                                    sx={{width:88,}}
                                 /> 
                             </div>}
                         </div>
