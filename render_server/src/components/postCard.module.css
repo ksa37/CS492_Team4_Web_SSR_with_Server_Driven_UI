@@ -105,5 +105,7 @@
     border-left: solid rgb(234, 235, 236) 2px;
     padding-left: 11px;
     font-size: 0.86rem;
-    /* white-space: pre-line; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

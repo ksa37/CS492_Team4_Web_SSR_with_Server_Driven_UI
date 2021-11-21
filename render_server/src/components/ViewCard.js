@@ -138,13 +138,13 @@ export default function ViewCard({props, view}) {
                 </Stack>
             </Paper>
             
-            {/* {more_links_exist&&<div className={styles.linkArea}>
+            {more_links_exist&&<div className={styles.linkArea}>
                 <div className={styles.linkLine}>
                     {more_links&&more_links.map((item) => (
                         <>
                         <Link href={item.link_url}>
                             <a>
-                            {item.link_name}\n
+                            {item.link_name} <br/>
                             </a>
                         </Link>
                         
@@ -153,7 +153,7 @@ export default function ViewCard({props, view}) {
 
                     )}
                 </div>
-            </div>} */}
+            </div>}
         </Card>
     )
 }
