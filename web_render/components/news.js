@@ -2,10 +2,10 @@ import React from 'react'
 import styles from '../styles/news.module.css'
 import PostCard from './PostCard'
 import MoreContent from './MoreContent';
-
 import { Card, CardHeader } from '@mui/material';
 export default function News({props}) {
   const {news_posts, news_more, } = props
+  console.log(props)
 
   const [sort, setSort] = React.useState(null);
   const [sortRelated, setSortRelated] = React.useState(null);

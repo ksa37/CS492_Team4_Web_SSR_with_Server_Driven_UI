@@ -1,11 +1,7 @@
+import * as React from 'react';
 import PostCard from '../components/PostCard'
 import { Box } from '@mui/material';
 import MoreContent from '../components/MoreContent';
-
-// var ViewType = Object.freeze({
-//     NEWS: 0,
-//     WIKI: 1
-// });
 
 export default function Wiki({props}) {
     const {wiki_posts, wiki_more} = props
