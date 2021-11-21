@@ -11,9 +11,9 @@ a {
 }
 .fanicon {
   margin-top: 30px;
-  margin-left: 150px;
   width: 140px;
   height: 70px;
+  float: right;
 }
 .blogicon {
   margin-top: 3px;
@@ -30,7 +30,6 @@ a {
   color: grey;
   font-size: 1.3rem;
   line-height: 1.8rem;
-  margin-left: 10px;
 }
 .content-title:hover {
   text-decoration: underline;
@@ -81,4 +80,7 @@ a {
 }
 .rightend {
   text-align: right;
+}
+.right {
+  float: right;
 }

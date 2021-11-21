@@ -44,7 +44,7 @@ const dummydata = {
               "name": "쏠트몬",
               "type": "여행 작가",
               "place": "| 국내 전문",
-              "fans": "| 팬 9,163",
+              "fans": "팬 9,163",
               "blogdetails": "2012 파워블로그",
               "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
               "detailsdepth": "· 도서 출간 3권 · 도심 여행 · 선호 여행 리뷰",
@@ -126,28 +126,29 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Home() {
   return (
     <Container>
-      <Card sx={{ maxWidth: 1150, my: '1px', lineHeight: "109px"}}>
+      <Card sx={{ maxWidth: 1150, lineHeight: "109px"}}>
        <Container sx={{ display: 'flex' }}>
           <Container sx={{ fontSize: '1.6rem', fontWeight : "700", display: 'flex'  }}> <div>인플루언서 </div> <div onClick = {influencer_icon}>  Icon </div> </Container>
           <Container sx={{ color: "#0c43b7", fontSize: '1.3rem' }} className = "content-title_rightend"> <Link href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> </Container>
         </Container>
       </Card>
       {dummydata['influencer'].map((each) => 
-      <Card sx={{ maxWidth: 1150, my: '1px'}} key = {each.name}>
+      <Card sx={{ maxWidth: 1150}} key = {each.name}>
         <Container sx={{ display: 'flex' }}>
           <CardHeader
           avatar={
             <Link href={each.avatar_name_url}> 
-            <Avatar sx = {{ width: 88, height: 88, ml: '35px', my: '5px', display:'inline-block'}} alt="" src="/static/images/avatar/avatar_1.png"/>
+            <Avatar sx = {{ width: 88, height: 88, display:'inline-block'}} alt="" src="/static/images/avatar/avatar_1.png"/>
             </Link>
           }
-          title= {<div> <Link href={each.avatar_name_url} underline="none"> <ui className = 'title'>{each.name}</ui> </Link> <ui className = 'header'>{each.type}</ui> <ui className = 'header'>{each.place}</ui> <ui className = 'header'>{each.fans}</ui> </div> }
-          subheader= {<div className = 'magintop'> <img className = "blogicon" src="/static/images/avatar/blogicon.png"/> <ui className = 'subheader'> {each.blogdetails} </ui> <ui className = 'detailsdepth'> {each.detailsdepth} </ui> </div>}
+          title= {<div> <Link href={each.avatar_name_url} underline="none"> <ui className = 'title'>{each.name}</ui> </Link> <ui className = 'header'>{each.fans}</ui> </div> }
+          subheader= {<div className = 'magintop'> <ui className = 'header'>{each.type}</ui> <ui className = 'header'>{each.place}</ui> </div>}
           />
-          <div> <img onClick = {addblogfan} className = "fanicon" src="/static/images/avatar/fanicon.png"/> </div>
+          <div className = 'right'> <img onClick = {addblogfan} className = "fanicon" src="/static/images/avatar/fanicon.png"/> </div>
         </Container>
         <Container sx={{ display: 'flex' }}>
           <Container>
+            <Container> <img className = "blogicon" src="/static/images/avatar/blogicon.png"/> <ui className = 'subheader'> {each.blogdetails} </ui> <ui className = 'detailsdepth'> {each.detailsdepth} </ui> </Container>
             <Link href={each.title_content_url} underline="none"> <Container sx={{color: '#0c43b7', fontSize: '1.6rem' }} className = 'content-title'> {each.title} </Container> </Link>
             <Link href={each.title_content_url} underline="none"> <Container sx={{my: '10px', color: "#404040", fontSize: '1.3rem' }}> {each.content} </Container> </Link>
             <Container sx={{my: '10px', color: 'grey', fontSize: '1.1rem' }}> {each.date} </Container>
