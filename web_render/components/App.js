@@ -5,6 +5,7 @@ import Photo from './photo';
 import Wiki from './wiki';
 
 export default function App(data) {
+  console.log(data)
   const json = data.input.keywords[1]
   const news_view =  json.view.includes("news");
   const photo_view = json.view.includes("photo");

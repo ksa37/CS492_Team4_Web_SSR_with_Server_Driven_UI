@@ -42,13 +42,13 @@ export default function Morevert({props}) {
                 <MorevertMenuItem props = {{
                     "handleClose": handleClose,
                     "text": "Keep에 저장",
-                    "srcURL": '/icons/bookmark.svg'
+                    "srcURL": '/images/svg/bookmark.svg'
                 }}/>
                 <Divider/>
                 <MorevertMenuItem props = {{
                     "handleClose": handleClose,
                     "text": "Keep 바로가기",
-                    "srcURL": '/icons/forward.svg'
+                    "srcURL": '/images/svg/forward.svg'
                 }}/>
             </Menu>
         </div>

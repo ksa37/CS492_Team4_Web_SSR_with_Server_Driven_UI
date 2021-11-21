@@ -5,7 +5,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import App from './App.js'
 
 export default function Main(props) {
-    console.log(props)
     const {cache, theme, data, } = {props}
     return (
         <CacheProvider value={cache}>

@@ -8,15 +8,15 @@ import themeLight from './components/themeLight';
 import createEmotionCache from './components/createEmotionCache';
 
 const cache = createEmotionCache();
-const input = window.DATA
-function Main(cache, theme, data) {
+const data = window.DATA
+function Main() {
     return (
       <CacheProvider value={cache}>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={themeLight}>
           <CssBaseline />
           <App input={data}/>
         </ThemeProvider>
       </CacheProvider>
     );
   }
-ReactDOM.hydrate(<Main cache={cache} theme={themeLight} data={input}/>, document.querySelector('#root'));
+ReactDOM.hydrate(<Main />, document.querySelector('#root'));

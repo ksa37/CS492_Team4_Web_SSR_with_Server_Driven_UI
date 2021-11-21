@@ -14,7 +14,7 @@ export default function MoreContent({props}){
                         {<div className={styles.moreContentText}>
                             <Box sx={{m: 0.5}}/>
                             <Typography  style={{ fontSize: 16, verticalAlign:'center', textAlign:'center'}}>
-                                {view_option} 더보기 {<img src="/icons/forward_arrow.svg"/>}
+                                {view_option} 더보기 {<img src="/images/svg/forward_arrow.svg"/>}
                             </Typography>
                             <Box sx={{m: 0.5}}/>
                         </div> 
