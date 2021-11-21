@@ -22,6 +22,7 @@ import { Box, minHeight } from '@mui/system';
 import News from './news';
 import Photo from './photo';
 import Wiki from './wiki';
+import View from './view';
 
 const themeLight = createTheme({
   palette: {
@@ -59,14 +60,15 @@ export default function Home({data}) {
   const news_view =  data[1]["view"].includes("news");
   const photo_view = data[1]["view"].includes("photo");
   const wiki_view = data[1]["view"].includes("wiki");
+  const view_view = data[1]["view"].includes("review");
   return (
    
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
     <div className={styles.container}>
-        {news_view && 
-        <div className="section_news">
-          <News props={data[1]["news"]}/>
+        {view_view&&
+        <div className="section_image">
+          <View props={data[1]["review"]}/>  
         </div>}
         {wiki_view && 
         <div className="section_wiki">
@@ -76,6 +78,12 @@ export default function Home({data}) {
         <div className="section_image">
           <Photo props={data[1]["photo"]}/>  
         </div>}
+        {news_view && 
+        <div className="section_news">
+          <News props={data[1]["news"]}/>
+        </div>}
+        
+        
     </div>
     </ThemeProvider>
 

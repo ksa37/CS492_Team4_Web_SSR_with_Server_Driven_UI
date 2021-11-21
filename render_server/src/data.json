@@ -111,7 +111,7 @@
       
       {
       "keyword": "파리",
-      "view": [ "photo", "news", "wiki" ],
+      "view": [ "photo", "news", "wiki", "review" ],
       "photo": {
         "tags": [
                   {
@@ -294,8 +294,101 @@
             
             ],
             "wiki_more": "https://m.search.naver.com/search.naver?page=2&query=%ED%8C%8C%EB%A6%AC&sm=mtb_pge&start=1&where=m_web" 
+            },
+    "review": {
+        "tags": [
+            {
+              "tag_name": "프랑스",
+              "tag_image_url": "/images/photos/photos_tag_images/paris_tag1.png",
+              "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%94%84%EB%9E%91%EC%8A%A4%20%ED%8C%8C%EB%A6%AC&pq=%ED%8C%8C%EB%A6%AC"
+            },
+            {
+              "tag_name": "국기",
+              "tag_image_url": "/images/photos/photos_tag_images/paris_tag2.png",
+              "tagURL" : "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EA%B5%AD%EA%B8%B0&pq=%ED%8C%8C%EB%A6%AC"
+            },
+            {
+              "tag_name": "지도",
+              "tag_image_url": "/images/photos/photos_tag_images/paris_tag3.png",
+              "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%A7%80%EB%8F%84&pq=%ED%8C%8C%EB%A6%AC"
+            },
+            {
+              "tag_name": "생제르맹",
+              "tag_image_url": "/images/photos/photos_tag_images/paris_tag4.png",
+              "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%83%9D%EC%A0%9C%EB%A5%B4%EB%A7%B9&pq=%ED%8C%8C%EB%A6%AC"
+            },
+            {
+              "tag_name": "에펠탑",
+              "tag_image_url": "/images/photos/photos_tag_images/paris_tag5.png",
+              "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
+            },
+            {
+              "tag_name": "야경",
+              "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
+              "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
             }
-          },
+          ],
+        "view_posts": [
+            { 
+                "publisherURL": "https://in.naver.com/hug387",
+                "publisherImgURL": "/images/view/blog_logo1.jpeg",
+                "publisher": "유지니",
+                "date": "",
+                "postURL": "https://m.blog.naver.com/hug387/222569690308",
+                "title": "호탤스닷컴 11월 할인코드 파리여행 준비해볼까~",
+                "contents": "직접 보여드릴게요, 파리 숙소를 검색했더니 다양한 호텔들이 나와요. 여기서 기본적으로... 다시가고 싶은 파리여행 뭘해도 재밌었다, 라는 생각이 드는 파리. 2020년 1월에...",
+                "contentsImgURL": "/images/view/blog_img1.png",
+                "relation": ""
+            },
+            { 
+                "publisherURL": "https://m.blog.naver.com/amy201427",
+                "publisherImgURL": "/images/view/blog_logo2.jpeg",
+                "publisher": "Chez Amy (·ㅅ·)♥",
+                "date": "",
+                "postURL": "https://m.blog.naver.com/amy201427/222573481510",
+                "title": "파리 블랙프라이데이에 낚인 라발레빌리지 아울렛 feat. FURLA 백팩",
+                "contents": "파리 블랙프라이데이에 낚인 라발레빌리지 아울렛 feat. FURLA 백팩 작년에 이어 올해도 어김없이 파리 블랙프라이데이가 돌아왔음 :) 작년과 다르게 올해는 위드코로나로 관광객들이...",
+                "contentsImgURL": "/images/view/blog_img2.png",
+                "relation": ""
+            },
+            { 
+                "publisherURL": "https://m.post.naver.com/my.naver?memberNo=15792726",
+                "publisherImgURL": "/images/view/blog_logo3.jpeg",
+                "publisher": "트래비",
+                "date": "",
+                "postURL": "https://m.post.naver.com/viewer/postView.naver?volumeNo=32649551&memberNo=15792726&vType=VERTICAL",
+                "title": "낭만과 고독 사이, 11월의 파리",
+                "contents": "11월의 파리는 쌀쌀하다.소나기도 자주 내리고,흐린 날도 더러 있다.그럼에도 여행은 낭만적이다.때론 고독하기도 하고.  파리의 낭만적인, 혹은 고독한 거리 L'Horizon 120 Rue de...",
+                "contentsImgURL": "/images/view/blog_img3.jpeg",
+                "relation": ""
+            },
+            { 
+                "publisherURL": "https://in.naver.com/charla1005",
+                "publisherImgURL": "/images/view/blog_logo4.jpeg",
+                "publisher": "샬라",
+                "date": "",
+                "postURL": "https://m.blog.naver.com/charla1005/222564450060",
+                "title": "파리 자유여행 몽파르나스 전망대 야경명소",
+                "contents": "파리 자유여행 몽파르나스 전망대 야경명소 2019년 11월, 딱 2년전 다녀온 파리 자유여행 :D 추울건 알고 갔지만.... 진짜 작정하고 추웠던 11월의 파리 ^_ㅜ 추운걸로 시작해서...",
+                "contentsImgURL":  "/images/view/blog_img4.png",
+                "relation": ""
+            },
+            { 
+                "publisherURL": "https://m.blog.naver.com/ghdtlr1130",
+                "publisherImgURL": "/images/view/blog_logo5.jpeg",
+                "publisher": "레이디마마",
+                "date": "",
+                "postURL": "https://m.blog.naver.com/ghdtlr1130/222573197981",
+                "title": "프랑스 파리 Paris- Versailles베르사유, bateau mouche바토무슈, Eiffel Tower에펠탑 (2021.09....",
+                "contents": "모두의 로망 파리~ 아닌가? 유로스타를 타려고 했는데, 몇개월전에 미리 예약하면... 차타고 런던에서 파리가기! eurotunnel 유로터널. 언젠가는 가봐야지했는데 바로 가게되다니. 차를...",
+                "contentsImgURL": "/images/view/blog_img5.png",
+                "relation": ""
+            }
+            
+            ],
+            "view_more": "https://m.search.naver.com/search.naver?where=m_view&sm=mtb_nrm&query=%ED%8C%8C%EB%A6%AC&mode=normal&nso=" 
+            }
+        },
           {
               "keyword": "모가디슈"
 

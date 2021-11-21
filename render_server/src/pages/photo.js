@@ -5,8 +5,6 @@ import React from 'react';
 import StandardImageList from '../components/StandardImageList';
 import MoreContent from '../components/MoreContent';
 
-
-import { red } from '@mui/material/colors';
 import { IconButtonProps } from '@mui/material/IconButton';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
