@@ -5,6 +5,7 @@ import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, 
 import Link from 'next/link'
 import PostCard from '../components/PostCard';
 import ViewCard from '../components/ViewCard';
+import ViewCardMultimeda from '../components/ViewCardMultimedia'
 
 export default function View({props}){
     const view_option = "VIEW";
@@ -52,7 +53,8 @@ export default function View({props}){
                 </Stack>
                 </Grid>
             </Paper>
-            {view_posts&&view_posts.map((view) => <ViewCard props={view} view={{"viewType": "NEWS"}}/>)}
+            {view_posts&&view_posts.slice(0, 5).map((view) => <ViewCard props={view} view={{"viewType": "NEWS"}}/>)}
+            {view_posts&&view_posts.slice(0, 3).map((view) => <ViewCardMultimeda props={view} view={{"viewType": "NEWS"}}/>)}
         </Card>
         <MoreContent props={{'view_option':view_option,'more_link':view_more}}/>
     </>

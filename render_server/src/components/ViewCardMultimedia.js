@@ -8,7 +8,7 @@ import DateConvertor from './DateConvertor'
 
 import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack} from '@mui/material';
 
-export default function ViewCard({props, view}) {  
+export default function ViewCardMultimeda({props, view}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, tags, more_links} = props
     const { viewType } = view
 
@@ -30,21 +30,21 @@ export default function ViewCard({props, view}) {
     return (
         <Card sx={{ maxWidth: 766 }} square > 
             <CardHeader 
-                sx={{ m: 0, p:0, paddingTop: '8px', paddingLeft: '16px', paddingRight: '8px', paddingBottom: '0px', '& .MuiCardHeader-avatar': {
-                    marginRight: '8px',
+                sx={{ m: 0, p:0, paddingTop: '12px', paddingLeft: '18px', paddingRight: '10px', paddingBottom: '12px', '& .MuiCardHeader-avatar': {
+                    marginRight: '11px',
                   }}} variant="contained"
                 avatar={
                     <Link href={publisherURL}>
                         <a>
-                            <div className={styles.publisherImgBoarder}>
+                            <div className={styles.viewMultiImgBoarder }>
                                 {publisherImgURL == ""
-                                ? <Image className={styles.publisherImg}
+                                ? <Image className={styles.viewMultiImgBoarder }
                                     src="/images/default_publisher.png" 
                                     width='100%'
                                     height='100%'
                                     objectFit='contain'
                                 />
-                                : <Image className={styles.publisherImg}
+                                : <Image className={styles.viewMultiImgBoarder }
                                     
                                     src={publisherImgURL}
                                     // src={contentsImgURL}
@@ -60,17 +60,12 @@ export default function ViewCard({props, view}) {
                     <div className={styles.publishInfo}>
                         <Link href={publisherURL}>
                             <a>
-                                <div className={styles.publisher}>{publisher}</div>
+                                <div className={styles.publisher}><b>{publisher}</b></div>
                             </a>
                         </Link>
-                        { viewType != "WIKI" &&
-                            <hr className={styles.verticalDivider}></hr>
-                        }
-                        { date != "" &&
-                            <div className={styles.date}>{converted_date}</div>
-                        }
                     </div>
                 }
+                subheader={<div className={styles.date}>{converted_date}</div>}
                 action = {
                     <Morevert props = {{
                         "open": open, 
@@ -81,23 +76,19 @@ export default function ViewCard({props, view}) {
                     />
                 }
             />
-            <CardContent sx={{ m: 0, p: 0, paddingLeft: '16px', paddingRight: '16px', marginBottom: '15px', 
+            {contentsImgURL != "" && <div className={styles.viewMultiImg}>
+                <Image className={styles.contentsImg}
+                    src={contentsImgURL}
+                    layout="fill"
+                /> 
+            </div>}
+            <CardContent sx={{ m: 0, p: 0, paddingLeft: '18px', paddingRight: '18px', paddingBottom: '15px', paddingTop: '14px',
             "&:last-child": {paddingBottom: 0}}} variant="contained" >
                 <Link href={postURL}>
                     <a>
                         <div className={styles.title}>{title}</div>
-                        { viewType == "WIKI" && <Divider 
-                            sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
-                        />}
                         <div className={styles.contentsInfo}>
-                            <div className={styles.contents}>{contents}</div>
-                            {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
-                                <Image className={styles.contentsImg}
-                                    src={contentsImgURL}
-                                    width='87px'
-                                    height='87px'
-                                /> 
-                            </div>}
+                        <div className={styles.contents}>{contents}</div>
                         </div>
                     </a>
                 </Link>
@@ -120,23 +111,6 @@ export default function ViewCard({props, view}) {
                 ))}
                 </Stack>
             </Paper>
-            
-            {more_links_exist&&<div className={styles.linkArea}>
-                <div className={styles.linkLine}>
-                    {more_links&&more_links.map((item) => (
-                        <>
-                        <Link href={item.link_url}>
-                            <a>
-                            {item.link_name} <br/>
-                            </a>
-                        </Link>
-                        
-                        </>
-                    )
-
-                    )}
-                </div>
-            </div>}
         </Card>     
     )
 }
