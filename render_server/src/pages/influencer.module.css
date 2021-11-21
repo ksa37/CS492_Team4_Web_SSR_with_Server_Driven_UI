@@ -20,15 +20,15 @@
   font-size: 1.3rem;
   line-height: 1.8rem;
 }
-.content-title:hover {
+.contenttitle:hover {
   text-decoration: underline;
   color: #0c43b7;
 }
 
-.content-title_rightend {
+.contenttitle_rightend {
   text-align: right;
 }
-.content-title_rightend:hover {
+.contenttitle_rightend:hover {
   text-decoration: underline;
   color: #0c43b7;
 }

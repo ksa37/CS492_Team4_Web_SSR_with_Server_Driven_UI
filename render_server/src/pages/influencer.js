@@ -12,6 +12,7 @@ import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
+import styles from './influencer.module.css'
 
 // require('react-dom');
 // window.React2 = require('react');
@@ -147,8 +148,8 @@ export default function Home() {
       <Search/>
       <Card sx={{ maxWidth: 1150, lineHeight: "109px"}}>
        <Container sx={{ display: 'flex' }}>
-          <Container sx={{ fontSize: '1.6rem', fontWeight : "700", display: 'flex'}}> <div>인플루언서 </div> <img onClick = {influencer_icon} className = "influencer_icon" src="/static/images/avatar/icon_img.png"/> </Container>
-          <Container sx={{ color: "#0c43b7", fontSize: '1.3rem' }} className = "content-title_rightend"> <Link href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> </Container>
+          <Container sx={{ fontSize: '1.6rem', fontWeight : "700", display: 'flex'}}> <div>인플루언서 </div> <img onClick = {influencer_icon} className = {styles.influencer_icon} src="/static/images/avatar/icon_img.png"/> </Container>
+          <Container sx={{ color: "#0c43b7", fontSize: '1.3rem' }} className = {styles.contenttitle_rightend}> <Link href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> </Container>
         </Container>
       </Card>
       {dummydata['influencer'].map((each) => 
@@ -157,23 +158,23 @@ export default function Home() {
           <CardHeader
           avatar={
             <Link href={each.avatar_name_url}> 
-            <Avatar sx = {{ width: 88, height: 88, display:'inline-block'}} alt="" src="/static/images/avatar/avatar_1.png"/>
+            <Avatar sx = {{ width: 88, height: 88, display:'inline-block'}} alt="" src="../static/images/avatar/avatar_1.png"/>
             </Link>
           }
-          title= {<div> <Link href={each.avatar_name_url} underline="none"> <ui className = 'title'>{each.name}</ui> </Link> <ui className = 'header'>{each.fans}</ui> </div> }
-          subheader= {<div className = 'magintop'> <ui className = 'header'>{each.type}</ui> <ui className = 'header'>{each.place}</ui> </div>}
+          title= {<div> <Link href={each.avatar_name_url} underline="none"> <ui className = {styles.title}>{each.name}</ui> </Link> <ui className = {styles.header}>{each.fans}</ui> </div> }
+          subheader= {<div className = {styles.magintop}> <ui className = {styles.header}>{each.type}</ui> <ui className = {styles.header}>{each.place}</ui> </div>}
           />
-          <div className = 'right'> <img onClick = {addblogfan} className = "fanicon" src="/static/images/avatar/fanicon.png"/> </div>
+          <div className = {styles.right}> <img onClick = {addblogfan} className = {styles.fanicon} src="../static/images/avatar/fanicon.png"/> </div>
         </Container>
-        <Container sx={{ml:'40px' }}> <img className = "blogicon" src="/static/images/avatar/blogicon.png"/> <ui className = 'subheader'> {each.blogdetails} </ui> <ui className = 'detailsdepth'> {each.detailsdepth} </ui> </Container>
-        <Link href={each.title_content_url} underline="none"> <Container sx={{my: '10px', color: '#0c43b7', fontSize: '1.6rem', ml:'40px' }} className = 'content-title'> {each.title} </Container> </Link>  
+        <Container sx={{ml:'40px' }}> <img className = {styles.blogicon} src="../static/images/avatar/blogicon.png"/> <ui className = {styles.subheader}> {each.blogdetails} </ui> <ui className = {styles.detailsdepth}> {each.detailsdepth} </ui> </Container>
+        <Link href={each.title_content_url} underline="none"> <Container sx={{my: '10px', color: '#0c43b7', fontSize: '1.6rem', ml:'40px' }} className = {styles.contenttitle}> {each.title} </Container> </Link>  
   
         <Container sx={{ display: 'flex' }}>
           <Container>
             <Link href={each.title_content_url} underline="none"> <Container sx={{my: '10px', color: "#404040", fontSize: '1.3rem' }}> {each.content} </Container> </Link>
             <Container sx={{my: '10px', color: 'grey', fontSize: '1.1rem' }}> {each.date} </Container>
           </Container>
-          <Link href={each.title_content_url} underline="none"> <img className = 'image'  src="/static/images/avatar/blog_1.png"/> </Link>
+          <Link href={each.title_content_url} underline="none"> <img className = {styles.image} src="/static/images/avatar/blog_1.png"/> </Link>
         </Container>
       </Card>)}
     </Container>
