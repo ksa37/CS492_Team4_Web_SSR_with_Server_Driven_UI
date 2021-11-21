@@ -1,0 +1,36 @@
+{
+    "name": "react-nodejs-example",
+    "version": "1.0.0",
+    "description": "example project react with nodejs",
+    "main": "server.js",
+    "scripts": {
+        "start": "npm-run-all -p build dev",
+        "build": "webpack -w",
+        "dev": "nodemon --exec babel-node -- server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bbachi/react-nodejs-example.git"
+    },
+    "author": "Bhargav Bachina",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/bbachi/react-nodejs-example/issues"
+    },
+    "homepage": "https://github.com/bbachi/react-nodejs-example#readme",
+    "dependencies": {
+        "@babel/core": "^7.16.0",
+        "@babel/node": "^7.16.0",
+        "@babel/preset-env": "^7.16.4",
+        "@babel/preset-react": "^7.16.0",
+        "axios": "^0.24.0",
+        "babel-loader": "^8.2.3",
+        "css-loader": "^6.5.1",
+        "express": "^4.17.1",
+        "nodemon": "latest",
+        "npm-run-all": "^4.1.5",
+        "style-loader": "^3.3.1",
+        "webpack": "latest",
+        "webpack-cli": "latest"
+    }
+}
