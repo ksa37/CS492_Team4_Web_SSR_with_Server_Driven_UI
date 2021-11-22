@@ -8,7 +8,7 @@ import DateConvertor from './DateConvertor'
 
 import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack} from '@mui/material';
 
-export default function ViewCard({props, view}) {  
+export default function ViewCardBasic({props, view}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, tags, more_links} = props
     const { viewType } = view
 
