@@ -103,7 +103,9 @@ export default function PostCard({props, view}) {
                             sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
                         />}
                         <div className={styles.contentsInfo}>
-                            <div className={styles.contents}>{contents}</div>
+                            <div className={styles.contents}>
+                                <p>{contents}</p>
+                            </div>
                             {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
                                 <Image className={styles.contentsImg}
                                     src={contentsImgURL}
