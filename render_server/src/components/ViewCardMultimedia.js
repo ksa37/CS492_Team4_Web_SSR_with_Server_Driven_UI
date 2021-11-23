@@ -78,7 +78,8 @@ export default function ViewCardMultimeda({props, view}) {
                 }
             />
             {contentsImgURL != "" && <div className={styles.viewMultiImg}>
-                <Image className={styles.contentsImg}
+                <img
+                    className={styles.viewMultiImg}
                     src={contentsImgURL}
                     layout="fill"
                 /> 

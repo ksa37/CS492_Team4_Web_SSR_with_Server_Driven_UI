@@ -111,10 +111,11 @@
 }
 
 .viewMultiImg {
-    display: flex;
-    position: relative;
+    /* display: flex; */
+    /* position: relative; */
     aspect-ratio: 1;
-    width: 100%;
+    max-width: 766px;
+    max-height: 766px;
     overflow: hidden;
     /* border-image-width: 0px !important; */
     /* max-height: 766px; */
