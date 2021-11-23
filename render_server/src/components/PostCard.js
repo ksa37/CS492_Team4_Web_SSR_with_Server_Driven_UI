@@ -34,7 +34,8 @@ export default function PostCard({props, view}) {
     // var isWiki = false;
     // var viewType = ViewType.NEWS;
     // var viewType = ViewType.WIKI;
-    console.log(viewType)
+    // console.log(viewType)
+    // console.log(view)
     // console.log(props)
 
     return (
@@ -42,7 +43,7 @@ export default function PostCard({props, view}) {
             <CardHeader 
                 sx={{ m: 0, p:0, paddingTop: '8px', paddingLeft: '16px', paddingRight: '8px' }} variant="contained"
                 avatar={
-                    <Link href={publisherURL}>
+                    <Link href={publisherURL} underline="none">
                         <a>
                             <div className={styles.publisherImgBoarder}>
                                 {publisherImgURL == ""
@@ -69,7 +70,7 @@ export default function PostCard({props, view}) {
                 }
                 title = {
                     <div className={styles.publishInfo}>
-                        <Link href={publisherURL}>
+                        <Link href={publisherURL} underline="none">
                             <a>
                                 <div className={styles.publisher}>{publisher}</div>
                             </a>
@@ -94,7 +95,7 @@ export default function PostCard({props, view}) {
                 }
             />
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '16px', paddingRight: '16px', marginBottom: '10px' }} variant="contained" >
-                <Link href={postURL}>
+                <Link href={postURL} underline="none">
                     <a>
                         <div className={styles.title}>{title}</div>
                         { viewType == ViewType.WIKI && <Divider 
