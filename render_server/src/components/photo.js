@@ -35,7 +35,7 @@ export default function Photo({props}) {
               >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:12, paddingRight:12}}>
                 {tags&&tags.map((item) => (
-                  <Link href={item.tagURL}>
+                  <Link key={item.tagURL} href={item.tagURL}>
                     <a>
                   <Chip 
                     key={item["tag_name"]}

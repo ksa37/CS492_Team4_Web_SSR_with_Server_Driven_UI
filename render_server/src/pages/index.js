@@ -5,9 +5,9 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline, Typography} from '@mui/material';
 import { Box } from '@mui/system';
 
-import News from './news';
-import Photo from './photo';
-import Wiki from './wiki';
+import News from '../components/news';
+import Photo from '../components/photo';
+import Wiki from '../components/wiki';
 
 const themeLight = createTheme({
   palette: {
@@ -25,43 +25,50 @@ const themeDark = createTheme({
     background: {
       default: "#e9ecef"
     },
-    // text: {
-    //   primary: "#ffffff"
-    // }
   }
 });
 
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch('http://localhost:5000/keywords')
-  const data = await res.json()
-  // console.log(data)
-  // Pass data to the page via props
-  return { props: { data:data } }
+export async function getServerSideProps(context) {
+  const {req, } = context
+  const props = {data: ''}
+  if (req.method === "POST") {
+    const streamPromise = new Promise((resolve, reject) => {
+      let body = ''
+      req.on('data', ( data ) => {
+        body += data
+      });
+      req.on('end', () => {
+        resolve(body);
+      });
+    });
+    const body = await streamPromise;
+		props.data = body;
+  }
+  return { props }
 }
 
 
 export default function Home({data}) {
-  const news_view =  data[1]["view"].includes("news");
-  const photo_view = data[1]["view"].includes("photo");
-  const wiki_view = data[1]["view"].includes("wiki");
+  const json = JSON.parse(JSON.parse(data).data)
+  const news_view =  json[1].view.includes("news");
+  const photo_view = json[1].view.includes("photo");
+  const wiki_view = json[1].view.includes("wiki");
   return (
-   
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
     <div className={styles.container}>
       <Box sx={{ m: 0, mb: 1 }}></Box>
         {news_view && 
         <div className="section_news">
-          <News props={data[1]["news"]}/>
+          <News props={json[1].news}/>
         </div>}
         {wiki_view && 
         <div className="section_wiki">
-          <Wiki props={data[1]["wiki"]}/>
+          <Wiki props={json[1].wiki}/>
         </div>}
         {photo_view&&
         <div className="section_image">
-          <Photo props={data[1]["photo"]}/>  
+          <Photo props={json[1].photo}/>  
         </div>}
       <Box sx={{ mb: 15 }}></Box>
       <Typography style={{fontSize: 16, fontWeight: '900', verticalAlign:'center', textAlign:'center'}}>
@@ -74,7 +81,5 @@ export default function Home({data}) {
       
     </div>
     </ThemeProvider>
-
-    
   )
 }

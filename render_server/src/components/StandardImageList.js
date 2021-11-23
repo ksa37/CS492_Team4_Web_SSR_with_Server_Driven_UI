@@ -1,59 +1,29 @@
 import React from 'react';
-import Image from "next/image"
-
+import Image from 'material-ui-image'
 import styles from "./imagelist.module.css";
-import Link from 'next/link';
-
-// const styles = createTheme({
-
-//   responsiveImage: {
-//     width: '100%',
-//     // Without height undefined it won't work
-//     height: '100%',
-//     // figure out your image aspect ratio
-//     aspectRatio: 1,
-//   },
-
-// });
-
-// function Item(props) {
-//   const { sx, ...other } = props;
-//   return (
-//     <Box
-//       sx={{
-//         bgcolor: 'primary.main',
-//         color: 'white',
-//         p: 1,
-//         borderRadius: 1,
-//         textAlign: 'center',
-//         fontSize: '1rem',
-//         fontWeight: '700',
-//         ...sx,
-//       }}
-//       {...other}
-//     />
-//   );
-// }
+import Link from '@mui/material/Link';
 
 export default function StandardImageList({props}) {
-  
   return (
       <div className={styles.container}>
-      {props&&props.map((img) => (
-          <div className={styles.grid_item} >
+      {props&&props.map((img, index) => (
+          <div key={index} className={styles.grid_item} >
             <Link href={img.img_url}>
               <a>
-              <Image
-                  src={img.img_path}
-                  layout="fill"
-                />
+                <div>
+                  <Image
+                    src={img.img_path}
+                    style={{
+                      width:'197px',
+                      height:'197px',
+                    }}
+                  />
+                </div>
               </a>
             </Link>
           </div>
         ))}
     </div>
-  );
-
-
+  )
 }
 

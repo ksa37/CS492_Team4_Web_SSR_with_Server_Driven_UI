@@ -1,5 +1,5 @@
 import React from 'react'
-import PostCard from '../components/PostCard'
+import PostCard from './PostCard'
 import styles from './news.module.css'
 import MoreContent from '../components/MoreContent';
 
@@ -14,30 +14,25 @@ var ViewType = Object.freeze({
 
 export default function News({props}) {
   const {news_posts, news_more} = props
-  // console.log(props)
 
   const [sort, setSort] = React.useState(true);
   const [sortRelated, setSortRelated] = React.useState(null);
   const [sortLastest, setSortLastest] = React.useState(null);
   const isRelated = Boolean(sort);
   const sortRelatedClick = (event) => {
-    // setSort(event.currentTarget);
     console.log("--------");
     console.log(isRelated);
     setSort(true);
     // setSort(!sort);
     console.log(event.currentTarget);
-    // console.log(event.target);
     console.log(isRelated);
   };
   const sortLastestClick = (event) => {
-    // setSort(event.currentTarget);
     console.log("--------");
     console.log(isRelated);
     setSort(false);
     // setSort(!sort);
     console.log(event.currentTarget);
-    // console.log(event.target);
     console.log(isRelated);
   };
   
@@ -48,13 +43,9 @@ export default function News({props}) {
         <CardHeader 
             className="api_title_area"
             title= {
-                // <Typography variant="h2" display="inline" style={{fontSize: 17}} > 
-                //     <b>뉴스</b>
-                // </Typography>
                 <div className={styles.viewHeader}>
                 <div className={styles.viewName}>뉴스</div>
                 <div className={styles.viewOptions}>
-                    {/* <div className={styles.viewSort}> */}
                       <button className={styles.btn}
                         onClick={sortRelatedClick}
                       >
@@ -62,8 +53,6 @@ export default function News({props}) {
                         {/* <ReactSVG className={styles.svg} src='/icons/dot.svg'/> */}
                         관련도순
                       </button>
-                    {/* </div> */}
-                    {/* <div className={styles.viewSort}> */}
                       <button className={styles.btn}
                         onClick={sortLastestClick}
                       >
@@ -82,7 +71,7 @@ export default function News({props}) {
             }
             style={{ textAlign: 'left'}}
         />
-        {news_posts&&news_posts.map((news) => <PostCard props={news} view={{"viewType": ViewType.NEWS}}/>)}
+        {news_posts&&news_posts.map((news) => <PostCard key={news.publisherURL} props={news} view={{"viewType": "NEWS"}}/>)}
       </Card>
       <MoreContent props={{'view_option': "뉴스",'more_link':news_more}}/>
       </>
