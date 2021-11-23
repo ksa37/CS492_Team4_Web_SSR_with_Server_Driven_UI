@@ -4,7 +4,7 @@ import styles from './news.module.css'
 import MoreContent from '../components/MoreContent';
 
 import { Card, CardHeader } from '@mui/material';
-import Dotdot from '../../public/icons/dot.svg'; 
+import Dot from '../../public/icons/dot.svg'; 
 
 // date to millisecond convertor: https://currentmillis.com
 var ViewType = Object.freeze({
@@ -49,23 +49,31 @@ export default function News({props}) {
                       <button className={styles.btn}
                         onClick={sortRelatedClick}
                       >
-                        <Dotdot fill="#000000" stroke='green'/>
-                        {/* <ReactSVG className={styles.svg} src='/icons/dot.svg'/> */}
-                        관련도순
+                        {sortRelated 
+                        ? <div className={styles.viewSort}>
+                            <Dot className={styles.sortDot} fill="var(--naver_green)"/>
+                            관련도순
+                          </div>
+                        : <div className={styles.viewSort}>
+                            <Dot className={styles.sortDot} fill="var(--date_gray)"/>
+                            <div className={styles.inactiveSort}>관련도순</div>
+                          </div>
+                        }
                       </button>
                       <button className={styles.btn}
                         onClick={sortLastestClick}
                       >
                         {sortRelated 
-                        ? <div>
+                        ? <div className={styles.viewSort}>
+                            <Dot className={styles.sortDot} fill="var(--date_gray)"/>
+                            <div className={styles.inactiveSort}>최신순</div>
+                          </div>
+                        : <div className={styles.viewSort}>
+                            <Dot className={styles.sortDot} fill="var(--naver_green)"/>
                             최신순
                           </div>
-                        : <div style={{color:"#FF0000"}}>
-                          최신순
-                        </div>}
-                      </button>
-                      {/* 최신순 */}
-                    {/* </div> */}
+                        }
+                    </button>
                 </div>
             </div>
             }
