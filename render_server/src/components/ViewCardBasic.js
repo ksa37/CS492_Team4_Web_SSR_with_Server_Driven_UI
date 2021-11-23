@@ -1,10 +1,11 @@
 import React from 'react'
-import Link from 'next/link'
+// import Link from 'next/link'
+import Link from '@mui/material/Link';
 import styles from './postCard.module.css'
-import Image from "next/image"
+// import Image from "next/image"
 import Morevert from './Morevert'
 import DateConvertor from './DateConvertor'
-
+import Image from 'material-ui-image'
 
 import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack} from '@mui/material';
 
@@ -34,7 +35,7 @@ export default function ViewCardBasic({props, view}) {
                     marginRight: '8px',
                   }}} variant="contained"
                 avatar={
-                    <Link href={publisherURL}>
+                    <Link href={publisherURL} underline="none">
                         <a>
                             <div className={styles.publisherImgBoarder}>
                                 {publisherImgURL == ""
@@ -58,7 +59,7 @@ export default function ViewCardBasic({props, view}) {
                 }
                 title = {
                     <div className={styles.publishInfo}>
-                        <Link href={publisherURL}>
+                        <Link href={publisherURL} underline="none">
                             <a>
                                 <div className={styles.publisher}>{publisher}</div>
                             </a>
@@ -83,7 +84,7 @@ export default function ViewCardBasic({props, view}) {
             />
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '16px', paddingRight: '16px', marginBottom: '15px', 
             "&:last-child": {paddingBottom: 0}}} variant="contained" >
-                <Link href={postURL}>
+                <Link href={postURL} underline="none">
                     <a>
                         <div className={styles.title}>{title}</div>
                         { viewType == "WIKI" && <Divider 
@@ -109,8 +110,8 @@ export default function ViewCardBasic({props, view}) {
               square
             >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:18, paddingRight:18}}> 
-                {tags&&tags.map((item) => (
-                    <Link href={item.tagURL}>
+                {tags&&tags.map((item, index) => (
+                    <Link key={index} href={item.tagURL} underline="none">
                     <a>
                     <Button className={styles.tagButton} variant="contained" disableElevation 
                     sx={{'&:hover': {backgroundColor: '#f4f7f8'}}}>#{item.tag_name}
@@ -123,9 +124,9 @@ export default function ViewCardBasic({props, view}) {
             
             {more_links_exist&&<div className={styles.linkArea}>
                 <div className={styles.linkLine}>
-                    {more_links&&more_links.map((item) => (
+                    {more_links&&more_links.map((item, index) => (
                         <>
-                        <Link href={item.link_url}>
+                        <Link key={index} href={item.link_url} underline="none">
                             <a>
                             {item.link_name} <br/>
                             </a>

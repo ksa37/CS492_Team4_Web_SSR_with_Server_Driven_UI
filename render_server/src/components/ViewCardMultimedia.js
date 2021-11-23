@@ -1,10 +1,11 @@
 import React from 'react'
-import Link from 'next/link'
+// import Link from 'next/link'
+import Link from '@mui/material/Link';
 import styles from './postCard.module.css'
-import Image from "next/image"
+// import Image from "next/image"
 import Morevert from './Morevert'
 import DateConvertor from './DateConvertor'
-
+import Image from 'material-ui-image'
 
 import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack} from '@mui/material';
 
@@ -34,7 +35,7 @@ export default function ViewCardMultimeda({props, view}) {
                     marginRight: '11px',
                   }}} variant="contained"
                 avatar={
-                    <Link href={publisherURL}>
+                    <Link href={publisherURL} underline="none">
                         <a>
                             <div className={styles.viewMultiImgBoarder }>
                                 {publisherImgURL == ""
@@ -58,7 +59,7 @@ export default function ViewCardMultimeda({props, view}) {
                 }
                 title = {
                     <div className={styles.publishInfo}>
-                        <Link href={publisherURL}>
+                        <Link href={publisherURL} underline="none">
                             <a>
                                 <div className={styles.publisher}><b>{publisher}</b></div>
                             </a>
@@ -84,7 +85,7 @@ export default function ViewCardMultimeda({props, view}) {
             </div>}
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '18px', paddingRight: '18px', paddingBottom: '15px', paddingTop: '14px',
             "&:last-child": {paddingBottom: 0}}} variant="contained" >
-                <Link href={postURL}>
+                <Link href={postURL} underline="none">
                     <a>
                         <div className={styles.title}>{title}</div>
                         <div className={styles.contentsInfo}>
@@ -100,8 +101,8 @@ export default function ViewCardMultimeda({props, view}) {
               square
             >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:18, paddingRight:18}}> 
-                {tags&&tags.map((item) => (
-                    <Link href={item.tagURL}>
+                {tags&&tags.map((item, index) => (
+                    <Link key={index} href={item.tagURL} underline="none">
                     <a>
                     <Button className={styles.tagButton} variant="contained" disableElevation 
                     sx={{'&:hover': {backgroundColor: '#f4f7f8'}}}>#{item.tag_name}

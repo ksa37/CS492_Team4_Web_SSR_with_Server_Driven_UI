@@ -1,7 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from './postCard.module.css'
-import Image from "next/image"
+// import Image from "next/image"
+import Image from 'material-ui-image'
 import Morevert from './Morevert'
 import DateConvertor from './DateConvertor'
 
@@ -48,7 +49,7 @@ export default function ViewCardTimeline({props, view}) {
                             marginRight: '10px', elevation: '0px'
                         }}} variant="contained"
                         avatar={
-                            <Link href={publisherURL}>
+                            <Link href={publisherURL} underline="none">
                                 <a>
                                     <div className={styles.viewMultiImgBoarder }>
                                         {publisherImgURL == ""
@@ -72,7 +73,7 @@ export default function ViewCardTimeline({props, view}) {
                         }
                         title = {
                             <div className={styles.publishInfo}>
-                                <Link href={publisherURL}>
+                                <Link href={publisherURL} underline="none">
                                     <a>
                                         <div className={styles.publisher}><b>{publisher}</b></div>
                                     </a>
@@ -161,7 +162,7 @@ export default function ViewCardTimeline({props, view}) {
                         </ul>
                     </div>  
                     <div>
-                        <Link href={postURL}>
+                        <Link href={postURL} underline="none">
                             <a>
                                 <div className={styles.title}>{title}</div>
                                 <div className={styles.contentsInfo}>
@@ -182,7 +183,7 @@ export default function ViewCardTimeline({props, view}) {
                             marginRight: '10px', elevation: '0px'
                         }}} variant="contained"
                         avatar={
-                            <Link href={publisherURL}>
+                            <Link href={publisherURL} underline="none">
                                 <a>
                                     <div className={styles.viewMultiImgBoarder }>
                                         {publisherImgURL == ""
@@ -206,7 +207,7 @@ export default function ViewCardTimeline({props, view}) {
                         }
                         title = {
                             <div className={styles.publishInfo}>
-                                <Link href={publisherURL}>
+                                <Link href={publisherURL} underline="none">
                                     <a>
                                         <div className={styles.publisher}><b>{publisher}</b></div>
                                     </a>
@@ -295,7 +296,7 @@ export default function ViewCardTimeline({props, view}) {
                         </ul>
                     </div>  
                     <div>
-                        <Link href={postURL}>
+                        <Link href={postURL} underline="none">
                             <a>
                                 <div className={styles.title}>{title}</div>
                                 <div className={styles.contentsInfo}>

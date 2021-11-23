@@ -1,12 +1,14 @@
-import Image from 'next/image'
+// import Image from 'next/image'
+import Image from 'material-ui-image'
 import React from 'react';
-import MoreContent from '../components/MoreContent';
+import MoreContent from './MoreContent';
 import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
-import Link from 'next/link'
-import PostCard from '../components/PostCard';
-import ViewCardBasic from '../components/ViewCardBasic';
-import ViewCardMultimeda from '../components/ViewCardMultimedia'
-import ViewCardTimeline from '../components/ViewCardTimeline';
+// import Link from 'next/link'
+import Link from '@mui/material/Link'
+import PostCard from './PostCard';
+import ViewCardBasic from './ViewCardBasic';
+import ViewCardMultimeda from './ViewCardMultimedia'
+import ViewCardTimeline from './ViewCardTimeline';
 
 export default function View({props}){
     const view_option = "VIEW";
@@ -37,7 +39,7 @@ export default function View({props}){
                 >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:12, paddingRight:12}}>
                 {tags&&tags.map((item) => (
-                    <Link href={item.tagURL}>
+                    <Link key={item.tagURL}  href={item.tagURL} underline="none">
                     <a>
                     <Chip 
                     key={item["tag_name"]}
@@ -54,9 +56,9 @@ export default function View({props}){
                 </Stack>
                 </Grid>
             </Paper>
-            {view_posts&&view_posts.slice(0, 5).map((view) => <ViewCardBasic props={view} view={{"viewType": "NEWS"}}/>)}
-            {view_posts&&view_posts.slice(0, 3).map((view) => <ViewCardMultimeda props={view} view={{"viewType": "NEWS"}}/>)}
-            {view_posts&&view_posts.slice(0, 5).map((view) => <ViewCardTimeline props={view} view={{"viewType": "NEWS"}}/>)}
+            {view_posts&&view_posts.slice(0, 5).map((view) => <ViewCardBasic key={view} props={view} view={{"viewType": "NEWS"}}/>)}
+            {view_posts&&view_posts.slice(0, 3).map((view) => <ViewCardMultimeda key={view} props={view} view={{"viewType": "NEWS"}}/>)}
+            {view_posts&&view_posts.slice(0, 5).map((view) => <ViewCardTimeline key={view} props={view} view={{"viewType": "NEWS"}}/>)}
         </Card>
         <MoreContent props={{'view_option':view_option,'more_link':view_more}}/>
     </>
