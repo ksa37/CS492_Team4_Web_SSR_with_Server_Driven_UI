@@ -8,6 +8,7 @@ import { Box } from '@mui/system';
 import News from '../components/news';
 import Photo from '../components/photo';
 import Wiki from '../components/wiki';
+import Influencer from '../components/influencer';
 
 const themeLight = createTheme({
   palette: {
@@ -57,6 +58,21 @@ export default function Home({ data }) {
   return (
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
+    <div className={styles.container}>
+        {news_view && 
+        <div className="section_news">
+          <News props={json[1].news}/>
+        </div>}
+        {wiki_view && 
+        <div className="section_wiki">
+          <Wiki props={json[1].wiki}/>
+        </div>}
+        {photo_view&&
+        <div className="section_image">
+          <Photo props={json[1].photo}/>  
+        </div>}
+        <Influencer/>
+    </div>
       <div className={styles.container}>
         <Box sx={{ m: 0, mb: 1 }}></Box>
         {news_view &&
