@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "json": "json-server ./src/data.json --port 5000"
+    "json": "json-server ./data.json --port 5000"
   },
   "dependencies": {
     "@emotion/react": "^11.5.0",

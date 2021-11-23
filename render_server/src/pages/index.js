@@ -8,6 +8,7 @@ import { CssBaseline } from '@mui/material';
 import News from '../components/news';
 import Photo from '../components/photo';
 import Wiki from '../components/wiki';
+import Influencer from '../components/influencer';
 
 const themeLight = createTheme({
   palette: {
@@ -69,6 +70,7 @@ export default function Home({data}) {
         <div className="section_image">
           <Photo props={json[1].photo}/>  
         </div>}
+        <Influencer/>
     </div>
     </ThemeProvider>
   )
