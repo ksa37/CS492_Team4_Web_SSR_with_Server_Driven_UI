@@ -7,6 +7,12 @@ import Image from 'material-ui-image'
 
 import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 
+var ViewType = Object.freeze({
+    NEWS: 0,
+    WIKI: 1
+});
+// typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
+
 export default function PostCard({props, view}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL } = props
     const { viewType } = view
@@ -24,12 +30,20 @@ export default function PostCard({props, view}) {
         setAnchorEl(null);
     };
 
+    // var isWiki = true;
+    // var isWiki = false;
+    // var viewType = ViewType.NEWS;
+    // var viewType = ViewType.WIKI;
+    // console.log(viewType)
+    // console.log(view)
+    // console.log(props)
+
     return (
         <Card sx={{ maxWidth: 766 }} square > 
             <CardHeader 
                 sx={{ m: 0, p:0, paddingTop: '8px', paddingLeft: '16px', paddingRight: '8px' }} variant="contained"
                 avatar={
-                    <Link href={publisherURL}>
+                    <Link href={publisherURL} underline="none">
                         <a>
                             <div className={styles.publisherImgBoarder}>
                                 {publisherImgURL == ""
@@ -56,12 +70,13 @@ export default function PostCard({props, view}) {
                 }
                 title = {
                     <div className={styles.publishInfo}>
-                        <Link href={publisherURL}>
+                        <Link href={publisherURL} underline="none">
                             <a>
                                 <div className={styles.publisher}>{publisher}</div>
                             </a>
                         </Link>
-                        { viewType != "WIKI" &&
+                        { viewType != ViewType.WIKI &&
+                        // { viewType != "WIKI" &&
                             <hr className={styles.verticalDivider}></hr>
                         }
                         { date != "" &&
@@ -80,10 +95,11 @@ export default function PostCard({props, view}) {
                 }
             />
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '16px', paddingRight: '16px', marginBottom: '10px' }} variant="contained" >
-                <Link href={postURL}>
+                <Link href={postURL} underline="none">
                     <a>
                         <div className={styles.title}>{title}</div>
-                        { viewType == "WIKI" && <Divider 
+                        { viewType == ViewType.WIKI && <Divider 
+                        // { viewType == "WIKI" && <Divider 
                             sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
                         />}
                         <div className={styles.contentsInfo}>

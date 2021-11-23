@@ -2,8 +2,10 @@ import React from 'react';
 import StandardImageList from '../components/StandardImageList';
 import MoreContent from '../components/MoreContent';
 
+
 import { Avatar, Card, CardHeader, Chip, Grid, Paper, Stack, Typography} from '@mui/material';
-import Link from '@mui/material/Link';
+import Link from 'next/link';
+import { Box } from '@mui/system';
 
 export default function Photo({props}) {
     const {tags, images, image_more} = props
