@@ -93,72 +93,83 @@ export default function ViewCardTimeline({props, view}) {
                     />   
                     <div className={styles.imageScroller}>
                         <ul className={styles.imageScrollerContainer}>
-                            <li className={styles.imageScrollerItem}>
-                                <Image
+                            {/* <li className={styles.imageScrollerItem}> */}
+                                <img
+                                    className={styles.imageScrollerItem}
                                     src={publisherImgURL}
                                     width={100}
                                     height={93}/>
-                            </li>
-                            <li className={styles.imageScrollerItem}>
-                                <Image
+                            {/* </li> */}
+                            {/* <li className={styles.imageScrollerItem}> */}
+                                <img
+                                    className={styles.imageScrollerItem}
                                     src={publisherImgURL}
                                     width={100}
                                     height={93}/>
-                            </li>
-                            <li className={styles.imageScrollerItem}>
-                                <Image
+                            {/* </li> */}
+                            {/* <li className={styles.imageScrollerItem}> */}
+                                <img
+                                className={styles.imageScrollerItem}
                                     src={publisherImgURL}
                                     width={100}
                                     height={93}/>
-                            </li>
-                            <li className={styles.imageScrollerItem}>
-                                <Image
+                            {/* </li> */}
+                            {/* <li className={styles.imageScrollerItem}> */}
+                                <img
+                                className={styles.imageScrollerItem}
                                     src={publisherImgURL}
                                     width={100}
                                     height={93}/>
-                            </li>
-                            <li className={styles.imageScrollerItem}>
-                                <Image
+                            {/* </li> */}
+                            {/* <li className={styles.imageScrollerItem}> */}
+                                <img
+                                className={styles.imageScrollerItem}
                                     src={publisherImgURL}
                                     width={100}
                                     height={93}/>
-                            </li>
-                            <li className={styles.imageScrollerItem}>
-                                <Image
+                            {/* </li> */}
+                            {/* <li className={styles.imageScrollerItem}> */}
+                                <img
+                                className={styles.imageScrollerItem}
                                     src={publisherImgURL}
                                     width={100}
                                     height={93}/>
-                            </li>
-                            <li className={styles.imageScrollerItem}>
-                                <Image
+                            {/* </li> */}
+                            {/* <li className={styles.imageScrollerItem}> */}
+                                <img
+                                className={styles.imageScrollerItem}
                                     src={publisherImgURL}
                                     width={100}
                                     height={93}/>
-                            </li>
-                            <li className={styles.imageScrollerItem}>
-                                <Image
+                            {/* </li> */}
+                            {/* <li className={styles.imageScrollerItem}> */}
+                                <img
+                                className={styles.imageScrollerItem}
                                     src={publisherImgURL}
                                     width={100}
                                     height={93}/>
-                            </li>
-                            <li className={styles.imageScrollerItem}>
-                                <Image
+                            {/* </li> */}
+                            {/* <li className={styles.imageScrollerItem}> */}
+                                <img
+                                className={styles.imageScrollerItem}
                                     src={publisherImgURL}
                                     width={100}
                                     height={93}/>
-                            </li>
-                            <li className={styles.imageScrollerItem}>
-                                <Image
+                            {/* </li> */}
+                            {/* <li className={styles.imageScrollerItem}> */}
+                                <img
+                                className={styles.imageScrollerItem}
                                     src={publisherImgURL}
                                     width={100}
                                     height={93}/>
-                            </li>
-                            <li className={styles.imageScrollerItem}>
-                                <Image
+                            {/* </li> */}
+                            {/* <li className={styles.imageScrollerItem}> */}
+                                <img
+                                className={styles.imageScrollerItem}
                                     src={publisherImgURL}
                                     width={100}
                                     height={93}/>
-                            </li>
+                            {/* </li> */}
                         </ul>
                     </div>  
                     <div>
