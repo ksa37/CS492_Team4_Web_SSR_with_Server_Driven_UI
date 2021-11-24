@@ -30,29 +30,28 @@ const themeDark = createTheme({
 });
 
 export async function getServerSideProps(context) {
-  const res = await fetch('http://localhost:5000/keywords')
-  const data = await res.json()
-  const string_data = JSON.stringify(data)
-  const props = {data: ''}
-  props.data = string_data
-  /*
   const {req, } = context
   const props = {data: ''}
   if (req.method === "POST") {
     const streamPromise = new Promise((resolve, reject) => {
       let body = ''
-      req.on('data', ( data ) => {
+      req.on('data', (data) => {
         body += data
       });
       req.on('end', () => {
-        resolve(body);
+        resolve(JSON.parse(body).data);
       });
     });
     const body = await streamPromise;
-      props.data = body;
+    props.data = body;
   }
-  return { props }
-  */
+  else
+  {
+    const res = await fetch('http://localhost:5000/Paris')
+    const data = await res.json()
+    const string_data = JSON.stringify(data)
+    props.data = string_data
+  }
   return { props }
 }
 
@@ -70,15 +69,15 @@ export default function Home({ data }) {
     <div className={styles.container}>
         {news_view && 
         <div className="section_news">
-          <News props={json[1].news}/>
+          <News props={json.news}/>
         </div>}
         {wiki_view && 
         <div className="section_wiki">
-          <Wiki props={json[1].wiki}/>
+          <Wiki props={json.wiki}/>
         </div>}
         {photo_view&&
         <div className="section_image">
-          <Photo props={json[1].photo}/>  
+          <Photo props={json.photo}/>  
         </div>}
         {influencer_view&&
         <div className="section_influencer">
@@ -93,7 +92,6 @@ export default function Home({ data }) {
           Team 4
         </Typography>
         <Box sx={{ mb: 5 }}></Box>
-
       </div>
     </ThemeProvider>
   )

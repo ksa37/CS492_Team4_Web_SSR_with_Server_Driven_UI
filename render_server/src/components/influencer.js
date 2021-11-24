@@ -112,8 +112,6 @@ const Item = styled(Paper)(({ theme }) => ({
 const Search = (props) => {
   const [showResults, setShowResults] = useState(false)
   const onClick = () => setShowResults(!showResults)
-  // console.log(showResults)
-  // console.log(props)
   return (
     <div>
       <div className = {styles.rightallign} onClick={onClick} > 인플루엔서 </div>
@@ -123,7 +121,6 @@ const Search = (props) => {
 }
 
 const Results = (props) => {
-  console.log(props)
   return (
     <div>
     <Card sx={{ width: 800, lineHeight: "50px", border: 1, borderColor: 'grey.200', my:"100px" }}>
