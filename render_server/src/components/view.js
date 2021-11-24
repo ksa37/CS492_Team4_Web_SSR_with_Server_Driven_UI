@@ -10,6 +10,7 @@ import ViewCardBasic from './ViewCardBasic';
 import ViewCardMultimeda from './ViewCardMultimedia'
 import ViewCardTimeline from './ViewCardTimeline';
 
+
 export default function View({props}){
     const view_option = "VIEW";
     const {tags, view_posts, view_more} = props
@@ -38,8 +39,8 @@ export default function View({props}){
                 
                 >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:12, paddingRight:12}}>
-                {tags&&tags.map((item) => (
-                    <Link key={item.tagURL}  href={item.tagURL} underline="none">
+                {tags&&tags.map((item, index) => (
+                    <Link key={index}  href={item.tagURL} underline="none">
                     <a>
                     <Chip 
                     key={item["tag_name"]}
@@ -56,9 +57,9 @@ export default function View({props}){
                 </Stack>
                 </Grid>
             </Paper>
-            {view_posts&&view_posts.slice(0, 5).map((view) => <ViewCardBasic key={view} props={view} view={{"viewType": "NEWS"}}/>)}
-            {view_posts&&view_posts.slice(0, 3).map((view) => <ViewCardMultimeda key={view} props={view} view={{"viewType": "NEWS"}}/>)}
-            {view_posts&&view_posts.slice(0, 5).map((view) => <ViewCardTimeline key={view} props={view} view={{"viewType": "NEWS"}}/>)}
+            {view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardBasic key={index} props={view} view={{"viewType": "NEWS"}}/>)}
+            {view_posts&&view_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} view={{"viewType": "NEWS"}}/>)}
+            {view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardTimeline key={index} props={view} view={{"viewType": "NEWS"}}/>)}
         </Card>
         <MoreContent props={{'view_option':view_option,'more_link':view_more}}/>
     </>
