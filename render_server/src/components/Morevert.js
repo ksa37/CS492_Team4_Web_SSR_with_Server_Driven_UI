@@ -12,7 +12,7 @@ export default function MoreVert({props}) {
 
     return (
         <div>
-            <IconButton
+            <IconButton sx={{ py: 0 }}
                 onClick={handleClick}
                 style={{ backgroundColor: 'transparent' }}
                 disableRipple

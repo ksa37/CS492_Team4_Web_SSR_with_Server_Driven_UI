@@ -10,6 +10,8 @@ import Photo from '../components/photo';
 import Wiki from '../components/wiki';
 import View from '../components/view'
 import Influencer from '../components/influencer';
+import Drama from '../components/Drama';
+import ViewCardBasic from '../components/ViewCardBasic';
 
 const themeLight = createTheme({
   palette: {
@@ -102,7 +104,11 @@ export default function Home({ data }) {
   return (
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
-    <div className={styles.container}>
+      <div className={styles.container}>
+        <div className="section_drama">
+          <Drama/>  
+        </div>
+        {/* <ViewCardBasic props={json.review}/> */}
         {news_view && 
         <div className="section_news">
           <News props={json.news}/>
