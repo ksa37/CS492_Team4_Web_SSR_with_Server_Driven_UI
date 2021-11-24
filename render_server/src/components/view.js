@@ -9,7 +9,6 @@ import PostCard from './PostCard';
 import ViewCardBasic from './ViewCardBasic';
 import ViewCardMultimeda from './ViewCardMultimedia'
 import ViewCardTimeline from './ViewCardTimeline';
-import style from './viewCard.module.css';
 
 const selectView = [
     {
@@ -58,6 +57,7 @@ export default function View({props}){
                     <>
                     {selectView&&selectView.map((option, index)=>(
                         <IconButton
+                            key={index}
                             onClick={()=>contentChange(index)}
                         >
                         {   currentItem.tab==option.tab

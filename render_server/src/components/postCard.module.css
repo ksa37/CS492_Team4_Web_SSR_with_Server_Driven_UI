@@ -231,3 +231,33 @@
 .imageScrollerContainer:last-child {
     margin-right: 18px;
 }
+
+.linkBox {
+    display: block;
+    margin: 3px 18px 18px 18px;
+    background-color: rgb(244, 247, 248);
+    padding-inline: 12px;
+    overflow: hidden;
+    font-size: 0.82rem;
+    position:relative;
+    line-height: 2.2rem;
+    color: #666;
+}
+/* 
+.linkBoxForward{
+
+ vertical-align: middle; 
+ justify-content: center;
+ align-content: center;
+} */
+.linkBoxForward{
+    /* background-image: url("/icons/forward.svg"); */
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+
+    background-position: -25px -40px;
+}

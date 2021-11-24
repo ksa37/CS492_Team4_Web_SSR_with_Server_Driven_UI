@@ -7,7 +7,7 @@ import MoreVert from './MoreVert'
 import DateConvertor from './DateConvertor'
 import Image from 'material-ui-image'
 
-import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack} from '@mui/material';
+import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack, Typography} from '@mui/material';
 
 export default function ViewCardBasic({props, view}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, tags, more_links} = props
@@ -123,6 +123,25 @@ export default function ViewCardBasic({props, view}) {
                     )}
                 </div>
             </div>}
+
+            <a href="https://m.search.naver.com/search.naver?sm=mtp_sly.hst&where=m&query=%ED%8C%8C%EB%A6%AC&acr=1" className={styles.linkBox}>
+                <span style={{marginRight:'12px', overflow:'hidden'}}>
+                    <img
+                        src={"icons/link.png"}
+                        height={11}
+                        width={11}
+                    />
+                    <span> 유지니의 #파리여행 콘텐츠 더보기</span>
+                    <img
+                        className={styles.linkBoxForward}
+                        src={'/icons/forward.svg'}
+                        width={7}
+                        height={11}
+                    />
+                    {/* <div className={styles.linkBoxForward} /> */}
+                    
+                </span>
+            </a>
         </Card>     
     )
 }
