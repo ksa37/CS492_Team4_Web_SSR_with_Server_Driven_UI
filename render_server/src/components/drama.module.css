@@ -1,12 +1,12 @@
 .dramaName {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 700;
     color: var(--dark_gray_1);
 }
 
 .dramaCategory {
     margin-top: 4px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     color:#968577;
 }
@@ -15,14 +15,16 @@
     display: flex;
     flex-direction: row;
     margin-top: 16px;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     color:#7E695A;
 }
 
 .verticalDivider {
-    border-left: 1px solid rgba( 225, 225, 225, 1 );
-    height: 14px;
+    border-left: 0px solid;
+    border-color: #D2C9C4;
+    color: #D2C9C4;
+    height: 16px;
     margin: 0;
     margin-left: 12px; 
     margin-right: 12px; 

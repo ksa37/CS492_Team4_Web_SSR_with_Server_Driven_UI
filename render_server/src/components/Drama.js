@@ -58,10 +58,10 @@ export default function Drama({props}) {
             style={{ textAlign: 'left'}}
         />
         <Paper 
-            sx={{ maxWidth:636, height: 1000, borderRadius: '7px' }}>
+            sx={{ maxWidth:746, height: 1000, borderRadius: '8px' }}>
             <Paper 
-            sx={{ maxWidth:610, height: 395, borderRadius: '5px'}}
-            style= {{ background: "#0403ff" }}
+            sx={{ maxWidth:716, height: 464, borderRadius: '6px'}}
+            style= {{ background: "#D2C9C4" }}
             >
             
         {/* {drama_videos&&drama_videos.map((video) => <PostCard key={video.title} props={video} view={{"viewType": ViewType.NEWS }}/>)} */}
