@@ -28,7 +28,7 @@ export default function View({props}){
             />
             <Paper 
                 className="group_option_tag_wrap" 
-                style={{height: 83, overflow: 'auto', backgroundColor:'#f8fafb'}}
+                style={{height: 83, overflow: 'auto', backgroundColor:'#f8fafb', borderBlock: '1px solid rgb(236, 240, 242)', boxShadow:'none'}}
                 square
             >
                 <Grid
@@ -40,19 +40,15 @@ export default function View({props}){
                 >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:12, paddingRight:12}}>
                 {tags&&tags.map((item, index) => (
-                    <Link key={index}  href={item.tagURL} underline="none">
-                    <a>
                     <Chip 
-                    key={item["tag_name"]}
+                    key={index} 
+                    component="a" 
+                    href={item.tagURL}
                     label={item["tag_name"]}
                     variant="outlined"
-                    style={{backgroundColor: "#ffffff"}}
-                    onclick
+                    sx={{backgroundColor: "#ffffff"}}
+                    clickable
                     />
-                    </a>
-                    
-                    {/* rgb(0,207,91) '#f5f7f8' */}
-                    </Link>
                 ))}
                 </Stack>
                 </Grid>

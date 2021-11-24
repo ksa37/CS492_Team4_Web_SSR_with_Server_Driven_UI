@@ -35,35 +35,31 @@ export default function ViewCardBasic({props, view}) {
                     marginRight: '8px',
                   }}} variant="contained"
                 avatar={
-                    <Link href={publisherURL} underline="none">
-                        <a>
-                            <div className={styles.publisherImgBoarder}>
-                                {publisherImgURL == ""
-                                ? <Image className={styles.publisherImg}
-                                    src="/images/default_publisher.png" 
-                                    width='100%'
-                                    height='100%'
-                                    objectFit='contain'
-                                />
-                                : <Image className={styles.publisherImg}
-                                    
-                                    src={publisherImgURL}
-                                    // src={contentsImgURL}
-                                    width='100%'
-                                    height='100%'
-                                    objectFit='contain'
-                                />}
-                            </div>
-                        </a>
-                    </Link>
+                    <a href={publisherURL} >
+                        <div className={styles.publisherImgBoarder}>
+                            {publisherImgURL == ""
+                            ? <Image className={styles.publisherImg}
+                                src="/images/default_publisher.png" 
+                                width='100%'
+                                height='100%'
+                                objectFit='contain'
+                            />
+                            : <Image className={styles.publisherImg}
+                                
+                                src={publisherImgURL}
+                                // src={contentsImgURL}
+                                width='100%'
+                                height='100%'
+                                objectFit='contain'
+                            />}
+                        </div>
+                    </a>
                 }
                 title = {
                     <div className={styles.publishInfo}>
-                        <Link href={publisherURL} underline="none">
-                            <a>
-                                <div className={styles.publisher}>{publisher}</div>
-                            </a>
-                        </Link>
+                        <a href={publisherURL}>
+                            <div className={styles.publisher}>{publisher}</div>
+                        </a>
                         { viewType != "WIKI" &&
                             <hr className={styles.verticalDivider}></hr>
                         }
@@ -84,24 +80,22 @@ export default function ViewCardBasic({props, view}) {
             />
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '16px', paddingRight: '16px', marginBottom: '15px', 
             "&:last-child": {paddingBottom: 0}}} variant="contained" >
-                <Link href={postURL} underline="none">
-                    <a>
-                        <div className={styles.title}>{title}</div>
-                        { viewType == "WIKI" && <Divider 
-                            sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
-                        />}
-                        <div className={styles.contentsInfo}>
-                            <div className={styles.contents}>{contents}</div>
-                            {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
-                                <Image className={styles.contentsImg}
-                                    src={contentsImgURL}
-                                    width='87px'
-                                    height='87px'
-                                /> 
-                            </div>}
-                        </div>
-                    </a>
-                </Link>
+                <a href={postURL}>
+                    <div className={styles.title}>{title}</div>
+                    { viewType == "WIKI" && <Divider 
+                        sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
+                    />}
+                    <div className={styles.contentsInfo}>
+                        <div className={styles.contents}>{contents}</div>
+                        {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
+                            <Image className={styles.contentsImg}
+                                src={contentsImgURL}
+                                width='87px'
+                                height='87px'
+                            /> 
+                        </div>}
+                    </div>
+                </a>
             </CardContent>   
             <Paper 
               className="group_option_tag_wrap" 
@@ -111,13 +105,9 @@ export default function ViewCardBasic({props, view}) {
             >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:18, paddingRight:18}}> 
                 {tags&&tags.map((item, index) => (
-                    <Link key={index} href={item.tagURL} underline="none">
-                    <a>
-                    <Button className={styles.tagButton} variant="contained" disableElevation 
-                    sx={{'&:hover': {backgroundColor: '#f4f7f8'}}}>#{item.tag_name}
-                    </Button>
+                    <a key={index}  className={styles.tagButton} href={item.tagURL}>
+                        #{item.tag_name}    
                     </a>
-                    </Link>
                 ))}
                 </Stack>
             </Paper>
@@ -125,14 +115,9 @@ export default function ViewCardBasic({props, view}) {
             {more_links_exist&&<div className={styles.linkArea}>
                 <div className={styles.linkLine}>
                     {more_links&&more_links.map((item, index) => (
-                        <>
-                        <Link key={index} href={item.link_url} underline="none">
-                            <a>
-                            {item.link_name} <br/>
-                            </a>
-                        </Link>
-                        
-                        </>
+                        <a key={index} href={item.link_url}>
+                        {item.link_name} <br/>
+                        </a>
                     )
 
                     )}
