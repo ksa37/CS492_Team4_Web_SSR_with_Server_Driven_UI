@@ -9,17 +9,15 @@ export default function StandardImageList({props}) {
       {props&&props.map((img, index) => (
           <div key={index} className={styles.grid_item} >
             <Link href={img.img_url}>
-              <a>
-                <div>
-                  <Image
-                    src={img.img_path}
-                    style={{
-                      width:'197px',
-                      height:'197px',
-                    }}
-                  />
-                </div>
-              </a>
+              <div>
+                <Image
+                  src={img.img_path}
+                  style={{
+                    width:'197px',
+                    height:'197px',
+                  }}
+                />
+              </div>
             </Link>
           </div>
         ))}

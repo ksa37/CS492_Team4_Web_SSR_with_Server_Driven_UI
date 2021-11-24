@@ -62,6 +62,8 @@ export default function Home({ data }) {
   const news_view = json[1].view.includes("news");
   const photo_view = json[1].view.includes("photo");
   const wiki_view = json[1].view.includes("wiki");
+  const influencer_view = json[1].view.includes("influencer");
+
   return (
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
@@ -78,22 +80,11 @@ export default function Home({ data }) {
         <div className="section_image">
           <Photo props={json[1].photo}/>  
         </div>}
-        <Influencer/>
-    </div>
-      <div className={styles.container}>
-        <Box sx={{ m: 0, mb: 1 }}></Box>
-        {news_view &&
-          <div className="section_news">
-            <News props={json[1].news} />
-          </div>}
-        {wiki_view &&
-          <div className="section_wiki">
-            <Wiki props={json[1].wiki} />
-          </div>}
-        {photo_view &&
-          <div className="section_image">
-            <Photo props={json[1].photo} />
-          </div>}
+        {influencer_view&&
+        <div className="section_influencer">
+          {/* <Influencer props={json[1].Influencer}/>   */}
+          <Influencer/>  
+        </div>}
         <Box sx={{ mb: 15 }}></Box>
         <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
           NAVER

@@ -36,15 +36,13 @@ export default function Photo({props}) {
                 <Stack direction="row" spacing={1} style= {{paddingLeft:12, paddingRight:12}}>
                 {tags&&tags.map((item) => (
                   <Link key={item.tagURL} href={item.tagURL}>
-                    <a>
-                  <Chip 
-                    key={item["tag_name"]}
-                    avatar={<Avatar src ={item["tag_image_url"]} />}
-                    label={item["tag_name"]}
-                    variant="outlined"
-                    style={{backgroundColor: "#ffffff"}}
-                  />
-                    </a>
+                    <Chip 
+                      key={item["tag_name"]}
+                      avatar={<Avatar src ={item["tag_image_url"]} />}
+                      label={item["tag_name"]}
+                      variant="outlined"
+                      style={{backgroundColor: "#ffffff"}}
+                    />
                   </Link>
                 ))}
               </Stack>
