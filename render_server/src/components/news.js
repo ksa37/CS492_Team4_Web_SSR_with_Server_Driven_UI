@@ -19,20 +19,13 @@ export default function News({props}) {
   const isRelated = Boolean(sortRelated);
   const sortRelatedClick = (event) => {
     setSortRelated(true);
-    // console.log(event.currentTarget);
-    // news_posts&&news_posts.sort((a, b) => console.log(a.relation, b.relation));
-    // news_posts&&news_posts.sort((a, b) => parseFloat(a.relation) > parseFloat(b.relation) ? 1 : -1);
-    // console.log(news_posts);
   };
   const sortLastestClick = (event) => {
     setSortRelated(false);
-    // console.log(event.currentTarget);
-    // news_posts&&news_posts.sort((a, b) => parseInt(a.date) < parseInt(b.date) ? 1 : -1);
-    // console.log(news_posts);
   };
 
   sortRelated
-  ? news_posts&&news_posts.sort((a, b) => parseFloat(a.relation) > parseFloat(b.relation) ? 1 : -1) // sort by relation
+  ? news_posts&&news_posts.sort((a, b) => parseFloat(a.relation) < parseFloat(b.relation) ? 1 : -1) // sort by relation
   : news_posts&&news_posts.sort((a, b) => parseInt(a.date) < parseInt(b.date) ? 1 : -1);            // sort by date
 
   

@@ -97,37 +97,38 @@ export default function Home({ data }) {
   const news_view = json.view.includes("news");
   const photo_view = json.view.includes("photo");
   const wiki_view = json.view.includes("wiki");
+  const influencer_view = json.view.includes("influencer");
+
   return (
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
     <div className={styles.container}>
-      <Box sx={{ m: 0, mb: 1 }}></Box>
-      {view_view&&
-      <div className="section_view">
-        <View props={json.review}/> 
-      </div>} 
-      {news_view && 
-      <div className="section_news">
-        <News props={json.news}/>
-      </div>}
-      {wiki_view && 
-      <div className="section_wiki">
-        <Wiki props={json.wiki}/>
-      </div>}
-      {photo_view&&
-      <div className="section_image">
-        <Photo props={json.photo}/>  
-      </div>}
-      <Influencer/>
-      <Box sx={{ mb: 15 }}></Box>
-      <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
-        NAVER
-      </Typography>
-      <Typography style={{ fontSize: 14, verticalAlign: 'center', textAlign: 'center' }}>
-        Team 4
-      </Typography>
-      <Box sx={{ mb: 5 }}></Box>
-    </div>
+        {news_view && 
+        <div className="section_news">
+          <News props={json.news}/>
+        </div>}
+        {wiki_view && 
+        <div className="section_wiki">
+          <Wiki props={json.wiki}/>
+        </div>}
+        {photo_view&&
+        <div className="section_image">
+          <Photo props={json.photo}/>  
+        </div>}
+        {influencer_view&&
+        <div className="section_influencer">
+          {/* <Influencer props={json[1].Influencer}/>   */}
+          <Influencer/>  
+        </div>}
+        <Box sx={{ mb: 15 }}></Box>
+        <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
+          NAVER
+        </Typography>
+        <Typography style={{ fontSize: 14, verticalAlign: 'center', textAlign: 'center' }}>
+          Team 4
+        </Typography>
+        <Box sx={{ mb: 5 }}></Box>
+      </div>
     </ThemeProvider>
   )
 }
