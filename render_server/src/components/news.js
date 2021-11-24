@@ -25,7 +25,7 @@ export default function News({props}) {
   };
 
   sortRelated
-  ? news_posts&&news_posts.sort((a, b) => parseFloat(a.relation) > parseFloat(b.relation) ? 1 : -1) // sort by relation
+  ? news_posts&&news_posts.sort((a, b) => parseFloat(a.relation) < parseFloat(b.relation) ? 1 : -1) // sort by relation
   : news_posts&&news_posts.sort((a, b) => parseInt(a.date) < parseInt(b.date) ? 1 : -1);            // sort by date
 
   
