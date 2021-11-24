@@ -8,6 +8,7 @@ import { Box } from '@mui/system';
 import News from '../components/news';
 import Photo from '../components/photo';
 import Wiki from '../components/wiki';
+import View from '../components/view'
 import Influencer from '../components/influencer';
 
 const themeLight = createTheme({
@@ -28,6 +29,33 @@ const themeDark = createTheme({
     },
   }
 });
+
+// export async function getServerSideProps(context) {
+//   const res = await fetch('http://localhost:5000/keywords')
+//   const data = await res.json()
+//   const string_data = JSON.stringify(data)
+//   const props = {data: ''}
+//   props.data = string_data
+//   /*
+//   const {req, } = context
+//   const props = {data: ''}
+//   if (req.method === "POST") {
+//     const streamPromise = new Promise((resolve, reject) => {
+//       let body = ''
+//       req.on('data', ( data ) => {
+//         body += data
+//       });
+//       req.on('end', () => {
+//         resolve(body);
+//       });
+//     });
+//     const body = await streamPromise;
+//       props.data = body;
+//   }
+//   return { props }
+//   */
+//   return { props }
+// }
 
 export async function getServerSideProps(context) {
   const {req, } = context
@@ -56,12 +84,16 @@ export async function getServerSideProps(context) {
 }
 
 
+// export default function Home({data}) {
+//   const json = JSON.parse(JSON.parse(data).data)
+//   // const json = JSON.parse(data)
+//   const news_view =  json[1].view.includes("news");
+//   const photo_view = json[1].view.includes("photo");
+//   const view_view = json[1].view.includes("review");
+//   const wiki_view = json[1].view.includes("wiki");
 export default function Home({ data }) {
   const json = JSON.parse(data)
-  // const news_view = json[1].view.includes("news");
-  // const photo_view = json[1].view.includes("photo");
-  // const wiki_view = json[1].view.includes("wiki");
-  // const influencer_view = json[1].view.includes("influencer");
+  const view_view = json.view.includes("review");
   const news_view = json.view.includes("news");
   const photo_view = json.view.includes("photo");
   const wiki_view = json.view.includes("wiki");

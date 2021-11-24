@@ -2,10 +2,21 @@ import React from 'react';
 import StandardImageList from '../components/StandardImageList';
 import MoreContent from '../components/MoreContent';
 
+import { IconButtonProps } from '@mui/material/IconButton';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ShareIcon from '@mui/icons-material/Share';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-import { Avatar, Card, CardHeader, Chip, Grid, Paper, Stack, Typography} from '@mui/material';
-import Link from 'next/link';
+// import { withStyles, makeStyles, styled} from "@material-ui/core/styles";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+
+// import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
+// import Link from 'next/link';
 import { Box } from '@mui/system';
+import { Avatar, Card, CardHeader, Chip, Grid, Paper, Stack, Typography} from '@mui/material';
+import Link from '@mui/material/Link';
 
 export default function Photo({props}) {
     const {tags, images, image_more} = props
@@ -25,6 +36,7 @@ export default function Photo({props}) {
             <Paper 
               className="group_option_tag_wrap" 
               style={{height: 83, overflow: 'auto', backgroundColor: '#f5f7f8'}}
+              square
             >
               <Grid
                 container
