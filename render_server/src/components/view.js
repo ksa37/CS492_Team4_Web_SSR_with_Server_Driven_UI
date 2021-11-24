@@ -59,7 +59,7 @@ export default function View({props}){
             </Paper>
             {view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardBasic key={index} props={view} view={{"viewType": "NEWS"}}/>)}
             {view_posts&&view_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} view={{"viewType": "NEWS"}}/>)}
-            {view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardTimeline key={index} props={view} view={{"viewType": "NEWS"}}/>)}
+            {view_posts&&view_posts.slice(0, 1).map((view, index) => <ViewCardTimeline key={index} props={view} view={{"viewType": "NEWS"}}/>)}
         </Card>
         <MoreContent props={{'view_option':view_option,'more_link':view_more}}/>
     </>
