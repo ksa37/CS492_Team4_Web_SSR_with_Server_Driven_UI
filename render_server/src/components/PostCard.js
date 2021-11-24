@@ -33,7 +33,7 @@ export default function PostCard({props, view}) {
     return (
         <Card sx={{ maxWidth: 766 }} square > 
             <CardHeader 
-                sx={{ m: 0, p:0, paddingTop: '8px', paddingLeft: '16px', paddingRight: '8px', '& .MuiCardHeader-avatar': {
+                sx={{ m: 0, p:0, paddingTop: '16px', paddingLeft: '16px', paddingRight: '8px', '& .MuiCardHeader-avatar': {
                     marginRight: '8px',
                   } }} variant="contained"
                 avatar={
