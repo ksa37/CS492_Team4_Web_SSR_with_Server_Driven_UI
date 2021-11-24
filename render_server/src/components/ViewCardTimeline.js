@@ -50,33 +50,29 @@ export default function ViewCardTimeline({props, view}) {
                         }}} variant="contained"
                         avatar={
                             <Link href={publisherURL} underline="none">
-                                <a>
-                                    <div className={styles.viewMultiImgBoarder }>
-                                        {publisherImgURL == ""
-                                        ? <Image className={styles.viewMultiImgBoarder }
-                                            src="/images/default_publisher.png" 
-                                            width='100%'
-                                            height='100%'
-                                            objectFit='contain'
-                                        />
-                                        : <Image className={styles.viewMultiImgBoarder }
-                                            
-                                            src={publisherImgURL}
-                                            // src={contentsImgURL}
-                                            width='100%'
-                                            height='100%'
-                                            objectFit='contain'
-                                        />}
-                                    </div>
-                                </a>
+                                <div className={styles.viewMultiImgBoarder }>
+                                    {publisherImgURL == ""
+                                    ? <Image className={styles.viewMultiImgBoarder }
+                                        src="/images/default_publisher.png" 
+                                        width='100%'
+                                        height='100%'
+                                        objectFit='contain'
+                                    />
+                                    : <Image className={styles.viewMultiImgBoarder }
+                                        
+                                        src={publisherImgURL}
+                                        // src={contentsImgURL}
+                                        width='100%'
+                                        height='100%'
+                                        objectFit='contain'
+                                    />}
+                                </div>
                             </Link>
                         }
                         title = {
                             <div className={styles.publishInfo}>
                                 <Link href={publisherURL} underline="none">
-                                    <a>
-                                        <div className={styles.publisher}><b>{publisher}</b></div>
-                                    </a>
+                                    <div className={styles.publisher}><b>{publisher}</b></div>
                                 </Link>
                             </div>
                         }

@@ -36,33 +36,29 @@ export default function ViewCardMultimeda({props, view}) {
                   }}} variant="contained"
                 avatar={
                     <Link href={publisherURL} underline="none">
-                        <a>
-                            <div className={styles.viewMultiImgBoarder }>
-                                {publisherImgURL == ""
-                                ? <Image className={styles.viewMultiImgBoarder }
-                                    src="/images/default_publisher.png" 
-                                    width='100%'
-                                    height='100%'
-                                    objectFit='contain'
-                                />
-                                : <Image className={styles.viewMultiImgBoarder }
-                                    
-                                    src={publisherImgURL}
-                                    // src={contentsImgURL}
-                                    width='100%'
-                                    height='100%'
-                                    objectFit='contain'
-                                />}
-                            </div>
-                        </a>
+                        <div className={styles.viewMultiImgBoarder }>
+                            {publisherImgURL == ""
+                            ? <Image className={styles.viewMultiImgBoarder }
+                                src="/images/default_publisher.png" 
+                                width='100%'
+                                height='100%'
+                                objectFit='contain'
+                            />
+                            : <Image className={styles.viewMultiImgBoarder }
+                                
+                                src={publisherImgURL}
+                                // src={contentsImgURL}
+                                width='100%'
+                                height='100%'
+                                objectFit='contain'
+                            />}
+                        </div>
                     </Link>
                 }
                 title = {
                     <div className={styles.publishInfo}>
                         <Link href={publisherURL} underline="none">
-                            <a>
-                                <div className={styles.publisher}><b>{publisher}</b></div>
-                            </a>
+                            <div className={styles.publisher}><b>{publisher}</b></div>
                         </Link>
                     </div>
                 }
@@ -87,12 +83,10 @@ export default function ViewCardMultimeda({props, view}) {
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '18px', paddingRight: '18px', paddingBottom: '15px', paddingTop: '14px',
             "&:last-child": {paddingBottom: 0}}} variant="contained" >
                 <Link href={postURL} underline="none">
-                    <a>
-                        <div className={styles.title}>{title}</div>
-                        <div className={styles.contentsInfo}>
-                        <div className={styles.contents}>{contents}</div>
-                        </div>
-                    </a>
+                    <div className={styles.title}>{title}</div>
+                    <div className={styles.contentsInfo}>
+                    <div className={styles.contents}>{contents}</div>
+                    </div>
                 </Link>
             </CardContent>   
             <Paper 
@@ -103,13 +97,9 @@ export default function ViewCardMultimeda({props, view}) {
             >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:18, paddingRight:18}}> 
                 {tags&&tags.map((item, index) => (
-                    <Link key={index} href={item.tagURL} underline="none">
-                    <a>
-                    <Button className={styles.tagButton} variant="contained" disableElevation 
-                    sx={{'&:hover': {backgroundColor: '#f4f7f8'}}}>#{item.tag_name}
-                    </Button>
+                    <a key={index}  className={styles.tagButton} href={item.tagURL}>
+                        #{item.tag_name}    
                     </a>
-                    </Link>
                 ))}
                 </Stack>
             </Paper>

@@ -35,7 +35,7 @@ export default function Photo({props}) {
             />
             <Paper 
               className="group_option_tag_wrap" 
-              style={{height: 83, overflow: 'auto', backgroundColor: '#f5f7f8'}}
+              style={{height: 83, overflow: 'auto', backgroundColor: '#f5f7f8', borderBlock: '1px solid rgb(236, 240, 242)', boxShadow:'none'}}
               square
             >
               <Grid
@@ -46,16 +46,17 @@ export default function Photo({props}) {
               
               >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:12, paddingRight:12}}>
-                {tags&&tags.map((item) => (
-                  <Link key={item.tagURL} href={item.tagURL}>
-                    <Chip 
-                      key={item["tag_name"]}
-                      avatar={<Avatar src ={item["tag_image_url"]} />}
-                      label={item["tag_name"]}
-                      variant="outlined"
-                      style={{backgroundColor: "#ffffff"}}
-                    />
-                  </Link>
+                {tags&&tags.map((item, index) => (
+                  <Chip 
+                    key={index}
+                    component="a" 
+                    href={item.tagURL}
+                    avatar={<Avatar src ={item["tag_image_url"]} />}
+                    label={item["tag_name"]}
+                    variant="outlined"
+                    sx={{backgroundColor: "#ffffff"}}
+                    clickable
+                  />
                 ))}
               </Stack>
               </Grid>
