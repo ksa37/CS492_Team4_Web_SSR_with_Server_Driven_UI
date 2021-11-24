@@ -8,6 +8,7 @@ import { Box } from '@mui/system';
 import News from '../components/news';
 import Photo from '../components/photo';
 import Wiki from '../components/wiki';
+import View from '../components/view'
 import Influencer from '../components/influencer';
 
 const themeLight = createTheme({
@@ -28,6 +29,33 @@ const themeDark = createTheme({
     },
   }
 });
+
+// export async function getServerSideProps(context) {
+//   const res = await fetch('http://localhost:5000/keywords')
+//   const data = await res.json()
+//   const string_data = JSON.stringify(data)
+//   const props = {data: ''}
+//   props.data = string_data
+//   /*
+//   const {req, } = context
+//   const props = {data: ''}
+//   if (req.method === "POST") {
+//     const streamPromise = new Promise((resolve, reject) => {
+//       let body = ''
+//       req.on('data', ( data ) => {
+//         body += data
+//       });
+//       req.on('end', () => {
+//         resolve(body);
+//       });
+//     });
+//     const body = await streamPromise;
+//       props.data = body;
+//   }
+//   return { props }
+//   */
+//   return { props }
+// }
 
 export async function getServerSideProps(context) {
   const {req, } = context
@@ -56,8 +84,16 @@ export async function getServerSideProps(context) {
 }
 
 
+// export default function Home({data}) {
+//   const json = JSON.parse(JSON.parse(data).data)
+//   // const json = JSON.parse(data)
+//   const news_view =  json[1].view.includes("news");
+//   const photo_view = json[1].view.includes("photo");
+//   const view_view = json[1].view.includes("review");
+//   const wiki_view = json[1].view.includes("wiki");
 export default function Home({ data }) {
   const json = JSON.parse(data)
+  const view_view = json.view.includes("review");
   const news_view = json.view.includes("news");
   const photo_view = json.view.includes("photo");
   const wiki_view = json.view.includes("wiki");
@@ -65,43 +101,33 @@ export default function Home({ data }) {
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
     <div className={styles.container}>
-        {news_view && 
-        <div className="section_news">
-          <News props={json.news}/>
-        </div>}
-        {wiki_view && 
-        <div className="section_wiki">
-          <Wiki props={json.wiki}/>
-        </div>}
-        {photo_view&&
-        <div className="section_image">
-          <Photo props={json.photo}/>  
-        </div>}
-        <Influencer/>
+      <Box sx={{ m: 0, mb: 1 }}></Box>
+      {view_view&&
+      <div className="section_view">
+        <View props={json.review}/> 
+      </div>} 
+      {news_view && 
+      <div className="section_news">
+        <News props={json.news}/>
+      </div>}
+      {wiki_view && 
+      <div className="section_wiki">
+        <Wiki props={json.wiki}/>
+      </div>}
+      {photo_view&&
+      <div className="section_image">
+        <Photo props={json.photo}/>  
+      </div>}
+      <Influencer/>
+      <Box sx={{ mb: 15 }}></Box>
+      <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
+        NAVER
+      </Typography>
+      <Typography style={{ fontSize: 14, verticalAlign: 'center', textAlign: 'center' }}>
+        Team 4
+      </Typography>
+      <Box sx={{ mb: 5 }}></Box>
     </div>
-      <div className={styles.container}>
-        <Box sx={{ m: 0, mb: 1 }}></Box>
-        {news_view &&
-          <div className="section_news">
-            <News props={json.news} />
-          </div>}
-        {wiki_view &&
-          <div className="section_wiki">
-            <Wiki props={json.wiki} />
-          </div>}
-        {photo_view &&
-          <div className="section_image">
-            <Photo props={json.photo} />
-          </div>}
-        <Box sx={{ mb: 15 }}></Box>
-        <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
-          NAVER
-        </Typography>
-        <Typography style={{ fontSize: 14, verticalAlign: 'center', textAlign: 'center' }}>
-          Team 4
-        </Typography>
-        <Box sx={{ mb: 5 }}></Box>
-      </div>
     </ThemeProvider>
   )
 }
