@@ -77,6 +77,7 @@ export default function Home({ data }) {
         <div className="section_image">
           <Photo props={json.photo}/>  
         </div>}
+        <Influencer/>
     </div>
       <div className={styles.container}>
         <Box sx={{ m: 0, mb: 1 }}></Box>
