@@ -4,7 +4,7 @@ import styles from './news.module.css'
 import MoreContent from '../components/MoreContent';
 
 import { Card, CardHeader } from '@mui/material';
-import { ReactComponent as Dot } from '../../public/icons/dot.svg'; 
+import Dot from '../../public/icons/dot.svg'; 
 
 // date to millisecond convertor: https://currentmillis.com
 var ViewType = Object.freeze({
@@ -15,26 +15,26 @@ var ViewType = Object.freeze({
 export default function News({props}) {
   const {news_posts, news_more} = props
 
-  const [sort, setSort] = React.useState(true);
-  const [sortRelated, setSortRelated] = React.useState(null);
-  const [sortLastest, setSortLastest] = React.useState(null);
-  const isRelated = Boolean(sort);
+  const [sortRelated, setSortRelated] = React.useState(true);
+  const isRelated = Boolean(sortRelated);
   const sortRelatedClick = (event) => {
-    console.log("--------");
-    console.log(isRelated);
-    setSort(true);
-    // setSort(!sort);
-    console.log(event.currentTarget);
-    console.log(isRelated);
+    setSortRelated(true);
+    // console.log(event.currentTarget);
+    // news_posts&&news_posts.sort((a, b) => console.log(a.relation, b.relation));
+    // news_posts&&news_posts.sort((a, b) => parseFloat(a.relation) > parseFloat(b.relation) ? 1 : -1);
+    // console.log(news_posts);
   };
   const sortLastestClick = (event) => {
-    console.log("--------");
-    console.log(isRelated);
-    setSort(false);
-    // setSort(!sort);
-    console.log(event.currentTarget);
-    console.log(isRelated);
+    setSortRelated(false);
+    // console.log(event.currentTarget);
+    // news_posts&&news_posts.sort((a, b) => parseInt(a.date) < parseInt(b.date) ? 1 : -1);
+    // console.log(news_posts);
   };
+
+  sortRelated
+  ? news_posts&&news_posts.sort((a, b) => parseFloat(a.relation) > parseFloat(b.relation) ? 1 : -1) // sort by relation
+  : news_posts&&news_posts.sort((a, b) => parseInt(a.date) < parseInt(b.date) ? 1 : -1);            // sort by date
+
   
 
   return (
@@ -49,23 +49,31 @@ export default function News({props}) {
                       <button className={styles.btn}
                         onClick={sortRelatedClick}
                       >
-                        {/* <Dot fill='red' stroke='green'/> */}
-                        {/* <ReactSVG className={styles.svg} src='/icons/dot.svg'/> */}
-                        관련도순
+                        {sortRelated 
+                        ? <div className={styles.viewSort}>
+                            <Dot className={styles.sortDot} fill="var(--naver_green)"/>
+                            관련도순
+                          </div>
+                        : <div className={styles.viewSort}>
+                            <Dot className={styles.sortDot} fill="var(--date_gray)"/>
+                            <div className={styles.inactiveSort}>관련도순</div>
+                          </div>
+                        }
                       </button>
                       <button className={styles.btn}
                         onClick={sortLastestClick}
                       >
-                        {sort 
-                        ? <div>
+                        {sortRelated 
+                        ? <div className={styles.viewSort}>
+                            <Dot className={styles.sortDot} fill="var(--date_gray)"/>
+                            <div className={styles.inactiveSort}>최신순</div>
+                          </div>
+                        : <div className={styles.viewSort}>
+                            <Dot className={styles.sortDot} fill="var(--naver_green)"/>
                             최신순
                           </div>
-                        : <div style={{color:"#FF0000"}}>
-                          최신순
-                        </div>}
-                      </button>
-                      {/* 최신순 */}
-                    {/* </div> */}
+                        }
+                    </button>
                 </div>
             </div>
             }

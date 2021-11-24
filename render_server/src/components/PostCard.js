@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from '@mui/material/Link';
 import styles from './postCard.module.css'
-import Morevert from './Morevert'
+import MoreVert from './morevert'
 import DateConvertor from './DateConvertor'
 import Image from 'material-ui-image'
 
@@ -85,7 +85,7 @@ export default function PostCard({props, view}) {
                     </div>
                 }
                 action = {
-                    <Morevert props = {{
+                    <MoreVert props = {{
                         "open": open, 
                         "anchorEl": anchorEl, 
                         "handleClick": handleClick, 
@@ -103,7 +103,9 @@ export default function PostCard({props, view}) {
                             sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
                         />}
                         <div className={styles.contentsInfo}>
-                            <div className={styles.contents}>{contents}</div>
+                            <div className={styles.contents}>
+                                <p>{contents}</p>
+                            </div>
                             {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
                                 <Image className={styles.contentsImg}
                                     src={contentsImgURL}
