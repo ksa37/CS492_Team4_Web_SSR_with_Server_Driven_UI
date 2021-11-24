@@ -58,10 +58,14 @@ export async function getServerSideProps(context) {
 
 export default function Home({ data }) {
   const json = JSON.parse(data)
-  const news_view = json[1].view.includes("news");
-  const photo_view = json[1].view.includes("photo");
-  const wiki_view = json[1].view.includes("wiki");
-  const influencer_view = json[1].view.includes("influencer");
+  // const news_view = json[1].view.includes("news");
+  // const photo_view = json[1].view.includes("photo");
+  // const wiki_view = json[1].view.includes("wiki");
+  // const influencer_view = json[1].view.includes("influencer");
+  const news_view = json.view.includes("news");
+  const photo_view = json.view.includes("photo");
+  const wiki_view = json.view.includes("wiki");
+  const influencer_view = json.view.includes("influencer");
 
   return (
     <ThemeProvider theme={themeLight}>
