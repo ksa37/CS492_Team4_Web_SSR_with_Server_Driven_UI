@@ -184,7 +184,8 @@ export default function ViewCardTimeline({props, view}) {
                     </div>
                 </div>
             </div>
-
+        </Card>
+/* 
             <Divider sx={{marginLeft:'32px', marginRight:'18px'}}/>
             <div className={styles.timelineContent} >
                 <div className={styles.timelineCircle}/>
@@ -318,138 +319,7 @@ export default function ViewCardTimeline({props, view}) {
                     </div>
                 </div>
             </div>
-        </Card> 
-        /*
-        <Card sx={{ maxWidth: 766 }} square > 
-            <CardHeader 
-                sx={{ m: 0, p:0, paddingTop: '12px', paddingLeft: '18px', paddingRight: '10px', paddingBottom: '12px', '& .MuiCardHeader-avatar': {
-                    marginRight: '11px',
-                  }}} variant="contained"
-                avatar={
-                    <Link href={publisherURL}>
-                        <a>
-                            <div className={styles.viewMultiImgBoarder }>
-                                {publisherImgURL == ""
-                                ? <Image className={styles.viewMultiImgBoarder }
-                                    src="/images/default_publisher.png" 
-                                    width='100%'
-                                    height='100%'
-                                    objectFit='contain'
-                                />
-                                : <Image className={styles.viewMultiImgBoarder }
-                                    
-                                    src={publisherImgURL}
-                                    // src={contentsImgURL}
-                                    width='100%'
-                                    height='100%'
-                                    objectFit='contain'
-                                />}
-                            </div>
-                        </a>
-                    </Link>
-                }
-                title = {
-                    <div className={styles.publishInfo}>
-                        <Link href={publisherURL}>
-                            <a>
-                                <div className={styles.publisher}><b>{publisher}</b></div>
-                            </a>
-                        </Link>
-                    </div>
-                }
-                subheader={<div className={styles.date}>{converted_date}</div>}
-                action = {
-                    <Morevert props = {{
-                        "open": open, 
-                        "anchorEl": anchorEl, 
-                        "handleClick": handleClick, 
-                        "handleClose": handleClose
-                    }}
-                    />
-                }
-            />
-            {contentsImgURL != "" && <div className={styles.viewMultiImg}>
-                <Image className={styles.contentsImg}
-                    src={contentsImgURL}
-                    layout="fill"
-                /> 
-            </div>}
-            <CardContent sx={{ m: 0, p: 0, paddingLeft: '18px', paddingRight: '18px', paddingBottom: '15px', paddingTop: '14px',
-            "&:last-child": {paddingBottom: 0}}} variant="contained" >
-                <Link href={postURL}>
-                    <a>
-                        <div className={styles.title}>{title}</div>
-                        <div className={styles.contentsInfo}>
-                        <div className={styles.contents}>{contents}</div>
-                        </div>
-                    </a>
-                </Link>
-            </CardContent>   
-            <Paper 
-              className="group_option_tag_wrap" 
-              style={{overflow: 'auto', paddingBottom: 18}}
-              elevation='0'
-              square
-            >
-                <Stack direction="row" spacing={1} style= {{paddingLeft:18, paddingRight:18}}> 
-                {tags&&tags.map((item) => (
-                    <Link href={item.tagURL}>
-                    <a>
-                    <Button className={styles.tagButton} variant="contained" disableElevation 
-                    sx={{'&:hover': {backgroundColor: '#f4f7f8'}}}>#{item.tag_name}
-                    </Button>
-                    </a>
-                    </Link>
-                ))}
-                </Stack>
-            </Paper>
-            <ul className='timeline_list'>
-                <li>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </li>
-            </ul>
-            <Timeline align="left" position="right">
-                <TimelineItem>
-                <TimelineOppositeContent style={{flex:0, padding:0}}>
-                </TimelineOppositeContent>
-                    <TimelineSeparator>
-                    <TimelineDot variant="outlined" />
-                    <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent style={{padding:4}}>
-                        <Link href={postURL}>
-                            <a>
-                                <div className={styles.title}>{title}</div>
-                                <div className={styles.contentsInfo}>
-                                <div className={styles.contents}>{contents}</div>
-                                </div>
-                            </a>
-                        </Link>
-                    </TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineSeparator>
-                    <TimelineDot variant="outlined" color="primary" />
-                    <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent>Code</TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineSeparator>
-                    <TimelineDot variant="outlined" color="secondary" />
-                    <TimelineConnector />
-                    </TimelineSeparator>
-                    <TimelineContent>Sleep</TimelineContent>
-                </TimelineItem>
-                <TimelineItem>
-                    <TimelineSeparator>
-                    <TimelineDot variant="outlined" />
-                    </TimelineSeparator>
-                    <TimelineContent>Repeat</TimelineContent>
-                </TimelineItem>
-            </Timeline>
-        </Card>     */
+        </Card>  */
+        
     )
 }
