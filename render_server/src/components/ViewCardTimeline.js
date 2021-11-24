@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from './postCard.module.css'
 // import Image from "next/image"
 import Image from 'material-ui-image'
-import Morevert from './Morevert'
+import MoreVert from './MoreVert'
 import DateConvertor from './DateConvertor'
 
 import Timeline from '@mui/lab/Timeline';
@@ -82,7 +82,7 @@ export default function ViewCardTimeline({props, view}) {
                         }
                         subheader={<div className={styles.date}>{converted_date}</div>}
                         action = {
-                            <Morevert props = {{
+                            <MoreVert props = {{
                                 "open": open, 
                                 "anchorEl": anchorEl, 
                                 "handleClick": handleClick, 
@@ -228,7 +228,7 @@ export default function ViewCardTimeline({props, view}) {
                         }
                         subheader={<div className={styles.date}>{converted_date}</div>}
                         action = {
-                            <Morevert props = {{
+                            <MoreVert props = {{
                                 "open": open, 
                                 "anchorEl": anchorEl, 
                                 "handleClick": handleClick, 

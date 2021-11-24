@@ -1,13 +1,13 @@
 import React from 'react'
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import styles from './morevert.module.css'
+import styles from './MoreVert.module.css'
 
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 import { Divider, IconButton } from '@mui/material';
 
-export default function Morevert({props}) {  
+export default function MoreVert({props}) {  
     const { open, anchorEl, handleClick, handleClose } = props
 
     return (
