@@ -6,12 +6,14 @@
     aspect-ratio: 1;
 }
 .grid_item{
-    display: flex;
+    display: block;
     position: relative;
     aspect-ratio: 1;
 }
 .grid_item_img {
+    /* position: relative; */
+    display: block;
     aspect-ratio: 1;
-    max-width: 254px;
-    max-width: 254px;
+    max-width: 100%;
+    max-width: 100%;
 }
