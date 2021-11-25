@@ -109,20 +109,7 @@
 
 }
 
-.linkArea {
-    margin-inline: 18px;
-    padding-block: 13px;
-    border-top: solid rgb(244, 246, 247) 2px;
-}
 
-.linkLine {
-    border-left: solid rgb(234, 235, 236) 2px;
-    padding-left: 11px;
-    font-size: 0.86rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 
 .viewMultiImg {
     /* display: flex; */
@@ -198,40 +185,6 @@
     border: 2px solid rgba(184,184,184,.9);
     background-color:#fff;
 }
-.imageScroller {
-    margin: 12px -18px 11px 0px;
-    height: 93px;
-}
-
-.imageScrollerContainer{
-    /* position: relative; */
-    height: 100%;
-    font-size: 0;
-    line-height: 0;
-    white-space: nowrap;
-    list-style: none;
-    overflow: auto;
-    padding-left: 0px;
-}
-
-
-
-.imageScrollerItem {
-    display: inline-block;
-    position: relative;
-    height: 100%;
-    vertical-align: top;
-    white-space: normal;
-    margin-left: 3px;
-}
-
-.imageScrollerContainer :first-child .img{
-    margin-left: 0px;
-}
-
-.imageScrollerContainer:last-child .img{
-    margin-right: 18px;
-}
 
 .linkBox {
     display: block;
@@ -244,21 +197,13 @@
     line-height: 2.2rem;
     color: #666;
 }
-/* 
-.linkBoxForward{
 
- vertical-align: middle; 
- justify-content: center;
- align-content: center;
-} */
 .linkBoxForward{
-    /* background-image: url("/icons/forward.svg"); */
     content: '';
     position: absolute;
     right: 12px;
     top: 0;
     bottom: 0;
     margin: auto 0;
-
     background-position: -25px -40px;
 }

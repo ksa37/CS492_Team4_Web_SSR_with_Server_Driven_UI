@@ -6,12 +6,12 @@ import MoreVert from './MoreVert'
 import DateConvertor from './DateConvertor'
 import ImageScroll from './ImageScroll';
 import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack} from '@mui/material';
+import LinkArea from './LinkArea';
 
-// var ViewType = Object.freeze({
-//     NEWS: 0,
-//     WIKI: 1,
-//     VIEW: 2
-// });
+var LinkType = Object.freeze({
+    VIEWBASIC: 0,
+    VIEWTIMELINE: 1
+  });
 
 export default function ViewCardTimeline({props}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, tags, more_links} = props
@@ -94,7 +94,9 @@ export default function ViewCardTimeline({props}) {
                             </a>
                         </Link>
                     </div>
+                    {<LinkArea props={{"more_links":more_links}} link_view={{"link_type": LinkType.VIEWTIMELINE}}/>}
                 </div>
+                   
             </div>
         </Card>   
     )

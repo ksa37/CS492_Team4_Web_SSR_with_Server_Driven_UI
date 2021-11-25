@@ -15,6 +15,11 @@ var ViewType = Object.freeze({
     WIKI: 1,
     VIEW: 2
 });
+
+var LinkType = Object.freeze({
+    VIEWBASIC: 0,
+    VIEWTIMELINE: 1
+  });
 // typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
 export default function PostCard({props, view}) {  
@@ -124,7 +129,7 @@ export default function PostCard({props, view}) {
                 </Link>
             </CardContent>  
             {viewType == ViewType.VIEW &&<TagArea props={{"tags":tags}}/>}   
-            {viewType == ViewType.VIEW &&<LinkArea props={{"more_links":more_links}}/>}                
+            {viewType == ViewType.VIEW &&<LinkArea props={{"more_links":more_links}} link_view={{"link_type": LinkType.VIEWBASIC}}/>}                
         </Card>
     )
 }
