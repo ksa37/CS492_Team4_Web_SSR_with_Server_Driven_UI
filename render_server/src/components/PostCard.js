@@ -20,6 +20,12 @@ var LinkType = Object.freeze({
     VIEWBASIC: 0,
     VIEWTIMELINE: 1
   });
+
+var ScrollType = Object.freeze({
+VIEWBASIC: 0,
+VIEWTIMELINE: 1,
+INFLUENCER: 2
+});
 // typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
 export default function PostCard({props, view}) {  
@@ -102,7 +108,10 @@ export default function PostCard({props, view}) {
                         sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
                     />}
                     {viewType == ViewType.VIEW && contentsImgURL.length > 1 &&
-                        <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}}/>
+                        <>
+                        <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.VIEWBASIC}}/>
+                        {/* <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.INFLUENCER}}/> */}
+                        </>
                     }
                     <div className={styles.contentsInfo}>
                         <div className={styles.contents}>

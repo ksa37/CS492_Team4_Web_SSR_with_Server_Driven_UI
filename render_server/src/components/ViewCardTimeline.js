@@ -13,6 +13,12 @@ var LinkType = Object.freeze({
     VIEWTIMELINE: 1
   });
 
+var ScrollType = Object.freeze({
+VIEWBASIC: 0,
+VIEWTIMELINE: 1,
+INFLUENCER: 2
+});
+
 export default function ViewCardTimeline({props}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, tags, more_links} = props
     
@@ -82,7 +88,7 @@ export default function ViewCardTimeline({props}) {
                         }
                     />   
                     {contentsImgURL.length > 1 &&
-                        <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}}/>
+                        <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.VIEWTIMELINE}}/>
                     }
                     <div>
                         <Link href={postURL} underline="none">
