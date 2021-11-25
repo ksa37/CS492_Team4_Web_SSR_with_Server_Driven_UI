@@ -200,6 +200,7 @@
 }
 .imageScroller {
     margin: 12px -18px 11px 0px;
+    height: 93px;
 }
 
 .imageScrollerContainer{
@@ -224,11 +225,11 @@
     margin-left: 3px;
 }
 
-.imageScrollerContainer :first-child {
+.imageScrollerContainer :first-child .img{
     margin-left: 0px;
 }
 
-.imageScrollerContainer:last-child {
+.imageScrollerContainer:last-child .img{
     margin-right: 18px;
 }
 

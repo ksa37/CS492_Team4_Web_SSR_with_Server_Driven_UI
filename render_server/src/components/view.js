@@ -10,6 +10,11 @@ import ViewCardBasic from './ViewCardBasic';
 import ViewCardMultimeda from './ViewCardMultimedia'
 import ViewCardTimeline from './ViewCardTimeline';
 
+var ViewType = Object.freeze({
+    NEWS: 0,
+    WIKI: 1,
+    VIEW: 2
+});
 const selectView = [
     {
       tab: "basic",
@@ -101,26 +106,18 @@ export default function View({props}){
                 </Grid>
             </Paper>
             {currentItem.tab=="basic" 
-                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardBasic key={index} props={view} view={{"viewType": "NEWS"}}/>)}</> 
+                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => 
+                    <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
+
+                    )}</> 
                 : <></> }
             {currentItem.tab=="timeline" 
-                ? <>{view_posts&&view_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} view={{"viewType": "NEWS"}}/>)} </>
+                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardTimeline key={index} props={view} />)} </>
                 : <></> }
             {currentItem.tab=="multimedia" 
-                ? <>{view_posts&&view_posts.slice(0, 1).map((view, index) => <ViewCardTimeline key={index} props={view} view={{"viewType": "NEWS"}}/>)} </>
+                ? <>{view_posts&&view_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
                 : <></> }
 
-                       {/* switch (currentItem.tab) {
-                    case "basic":
-                        {view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardBasic key={index} props={view} view={{"viewType": "NEWS"}}/>)}
-                        [break]
-                    case "timeline":
-                        {view_posts&&view_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} view={{"viewType": "NEWS"}}/>)}
-                        [break]
-                    case "multimedia":
-                        {view_posts&&view_posts.slice(0, 1).map((view, index) => <ViewCardTimeline key={index} props={view} view={{"viewType": "NEWS"}}/>)}
-                        [break]
-                } */}
             {/* {view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardBasic key={index} props={view} view={{"viewType": "NEWS"}}/>)}
             {view_posts&&view_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} view={{"viewType": "NEWS"}}/>)}
             {view_posts&&view_posts.slice(0, 1).map((view, index) => <ViewCardTimeline key={index} props={view} view={{"viewType": "NEWS"}}/>)} */}
