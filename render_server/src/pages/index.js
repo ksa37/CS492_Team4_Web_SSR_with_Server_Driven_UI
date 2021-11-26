@@ -102,6 +102,11 @@ export default function Home({ data }) {
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
     <div className={styles.container}>
+        {view_view&&
+        <div className="section_view">
+        <View props={json.review}/>
+        </div>
+        }
         {news_view && 
         <div className="section_news">
           <News props={json.news}/>

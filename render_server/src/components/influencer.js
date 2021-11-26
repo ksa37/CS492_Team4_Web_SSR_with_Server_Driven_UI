@@ -72,13 +72,14 @@ export default function Influencer(props) {
   const [showResults, setShowResults] = useState(false)
   const { data } = props.props
   return (
-    <>
-      <Card sx={{ maxWidth: 768, lineHeight: "109px"}}>
+    <Container>
+      <Search/>
+      <Card sx={{ maxWidth: 1150, lineHeight: "109px"}}>
        <Container sx={{ display: 'flex' }}>
 
           <Container sx={{ fontSize: '1rem', fontWeight : "700", display: 'flex'}}> 
           <div>인플루언서 </div> 
-          <img onClick = {influencer_icon} className = {styles.influencer_icon} src="/images/influencer/icon_img.png"/> 
+          <img onClick = {influencer_icon} className = {styles.influencer_icon} src="/static/images/avatar/icon_img.png"/> 
           </Container>
 
           <Container sx={{ color: "#0c43b7", fontSize: '1rem' }} className = {styles.contenttitle_rightend}> 
@@ -94,7 +95,7 @@ export default function Influencer(props) {
           <CardHeader
           avatar={
             <Link href={each.avatar_name_url}> 
-            <Avatar sx = {{ width: 88, height: 88, display:'inline-block'}} alt="" src="/images/influencer/avatar_1.png"/>
+            <Avatar sx = {{ width: 88, height: 88, display:'inline-block'}} alt="" src="../static/images/avatar/avatar_1.png"/>
             </Link>
           }
           title = {<div className = {styles.flex}> <Link href={each.avatar_name_url} underline="none"> 
@@ -110,24 +111,24 @@ export default function Influencer(props) {
         </Container>
 
         <Container sx={{ml:'40px', display : 'flex' }}> 
-          <img className = {styles.blogicon} src="/images/influencer/blogicon.png"/> 
+          <img className = {styles.blogicon} src="../static/images/avatar/blogicon.png"/> 
           <div className = {styles.subheader}> {each.blogdetails} </div> 
           <div className = {styles.detailsdepth}> {each.detailsdepth} </div> 
         </Container>
         <Search props = {each.detailsdepth}/>
         
         <Link href={each.title_content_url} underline="none"> 
-        <Container sx={{color: '#0c43b7', fontSize: '1rem', ml:'45px' }} className = {styles.contenttitle}> {each.title} </Container> 
+        <Container sx={{my: '10px', color: '#0c43b7', fontSize: '1.6rem', ml:'40px' }} className = {styles.contenttitle}> {each.title} </Container> 
         </Link>  
   
         <Container className = {styles.flex_allign}>
           <Container>
-            <Link href={each.title_content_url} underline="none"> <Container sx={{my: '10px', color: "#404040", fontSize: '1rem' }}> {each.content} </Container> </Link>
-            <Container sx={{my: '10px', color: 'grey', fontSize: '1rem' }}> {each.date} </Container>
+            <Link href={each.title_content_url} underline="none"> <Container sx={{my: '10px', color: "#404040", fontSize: '1.3rem' }}> {each.content} </Container> </Link>
+            <Container sx={{my: '10px', color: 'grey', fontSize: '1.1rem' }}> {each.date} </Container>
           </Container>
-          <Link href={each.title_content_url} underline="none"> <img className = {styles.image} src="/images/influencer/blog_1.png"/> </Link>
+          <Link href={each.title_content_url} underline="none"> <img className = {styles.image} src="/static/images/avatar/blog_1.png"/> </Link>
         </Container>
       </Card>)}
-    </>
+    </Container>
   )
 }

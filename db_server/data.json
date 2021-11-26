@@ -190,6 +190,36 @@
                     "tag_name": "야경",
                     "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
                     "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
+                },
+                {
+                    "tag_name": "여행",
+                    "tag_image_url": "/images/photos/photos_tag_images/paris_tag7.jpeg",
+                    "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%AC%ED%96%89&pq=%ED%8C%8C%EB%A6%AC"
+                },
+                {
+                    "tag_name": "관광지",
+                    "tag_image_url": "/images/photos/photos_tag_images/paris_tag8.jpeg",
+                    "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EA%B4%80%EA%B4%91%EC%A7%80&pq=%ED%8C%8C%EB%A6%AC"
+                },
+                {
+                    "tag_name": "개선문",
+                    "tag_image_url": "/images/photos/photos_tag_images/paris_tag9.jpeg",
+                    "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EA%B0%9C%EC%84%A0%EB%AC%B8&pq=%ED%8C%8C%EB%A6%AC"
+                },
+                {
+                    "tag_name": "거리",
+                    "tag_image_url": "/images/photos/photos_tag_images/paris_tag10.jpeg",
+                    "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EA%B1%B0%EB%A6%AC&pq=%ED%8C%8C%EB%A6%AC"
+                },
+                {
+                    "tag_name": "올림픽",
+                    "tag_image_url": "/images/photos/photos_tag_images/paris_tag11.jpeg",
+                    "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%98%AC%EB%A6%BC%ED%94%BD&pq=%ED%8C%8C%EB%A6%AC"
+                },
+                {
+                    "tag_name": "풍경",
+                    "tag_image_url": "/images/photos/photos_tag_images/paris_tag12.jpeg",
+                    "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%ED%92%8D%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
                 }
             ],
             "images": [
@@ -206,8 +236,8 @@
                     "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
                 },
                 {
-                    "img_path": "/images/photos/photos_images/paris_image3.jpeg",
-                    "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
+                    "img_path": "/images/photos/photos_images/paris_image4.jpeg",
+                    "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&sm=mtb_img&query=%ED%8C%8C%EB%A6%AC&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall#imgId=image_sas%3Ablog69427238%7C14%7C222565476601_1986740026"
                 },
                 {
                     "img_path": "/images/photos/photos_images/paris_image5.jpeg",
@@ -226,7 +256,7 @@
                     "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
                 },
                 {
-                    "img_path": "/images/photos/photos_images/paris_image8.jpeg",
+                    "img_path": "/images/photos/photos_images/paris_image9.jpeg",
                     "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
                 }
             ],
@@ -333,37 +363,42 @@
     "review": {
         "tags": [
             {
-              "tag_name": "프랑스",
+              "tag_name": "전체",
               "tag_image_url": "/images/photos/photos_tag_images/paris_tag1.png",
               "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%94%84%EB%9E%91%EC%8A%A4%20%ED%8C%8C%EB%A6%AC&pq=%ED%8C%8C%EB%A6%AC"
             },
             {
-              "tag_name": "국기",
+              "tag_name": "카페글",
               "tag_image_url": "/images/photos/photos_tag_images/paris_tag2.png",
               "tagURL" : "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EA%B5%AD%EA%B8%B0&pq=%ED%8C%8C%EB%A6%AC"
             },
             {
-              "tag_name": "지도",
+              "tag_name": "날씨",
               "tag_image_url": "/images/photos/photos_tag_images/paris_tag3.png",
               "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%A7%80%EB%8F%84&pq=%ED%8C%8C%EB%A6%AC"
             },
             {
-              "tag_name": "생제르맹",
+              "tag_name": "맛집",
               "tag_image_url": "/images/photos/photos_tag_images/paris_tag4.png",
               "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%83%9D%EC%A0%9C%EB%A5%B4%EB%A7%B9&pq=%ED%8C%8C%EB%A6%AC"
             },
             {
-              "tag_name": "에펠탑",
+              "tag_name": "물랑루즈",
               "tag_image_url": "/images/photos/photos_tag_images/paris_tag5.png",
               "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
             },
             {
-              "tag_name": "야경",
+              "tag_name": "쇼핑",
               "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
               "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
             },
             {
-                "tag_name": "야경",
+                "tag_name": "코스",
+                "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
+                "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
+            },
+            {
+                "tag_name": "모나리자",
                 "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
                 "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
             },
@@ -373,27 +408,22 @@
                 "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
             },
             {
-                "tag_name": "야경",
+                "tag_name": "에펠탑",
                 "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
                 "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
             },
             {
-                "tag_name": "야경",
+                "tag_name": "예약",
                 "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
                 "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
             },
             {
-                "tag_name": "야경",
+                "tag_name": "루브르박물관",
                 "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
                 "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
             },
             {
-                "tag_name": "야경",
-                "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
-                "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
-            },
-            {
-                "tag_name": "야경",
+                "tag_name": "베르사유궁전",
                 "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
                 "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
             }
@@ -403,11 +433,16 @@
                 "publisherURL": "https://in.naver.com/hug387",
                 "publisherImgURL": "/images/view/blog_logo1.jpeg",
                 "publisher": "유지니",
-                "date": "1636595858000",
+                "date": "1637031240000",
                 "postURL": "https://m.blog.naver.com/hug387/222569690308",
                 "title": "호탤스닷컴 11월 할인코드 파리여행 준비해볼까~",
                 "contents": "직접 보여드릴게요, 파리 숙소를 검색했더니 다양한 호텔들이 나와요. 여기서 기본적으로... 다시가고 싶은 파리여행 뭘해도 재밌었다, 라는 생각이 드는 파리. 2020년 1월에...",
-                "contentsImgURL": "/images/view/blog_img1.png",
+                "contentsImgURL": ["/images/view/blog_img1_1.png","/images/view/blog_img1_2.jpeg",
+                    "/images/view/blog_img1_3.jpeg","/images/view/blog_img1_4.jpeg","/images/view/blog_img1_5.jpeg",
+                    "/images/view/blog_img1_6.jpeg","/images/view/blog_img1_7.jpeg","/images/view/blog_img1_8.jpeg",
+                    "/images/view/blog_img1_9.jpeg","/images/view/blog_img1_10.jpeg","/images/view/blog_img1_11.jpeg"
+                ],
+                "imgNum": 11,
                 "relation": "",
                 "tags": [
                     {"tag_name": "호텔스닷컴",
@@ -428,11 +463,12 @@
                 "publisherURL": "https://m.blog.naver.com/amy201427",
                 "publisherImgURL": "/images/view/blog_logo2.jpeg",
                 "publisher": "Chez Amy (·ㅅ·)♥",
-                "date": "1636595858000",
+                "date": "1637341500000",
                 "postURL": "https://m.blog.naver.com/amy201427/222573481510",
                 "title": "파리 블랙프라이데이에 낚인 라발레빌리지 아울렛 feat. FURLA 백팩",
                 "contents": "파리 블랙프라이데이에 낚인 라발레빌리지 아울렛 feat. FURLA 백팩 작년에 이어 올해도 어김없이 파리 블랙프라이데이가 돌아왔음 :) 작년과 다르게 올해는 위드코로나로 관광객들이...",
-                "contentsImgURL": "/images/view/blog_img2.png",
+                "contentsImgURL": ["/images/view/blog_img2.png"],
+                "imgNum": 99,
                 "relation": "",
                 "tags": [
                     {"tag_name": "파리블랙프라이데이",
@@ -462,11 +498,12 @@
                 "publisherURL": "https://m.post.naver.com/my.naver?memberNo=15792726",
                 "publisherImgURL": "/images/view/blog_logo3.jpeg",
                 "publisher": "트래비",
-                "date": "1636595858000",
+                "date": "1635483180000",
                 "postURL": "https://m.post.naver.com/viewer/postView.naver?volumeNo=32649551&memberNo=15792726&vType=VERTICAL",
                 "title": "낭만과 고독 사이, 11월의 파리",
                 "contents": "11월의 파리는 쌀쌀하다.소나기도 자주 내리고,흐린 날도 더러 있다.그럼에도 여행은 낭만적이다.때론 고독하기도 하고.  파리의 낭만적인, 혹은 고독한 거리 L'Horizon 120 Rue de...",
-                "contentsImgURL": "/images/view/blog_img3.jpeg",
+                "contentsImgURL": ["/images/view/blog_img3.jpeg"],
+                "imgNum": 8,
                 "relation": "",
                 "tags": [
                     {"tag_name": "frparis",
@@ -499,11 +536,12 @@
                 "publisherURL": "https://in.naver.com/charla1005",
                 "publisherImgURL": "/images/view/blog_logo4.jpeg",
                 "publisher": "샬라",
-                "date": "1636595858000",
+                "date": "1636549680000",
                 "postURL": "https://m.blog.naver.com/charla1005/222564450060",
                 "title": "파리 자유여행 몽파르나스 전망대 야경명소",
                 "contents": "파리 자유여행 몽파르나스 전망대 야경명소 2019년 11월, 딱 2년전 다녀온 파리 자유여행 :D 추울건 알고 갔지만.... 진짜 작정하고 추웠던 11월의 파리 ^_ㅜ 추운걸로 시작해서...",
-                "contentsImgURL":  "/images/view/blog_img4.png",
+                "contentsImgURL":  ["/images/view/blog_img4.png"],
+                "imgNum": 30,
                 "relation": "",
                 "tags": [
                     {"tag_name": "몽파르나스전망대",
@@ -521,11 +559,12 @@
                 "publisherURL": "https://m.blog.naver.com/ghdtlr1130",
                 "publisherImgURL": "/images/view/blog_logo5.jpeg",
                 "publisher": "레이디마마",
-                "date": "",
+                "date": "1637317200000",
                 "postURL": "https://m.blog.naver.com/ghdtlr1130/222573197981",
                 "title": "프랑스 파리 Paris- Versailles베르사유, bateau mouche바토무슈, Eiffel Tower에펠탑 (2021.09....",
                 "contents": "모두의 로망 파리~ 아닌가? 유로스타를 타려고 했는데, 몇개월전에 미리 예약하면... 차타고 런던에서 파리가기! eurotunnel 유로터널. 언젠가는 가봐야지했는데 바로 가게되다니. 차를...",
-                "contentsImgURL": "/images/view/blog_img5.png",
+                "contentsImgURL":[ "/images/view/blog_img5.png"],
+                "imgNum": 34,
                 "relation": "",
                 "tags": [
                     {"tag_name": "파리",
