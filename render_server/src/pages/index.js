@@ -8,7 +8,7 @@ import { Box } from '@mui/system';
 import News from '../components/news';
 import Photo from '../components/photo';
 import Wiki from '../components/wiki';
-import View from '../components/view'
+// import View from '../components/view'
 import Influencer from '../components/influencer';
 
 const themeLight = createTheme({
@@ -58,12 +58,6 @@ const themeDark = createTheme({
 // }
 
 export async function getServerSideProps(context) {
-  const res = await fetch('http://localhost:5000/keywords')
-  const data = await res.json()
-  const string_data = JSON.stringify(data)
-  const props = {data: ''}
-  props.data = string_data
-  /*
   const {req, } = context
   const props = {data: ''}
   if (req.method === "POST") {
@@ -87,19 +81,23 @@ export async function getServerSideProps(context) {
     props.data = string_data
   }
   return { props }
-  */
-  return { props }
 }
 
 
+// export default function Home({data}) {
+//   const json = JSON.parse(JSON.parse(data).data)
+//   // const json = JSON.parse(data)
+//   const news_view =  json[1].view.includes("news");
+//   const photo_view = json[1].view.includes("photo");
+//   const view_view = json[1].view.includes("review");
+//   const wiki_view = json[1].view.includes("wiki");
 export default function Home({ data }) {
   const json = JSON.parse(data)
   const view_view = json.view.includes("review");
   const news_view = json.view.includes("news");
   const photo_view = json.view.includes("photo");
   const wiki_view = json.view.includes("wiki");
-  // const influencer_view = json.view.includes("influencer");
-
+  const influencer_view = json.view.includes("influencer");
   return (
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
@@ -116,13 +114,10 @@ export default function Home({ data }) {
         <div className="section_image">
           <Photo props={json.photo}/>  
         </div>}
-
-        {/* {influencer_view&&
+        {influencer_view&&
         <div className="section_influencer">
           <Influencer props={json.influencer}/>    
-        </div>} */}
-        <Influencer/>
-
+        </div>}
         <Box sx={{ mb: 15 }}></Box>
         <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
           NAVER
@@ -135,4 +130,3 @@ export default function Home({ data }) {
     </ThemeProvider>
   )
 }
-
