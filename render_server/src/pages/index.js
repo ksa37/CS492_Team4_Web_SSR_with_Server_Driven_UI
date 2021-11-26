@@ -8,7 +8,7 @@ import { Box } from '@mui/system';
 import News from '../components/news';
 import Photo from '../components/photo';
 import Wiki from '../components/wiki';
-// import View from '../components/view'
+import View from '../components/view'
 import Influencer from '../components/influencer';
 import Drama from '../components/Drama';
 import ViewCardBasic from '../components/ViewCardBasic';
