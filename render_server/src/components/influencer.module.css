@@ -6,8 +6,8 @@
 }
 .blogicon {
   margin-top: 3px;
-  width: 15px;
-  height: 15px;
+  width: 30px;
+  height: 30px;
 }
 .flex {
   position: inline-block;
@@ -20,13 +20,7 @@
 }
 .header {
   color: grey;
-  font-size: 1.1rem;
-  line-height: 1.8rem;
-  margin-left: 10px;
-}
-.header_sub {
-  color: grey;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.8rem;
 }
 .contenttitle:hover {
@@ -45,17 +39,17 @@
 .title {
   font-weight: 700;
   color: #242424;
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.8rem;
 }
 .subheader {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 20px;
   color: #666;
   font-weight: 700;
 }
 .detailsdepth {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 20px;
   color: #666;
   margin-left: 10px;
@@ -64,8 +58,8 @@
   margin-top: 6px;
 }
 .image {
-  width: 100px;
-  height: 100px;
+  width: 132px;
+  height: 132px;
   transition: all 0.2s ease-in-out;
 }
 .image:hover {
@@ -80,7 +74,7 @@
   text-align: right;
 }
 .right {
-  margin-left: 250px;
+  margin-left: 600px;
 }
 .influencer_icon {
   height: 30px;
@@ -88,14 +82,8 @@
   margin: auto 0;
 }
 .rightallign {
-  margin-left: 700px;
+  margin-left: 300px;
   display: block;
   z-index: 100;
-}
-.flex {
-  display: flex;
-}
-.flipscreen {
-  margin-left: 15px;
-  font-size: 0.8rem;
+  margin-top: 100px;
 }
