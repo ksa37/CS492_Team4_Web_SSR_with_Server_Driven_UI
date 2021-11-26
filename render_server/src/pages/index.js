@@ -93,7 +93,7 @@ export async function getServerSideProps(context) {
 //   const wiki_view = json[1].view.includes("wiki");
 export default function Home({ data }) {
   const json = JSON.parse(data)
-  const view_view = json.view.includes("review");
+  // const view_view = json.view.includes("review");
   const news_view = json.view.includes("news");
   const photo_view = json.view.includes("photo");
   const wiki_view = json.view.includes("wiki");
@@ -102,11 +102,11 @@ export default function Home({ data }) {
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
     <div className={styles.container}>
-        {view_view&&
+        {/* {view_view&&
         <div className="section_view">
         <View props={json.review}/>
         </div>
-        }
+        } */}
         {news_view && 
         <div className="section_news">
           <News props={json.news}/>
