@@ -22,9 +22,9 @@ var LinkType = Object.freeze({
   });
 
 var ScrollType = Object.freeze({
-VIEWBASIC: 0,
-VIEWTIMELINE: 1,
-INFLUENCER: 2
+    VIEWBASIC: 0,
+    VIEWTIMELINE: 1,
+    INFLUENCER: 2
 });
 // typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
