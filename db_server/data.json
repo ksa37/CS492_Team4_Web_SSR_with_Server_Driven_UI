@@ -105,11 +105,59 @@
                 }
             ],
             "news_more": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_nmr&query=%ED%8C%8C%EB%A6%AC" 
+        },
+        "influencer": { 
+            "data": [
+            {
+              "name": "쏠트몬",
+              "type": "여행 작가",
+              "place": " 국내 전문",
+              "fans": "팬 9,163",
+              "blogdetails": "2012 파워블로그",
+              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+              "detailsdepth": ["도심 여행", "선호 여행 리뷰"],
+              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
+              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+              "date": "2021.11.05",
+              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
+              "image" : ""
+            },
+            {
+              "name": "쏠트몬1",
+              "type": "여행 작가",
+              "place": " 국내 전문",
+              "fans": "팬 9,163",
+              "blogdetails": "2012 파워블로그",
+              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+              "detailsdepth": ["도심 여행", "선호 여행 리뷰"],
+              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
+              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+              "date": "2021.11.05",
+              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
+              "image" : ""
+            },
+            {
+              "name": "쏠트몬2",
+              "type": "여행 작가",
+              "place": " 국내 전문",
+              "fans": "팬 9,163",
+              "blogdetails": "2012 파워블로그",
+              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+              "detailsdepth": ["도심 여행", "선호 여행 리뷰"],
+              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
+              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+              "date": "2021.11.05",
+              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
+              "image" : ""
+            }]
         }
     },
     "Paris": {
         "keyword": "파리",
-        "view": [ "photo", "news", "wiki", "review" ],
+        "view": [ "photo", "news", "wiki", "review", "influencer" ],
         "basicInfo": {},
         "photo": {
             "tags": [
@@ -559,6 +607,55 @@
             
             ],
             "view_more": "https://m.search.naver.com/search.naver?where=m_view&sm=mtb_nrm&query=%ED%8C%8C%EB%A6%AC&mode=normal&nso=" 
+            },
+
+        "influencer": { 
+                "data": [
+                {
+                  "name": "쏠트몬",
+                  "type": "여행 작가",
+                  "place": " 국내 전문",
+                  "fans": "팬 9,163",
+                  "blogdetails": "2012 파워블로그",
+                  "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+                  "detailsdepth": ["도심 여행", "선호 여행 리뷰"],
+                  "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
+                  "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+                  "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+                  "date": "2021.11.05",
+                  "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
+                  "image" : ""
+                },
+                {
+                  "name": "쏠트몬1",
+                  "type": "여행 작가",
+                  "place": " 국내 전문",
+                  "fans": "팬 9,163",
+                  "blogdetails": "2012 파워블로그",
+                  "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+                  "detailsdepth": ["도심 여행", "선호 여행 리뷰"],
+                  "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
+                  "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+                  "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+                  "date": "2021.11.05",
+                  "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
+                  "image" : ""
+                },
+                {
+                  "name": "쏠트몬2",
+                  "type": "여행 작가",
+                  "place": " 국내 전문",
+                  "fans": "팬 9,163",
+                  "blogdetails": "2012 파워블로그",
+                  "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+                  "detailsdepth": ["도심 여행", "선호 여행 리뷰"],
+                  "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
+                  "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
+                  "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
+                  "date": "2021.11.05",
+                  "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
+                  "image" : ""
+                }]
             }
         },
     "Mogadishu": {
