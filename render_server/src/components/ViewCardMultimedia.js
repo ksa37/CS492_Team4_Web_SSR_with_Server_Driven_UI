@@ -1,18 +1,15 @@
 import React from 'react'
-// import Link from 'next/link'
 import Link from '@mui/material/Link';
 import styles from './postCard.module.css'
-// import Image from "next/image"
 import MoreVert from './MoreVert'
 import DateConvertor from './DateConvertor'
 import Image from 'material-ui-image'
+import TagArea from './TagArea';
 
 import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack} from '@mui/material';
 
-export default function ViewCardMultimeda({props, view}) {  
+export default function ViewCardMultimeda({props}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, tags, more_links} = props
-    const { viewType } = view
-
     const now = Date.now()
     var converted_date = DateConvertor(date)
 
@@ -26,7 +23,7 @@ export default function ViewCardMultimeda({props, view}) {
         setAnchorEl(null);
     };
 
-    const more_links_exist = more_links.length!=0;
+    // const more_links_exist = more_links.length!=0;
 
     return (
         <Card sx={{ maxWidth: 766 }} square > 
@@ -36,33 +33,27 @@ export default function ViewCardMultimeda({props, view}) {
                   }}} variant="contained"
                 avatar={
                     <Link href={publisherURL} underline="none">
-                        <a>
-                            <div className={styles.viewMultiImgBoarder }>
-                                {publisherImgURL == ""
-                                ? <Image className={styles.viewMultiImgBoarder }
-                                    src="/images/default_publisher.png" 
-                                    width='100%'
-                                    height='100%'
-                                    objectFit='contain'
-                                />
-                                : <Image className={styles.viewMultiImgBoarder }
-                                    
-                                    src={publisherImgURL}
-                                    // src={contentsImgURL}
-                                    width='100%'
-                                    height='100%'
-                                    objectFit='contain'
-                                />}
-                            </div>
-                        </a>
+                        <div className={styles.viewMultiImgBoarder }>
+                            {publisherImgURL == ""
+                            ? <Image className={styles.viewMultiImgBoarder }
+                                src="/images/default_publisher.png" 
+                                width='100%'
+                                height='100%'
+                                objectFit='contain'
+                            />
+                            : <Image className={styles.viewMultiImgBoarder }
+                                src={publisherImgURL}
+                                width='100%'
+                                height='100%'
+                                objectFit='contain'
+                            />}
+                        </div>
                     </Link>
                 }
                 title = {
                     <div className={styles.publishInfo}>
                         <Link href={publisherURL} underline="none">
-                            <a>
-                                <div className={styles.publisher}><b>{publisher}</b></div>
-                            </a>
+                            <div className={styles.publisher}><b>{publisher}</b></div>
                         </Link>
                     </div>
                 }
@@ -77,42 +68,23 @@ export default function ViewCardMultimeda({props, view}) {
                     />
                 }
             />
-            {contentsImgURL != "" && <div className={styles.viewMultiImg}>
+            {contentsImgURL.length>=1 && <div className={styles.viewMultiImg}>
                 <img
                     className={styles.viewMultiImg}
-                    src={contentsImgURL}
+                    src={contentsImgURL[0]}
                     layout="fill"
                 /> 
             </div>}
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '18px', paddingRight: '18px', paddingBottom: '15px', paddingTop: '14px',
             "&:last-child": {paddingBottom: 0}}} variant="contained" >
                 <Link href={postURL} underline="none">
-                    <a>
-                        <div className={styles.title}>{title}</div>
-                        <div className={styles.contentsInfo}>
-                        <div className={styles.contents}>{contents}</div>
-                        </div>
-                    </a>
+                    <div className={styles.title}>{title}</div>
+                    <div className={styles.contentsInfo}>
+                    <div className={styles.contents}>{contents}</div>
+                    </div>
                 </Link>
             </CardContent>   
-            <Paper 
-              className="group_option_tag_wrap" 
-              style={{overflow: 'auto', paddingBottom: 18}}
-              elevation='0'
-              square
-            >
-                <Stack direction="row" spacing={1} style= {{paddingLeft:18, paddingRight:18}}> 
-                {tags&&tags.map((item, index) => (
-                    <Link key={index} href={item.tagURL} underline="none">
-                    <a>
-                    <Button className={styles.tagButton} variant="contained" disableElevation 
-                    sx={{'&:hover': {backgroundColor: '#f4f7f8'}}}>#{item.tag_name}
-                    </Button>
-                    </a>
-                    </Link>
-                ))}
-                </Stack>
-            </Paper>
+            {<TagArea props={{"tags":tags}}/>}
         </Card>     
     )
 }
