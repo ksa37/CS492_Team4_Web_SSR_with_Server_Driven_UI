@@ -9,6 +9,8 @@
 
 .moreContent {
     margin-bottom: 10px;
+    margin-inline: 1px;
+    max-width: 766px;
 }
 
 .moreContentText {

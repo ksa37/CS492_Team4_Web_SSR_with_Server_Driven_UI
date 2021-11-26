@@ -112,7 +112,6 @@ const Item = styled(Paper)(({ theme }) => ({
 const Search = (props) => {
   const [showResults, setShowResults] = useState(false)
   const onClick = () => setShowResults(!showResults)
-  console.log(showResults)
   return (
     <div>
       <div className = {styles.rightallign} onClick={onClick} > i </div>

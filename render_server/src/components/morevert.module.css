@@ -1,0 +1,8 @@
+.menuItem {
+    width: 170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 15px;
+    color: var(--dark_gray_2);
+}
