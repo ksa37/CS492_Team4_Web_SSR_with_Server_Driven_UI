@@ -17,6 +17,18 @@ function addblogfan() {
   else {}
 }
 
+const Blogfan = () => {
+  const [showResults, setShowResults] = useState(false)
+  const onClick = () => setShowResults(!showResults)
+  return (
+    <div>
+      { showResults ? 
+      <div onClick={onClick} > <img className = {styles.fanicon} src="/images/influencer/unfan.png"/>  </div> 
+      : <div onClick={onClick} > <img className = {styles.fanicon} src="/images/influencer/fanicon.png"/>  </div>}
+    </div>
+  )
+}
+
 function influencer_icon(){
   console.log('clicked')
   const togglePopup = () => {
@@ -35,7 +47,9 @@ const Search = (props) => {
   const onClick = () => setShowResults(!showResults)
   return (
     <div>
-      <div className = {styles.rightallign} onClick={onClick} > i </div>
+      { showResults ? 
+      <div className = {styles.rightallign} onClick={onClick} > <img className = {styles.influencer_icon} src="/images/influencer/after.png"/>  </div> 
+      : <div className = {styles.rightallign} onClick={onClick} > <img className = {styles.influencer_icon} src="/images/influencer/before.png"/>  </div>}
       { showResults ? <Results props={props}/> : null }
     </div>
   )
@@ -43,10 +57,10 @@ const Search = (props) => {
 
 const Results = (props) => {
   return (
-    <Card sx={{ width: 748, lineHeight: "20px", border: 1, borderColor: 'grey.100', ml: "10px", mr: "10px" }}>
-      <Card sx={{ width: 720, lineHeight: "20px", border: 1, borderColor: 'grey.100', ml: "10px", mr: "10px", fontSize: '0.8rem' }}>
-        <div> 여행 스타일: {props.props.props[0]} </div>
-        <div> 창작 분야: {props.props.props[1]}</div>
+    <Card sx={{ width: 700, lineHeight: "20px", border: 1, borderColor: 'grey.100', ml: "40px", mr: "40px", mb: "30px" }}>
+      <Card sx={{ width: 680, lineHeight: "20px", border: 1, borderColor: 'grey.100', ml: "10px", mr: "10px", fontSize: '0.8rem' }}>
+        <div className = {styles.typ_grey}> 여행 스타일:   <div className = {styles.typ_black}>{props.props.props[0]}</div> </div>
+        <div className = {styles.typ_grey}> 창작 분야:     <div className = {styles.typ_black}>{props.props.props[1]}</div></div>
       </Card>
       <div className = {styles.flipscreen}> 자세히 보기
       </div>
@@ -87,11 +101,12 @@ export default function Influencer(props) {
           <div className = {styles.title}>{each.name}</div> 
           </Link> <div className = {styles.header}>{each.fans}</div> </div> }
           
-          subheader= {<div className = {styles.magintop, styles.flex}> 
+          subheader= {<div className = {styles.flex}> 
           <div className = {styles.header_sub}>{each.type}</div> 
-          <div className = {styles.header_sub}>{each.place}</div> </div>}
+          <div className = {styles.header_sub}>{each.place}</div> 
+          </div>}
           />
-          <div className = {styles.right}> <img onClick = {addblogfan} className = {styles.fanicon} src="/images/influencer/fanicon.png"/> </div>
+          <div > <Blogfan/>  </div>
         </Container>
 
         <Container sx={{ml:'40px', display : 'flex' }}> 
