@@ -109,6 +109,11 @@ export default function Home({ data }) {
           <Drama/>  
         </div>
         {/* <ViewCardBasic props={json.review}/> */}
+        {view_view&&
+        <div className="section_view">
+        <View props={json.review}/>
+        </div>
+        }
         {news_view && 
         <div className="section_news">
           <News props={json.news}/>

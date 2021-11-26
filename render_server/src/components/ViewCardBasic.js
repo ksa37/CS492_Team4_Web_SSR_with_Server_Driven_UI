@@ -7,7 +7,7 @@ import MoreVert from './MoreVert'
 import DateConvertor from './DateConvertor'
 import Image from 'material-ui-image'
 
-import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack} from '@mui/material';
+import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack, Typography} from '@mui/material';
 
 export default function ViewCardBasic({props, view}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, tags, more_links} = props
@@ -35,35 +35,31 @@ export default function ViewCardBasic({props, view}) {
                     marginRight: '8px',
                   }}} variant="contained"
                 avatar={
-                    <Link href={publisherURL} underline="none">
-                        <a>
-                            <div className={styles.publisherImgBoarder}>
-                                {publisherImgURL == ""
-                                ? <Image className={styles.publisherImg}
-                                    src="/images/default_publisher.png" 
-                                    width='100%'
-                                    height='100%'
-                                    objectFit='contain'
-                                />
-                                : <Image className={styles.publisherImg}
-                                    
-                                    src={publisherImgURL}
-                                    // src={contentsImgURL}
-                                    width='100%'
-                                    height='100%'
-                                    objectFit='contain'
-                                />}
-                            </div>
-                        </a>
-                    </Link>
+                    <a href={publisherURL} >
+                        <div className={styles.publisherImgBoarder}>
+                            {publisherImgURL == ""
+                            ? <Image className={styles.publisherImg}
+                                src="/images/default_publisher.png" 
+                                width='100%'
+                                height='100%'
+                                objectFit='contain'
+                            />
+                            : <Image className={styles.publisherImg}
+                                
+                                src={publisherImgURL}
+                                // src={contentsImgURL}
+                                width='100%'
+                                height='100%'
+                                objectFit='contain'
+                            />}
+                        </div>
+                    </a>
                 }
                 title = {
                     <div className={styles.publishInfo}>
-                        <Link href={publisherURL} underline="none">
-                            <a>
-                                <div className={styles.publisher}>{publisher}</div>
-                            </a>
-                        </Link>
+                        <a href={publisherURL}>
+                            <div className={styles.publisher}>{publisher}</div>
+                        </a>
                         { viewType != "WIKI" &&
                             <hr className={styles.verticalDivider}></hr>
                         }
@@ -84,40 +80,34 @@ export default function ViewCardBasic({props, view}) {
             />
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '16px', paddingRight: '16px', marginBottom: '15px', 
             "&:last-child": {paddingBottom: 0}}} variant="contained" >
-                <Link href={postURL} underline="none">
-                    <a>
-                        <div className={styles.title}>{title}</div>
-                        { viewType == "WIKI" && <Divider 
-                            sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
-                        />}
-                        <div className={styles.contentsInfo}>
-                            <div className={styles.contents}>{contents}</div>
-                            {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
-                                <Image className={styles.contentsImg}
-                                    src={contentsImgURL}
-                                    width='87px'
-                                    height='87px'
-                                /> 
-                            </div>}
-                        </div>
-                    </a>
-                </Link>
+                <a href={postURL}>
+                    <div className={styles.title}>{title}</div>
+                    { viewType == "WIKI" && <Divider 
+                        sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
+                    />}
+                    <div className={styles.contentsInfo}>
+                        <div className={styles.contents}>{contents}</div>
+                        {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
+                            <Image className={styles.contentsImg}
+                                src={contentsImgURL}
+                                width='87px'
+                                height='87px'
+                            /> 
+                        </div>}
+                    </div>
+                </a>
             </CardContent>   
             <Paper 
               className="group_option_tag_wrap" 
               style={{overflow: 'auto', paddingBottom: 18}}
-              elevation='0'
+              elevation={0}
               square
             >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:18, paddingRight:18}}> 
                 {tags&&tags.map((item, index) => (
-                    <Link key={index} href={item.tagURL} underline="none">
-                    <a>
-                    <Button className={styles.tagButton} variant="contained" disableElevation 
-                    sx={{'&:hover': {backgroundColor: '#f4f7f8'}}}>#{item.tag_name}
-                    </Button>
+                    <a key={index}  className={styles.tagButton} href={item.tagURL}>
+                        #{item.tag_name}    
                     </a>
-                    </Link>
                 ))}
                 </Stack>
             </Paper>
@@ -125,19 +115,33 @@ export default function ViewCardBasic({props, view}) {
             {more_links_exist&&<div className={styles.linkArea}>
                 <div className={styles.linkLine}>
                     {more_links&&more_links.map((item, index) => (
-                        <>
-                        <Link key={index} href={item.link_url} underline="none">
-                            <a>
-                            {item.link_name} <br/>
-                            </a>
-                        </Link>
-                        
-                        </>
+                        <a key={index} href={item.link_url}>
+                        {item.link_name} <br/>
+                        </a>
                     )
 
                     )}
                 </div>
             </div>}
+
+            <a href="https://m.search.naver.com/search.naver?sm=mtp_sly.hst&where=m&query=%ED%8C%8C%EB%A6%AC&acr=1" className={styles.linkBox}>
+                <span style={{marginRight:'12px', overflow:'hidden'}}>
+                    <img
+                        src={"icons/link.png"}
+                        height={11}
+                        width={11}
+                    />
+                    <span> 유지니의 #파리여행 콘텐츠 더보기</span>
+                    <img
+                        className={styles.linkBoxForward}
+                        src={'/icons/forward.svg'}
+                        width={7}
+                        height={11}
+                    />
+                    {/* <div className={styles.linkBoxForward} /> */}
+                    
+                </span>
+            </a>
         </Card>     
     )
 }

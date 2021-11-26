@@ -21,9 +21,7 @@
 }
 
 .verticalDivider {
-    border-left: 0px solid;
-    border-color: #D2C9C4;
-    color: #D2C9C4;
+    border-left: 1px solid #D2C9C4;
     height: 16px;
     margin: 0;
     margin-left: 12px; 

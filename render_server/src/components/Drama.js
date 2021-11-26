@@ -35,13 +35,13 @@ export default function Drama({props}) {
                     </Link>
                     <div className={styles.menu}>
                         전체
-                        <hr className={styles.verticalDivider}></hr>
+                        <div className={styles.verticalDivider}></div>
                         기본정보
-                        <hr className={styles.verticalDivider}></hr>
+                        <div className={styles.verticalDivider}></div>
                         등장인물
-                        <hr className={styles.verticalDivider}></hr>
+                        <div className={styles.verticalDivider}></div>
                         공식영상
-                        <hr className={styles.verticalDivider}></hr>
+                        <div className={styles.verticalDivider}></div>
                         함께 볼만한 웹드라마
                     </div>
                 </div>
