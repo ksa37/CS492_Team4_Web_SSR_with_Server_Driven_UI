@@ -8,7 +8,7 @@ import { Box } from '@mui/system';
 import News from '../components/news';
 import Photo from '../components/photo';
 import Wiki from '../components/wiki';
-import View from '../components/view'
+// import View from '../components/view'
 import Influencer from '../components/influencer';
 
 const themeLight = createTheme({
@@ -98,7 +98,6 @@ export default function Home({ data }) {
   const photo_view = json.view.includes("photo");
   const wiki_view = json.view.includes("wiki");
   const influencer_view = json.view.includes("influencer");
-
   return (
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
@@ -122,8 +121,7 @@ export default function Home({ data }) {
         </div>}
         {influencer_view&&
         <div className="section_influencer">
-          {/* <Influencer props={json[1].Influencer}/>   */}
-          <Influencer/>  
+          <Influencer props={json.influencer}/>    
         </div>}
         <Box sx={{ mb: 15 }}></Box>
         <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
@@ -137,4 +135,3 @@ export default function Home({ data }) {
     </ThemeProvider>
   )
 }
-
