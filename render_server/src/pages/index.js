@@ -98,7 +98,7 @@ export default function Home({ data }) {
   const news_view = json.view.includes("news");
   const photo_view = json.view.includes("photo");
   const wiki_view = json.view.includes("wiki");
-  const influencer_view = json.view.includes("influencer");
+  // const influencer_view = json.view.includes("influencer");
 
   return (
     <ThemeProvider theme={themeLight}>
@@ -116,11 +116,13 @@ export default function Home({ data }) {
         <div className="section_image">
           <Photo props={json.photo}/>  
         </div>}
-        {influencer_view&&
+
+        {/* {influencer_view&&
         <div className="section_influencer">
-          {/* <Influencer props={json[1].Influencer}/>   */}
-          <Influencer/>  
-        </div>}
+          <Influencer props={json.influencer}/>    
+        </div>} */}
+        <Influencer/>
+
         <Box sx={{ mb: 15 }}></Box>
         <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
           NAVER

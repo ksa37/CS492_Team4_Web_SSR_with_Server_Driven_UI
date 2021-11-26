@@ -133,19 +133,20 @@ const Results = (props) => {
   )
 }
 
-export default function Home() {
+export default function Influencer() {
   const [showResults, setShowResults] = useState(false)
+  // const {data} = props
   return (
     <>
       <Card sx={{ maxWidth: 768, lineHeight: "109px"}}>
        <Container sx={{ display: 'flex' }}>
 
-          <Container sx={{ fontSize: '1.6rem', fontWeight : "700", display: 'flex'}}> 
+          <Container sx={{ fontSize: '1rem', fontWeight : "700", display: 'flex'}}> 
           <div>인플루언서 </div> 
           <img onClick = {influencer_icon} className = {styles.influencer_icon} src="/images/influencer/icon_img.png"/> 
           </Container>
 
-          <Container sx={{ color: "#0c43b7", fontSize: '1.3rem' }} className = {styles.contenttitle_rightend}> 
+          <Container sx={{ color: "#0c43b7", fontSize: '1rem' }} className = {styles.contenttitle_rightend}> 
           <Link href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> 
           </Container>
 
