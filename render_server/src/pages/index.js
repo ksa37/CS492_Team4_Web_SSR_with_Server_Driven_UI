@@ -30,6 +30,12 @@ const themeDark = createTheme({
 });
 
 export async function getServerSideProps(context) {
+  const res = await fetch('http://localhost:5000/keywords')
+  const data = await res.json()
+  const string_data = JSON.stringify(data)
+  const props = {data: ''}
+  props.data = string_data
+  /*
   const {req, } = context
   const props = {data: ''}
   if (req.method === "POST") {
@@ -46,11 +52,14 @@ export async function getServerSideProps(context) {
 		props.data = body;
   }
   return { props }
+  */
+  return { props }
 }
 
 
 export default function Home({data}) {
-  const json = JSON.parse(JSON.parse(data).data)
+  console.log(data)
+  const json = JSON.parse(data)
   const news_view =  json[1].view.includes("news");
   const photo_view = json[1].view.includes("photo");
   const wiki_view = json[1].view.includes("wiki");
