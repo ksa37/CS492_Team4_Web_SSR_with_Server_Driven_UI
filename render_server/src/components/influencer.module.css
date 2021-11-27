@@ -118,3 +118,12 @@
   margin-left: 10px;
   font-size: 0.8rem;
 }
+.l {
+  float: left;
+}
+.r {
+  float: right;
+}
+.f {
+  display: flex;
+}
