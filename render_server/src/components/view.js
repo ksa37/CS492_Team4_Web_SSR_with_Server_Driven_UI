@@ -150,7 +150,7 @@ export default function View({props}){
                             name='tag'
                             label={item["tag_name"]}
                             variant="outlined"
-                            sx={{backgroundColor: "#ffffff", "&&:hover":{backgroundColor:"#ffffff" }}}
+                            sx={{backgroundColor: "#ffffff", color: "#666", "&&:hover":{backgroundColor:"#ffffff" }}}
                             clickable
                             onClick={() => setViewTag(index)}
                             />

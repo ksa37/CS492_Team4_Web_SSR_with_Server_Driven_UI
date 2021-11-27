@@ -9,6 +9,7 @@ import ImageScroll from './ImageScroll';
 import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 import TagArea from './TagArea';
 import LinkArea from './LinkArea';
+import Comments from './Comments';
 
 var ViewType = Object.freeze({
     NEWS: 0,
@@ -138,6 +139,7 @@ export default function PostCard({props, view}) {
                     </div>
                 </Link>
             </CardContent>  
+            {viewType == ViewType.VIEW && <Comments props={{'comments':["어머..", "hello","hoho", "merry", "christmas"], 'link': "http://m.naver.com"}}/>}
             {viewType == ViewType.VIEW &&<TagArea props={{"tags":tags}}/>}   
             {viewType == ViewType.VIEW &&<LinkArea props={{"more_links":more_links}} link_view={{"link_type": LinkType.VIEWBASIC}}/>}                
         </Card>
