@@ -11,11 +11,9 @@
 .fanicon {
   width: 70px;
   height: 40px;
-  justify-content: right;
-  margin-left: 300px;
+  float: right;
 }
 .blogicon {
-  margin-top: 3px;
   width: 15px;
   height: 15px;
 }
@@ -28,19 +26,21 @@
 .header {
   color: grey;
   font-size: 1rem;
-  margin-left: 10px;
-  margin-top: 5px;
+  margin-left: 5px;
+  /* margin-top: 5px; */
 }
 .header_sub {
   color: grey;
   font-size: 1.1rem;
-  line-height: 1.5rem;
+  float: left;
+  /* line-height: 1.5rem; */
 }
 .header_sub_lft {
   color: grey;
   font-size: 1.1rem;
-  line-height: 1.5rem;
-  margin-left: 20px;
+  /* line-height: 1.5rem; */
+  margin-left: 5px;
+  float: left;
 }
 .flexend {
   float: right;
@@ -62,7 +62,7 @@
 }
 
 .title {
-  margin-top: 5px;
+  /* margin-top: 5px; */
   font-weight: 700;
   color: #242424;
   font-size: 1rem;
@@ -118,7 +118,7 @@
   margin-left: 10px;
   font-size: 0.8rem;
 }
-.l {
+/* .l {
   float: left;
 }
 .r {
@@ -126,4 +126,9 @@
 }
 .f {
   display: flex;
+} */
+.avatar {
+  float: left;
+  height: 65px;
+  width: 65px;
 }
