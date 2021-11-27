@@ -45,6 +45,7 @@
     font-size: 18px;
     font-weight: 500;
     color:rgba( 39, 105, 189, 1 );
+    margin-top: 4px; 
 }
 
 .contentsInfo {

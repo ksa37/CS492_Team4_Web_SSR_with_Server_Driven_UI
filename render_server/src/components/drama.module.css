@@ -1,0 +1,30 @@
+.dramaName {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark_gray_1);
+}
+
+.dramaCategory {
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color:#968577;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    color:#7E695A;
+}
+
+.verticalDivider {
+    border-left: 1px solid #D2C9C4;
+    height: 16px;
+    margin: 0;
+    margin-left: 12px; 
+    margin-right: 12px; 
+    margin-top: 2px; 
+}

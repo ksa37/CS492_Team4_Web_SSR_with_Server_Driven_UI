@@ -100,7 +100,7 @@ export default function ViewCardBasic({props, view}) {
             <Paper 
               className="group_option_tag_wrap" 
               style={{overflow: 'auto', paddingBottom: 18}}
-              elevation='0'
+              elevation={0}
               square
             >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:18, paddingRight:18}}> 

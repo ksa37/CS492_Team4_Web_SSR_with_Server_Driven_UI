@@ -1,7 +1,18 @@
+.typ_grey {
+  color: grey;
+  font-weight: 600;
+  display: flex;
+}
+.typ_black {
+  color: grey;
+  font-weight: 200;
+  margin-left: 10px;
+}
 .fanicon {
   margin-top: 30px;
-  width: 140px;
-  height: 70px;
+  margin-left: 330px;
+  width: 70px;
+  height: 40px;
   float: right;
 }
 .blogicon {
@@ -85,5 +96,13 @@
   margin-left: 300px;
   display: block;
   z-index: 100;
-  margin-top: 100px;
+}
+.flex {
+  display: flex;
+}
+.flipscreen {
+  color: grey;
+  font-weight: 200;
+  margin-left: 10px;
+  font-size: 0.8rem;
 }
