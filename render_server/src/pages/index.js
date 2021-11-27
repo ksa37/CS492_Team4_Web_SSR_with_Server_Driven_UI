@@ -11,6 +11,8 @@ import Photo from '../components/Photo';
 import Wiki from '../components/Wiki';
 import View from '../components/View'
 import Influencer from '../components/Influencer';
+import Bulguksa from '../components/Bulguksa';
+import Linkbox from '../components/Linkbox';
 
 const themeLight = createTheme({
   palette: {
@@ -33,7 +35,7 @@ const themeDark = createTheme({
 
 export async function getServerSideProps(context) {
   const {req, } = context
-  const props = {data: '', views: []}
+  const props = {data: '', views: [], keyword: ''}
   if (req.method === "POST") {
     const streamPromise = new Promise((resolve, reject) => {
       let body = ''
@@ -47,6 +49,7 @@ export async function getServerSideProps(context) {
     const json = await streamPromise;
     props.data = json.data;
     props.views = json.views;
+    props.keyword = json.keyword;
   }
   else
   {
@@ -55,54 +58,61 @@ export async function getServerSideProps(context) {
     const string_data = JSON.stringify(data)
     props.data = string_data
     props.views = data.views;
+    props.keyword = 'Bulguksa';
   }
   return { props }
 }
 
-export default function Home({ data, views }) {
+export default function Home({ data, views, keyword }) {
   const json = JSON.parse(data)
-
   return (
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
       <div className={styles.container}>
-        {views.map(view => {
+        <div className="section_link">
+          <Linkbox />
+        </div>
+        {views.map((view, index) => {
           switch(view) {
             /*
             case "basic":
-              return (
-                <div className="section_basic">
-                  <News props={json.news}/>
-                </div>
-              )
+              if (keyword === 'Bulguksa')
+              {
+                return (
+                  <div className="section_bulguksa">
+                    <Bulguksa props={json.basic}/>
+                  </div>
+                )
+              }
+              break;
             */
             case "influencer":
               return (
-                <div className="section_influencer">
+                <div key={index} className="section_influencer">
                   <Influencer props={json.influencer}/>
                 </div>
               )
             case "review":
               return (
-                <div className="section_review">
+                <div key={index} className="section_review">
                   <View props={json.review}/>
                 </div>
               )
             case "wiki":
               return (
-                <div className="section_wiki">
+                <div key={index} className="section_wiki">
                   <Wiki props={json.wiki}/>
                 </div>
               )
             case "news":
               return (
-                <div className="section_news">
+                <div key={index} className="section_news">
                   <News props={json.news}/>
                 </div>
               )
             case "photo":
               return (
-                <div className="section_photo">
+                <div key={index} className="section_photo">
                   <Photo props={json.photo}/>
                 </div>
               )
