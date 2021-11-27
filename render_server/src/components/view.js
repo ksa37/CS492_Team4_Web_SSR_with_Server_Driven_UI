@@ -191,21 +191,22 @@ export default function View({props}){
 
                     )}</> 
                 : <></> }
-            {currentViewType==1 && currentTimelineTag==0
+            {/* {currentViewType==1 && currentTimelineTag==0
                 ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardTimeline key={index} props={view} />)} </>
-                : <></> }
+                : <></> } */}
             {currentViewType==2 && currentMultimediaTag==0
                 ? <>{view_posts&&view_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
                 : <></> }
-            {currentViewType==0 && currentBasicTag==1
+            {/* {currentViewType==0 && currentBasicTag==1
                 ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardTimeline key={index} props={view} />)} </>
-                : <></> }
+                : <></> } */}
             {currentViewType==1 && currentTimelineTag==1
                 ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => 
                     <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
 
                     )}</> 
                 : <></>}
+            <ViewCardTimeline props={{'view_posts': view_posts.slice(0,5)}}/>
 
             
         </Card>
