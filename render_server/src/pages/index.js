@@ -57,6 +57,14 @@ const themeDark = createTheme({
 //   return { props }
 // }
 
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; 
+}
+
+const random_keywords = ['Bulguksa','Paris']
+
 export async function getServerSideProps(context) {
   const {req, } = context
   const props = {data: ''}
@@ -75,7 +83,12 @@ export async function getServerSideProps(context) {
   }
   else
   {
+    // const keyword_num  = random_keywords.length
+    // console.log(keyword_num)
+    // const random_keyword = random_keywords[getRandomIntInclusive(1, keyword_num)]
+    // const random_fetch = 'http://localhost:5000/'+random_keyword
     const res = await fetch('http://localhost:5000/Paris')
+    // const res = await fetch(random_fetch)
     const data = await res.json()
     const string_data = JSON.stringify(data)
     props.data = string_data
