@@ -12,8 +12,16 @@ export default function MoreVert({props}) {
 
     return (
         <div>
-            <IconButton
+            <IconButton sx={{ py: 0 }}
                 onClick={handleClick}
+                // onClick={
+                //     // {handleClick} && 
+                //     () => {
+                //     shareNaverLink( 'https://n.news.naver.com/mnews/article/366/0000772471?sid=101', '이 링크를 공유' )
+                //     }
+                // }
+                
+
                 style={{ backgroundColor: 'transparent' }}
                 disableRipple
             >
@@ -60,13 +68,27 @@ function MorevertMenuItem({props}) {
 
     return (
         <MenuItem 
-            className={styles.menuItem} 
             onClick={handleClose}
             style={{ backgroundColor: 'transparent' }}
             disableRipple
         >
-            {text}
-            <img src={srcURL}/>
+            <div className={styles.menuItem}>
+                {text}
+                <img src={srcURL}/>
+            </div>
         </MenuItem>
     )
+}
+
+function shareNaverLink(url, title) { 
+    var encodeUrl = encodeURIComponent( url ); 
+    var encodeTitle = encodeURIComponent( title ); 
+    // var link = StringTool.format( 'https://share.naver.com/web/shareView.nhn?url={0}&title={1}', encodeUrl, encodeTitle ); 
+    var link = `https://share.naver.com/web/shareView.nhn?url=${encodeUrl}&title=${encodeTitle}`; 
+
+    console.log("share Naver")
+    if (typeof window !== "undefined") {
+        // browser code
+        window.open( link, 'share', 'width=500, height=500' ); 
+    }
 }
