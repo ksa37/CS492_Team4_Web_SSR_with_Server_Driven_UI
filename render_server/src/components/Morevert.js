@@ -1,13 +1,13 @@
 import React from 'react'
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import styles from './morevert.module.css'
+import styles from './Morevert.module.css'
 
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 import { Divider, IconButton } from '@mui/material';
 
-export default function Morevert({props}) {  
+export default function MoreVert({props}) {  
     const { open, anchorEl, handleClick, handleClose } = props
 
     return (
@@ -69,4 +69,17 @@ function MorevertMenuItem({props}) {
             <img src={srcURL}/>
         </MenuItem>
     )
+}
+
+function shareNaverLink(url, title) { 
+    var encodeUrl = encodeURIComponent( url ); 
+    var encodeTitle = encodeURIComponent( title ); 
+    // var link = StringTool.format( 'https://share.naver.com/web/shareView.nhn?url={0}&title={1}', encodeUrl, encodeTitle ); 
+    var link = `https://share.naver.com/web/shareView.nhn?url=${encodeUrl}&title=${encodeTitle}`; 
+
+    console.log("share Naver")
+    if (typeof window !== "undefined") {
+        // browser code
+        window.open( link, 'share', 'width=500, height=500' ); 
+    }
 }

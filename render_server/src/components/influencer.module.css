@@ -1,16 +1,21 @@
+.typ_grey {
+  color: grey;
+  font-weight: 600;
+  display: flex;
+}
+.typ_black {
+  color: grey;
+  font-weight: 200;
+  margin-left: 10px;
+}
 .fanicon {
-  margin-top: 30px;
-  width: 140px;
-  height: 70px;
+  width: 70px;
+  height: 40px;
   float: right;
 }
 .blogicon {
-  margin-top: 3px;
-  width: 30px;
-  height: 30px;
-}
-.flex {
-  position: inline-block;
+  width: 15px;
+  height: 15px;
 }
 .flex2 {
   float: left;
@@ -20,8 +25,27 @@
 }
 .header {
   color: grey;
-  font-size: 1.3rem;
-  line-height: 1.8rem;
+  font-size: 1rem;
+  margin-left: 5px;
+  /* margin-top: 5px; */
+}
+.header_sub {
+  color: grey;
+  font-size: 1.1rem;
+  float: left;
+  /* line-height: 1.5rem; */
+}
+.header_sub_lft {
+  color: grey;
+  font-size: 1.1rem;
+  /* line-height: 1.5rem; */
+  margin-left: 5px;
+  float: left;
+}
+.flexend {
+  float: right;
+  justify-content: right;
+  margin-left: 200px;
 }
 .contenttitle:hover {
   text-decoration: underline;
@@ -30,6 +54,7 @@
 
 .contenttitle_rightend {
   text-align: right;
+  font-size: 0.8rem;
 }
 .contenttitle_rightend:hover {
   text-decoration: underline;
@@ -37,20 +62,18 @@
 }
 
 .title {
+  /* margin-top: 5px; */
   font-weight: 700;
   color: #242424;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
+  font-size: 1rem;
 }
 .subheader {
-  font-size: 1.3rem;
-  line-height: 20px;
+  font-size: 1rem;
   color: #666;
   font-weight: 700;
 }
 .detailsdepth {
-  font-size: 1.3rem;
-  line-height: 20px;
+  font-size: 1rem;
   color: #666;
   margin-left: 10px;
 }
@@ -58,8 +81,8 @@
   margin-top: 6px;
 }
 .image {
-  width: 132px;
-  height: 132px;
+  width: 100px;
+  height: 100px;
   transition: all 0.2s ease-in-out;
 }
 .image:hover {
@@ -74,16 +97,38 @@
   text-align: right;
 }
 .right {
-  margin-left: 600px;
+  margin-left: 250px;
 }
 .influencer_icon {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   margin: auto 0;
 }
 .rightallign {
-  margin-left: 300px;
+  margin-left: 700px;
   display: block;
   z-index: 100;
-  margin-top: 100px;
+}
+.flex {
+  display: flex;
+}
+.flipscreen {
+  color: grey;
+  font-weight: 200;
+  margin-left: 10px;
+  font-size: 0.8rem;
+}
+/* .l {
+  float: left;
+}
+.r {
+  float: right;
+}
+.f {
+  display: flex;
+} */
+.avatar {
+  float: left;
+  height: 65px;
+  width: 65px;
 }

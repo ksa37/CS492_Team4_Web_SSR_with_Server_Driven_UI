@@ -1,11 +1,7 @@
 import React from 'react';
-import StandardImageList from '../components/StandardImageList';
-import MoreContent from '../components/MoreContent';
-
-
+import StandardImageList from './Standardimagelist';
+import MoreContent from './Morecontent';
 import { Avatar, Card, CardHeader, Chip, Grid, Paper, Stack, Typography} from '@mui/material';
-import Link from 'next/link';
-import { Box } from '@mui/system';
 
 export default function Photo({props}) {
     const {tags, images, image_more} = props
@@ -24,7 +20,8 @@ export default function Photo({props}) {
             />
             <Paper 
               className="group_option_tag_wrap" 
-              style={{height: 83, overflow: 'auto', backgroundColor: '#f5f7f8'}}
+              style={{height: 83, overflow: 'auto', backgroundColor: '#f5f7f8', borderBlock: '1px solid rgb(236, 240, 242)', boxShadow:'none'}}
+              square
             >
               <Grid
                 container
@@ -34,18 +31,17 @@ export default function Photo({props}) {
               
               >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:12, paddingRight:12}}>
-                {tags&&tags.map((item) => (
-                  <Link key={item.tagURL} href={item.tagURL}>
-                    <a>
+                {tags&&tags.map((item, index) => (
                   <Chip 
-                    key={item["tag_name"]}
+                    key={index}
+                    component="a" 
+                    href={item.tagURL}
                     avatar={<Avatar src ={item["tag_image_url"]} />}
                     label={item["tag_name"]}
                     variant="outlined"
-                    style={{backgroundColor: "#ffffff"}}
+                    sx={{backgroundColor: "#ffffff"}}
+                    clickable
                   />
-                    </a>
-                  </Link>
                 ))}
               </Stack>
               </Grid>

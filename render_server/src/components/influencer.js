@@ -1,107 +1,23 @@
 import Container from '@mui/material/Container';
 import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-// import CardContent from '@mui/material/CardContent';
-import Avatar from '@mui/material/Avatar';
 import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
-import styles from './influencer.module.css'
+import styles from './Influencer.module.css'
+import MoreContent from './Morecontent';
 
-function addblogfan() {
-  var answer = window.confirm("로그인이 필요한 서비스입니다.\n로그인 하시겠습니까?");
-  if (answer) {
-    window.location.href = "https://nid.naver.com/nidlogin.login?svctype=262144&url=https%3A%2F%2Fsearch.naver.com%2Fsearch.naver%3Fwhere%3Dnexearch%26sm%3Dtop_hty%26fbm%3D1%26ie%3Dutf8%26query%3D%25EB%25B6%2588%25EA%25B5%25AD%25EC%2582%25AC"
+const Blogfan = () => {
+  const [showResults, setShowResults] = useState(false)
+  const onClick = () => setShowResults(!showResults)
+  return (
+    <div>
+      { showResults ? 
+      <div onClick={onClick} > <img className = {styles.fanicon} src="/images/influencer/unfan.png"/>  </div> 
+      : <div onClick={onClick} > <img className = {styles.fanicon} src="/images/influencer/fanicon.png"/>  </div>}
+    </div>
+  )
 }
-  else {}
-}
-
-function influencer_icon(){
-  console.log('clicked')
-  const togglePopup = () => {
-    setShowPopup(!showPopup)
-  };
-}
-
-const dummydata = {
-          "influencer": [
-            {
-              "name": "쏠트몬",
-              "type": "여행 작가",
-              "place": "| 국내 전문",
-              "fans": "팬 9,163",
-              "blogdetails": "2012 파워블로그",
-              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
-              "detailsdepth": "· 도서 출간 3권 · 도심 여행 · 선호 여행 리뷰",
-              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
-              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
-              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
-              "date": "2021.11.05",
-              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
-              "image" : ""
-            },
-            {
-              "name": "쏠트몬1",
-              "type": "여행 작가",
-              "place": "| 국내 전문",
-              "fans": "| 팬 9,163",
-              "blogdetails": "2012 파워블로그",
-              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
-              "detailsdepth": "· 도서 출간 3권 · 도심 여행 · 선호 여행 리뷰",
-              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
-              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
-              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
-              "date": "2021.11.05",
-              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
-              "image" : ""
-            },
-            {
-              "name": "쏠트몬2",
-              "type": "여행 작가",
-              "place": "| 국내 전문",
-              "fans": "| 팬 9,163",
-              "blogdetails": "2012 파워블로그",
-              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
-              "detailsdepth": "· 도서 출간 3권 · 도심 여행 · 선호 여행 리뷰",
-              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
-              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
-              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
-              "date": "2021.11.05",
-              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
-              "image" : ""
-            },
-            {
-              "name": "쏠트몬3",
-              "type": "여행 작가",
-              "place": "| 국내 전문",
-              "fans": "| 팬 9,163",
-              "blogdetails": "2012 파워블로그",
-              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
-              "detailsdepth": "· 도서 출간 3권 · 도심 여행 · 선호 여행 리뷰",
-              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
-              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
-              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
-              "date": "2021.11.05",
-              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
-              "image" : ""
-            },
-            {
-              "name": "쏠트몬4",
-              "type": "여행 작가",
-              "place": "| 국내 전문",
-              "fans": "| 팬 9,163",
-              "blogdetails": "2012 파워블로그",
-              "avatar_name_url": "https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
-              "detailsdepth": "· 도서 출간 3권 · 도심 여행 · 선호 여행 리뷰",
-              "title": "경주 가볼만한곳 불타는 단풍 가을 불국사",    
-              "content": "가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학",
-              "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
-              "date": "2021.11.05",
-              "etc" : ["블로그경주 숙소 추천 경주월드 엑스포공원 도보 가능한 힐튼", "블로그경주 숙소 추천 보문관광단지 원픽 라한 호텔"],
-              "image" : ""
-            }
-            ]}
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -114,7 +30,9 @@ const Search = (props) => {
   const onClick = () => setShowResults(!showResults)
   return (
     <div>
-      <div className = {styles.rightallign} onClick={onClick} > 인플루엔서 </div>
+      { showResults ? 
+      <div className = {styles.rightallign} onClick={onClick} > <img className = {styles.influencer_icon} src="/images/influencer/after.png"/>  </div> 
+      : <div className = {styles.rightallign} onClick={onClick} > <img className = {styles.influencer_icon} src="/images/influencer/before.png"/>  </div>}
       { showResults ? <Results props={props}/> : null }
     </div>
   )
@@ -122,64 +40,76 @@ const Search = (props) => {
 
 const Results = (props) => {
   return (
-    <div>
-    <Card sx={{ width: 800, lineHeight: "50px", border: 1, borderColor: 'grey.200', my:"100px" }}>
-      <Container> 여행 스타일SNS 핫플 매니아 </Container>
-      <Container> 여행 스타일SNS 핫플 매니아 </Container>
-      <Container> 자세히 보기 </Container>
+    <Card sx={{ width: 700, lineHeight: "20px", border: 1, borderColor: 'grey.100', ml: "40px", mr: "40px", mb: "5px" }}>
+      <Card sx={{ width: 680, lineHeight: "20px", border: 1, borderColor: 'grey.100', ml: "10px", mr: "10px", fontSize: '0.8rem' }}>
+        <div className = {styles.typ_grey}> 여행 스타일:   <div className = {styles.typ_black}>{props.props.props[0]}</div> </div>
+        <div className = {styles.typ_grey}> 창작 분야:     <div className = {styles.typ_black}>{props.props.props[1]}</div></div>
+      </Card>
+      <div className = {styles.flipscreen}> 자세히 보기
+      </div>
     </Card>
-    </div> 
   )
 }
 
-export default function Home() {
+export default function Influencer(props) {
   const [showResults, setShowResults] = useState(false)
+  const { data, keyword, morecontent } = props.props
   return (
-    <Container>
-      <Search/>
-      <Card sx={{ maxWidth: 1150, lineHeight: "109px"}}>
+    <>
+    <Card sx={{ maxWidth: 768, lineHeight: "79px"}}>
        <Container sx={{ display: 'flex' }}>
-          <Container sx={{ fontSize: '1.6rem', fontWeight : "700", display: 'flex'}}> 
+
+          <Container sx={{ fontSize: '1rem', fontWeight : "700", display: 'flex'}}> 
           <div>인플루언서 </div> 
-          <img onClick = {influencer_icon} className = {styles.influencer_icon} src="/static/images/avatar/icon_img.png"/> 
+          <img className = {styles.influencer_icon} src="/images/influencer/icon_img.png"/>
           </Container>
-          <Container sx={{ color: "#0c43b7", fontSize: '1.3rem' }} className = {styles.contenttitle_rightend}> <Link href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> </Container>
+
+          <Container sx={{ color: "#0c43b7", fontSize: '1rem' }} className = {styles.contenttitle_rightend}> 
+          <Link href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> 
+          </Container>
+
         </Container>
       </Card>
-      {dummydata['influencer'].map((each) => 
-      <Card sx={{ maxWidth: 1150, my: '10px'}} key = {each.name}>
-        <Container sx={{ display: 'flex' }}>
-          <CardHeader
-          avatar={
-            <Link href={each.avatar_name_url}> 
-            <Avatar sx = {{ width: 88, height: 88, display:'inline-block'}} alt="" src="../static/images/avatar/avatar_1.png"/>
-            </Link>
-          }
-          title= {<div> <Link href={each.avatar_name_url} underline="none"> <ui className = {styles.title}>{each.name}</ui> </Link> <ui className = {styles.header}>{each.fans}</ui> </div> }
-          subheader= {<div className = {styles.magintop}> <ui className = {styles.header}>{each.type}</ui> <ui className = {styles.header}>{each.place}</ui> </div>}
-          />
-          <div className = {styles.right}> <img onClick = {addblogfan} className = {styles.fanicon} src="../static/images/avatar/fanicon.png"/> </div>
+
+      {data.map((each) => 
+      <Card sx={{ maxWidth: 768, my: '10px'}} key = {each.name}>
+        <Container sx={{ maxWidth: 768, mt:"10px" }}>
+          <Link href={each.avatar_name_url}> 
+          <img className = {styles.avatar} src={"/images/influencer/avatar_" + keyword + "_" + each.key + ".png"}/>
+          </Link>
+            <div className = {styles.flex}> 
+              <Link href={each.avatar_name_url} underline="none"> <div className = {styles.title}>{each.name}</div> </Link> 
+              <div className = {styles.header}>{each.fans}</div> 
+            </div>  
+            <div className = {styles.header_sub}>{each.type}</div> 
+            <div className = {styles.header_sub_lft}>{each.place}</div>
+            <Blogfan/>
         </Container>
 
         <Container sx={{ml:'40px', display : 'flex' }}> 
-          <img className = {styles.blogicon} src="../static/images/avatar/blogicon.png"/> 
+          <img className = {styles.blogicon} src="/images/influencer/blogicon.png"/> 
           <div className = {styles.subheader}> {each.blogdetails} </div> 
           <div className = {styles.detailsdepth}> {each.detailsdepth} </div> 
         </Container>
         <Search props = {each.detailsdepth}/>
         
         <Link href={each.title_content_url} underline="none"> 
-        <Container sx={{my: '10px', color: '#0c43b7', fontSize: '1.6rem', ml:'40px' }} className = {styles.contenttitle}> {each.title} </Container> 
+        <Container sx={{color: '#0c43b7', fontSize: '1rem', ml:'45px' }} className = {styles.contenttitle}> {each.title} </Container> 
         </Link>  
   
         <Container className = {styles.flex_allign}>
           <Container>
-            <Link href={each.title_content_url} underline="none"> <Container sx={{my: '10px', color: "#404040", fontSize: '1.3rem' }}> {each.content} </Container> </Link>
-            <Container sx={{my: '10px', color: 'grey', fontSize: '1.1rem' }}> {each.date} </Container>
+            <Link href={each.title_content_url} underline="none"> <Container sx={{my: '10px', color: "#404040", fontSize: '1rem' }}> {each.content} </Container> </Link>
+            <Container sx={{my: '10px', color: 'grey', fontSize: '1rem' }}> {each.date} </Container>
           </Container>
-          <Link href={each.title_content_url} underline="none"> <img className = {styles.image} src="/static/images/avatar/blog_1.png"/> </Link>
+          <Link href={each.title_content_url} underline="none"> <img className = {styles.image} src={"/images/influencer/blog_" + keyword + "_" + each.key + ".png"}/> </Link>
         </Container>
+        {/* <div className = {styles.f}>
+          <div className = {styles.l}> 1 </div>
+          <div className = {styles.r}> 2 </div>
+        </div> */}
       </Card>)}
-    </Container>
+      <MoreContent props={{'view_option': "인플루엔서",'more_link':morecontent}}/>
+    </>
   )
 }

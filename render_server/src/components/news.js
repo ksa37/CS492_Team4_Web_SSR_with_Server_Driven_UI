@@ -1,7 +1,7 @@
 import React from 'react'
-import PostCard from './PostCard'
-import styles from './news.module.css'
-import MoreContent from '../components/MoreContent';
+import PostCard from './Postcard'
+import styles from './News.module.css'
+import MoreContent from './Morecontent';
 
 import { Card, CardHeader } from '@mui/material';
 import Dot from '../../public/icons/dot.svg'; 
@@ -14,25 +14,18 @@ var ViewType = Object.freeze({
 
 export default function News({props}) {
   const {news_posts, news_more} = props
-
+  
   const [sortRelated, setSortRelated] = React.useState(true);
   const isRelated = Boolean(sortRelated);
   const sortRelatedClick = (event) => {
     setSortRelated(true);
-    // console.log(event.currentTarget);
-    // news_posts&&news_posts.sort((a, b) => console.log(a.relation, b.relation));
-    // news_posts&&news_posts.sort((a, b) => parseFloat(a.relation) > parseFloat(b.relation) ? 1 : -1);
-    // console.log(news_posts);
   };
   const sortLastestClick = (event) => {
     setSortRelated(false);
-    // console.log(event.currentTarget);
-    // news_posts&&news_posts.sort((a, b) => parseInt(a.date) < parseInt(b.date) ? 1 : -1);
-    // console.log(news_posts);
   };
 
   sortRelated
-  ? news_posts&&news_posts.sort((a, b) => parseFloat(a.relation) > parseFloat(b.relation) ? 1 : -1) // sort by relation
+  ? news_posts&&news_posts.sort((a, b) => parseFloat(a.relation) < parseFloat(b.relation) ? 1 : -1) // sort by relation
   : news_posts&&news_posts.sort((a, b) => parseInt(a.date) < parseInt(b.date) ? 1 : -1);            // sort by date
 
   

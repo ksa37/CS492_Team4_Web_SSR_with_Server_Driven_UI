@@ -4,11 +4,13 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import { CssBaseline, Typography } from '@mui/material';
 import { Box } from '@mui/system';
+import Link from '@mui/material/Link';
 
-import News from '../components/news';
-import Photo from '../components/photo';
-import Wiki from '../components/wiki';
-import Influencer from '../components/influencer';
+import News from '../components/News';
+import Photo from '../components/Photo';
+import Wiki from '../components/Wiki';
+import View from '../components/View'
+import Influencer from '../components/Influencer';
 
 const themeLight = createTheme({
   palette: {
@@ -31,7 +33,7 @@ const themeDark = createTheme({
 
 export async function getServerSideProps(context) {
   const {req, } = context
-  const props = {data: ''}
+  const props = {data: '', views: []}
   if (req.method === "POST") {
     const streamPromise = new Promise((resolve, reject) => {
       let body = ''
@@ -39,59 +41,72 @@ export async function getServerSideProps(context) {
         body += data
       });
       req.on('end', () => {
-        resolve(JSON.parse(body).data);
+        resolve(JSON.parse(body));
       });
     });
-    const body = await streamPromise;
-    props.data = body;
+    const json = await streamPromise;
+    props.data = json.data;
+    props.views = json.views;
   }
   else
   {
-    const res = await fetch('http://localhost:5000/Paris')
+    const res = await fetch('http://localhost:5000/Bulguksa')
     const data = await res.json()
     const string_data = JSON.stringify(data)
     props.data = string_data
+    props.views = data.views;
   }
   return { props }
 }
 
-
-export default function Home({ data }) {
+export default function Home({ data, views }) {
   const json = JSON.parse(data)
-  const news_view = json.view.includes("news");
-  const photo_view = json.view.includes("photo");
-  const wiki_view = json.view.includes("wiki");
+
   return (
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
-    <div className={styles.container}>
-        {news_view && 
-        <div className="section_news">
-          <News props={json.news}/>
-        </div>}
-        {wiki_view && 
-        <div className="section_wiki">
-          <Wiki props={json.wiki}/>
-        </div>}
-        {photo_view&&
-        <div className="section_image">
-          <Photo props={json.photo}/>  
-        </div>}
-    </div>
       <div className={styles.container}>
-        <Box sx={{ m: 0, mb: 1 }}></Box>
-        {news_view &&
-          <div className="section_news">
-            <News props={json.news} />
-          </div>}
-        {wiki_view &&
-          <div className="section_wiki">
-            <Wiki props={json.wiki} />
-          </div>}
-        {photo_view &&
-          <div className="section_image">
-            <Photo props={json.photo} />
-          </div>}
+        {views.map(view => {
+          switch(view) {
+            /*
+            case "basic":
+              return (
+                <div className="section_basic">
+                  <News props={json.news}/>
+                </div>
+              )
+            */
+            case "influencer":
+              return (
+                <div className="section_influencer">
+                  <Influencer props={json.influencer}/>
+                </div>
+              )
+            case "review":
+              return (
+                <div className="section_review">
+                  <View props={json.review}/>
+                </div>
+              )
+            case "wiki":
+              return (
+                <div className="section_wiki">
+                  <Wiki props={json.wiki}/>
+                </div>
+              )
+            case "news":
+              return (
+                <div className="section_news">
+                  <News props={json.news}/>
+                </div>
+              )
+            case "photo":
+              return (
+                <div className="section_photo">
+                  <Photo props={json.photo}/>
+                </div>
+              )
+          }})}
         <Box sx={{ mb: 15 }}></Box>
         <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
           NAVER
@@ -104,4 +119,3 @@ export default function Home({ data }) {
     </ThemeProvider>
   )
 }
-

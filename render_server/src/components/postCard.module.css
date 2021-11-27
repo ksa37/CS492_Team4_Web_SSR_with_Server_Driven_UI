@@ -90,3 +90,120 @@
     border-top: 1px solid #EDF0F2;
     margin: 0;
 } */
+
+.tagArea {
+    padding-bottom: 18px;
+}
+
+.tagButton {
+    display: inline-block;
+    background-color: #f4f7f8;
+    border-radius: 0px;
+    color: #666;
+    font-size: 0.82rem;
+    padding: 0 8px;
+    line-height: 1.6rem;
+    white-space: nowrap;
+    text-transform: none;
+    border: 0px;
+
+}
+
+
+
+.viewMultiImg {
+    /* display: flex; */
+    /* position: relative; */
+    aspect-ratio: 1;
+    max-width: 766px;
+    max-height: 766px;
+    overflow: hidden;
+    /* border-image-width: 0px !important; */
+    /* max-height: 766px; */
+}
+
+.viewMultiImgBoarder {
+    width: 32px;
+    height: 32px; 
+    /* border: 1px solid #F3F3F3; */
+    border-radius: 10rem;
+    
+}
+
+/* ViewCardTimeline */
+.timelineDate {
+    display: block;
+    padding-left: 17px;
+    border-bottom: solid 1px rgb(236, 240, 242);
+    font-weight: 700;
+    height: 43px;
+    line-height: 43px;
+    font-size: 0.88rem;
+}
+
+.timelineContent {
+    display: block;
+    position: relative;
+    padding: 0 18px 0 12px;
+    font-size: 0.88rem;
+    list-style: none;
+}
+
+/* .timelineContent :not(:first-child)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    bottom: 0;
+    z-index: 1;
+    width: 2px;
+    background-color: #ecf0f2;
+} */
+
+.timelineContentInner {
+    margin-left: 3px;
+    padding-top: 11px;
+    padding-bottom: 19px;
+    padding-left: 15px;
+    border-left: solid 2px #ecf0f2;
+    /* border-bottom: solid 1px rgb(236, 240, 242); */
+}
+
+/* .timelineContent :not(:first-child) {
+    border-top: solid 1px rgb(236, 240, 242);
+} */
+.timelineCircle{
+    content: '';
+    position: absolute;
+    top: 29px;
+    left: 12px;
+    z-index: 1;
+    width: 8px;
+    heighT: 8px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid rgba(184,184,184,.9);
+    background-color:#fff;
+}
+
+.linkBox {
+    display: block;
+    margin: 3px 18px 18px 18px;
+    background-color: rgb(244, 247, 248);
+    padding-inline: 12px;
+    overflow: hidden;
+    font-size: 0.82rem;
+    position:relative;
+    line-height: 2.2rem;
+    color: #666;
+}
+
+.linkBoxForward{
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    background-position: -25px -40px;
+}

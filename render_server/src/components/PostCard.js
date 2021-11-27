@@ -1,20 +1,35 @@
 import React from 'react'
 import Link from '@mui/material/Link';
-import styles from './postCard.module.css'
-import MoreVert from './morevert'
-import DateConvertor from './DateConvertor'
+import styles from './Postcard.module.css'
+import MoreVert from './Morevert'
+import DateConvertor from './Dateconvertor'
 import Image from 'material-ui-image'
+import ImageScroll from './Imagescroll';
 
 import { Card, CardContent, CardHeader, Divider } from '@mui/material';
+import TagArea from './Tagarea';
+import LinkArea from './Linkarea';
 
 var ViewType = Object.freeze({
     NEWS: 0,
-    WIKI: 1
+    WIKI: 1,
+    VIEW: 2
+});
+
+var LinkType = Object.freeze({
+    VIEWBASIC: 0,
+    VIEWTIMELINE: 1
+  });
+
+var ScrollType = Object.freeze({
+    VIEWBASIC: 0,
+    VIEWTIMELINE: 1,
+    INFLUENCER: 2
 });
 // typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
 export default function PostCard({props, view}) {  
-    const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL } = props
+    const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, imgNum, tags, more_links } = props
     const { viewType } = view
 
     const now = Date.now()
@@ -29,55 +44,47 @@ export default function PostCard({props, view}) {
     const handleClose = () => {
         setAnchorEl(null);
     };
-
-    // var isWiki = true;
-    // var isWiki = false;
-    // var viewType = ViewType.NEWS;
-    // var viewType = ViewType.WIKI;
-    // console.log(viewType)
-    // console.log(view)
-    // console.log(props)
-
+    // if (viewType==ViewType.VIEW){
+    //     console.log(contentsImgURL.length);
+    // }
+    
     return (
         <Card sx={{ maxWidth: 766 }} square > 
             <CardHeader 
-                sx={{ m: 0, p:0, paddingTop: '8px', paddingLeft: '16px', paddingRight: '8px' }} variant="contained"
+                sx={{ m: 0, p:0, paddingTop: '8px', paddingLeft: '16px', paddingRight: '8px', '& .MuiCardHeader-avatar': {
+                    marginRight: '8px',
+                  } }} variant="contained"
                 avatar={
-                    <Link href={publisherURL} underline="none">
-                        <a>
-                            <div className={styles.publisherImgBoarder}>
-                                {publisherImgURL == ""
-                                ? <Image className={styles.publisherImg}
-                                    src="/images/default_publisher.png" 
-                                    style={{
-                                        width:'100%',
-                                        height:'100%',
-                                        objectFit:'contain',
-                                    }}
-                                />
-                                : <Image className={styles.publisherImg}
-                                    
-                                    src={publisherImgURL}
-                                    style={{
-                                        width:'100%',
-                                        height:'100%',
-                                        objectFit:'contain',
-                                    }}
-                                />}
-                            </div>
-                        </a>
+                    <Link href={publisherURL}>
+                        <div className={styles.publisherImgBoarder}>
+                            {publisherImgURL == ""
+                            ? <Image className={styles.publisherImg}
+                                src="/images/default_publisher.png" 
+                                style={{
+                                    width:'100%',
+                                    height:'100%',
+                                    objectFit:'contain',
+                                }}
+                            />
+                            : <Image className={styles.publisherImg}
+                                
+                                src={publisherImgURL}
+                                style={{
+                                    width:'100%',
+                                    height:'100%',
+                                    objectFit:'contain',
+                                }}
+                            />}
+                        </div>
                     </Link>
                 }
                 title = {
                     <div className={styles.publishInfo}>
                         <Link href={publisherURL} underline="none">
-                            <a>
-                                <div className={styles.publisher}>{publisher}</div>
-                            </a>
+                            <div className={styles.publisher}>{publisher}</div>
                         </Link>
                         { viewType != ViewType.WIKI &&
-                        // { viewType != "WIKI" &&
-                            <hr className={styles.verticalDivider}></hr>
+                            <div className={styles.verticalDivider}></div>
                         }
                         { date != "" &&
                             <div className={styles.date}>{converted_date}</div>
@@ -96,30 +103,42 @@ export default function PostCard({props, view}) {
             />
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '16px', paddingRight: '16px', marginBottom: '10px' }} variant="contained" >
                 <Link href={postURL} underline="none">
-                    <a>
-                        <div className={styles.title}>{title}</div>
-                        { viewType == ViewType.WIKI && <Divider 
-                        // { viewType == "WIKI" && <Divider 
-                            sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
-                        />}
-                        <div className={styles.contentsInfo}>
-                            <div className={styles.contents}>
-                                <p>{contents}</p>
-                            </div>
-                            {contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
-                                <Image className={styles.contentsImg}
-                                    src={contentsImgURL}
-                                    style={{
-                                        width:'88px',
-                                        height:'100%',
-                                        objectFit:'contain',
-                                    }}
-                                /> 
-                            </div>}
+                    <div className={styles.title}>{title}</div>
+                    { viewType == ViewType.WIKI && <Divider 
+                        sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
+                    />}
+                    {viewType == ViewType.VIEW && contentsImgURL.length > 1 &&
+                        <>
+                        <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.VIEWBASIC}}/>
+                        {/* <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.INFLUENCER}}/> */}
+                        </>
+                    }
+                    <div className={styles.contentsInfo}>
+                        <div className={styles.contents}>
+                            <p>{contents}</p>
                         </div>
-                    </a>
+                        {viewType != ViewType.VIEW && contentsImgURL != "" && <div className={styles.contentsImgBoarder}>
+                            <Image className={styles.contentsImg}
+                                src={contentsImgURL}
+                                style={{
+                                    width:'88px',
+                                    height:'100%',
+                                    objectFit:'contain',
+                                }}
+                            /> 
+                        </div>}
+                        {viewType == ViewType.VIEW && contentsImgURL.length == 1 && <div className={styles.contentsImgBoarder}>
+                            <Image className={styles.contentsImg}
+                                src={contentsImgURL[0]}
+                                width='87px'
+                                height='87px'
+                            /> 
+                        </div>}
+                    </div>
                 </Link>
-            </CardContent>                      
+            </CardContent>  
+            {viewType == ViewType.VIEW &&<TagArea props={{"tags":tags}}/>}   
+            {viewType == ViewType.VIEW &&<LinkArea props={{"more_links":more_links}} link_view={{"link_type": LinkType.VIEWBASIC}}/>}                
         </Card>
     )
 }
