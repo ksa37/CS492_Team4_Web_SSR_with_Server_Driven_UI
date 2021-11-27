@@ -1,13 +1,11 @@
 import Container from '@mui/material/Container';
 import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-// import CardContent from '@mui/material/CardContent';
-import Avatar from '@mui/material/Avatar';
 import { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import styles from './influencer.module.css'
+import MoreContent from '../components/MoreContent';
 
 const Blogfan = () => {
   const [showResults, setShowResults] = useState(false)
@@ -15,8 +13,8 @@ const Blogfan = () => {
   return (
     <div>
       { showResults ? 
-      <div style={{display: 'flex', justifyContent:'flex-end'}} onClick={onClick} > <img className = {styles.fanicon} src="/images/influencer/unfan.png"/>  </div> 
-      : <div style={{display: 'flex', justifyContent:'flex-end'}} onClick={onClick} > <img className = {styles.fanicon} src="/images/influencer/fanicon.png"/>  </div>}
+      <div onClick={onClick} > <img className = {styles.fanicon} src="/images/influencer/unfan.png"/>  </div> 
+      : <div onClick={onClick} > <img className = {styles.fanicon} src="/images/influencer/fanicon.png"/>  </div>}
     </div>
   )
 }
@@ -63,6 +61,7 @@ const Results = (props) => {
 export default function Influencer(props) {
   const [showResults, setShowResults] = useState(false)
   const { data } = props.props
+  console.log(data, props, 'dataprops')
   return (
     <>
     <Card sx={{ maxWidth: 768, lineHeight: "79px"}}>
@@ -84,7 +83,7 @@ export default function Influencer(props) {
       <Card sx={{ maxWidth: 768, my: '10px'}} key = {each.name}>
         <Container sx={{ maxWidth: 768, display: 'flex', mt:"10px" }}>
           <Link href={each.avatar_name_url}> 
-          <img sx = {{ width: 88, height: 88}} src="/images/influencer/avatar_1.png"/>
+          <img sx = {{ width: 88, height: 88}} src={"/images/influencer/avatar_" + each.key + ".png"}/>
           </Link>
           
           <div>
@@ -118,9 +117,14 @@ export default function Influencer(props) {
             <Link href={each.title_content_url} underline="none"> <Container sx={{my: '10px', color: "#404040", fontSize: '1rem' }}> {each.content} </Container> </Link>
             <Container sx={{my: '10px', color: 'grey', fontSize: '1rem' }}> {each.date} </Container>
           </Container>
-          <Link href={each.title_content_url} underline="none"> <img className = {styles.image} src="/images/influencer/blog_1.png"/> </Link>
+          <Link href={each.title_content_url} underline="none"> <img className = {styles.image} src={"/images/influencer/blog_" + each.key + ".png"}/> </Link>
         </Container>
+        {/* <div className = {styles.f}>
+          <div className = {styles.l}> 1 </div>
+          <div className = {styles.r}> 2 </div>
+        </div> */}
       </Card>)}
+      <MoreContent props={{'view_option': "인플루엔서",'more_link':"https://m.search.naver.com/search.naver?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%AC&sm=mtb_nmr&where=m_influencer"}}/>
     </>
   )
 }
