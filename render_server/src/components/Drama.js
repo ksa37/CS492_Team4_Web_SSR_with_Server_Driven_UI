@@ -22,81 +22,53 @@ export default function Drama({props}) {
         console.log(link);
     }
 
-    const parentRef   = React.useRef(null);
-    const childrenRef = React.useRef(null);
-    var parentWidth;
+    // const parentRef   = React.useRef(null);
+    // const childrenRef = React.useRef(null);
+    // var parentWidth;
 
-    React.useEffect ( () => {
-        if(parentRef.current){
-            let parentHeight = parentRef.current.offsetHeight;
-            parentWidth  = parentRef.current.offsetWidth;
-            console.log("parent width:", parentWidth);
+    // React.useEffect ( () => {
+    //     if(parentRef.current){
+    //         let parentHeight = parentRef.current.offsetHeight;
+    //         parentWidth  = parentRef.current.offsetWidth;
+    //         console.log("parent width:", parentWidth);
+    //     }
+    //     if(childrenRef.current){
+    //         let childrenHeight = childrenRef.current.offsetHeight;
+    //         let childrenWidth  = childrenRef.current.offsetWidth;
+    //         console.log("children width:", childrenWidth);
+    //     }
+    // }, [parentRef, childrenRef]);
+    // console.log(parentWidth);
+    const [offset, setOffset] = React.useState(0);
+
+    React.useEffect(() => {
+        window.onscroll = () => {
+        setOffset(window.pageYOffset)
         }
-        if(childrenRef.current){
-            let childrenHeight = childrenRef.current.offsetHeight;
-            let childrenWidth  = childrenRef.current.offsetWidth;
-            console.log("children width:", childrenWidth);
-        }
-    }, [parentRef, childrenRef]);
+    }, []);
+
+    // console.log(offset); 
     
     return (
         <>
-        <div className={ styles.page }>
-        <Card sx={{ maxWidth: 768 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square  ref={ parentRef }>
-        {/* <div className={styles.wrapHeader}>
-        <div className={styles.basicInfoHeader}>
-            <div>
-                <Link underline="none">
-                // <Link href={dramaURL} underline="none">
-                    <div className={styles.dramaName}>술꾼도시여자들</div>
-                </Link>
-                <Link underline="none">
-                // </Link><Link href={categoryURL} underline="none"> 
-                    <div className={styles.dramaCategory}>웹드라마</div>
-                </Link>
-                <div className={styles.menu}>
-                    전체
-                    <div className={styles.verticalDivider}></div>
-                    기본정보
-                    <div className={styles.verticalDivider}></div>
-                    등장인물
-                    <div className={styles.verticalDivider}></div>
-                    공식영상
-                    <div className={styles.verticalDivider}></div>
-                    함께 볼만한 웹드라마
-                </div>
-            </div>
-            <Box className={styles.box} sx={{m: 0.5}}/>
-            <MoreVert props = {{
-                "open": open, 
-                "anchorEl": anchorEl, 
-                "handleClick": handleClick, 
-                "handleClose": handleClose,
-                "url": link,
-                "title": "술꾼도시여자들 공식영상",
-                "activeColor": "rgba(145,120,103,1)",
-                "inactiveColor": "rgba(145,120,103,0.5)"
-            }}/>
-        </div>
-        </div> */}
-        {/* <div ref={ childrenRef }> */}
-        <Card className={styles.basicInfoHeader} sx={{ maxWidth: 768, maxHeight: 122 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square  ref={ parentRef }>
-        <CardHeader 
-            sx={{ paddingRight: '8px', 
-                '& .MuiCardHeader-action': { padding: 0}
+        {/* <div className={ styles.basicInfoHeader }> */}
+        {/* <Card sx={{ maxWidth: 768 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square> */}
+        <Card className={styles.stickyHeader}  sx={{ maxWidth: 768, maxHeight: 122}} style={{backgroundColor: "#F1EDEB" }} variant='elevation' square >
+        <CardHeader
+            sx={{ paddingRight: '8px', '& .MuiCardHeader-action': { padding: 0}
             }}
-            // style={{backgroundColor: "#F1EDEB" }}
             title= {
-                // <div className={styles.headerInfo}>
-                <div>
+                <div className={styles.basicInfoHeader}>
                     <Link underline="none">
-                    {/* // <Link href={dramaURL} underline="none"> */}
+                    {/* // <Link href={dramaURL} underline="none">  */}
                         <div className={styles.dramaName}>술꾼도시여자들</div>
                     </Link>
+                    { (offset == 0) &&
                     <Link underline="none">
                     {/* // <Link href={categoryURL} underline="none"> */}
                         <div className={styles.dramaCategory}>웹드라마</div>
                     </Link>
+                    }
                     <div className={styles.menu}>
                         전체
                         <div className={styles.verticalDivider}></div>
@@ -111,7 +83,9 @@ export default function Drama({props}) {
                     <Box sx={{m: 0.5}}/>
                 </div>
             }
+            
             action = {
+                (offset == 0) &&
                 <MoreVert props = {{
                     "open": open, 
                     "anchorEl": anchorEl, 
@@ -127,7 +101,8 @@ export default function Drama({props}) {
             style={{ textAlign: 'left'}}
         />
         </Card>
-        <Paper className={styles.innerContent}
+        <Card sx={{ maxWidth: 768 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square>
+        <Paper
             sx={{ mt: '122px', maxWidth:746, height: 1000, borderRadius: '8px' }}>
             <Paper 
             sx={{ maxWidth:716, height: 464, borderRadius: '6px'}}
@@ -137,7 +112,7 @@ export default function Drama({props}) {
             </Paper>
         </Paper>
       </Card>
-      </div>
+      {/* </div> */}
 
       {/* <MoreContent props={{'view_option': "뉴스",'more_link':news_more}}/> */}
         </>

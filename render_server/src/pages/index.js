@@ -108,7 +108,7 @@ export default function Home({ data }) {
           <Drama/>  
         </div>
         {/* <ViewCardBasic props={json.review}/> */}
-        {view_view&&
+        {/* {view_view&&
         <div className="section_view">
         <View props={json.review}/>
         </div>
@@ -128,7 +128,7 @@ export default function Home({ data }) {
         {influencer_view&&
         <div className="section_influencer">
           <Influencer props={json.influencer}/>    
-        </div>}
+        </div>} */}
         <Box sx={{ mb: 15 }}></Box>
         <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
           NAVER
