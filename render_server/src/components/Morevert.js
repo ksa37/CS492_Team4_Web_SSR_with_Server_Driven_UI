@@ -87,8 +87,9 @@ export default function MoreVert({props}) {
                 <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
                 <MorevertMenuItem props = {{
                     "onClick": () => {
-                                <Link href="https://keep.naver.com/"/>
-                                },
+                                if (typeof window !== "undefined") {
+                                    window.location.replace( "https://keep.naver.com/" ); 
+                                }},
                     "text": "Keep 바로가기",
                     "icon": <img src='/icons/forward.svg'/>
                 }}/>
