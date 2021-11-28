@@ -9,7 +9,7 @@ import BookmarkIcon from '../../public/icons/bookmark.svg';
 import { IconButton, Box } from '@mui/material';
 
 export default function MoreVert({props}) {  
-    const { open, anchorEl, handleClick, handleClose, url, title } = props
+    const { open, anchorEl, handleClick, handleClose, url, title, activeColor='#9FA4AA', inactiveColor='#D1D3D6' } = props
     const [keep, setKeep] = React.useState(true);
     const setKeepClick = (event) => {
         setKeep(!keep);
@@ -24,8 +24,10 @@ export default function MoreVert({props}) {
                 disableRipple
             >
                 { open
-                ? <MoreVertIcon style={{color: '#8F8F8F'}}/>
-                : <MoreVertIcon style={{color: '#D1D3D6'}}/>
+                ? <MoreVertIcon style={{color: activeColor}}/>
+                : <MoreVertIcon style={{color: inactiveColor}}/>
+                // ? <MoreVertIcon style={{color: '#8F8F8F'}}/>
+                // : <MoreVertIcon style={{color: '#D1D3D6'}}/>
                 }   
             </IconButton>
             <Menu
@@ -59,35 +61,36 @@ export default function MoreVert({props}) {
                 <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
                 <div className={styles.divider}/>
                 {keep
-                ?
-                <div> 
-                <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
-                <MorevertMenuItem props = {{
-                    "onClick": setKeepClick,
-                    "text": "Keep에 저장",
-                    "icon": <BookmarkIcon style={{stroke: '#B3B4B6'}}/>
-                }}/>
-                <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
-                <div className={styles.divider}/>
+                ? <div> 
+                    <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
+                    <MorevertMenuItem props = {{
+                        "onClick": setKeepClick,
+                        "text": "Keep에 저장",
+                        "icon": <BookmarkIcon style={{stroke: '#B3B4B6'}}/>
+                    }}/>
+                    <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
+                    <div className={styles.divider}/>
                 </div>
-                :<div>
+                : <div>
                     <Box style={{ backgroundColor: "var(--naver_green)", height: "8px" }}/>
-                <MorevertMenuItem props = {{
-                    "onClick": setKeepClick,
-                    "text": "저장된 문서입니다.",
-                    "icon": <BookmarkIcon style={{stroke: 'var(--naver_green)', fill: '#FFFFFF'}}/>,
-                    "bgColor": 'var(--naver_green)',
-                    "color": '#FFFFFF'
-                }}/>
-                <Box style={{ backgroundColor: "var(--naver_green)", height: "8px" }}/>
-                <div className={styles.divider}/>
+                    <MorevertMenuItem props = {{
+                        "onClick": setKeepClick,
+                        "text": "저장된 문서입니다.",
+                        "icon": <BookmarkIcon style={{stroke: 'var(--naver_green)', fill: '#FFFFFF'}}/>,
+                        "bgColor": 'var(--naver_green)',
+                        "color": '#FFFFFF'
+                    }}/>
+                    <Box style={{ backgroundColor: "var(--naver_green)", height: "8px" }}/>
+                    <div className={styles.divider}/>
                 </div>
                 }
                 <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
                 <MorevertMenuItem props = {{
                     "onClick": () => {
                                 if (typeof window !== "undefined") {
-                                    window.location.replace( "https://keep.naver.com/" ); 
+                                    // window.location.replace( "https://keep.naver.com/" ); 
+                                    window.location.href = "https://keep.naver.com/";
+                                
                                 }},
                     "text": "Keep 바로가기",
                     "icon": <img src='/icons/forward.svg'/>
@@ -98,7 +101,7 @@ export default function MoreVert({props}) {
 }
 
 function MorevertMenuItem({props}) { 
-    const { onClick, text, icon, bgColor = "transparent", color = "var(--dark_gray_2)" } = props
+    const { onClick, text, icon, bgColor="transparent", color="var(--dark_gray_2)" } = props
 
     return (
         <MenuItem 
