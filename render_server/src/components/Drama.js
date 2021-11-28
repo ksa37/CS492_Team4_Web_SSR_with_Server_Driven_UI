@@ -108,12 +108,32 @@ export default function Drama({props}) {
         <Card className={styles.contents} sx={{ maxWidth: 768 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square>
         <Paper
             sx={{ px: "15px", pt: "21px", mb: "21px", mx: "11px", maxWidth:746, height: 1000, borderRadius: '8px' }}>
-            <Paper 
+            {btns.map((btn, i) => (
+                (menu.darkBtn === i) && 
+                <Paper 
+                    key={i}
+                    sx={{ maxWidth: 716, height: 464, borderRadius: '6px'}}
+                    style= {{ background: "#D2C9C4" }}
+                > {btn}
+                </Paper>
+
+                // <div key={i} className={styles.btnmenu}>
+                // <button
+                // // key={i}
+                // onClick={changeColor.bind(this, i)}
+                // className={ menu.darkBtn === i ? styles.selectedMenu : ((i == 0) ? styles.firstunselectedMenu : styles.unselectedMenu) }
+                // >
+                // {btn}
+                // </button>
+                // {(i != btns.length - 1) && !(i === menu.darkBtn || i + 1 === menu.darkBtn) && <div className={styles.verticalDivider}></div>}
+                // </div>
+            ))}
+            {/* <Paper 
             sx={{ maxWidth: 716, height: 464, borderRadius: '6px'}}
             style= {{ background: "#D2C9C4" }}
-            >
+            > */}
         {/* // {drama_videos&&drama_videos.map((video) => <PostCard key={video.title} props={video} view={{"viewType": ViewType.NEWS }}/>)} */}
-            </Paper>
+            {/* </Paper> */}
         </Paper>
       </Card>
       {/* </div> */}
