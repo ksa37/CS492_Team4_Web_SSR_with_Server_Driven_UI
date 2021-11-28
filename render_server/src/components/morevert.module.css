@@ -4,5 +4,11 @@
     flex-direction: row;
     justify-content: space-between;
     font-size: 15px;
+    /* padding-top: 8px; */
     /* color: var(--dark_gray_2); */
+}
+
+.divider {
+    border-top: 1px solid #EDF0F2;
+    margin: 0;
 }
