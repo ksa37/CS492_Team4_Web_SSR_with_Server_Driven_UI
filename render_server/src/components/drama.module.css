@@ -1,22 +1,14 @@
 .stickyHeader { 
     position: sticky;
-    transition: all .3s;
-
     top: 0;
+    transition: all .3s;
     background-color:#F1EDEB;
-    border-top-style: solid;
-    border-left-style: solid;
-    border-right-style: solid;
-    border-bottom-style: hidden;
-    border-top-width: 2px;
-    border-right-width: 1px;
-    border-left-width: 1px;
-    border-bottom-width: 0;
-    border-top-color: rgba(145,120,103,0.5);
-    border-right-color: #E3E5E8;
-    border-left-color: #E3E5E8;
-    border-bottom-color: #F1EDEB;
     width: 100%;
+    
+    border: 1px solid #E3E5E8;
+    border-bottom: none;
+    border-top-width: 2px;
+    border-top-color: rgba(145,120,103,0.5);
 }
 
 .dramaName {
@@ -62,19 +54,10 @@
     border-left: 1px solid #D2C9C4;
     height: 16px;
     margin: 0;
-    /* margin-left: 12px; 
-    margin-right: 12px;  */
     margin-top: 2px; 
 }
 
 .contents {
-    border-left-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-right-width: 1px;
-    border-left-width: 1px;
-    border-bottom-width: 1px;
-    border-right-color: #E3E5E8;
-    border-left-color: #E3E5E8;
-    border-bottom-color: #E3E5E8;
+    border: 1px solid #E3E5E8;
+    border-top: none;
 }

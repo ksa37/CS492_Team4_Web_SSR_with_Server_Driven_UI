@@ -73,11 +73,9 @@ export default function Drama({props}) {
                         <div className={styles.unselectedMenu}>
                             공식영상
                         </div>
-                        <div className={styles.verticalDivider}></div>
                         <div className={styles.selectedMenu}>
                             공식영상
                         </div>
-                        <div className={styles.verticalDivider}></div>
                         <div className={styles.unselectedMenu}>
                             함께 볼만한 웹드라마
                         </div>
