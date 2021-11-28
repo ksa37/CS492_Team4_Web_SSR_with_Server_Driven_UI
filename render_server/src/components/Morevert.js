@@ -2,8 +2,11 @@ import React from 'react'
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import styles from './MoreVert.module.css'
+import Link from '@mui/material/Link';
 
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import BookmarkIcon from '../../public/icons/bookmark.svg'; 
+import ForwardIcon from '../../public/icons/forward.svg'; 
 
 import { Divider, IconButton } from '@mui/material';
 
@@ -48,15 +51,38 @@ export default function MoreVert({props}) {
                 }}
                 >
                 <MorevertMenuItem props = {{
-                    "handleClose": handleClose,
-                    "text": "Keep에 저장",
-                    "srcURL": '/icons/bookmark.svg'
+                    "onClick": () => {
+                        shareNaverLink( 'https://n.news.naver.com/mnews/article/366/0000772471?sid=101', '이 링크를 공유' )
+                        },
+                    "text": "공유하기",
+                    "icon": <ForwardIcon style={{color: '#8F8F8F'}}/>
+                    // "icon": '/icons/bookmark.svg'
                 }}/>
-                <Divider/>
+                <Divider sx={{ m: 0 }}/>
                 <MorevertMenuItem props = {{
-                    "handleClose": handleClose,
+                    "onClick": () => {
+                                shareNaverLink( 'https://n.news.naver.com/mnews/article/366/0000772471?sid=101', '이 링크를 공유' )
+                                },
+                    "text": "Keep에 저장",
+                    "icon": <BookmarkIcon style={{color: '#8F8F8F'}}/>
+                }}/>
+                <Divider sx={{ m: 0 }}/>
+                <MorevertMenuItemColor props = {{
+                    "onClick": () => {
+                        shareNaverLink( 'https://n.news.naver.com/mnews/article/366/0000772471?sid=101', '이 링크를 공유' )
+                        },
+                    "text": "저장된 문서입니다.",
+                    "icon": <BookmarkIcon style={{stroke: 'var(--naver_green)', fill: '#FFFFFF'}}/>,
+                    "bgColor": 'var(--naver_green)',
+                    "color": '#FFFFFF'
+                }}/>
+                <Divider sx={{ m: 0 }}/>
+                <MorevertMenuItem props = {{
+                    "onClick": () => {
+                                <Link href="https://keep.naver.com/"/>
+                                },
                     "text": "Keep 바로가기",
-                    "srcURL": '/icons/forward.svg'
+                    "icon": <img src='/icons/forward.svg'/>
                 }}/>
             </Menu>
         </div>
@@ -64,17 +90,18 @@ export default function MoreVert({props}) {
 }
 
 function MorevertMenuItem({props}) { 
-    const { handleClose, text, srcURL } = props
+    const { onClick, text, icon, bgColor = "transparent", color = "var(--dark_gray_2)" } = props
 
     return (
         <MenuItem 
-            onClick={handleClose}
-            style={{ backgroundColor: 'transparent' }}
+            onClick={onClick}
+            // style={{ backgroundColor: 'transparent', color: 'var(--dark_gray_2)' }}
+            style={{ backgroundColor: {bgColor}, color: {color} }}
             disableRipple
         >
             <div className={styles.menuItem}>
                 {text}
-                <img src={srcURL}/>
+                {icon}
             </div>
         </MenuItem>
     )
