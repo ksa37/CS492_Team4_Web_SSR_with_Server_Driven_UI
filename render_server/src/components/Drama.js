@@ -15,6 +15,12 @@ export default function Drama({props}) {
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    var link;
+    if (typeof window !== "undefined") {
+        link = window.location.href;
+        console.log(link);
+    }
     
     return (
         <>
@@ -51,7 +57,9 @@ export default function Drama({props}) {
                     "open": open, 
                     "anchorEl": anchorEl, 
                     "handleClick": handleClick, 
-                    "handleClose": handleClose
+                    "handleClose": handleClose,
+                    "url": link,
+                    "title": "술꾼도시여자들 공식영상"
                 }}
                 />
             }

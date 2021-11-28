@@ -2,29 +2,24 @@ import React from 'react'
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import styles from './MoreVert.module.css'
-import Link from '@mui/material/Link';
 
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import BookmarkIcon from '../../public/icons/bookmark.svg'; 
-import ForwardIcon from '../../public/icons/forward.svg'; 
 
-import { Divider, IconButton, Box } from '@mui/material';
+import { IconButton, Box } from '@mui/material';
 
 export default function MoreVert({props}) {  
-    const { open, anchorEl, handleClick, handleClose } = props
+    const { open, anchorEl, handleClick, handleClose, url, title } = props
+    const [keep, setKeep] = React.useState(true);
+    const setKeepClick = (event) => {
+        setKeep(!keep);
+        // console.log(keep)
+    };
 
     return (
         <div>
             <IconButton sx={{ py: 0 }}
                 onClick={handleClick}
-                // onClick={
-                //     // {handleClick} && 
-                //     () => {
-                //     shareNaverLink( 'https://n.news.naver.com/mnews/article/366/0000772471?sid=101', '이 링크를 공유' )
-                //     }
-                // }
-                
-
                 style={{ backgroundColor: 'transparent' }}
                 disableRipple
             >
@@ -52,38 +47,42 @@ export default function MoreVert({props}) {
                 >
                 <MorevertMenuItem props = {{
                     "onClick": () => {
-                        shareNaverLink( 'https://n.news.naver.com/mnews/article/366/0000772471?sid=101', '이 링크를 공유' )
+                        shareNaverLink( url, `[공유] ${title}` )
+                        // shareNaverLink( 'https://n.news.naver.com/mnews/article/366/0000772471?sid=101', '이 링크를 공유' )
                         },
                     "text": "공유하기",
-                    "icon": <img src="https://ssl.pstatic.net/share/js/naver_sharebutton.js"/>
+                    "icon": <img src="/icons/naver_share.png" 
+                                width="auto"
+                                height="16px"
+                                />
                 }}/>
                 <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
                 <div className={styles.divider}/>
+                {keep
+                ?
+                <div> 
                 <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
-                {/* <Divider sx={{ m: 0 }}/> */}
                 <MorevertMenuItem props = {{
-                    "onClick": () => {
-                                shareNaverLink( 'https://n.news.naver.com/mnews/article/366/0000772471?sid=101', '이 링크를 공유' )
-                                },
+                    "onClick": setKeepClick,
                     "text": "Keep에 저장",
                     "icon": <BookmarkIcon style={{stroke: '#B3B4B6'}}/>
                 }}/>
                 <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
                 <div className={styles.divider}/>
-                <Box style={{ backgroundColor: "var(--naver_green)", height: "8px" }}/>
-                {/* <Divider sx={{ m: 0 }}/> */}
+                </div>
+                :<div>
+                    <Box style={{ backgroundColor: "var(--naver_green)", height: "8px" }}/>
                 <MorevertMenuItem props = {{
-                    "onClick": () => {
-                        shareNaverLink( 'https://n.news.naver.com/mnews/article/366/0000772471?sid=101', '이 링크를 공유' )
-                        },
+                    "onClick": setKeepClick,
                     "text": "저장된 문서입니다.",
                     "icon": <BookmarkIcon style={{stroke: 'var(--naver_green)', fill: '#FFFFFF'}}/>,
                     "bgColor": 'var(--naver_green)',
                     "color": '#FFFFFF'
                 }}/>
-                {/* <Divider sx={{ m: 0 }}/> */}
                 <Box style={{ backgroundColor: "var(--naver_green)", height: "8px" }}/>
                 <div className={styles.divider}/>
+                </div>
+                }
                 <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
                 <MorevertMenuItem props = {{
                     "onClick": () => {
@@ -100,12 +99,10 @@ export default function MoreVert({props}) {
 
 function MorevertMenuItem({props}) { 
     const { onClick, text, icon, bgColor = "transparent", color = "var(--dark_gray_2)" } = props
-    // const { onClick, text, icon, bgColor, color } = props
 
     return (
         <MenuItem 
             onClick={onClick}
-            // style={{ backgroundColor: 'transparent', color: 'var(--dark_gray_2)' }}
             style={{ backgroundColor: bgColor, color: color }}
             disableRipple
         >
@@ -119,11 +116,10 @@ function MorevertMenuItem({props}) {
 
 function shareNaverLink(url, title) { 
     var encodeUrl = encodeURIComponent( url ); 
-    var encodeTitle = encodeURIComponent( title ); 
-    // var link = StringTool.format( 'https://share.naver.com/web/shareView.nhn?url={0}&title={1}', encodeUrl, encodeTitle ); 
+    var encodeTitle = encodeURIComponent( title );
     var link = `https://share.naver.com/web/shareView.nhn?url=${encodeUrl}&title=${encodeTitle}`; 
-
-    console.log("share Naver")
+    
+    // console.log("share Naver", encodeUrl, encodeTitle)
     if (typeof window !== "undefined") {
         // browser code
         window.open( link, 'share', 'width=500, height=500' ); 
