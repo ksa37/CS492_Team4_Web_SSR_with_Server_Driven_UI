@@ -51,8 +51,7 @@ export default function Drama({props}) {
 
     return (
         <>
-        <Card className={styles.stickyHeader}  sx={{ maxWidth: 768, maxHeight: 500}} style={{backgroundColor: "#F1EDEB" }} variant={variant} square >
-        {/* <Card className={styles.stickyHeader}  sx={{ maxWidth: 768, maxHeight: 122}} style={{backgroundColor: "#F1EDEB" }} variant={variant} square > */}
+        <Card className={styles.stickyHeader}  sx={{ maxWidth: 768, maxHeight: 122}} style={{backgroundColor: "#F1EDEB" }} variant={variant} square >
         <CardHeader
             sx={{ paddingBottom: '4px', paddingRight: '8px', '& .MuiCardHeader-action': { padding: 0}
             }}
@@ -74,13 +73,17 @@ export default function Drama({props}) {
                         {btns.map((btn, i) => (
                             <div key={i} className={styles.btnmenu}>
                             <button
-                            // key={i}
-                            onClick={changeColor.bind(this, i)}
-                            className={ menu.darkBtn === i ? styles.selectedMenu : ((i == 0) ? styles.firstunselectedMenu : styles.unselectedMenu) }
+                                onClick={changeColor.bind(this, i)}
+                                className={ 
+                                    menu.darkBtn === i 
+                                    ? styles.selectedMenu 
+                                    : ((i == 0) ? styles.firstunselectedMenu : styles.unselectedMenu) }
                             >
                             {btn}
                             </button>
-                            {(i != btns.length - 1) && !(i === menu.darkBtn || i + 1 === menu.darkBtn) && <div className={styles.verticalDivider}></div>}
+                            {(i != btns.length - 1) 
+                            && !(i === menu.darkBtn || i + 1 === menu.darkBtn) 
+                            && <div className={styles.verticalDivider}></div>}
                             </div>
                         ))}
                     </div>
@@ -115,28 +118,11 @@ export default function Drama({props}) {
                     sx={{ maxWidth: 716, height: 464, borderRadius: '6px'}}
                     style= {{ background: "#D2C9C4" }}
                 > {btn}
-                </Paper>
-
-                // <div key={i} className={styles.btnmenu}>
-                // <button
-                // // key={i}
-                // onClick={changeColor.bind(this, i)}
-                // className={ menu.darkBtn === i ? styles.selectedMenu : ((i == 0) ? styles.firstunselectedMenu : styles.unselectedMenu) }
-                // >
-                // {btn}
-                // </button>
-                // {(i != btns.length - 1) && !(i === menu.darkBtn || i + 1 === menu.darkBtn) && <div className={styles.verticalDivider}></div>}
-                // </div>
-            ))}
-            {/* <Paper 
-            sx={{ maxWidth: 716, height: 464, borderRadius: '6px'}}
-            style= {{ background: "#D2C9C4" }}
-            > */}
         {/* // {drama_videos&&drama_videos.map((video) => <PostCard key={video.title} props={video} view={{"viewType": ViewType.NEWS }}/>)} */}
-            {/* </Paper> */}
+                </Paper>
+            ))}
         </Paper>
       </Card>
-      {/* </div> */}
 
       {/* <MoreContent props={{'view_option': "뉴스",'more_link':news_more}}/> */}
         </>
