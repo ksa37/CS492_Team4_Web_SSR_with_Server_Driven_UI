@@ -2,6 +2,7 @@ import React from 'react'
 import Link from '@mui/material/Link';
 import MoreVert from './MoreVert'
 import styles from './drama.module.css'
+import HeaderMenuButton from './HeaderMenuButton';
 
 import { Card, CardContent, CardHeader, Divider, Box, Paper } from '@mui/material';
 
@@ -40,8 +41,8 @@ export default function Drama({props}) {
     
     return (
         <>
-        <Card className={styles.stickyHeader}  sx={{ maxWidth: 768, maxHeight: 122}} style={{backgroundColor: "#F1EDEB" }} variant={variant} square >
-        {/* <Card className={styles.stickyHeader}  sx={{ maxWidth: 768, maxHeight: 122}} style={{backgroundColor: "#F1EDEB" }} variant='elevation' square > */}
+        <Card className={styles.stickyHeader}  sx={{ maxWidth: 768, maxHeight: 500}} style={{backgroundColor: "#F1EDEB" }} variant={variant} square >
+        {/* <Card className={styles.stickyHeader}  sx={{ maxWidth: 768, maxHeight: 122}} style={{backgroundColor: "#F1EDEB" }} variant={variant} square > */}
         <CardHeader
             sx={{ paddingBottom: '4px', paddingRight: '8px', '& .MuiCardHeader-action': { padding: 0}
             }}
@@ -58,7 +59,8 @@ export default function Drama({props}) {
                     </Link>
                     }
                     <div className={styles.menu}>
-                        <div className={styles.firstunselectedMenu}>
+                        <HeaderMenuButton/>
+                        {/* <div className={styles.firstunselectedMenu}>
                             전체
                         </div>
                         <div className={styles.verticalDivider}></div>
@@ -78,7 +80,7 @@ export default function Drama({props}) {
                         </div>
                         <div className={styles.unselectedMenu}>
                             함께 볼만한 웹드라마
-                        </div>
+                        </div> */}
                     </div>
                     <Box sx={{m: 0.5}}/>
                 </div>
