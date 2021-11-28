@@ -11,7 +11,7 @@ class HeaderMenuButton extends Component {
   
     changeColor = (btn) => {
       this.setState({ darkBtn: btn });
-      console.log(this.state.darkBtn)
+      // console.log(this.state.darkBtn)
     };
 
     btns = ["전체", "기본정보", "등장인물", "공식영상", "함께 볼만한 웹드라마"];

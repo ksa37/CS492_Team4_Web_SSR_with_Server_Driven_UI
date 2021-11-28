@@ -24,7 +24,7 @@
     color:#968577;
 }
 
-.menu {
+/* .menu {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -32,12 +32,13 @@
     font-size: 15px;
     font-weight: 400;
     color:#7E695A;
-}
+} */
 
 .btnmenu {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 4px;
 }
 
 .button:active {

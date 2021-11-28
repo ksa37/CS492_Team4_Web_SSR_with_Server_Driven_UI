@@ -4,9 +4,11 @@ import MoreVert from './MoreVert'
 import styles from './drama.module.css'
 import HeaderMenuButton from './HeaderMenuButton';
 
-import { Card, CardContent, CardHeader, Divider, Box, Paper } from '@mui/material';
+import { Card, CardHeader, Box, Paper } from '@mui/material';
 
 export default function Drama({props}) {
+    var btns = ["전체", "기본정보", "등장인물", "공식영상", "함께 볼만한 웹드라마"];
+    
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -20,7 +22,7 @@ export default function Drama({props}) {
     var link;
     if (typeof window !== "undefined") {
         link = window.location.href;
-        console.log(link);
+        // console.log(link);
     }
 
     const [offset, setOffset] = React.useState(0);
@@ -31,14 +33,18 @@ export default function Drama({props}) {
     }, []);
 
     var variant;
-    if (offset) {
-        variant ='elevation';
-    }
-    else {
-        variant ='none';
-    }
+    if (offset) variant ='elevation';
+    else variant ='none';
     // console.log(offset); 
     
+    const [menu, setMenu] = React.useState({
+        darkBtn: 0
+    });
+
+    const changeColor = (btn) => {
+        setMenu({ darkBtn: btn });
+    };
+
     return (
         <>
         <Card className={styles.stickyHeader}  sx={{ maxWidth: 768, maxHeight: 500}} style={{backgroundColor: "#F1EDEB" }} variant={variant} square >
@@ -58,29 +64,19 @@ export default function Drama({props}) {
                         <div className={styles.dramaCategory}>웹드라마</div>
                     </Link>
                     }
-                    <div className={styles.menu}>
-                        <HeaderMenuButton/>
-                        {/* <div className={styles.firstunselectedMenu}>
-                            전체
-                        </div>
-                        <div className={styles.verticalDivider}></div>
-                        <div className={styles.unselectedMenu}>
-                            기본정보
-                        </div>
-                        <div className={styles.verticalDivider}></div>
-                        <div className={styles.unselectedMenu}>
-                            등장인물
-                        </div>
-                        <div className={styles.verticalDivider}></div>
-                        <div className={styles.unselectedMenu}>
-                            공식영상
-                        </div>
-                        <div className={styles.selectedMenu}>
-                            공식영상
-                        </div>
-                        <div className={styles.unselectedMenu}>
-                            함께 볼만한 웹드라마
-                        </div> */}
+                    <div className={styles.btnmenu}>
+                        {btns.map((btn, i) => (
+                            <div key={i} className={styles.btnmenu}>
+                            <button
+                            // key={i}
+                            onClick={changeColor.bind(this, i)}
+                            className={ menu.darkBtn === i ? styles.selectedMenu : ((i == 0) ? styles.firstunselectedMenu : styles.unselectedMenu) }
+                            >
+                            {btn}
+                            </button>
+                            {(i != btns.length - 1) && !(i === menu.darkBtn || i + 1 === menu.darkBtn) && <div className={styles.verticalDivider}></div>}
+                            </div>
+                        ))}
                     </div>
                     <Box sx={{m: 0.5}}/>
                 </div>
