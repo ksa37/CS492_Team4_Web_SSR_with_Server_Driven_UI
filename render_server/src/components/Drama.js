@@ -22,43 +22,31 @@ export default function Drama({props}) {
         console.log(link);
     }
 
-    // const parentRef   = React.useRef(null);
-    // const childrenRef = React.useRef(null);
-    // var parentWidth;
-
-    // React.useEffect ( () => {
-    //     if(parentRef.current){
-    //         let parentHeight = parentRef.current.offsetHeight;
-    //         parentWidth  = parentRef.current.offsetWidth;
-    //         console.log("parent width:", parentWidth);
-    //     }
-    //     if(childrenRef.current){
-    //         let childrenHeight = childrenRef.current.offsetHeight;
-    //         let childrenWidth  = childrenRef.current.offsetWidth;
-    //         console.log("children width:", childrenWidth);
-    //     }
-    // }, [parentRef, childrenRef]);
-    // console.log(parentWidth);
     const [offset, setOffset] = React.useState(0);
-
     React.useEffect(() => {
         window.onscroll = () => {
         setOffset(window.pageYOffset)
         }
     }, []);
 
+    var variant;
+    if (offset) {
+        variant ='elevation';
+    }
+    else {
+        variant ='none';
+    }
     // console.log(offset); 
     
     return (
         <>
-        {/* <div className={ styles.basicInfoHeader }> */}
-        {/* <Card sx={{ maxWidth: 768 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square> */}
-        <Card className={styles.stickyHeader}  sx={{ maxWidth: 768, maxHeight: 122}} style={{backgroundColor: "#F1EDEB" }} variant='elevation' square >
+        <Card className={styles.stickyHeader}  sx={{ maxWidth: 768, maxHeight: 122}} style={{backgroundColor: "#F1EDEB" }} variant={variant} square >
+        {/* <Card className={styles.stickyHeader}  sx={{ maxWidth: 768, maxHeight: 122}} style={{backgroundColor: "#F1EDEB" }} variant='elevation' square > */}
         <CardHeader
-            sx={{ paddingRight: '8px', '& .MuiCardHeader-action': { padding: 0}
+            sx={{ paddingBottom: '4px', paddingRight: '8px', '& .MuiCardHeader-action': { padding: 0}
             }}
             title= {
-                <div className={styles.basicInfoHeader}>
+                <div>
                     <Link underline="none">
                     {/* // <Link href={dramaURL} underline="none">  */}
                         <div className={styles.dramaName}>술꾼도시여자들</div>
@@ -70,15 +58,29 @@ export default function Drama({props}) {
                     </Link>
                     }
                     <div className={styles.menu}>
-                        전체
+                        <div className={styles.firstunselectedMenu}>
+                            전체
+                        </div>
                         <div className={styles.verticalDivider}></div>
-                        기본정보
+                        <div className={styles.unselectedMenu}>
+                            기본정보
+                        </div>
                         <div className={styles.verticalDivider}></div>
-                        등장인물
+                        <div className={styles.unselectedMenu}>
+                            등장인물
+                        </div>
                         <div className={styles.verticalDivider}></div>
-                        공식영상
+                        <div className={styles.unselectedMenu}>
+                            공식영상
+                        </div>
                         <div className={styles.verticalDivider}></div>
-                        함께 볼만한 웹드라마
+                        <div className={styles.selectedMenu}>
+                            공식영상
+                        </div>
+                        <div className={styles.verticalDivider}></div>
+                        <div className={styles.unselectedMenu}>
+                            함께 볼만한 웹드라마
+                        </div>
                     </div>
                     <Box sx={{m: 0.5}}/>
                 </div>
@@ -101,9 +103,9 @@ export default function Drama({props}) {
             style={{ textAlign: 'left'}}
         />
         </Card>
-        <Card sx={{ maxWidth: 768 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square>
+        <Card className={styles.contents} sx={{ maxWidth: 768 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square>
         <Paper
-            sx={{ mt: '122px', maxWidth:746, height: 1000, borderRadius: '8px' }}>
+            sx={{ maxWidth:746, height: 1000, borderRadius: '8px' }}>
             <Paper 
             sx={{ maxWidth:716, height: 464, borderRadius: '6px'}}
             style= {{ background: "#D2C9C4" }}
