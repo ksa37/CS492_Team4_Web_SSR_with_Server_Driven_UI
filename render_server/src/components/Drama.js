@@ -8,7 +8,11 @@ import { Card, CardHeader, Box, Paper } from '@mui/material';
 
 export default function Drama({props}) {
     var btns = ["전체", "기본정보", "등장인물", "공식영상", "함께 볼만한 웹드라마"];
-    
+    var keywordURL = "https://m.tving.com/app/theme.tving?pocCode=POCD0600&themeSeq=109682&utm_source=portal&utm_medium=search&utm_campaign=WorkLaterDrinkNow&utm_content=eventpage";
+    var keyword = "술꾼도시여자들"
+    var categoryURL = "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blFB&x_csa=%7B%22pkid%22%3A%22356%22%7D&qvt=0&query=%EC%9B%B9%EB%93%9C%EB%9D%BC%EB%A7%88"
+    var category = "웹드라마"
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -54,15 +58,17 @@ export default function Drama({props}) {
             }}
             title= {
                 <div>
-                    <Link underline="none">
-                    {/* // <Link href={dramaURL} underline="none">  */}
-                        <div className={styles.dramaName}>술꾼도시여자들</div>
-                    </Link>
+                    <div className={styles.dramaName}>
+                        <Link className={styles.dramaName} href={keywordURL} underline="none"> 
+                            {keyword}
+                        </Link>
+                    </div>
                     { (offset == 0) &&
-                    <Link underline="none">
-                    {/* // <Link href={categoryURL} underline="none"> */}
-                        <div className={styles.dramaCategory}>웹드라마</div>
-                    </Link>
+                        <div className={styles.dramaCategory}>
+                            <Link className={styles.dramaCategory} href={categoryURL} underline="none"> 
+                                {category}
+                            </Link>
+                        </div>
                     }
                     <div className={styles.btnmenu}>
                         {btns.map((btn, i) => (
@@ -101,9 +107,9 @@ export default function Drama({props}) {
         </Card>
         <Card className={styles.contents} sx={{ maxWidth: 768 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square>
         <Paper
-            sx={{ maxWidth:746, height: 1000, borderRadius: '8px' }}>
+            sx={{ px: "15px", pt: "21px", mb: "21px", mx: "11px", maxWidth:746, height: 1000, borderRadius: '8px' }}>
             <Paper 
-            sx={{ maxWidth:716, height: 464, borderRadius: '6px'}}
+            sx={{ maxWidth: 716, height: 464, borderRadius: '6px'}}
             style= {{ background: "#D2C9C4" }}
             >
         {/* // {drama_videos&&drama_videos.map((video) => <PostCard key={video.title} props={video} view={{"viewType": ViewType.NEWS }}/>)} */}

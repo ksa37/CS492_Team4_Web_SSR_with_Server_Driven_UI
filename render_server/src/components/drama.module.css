@@ -15,6 +15,7 @@
     font-size: 18px;
     font-weight: bold;
     color: var(--dark_gray_1);
+    width: fit-content;
 }
 
 .dramaCategory {
@@ -22,6 +23,7 @@
     font-size: 14px;
     font-weight: 400;
     color:#968577;
+    width: fit-content;
 }
 
 /* .menu {
