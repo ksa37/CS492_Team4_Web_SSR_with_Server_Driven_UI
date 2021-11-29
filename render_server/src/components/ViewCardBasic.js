@@ -73,7 +73,9 @@ export default function ViewCardBasic({props, view}) {
                         "open": open, 
                         "anchorEl": anchorEl, 
                         "handleClick": handleClick, 
-                        "handleClose": handleClose
+                        "handleClose": handleClose,
+                        "url": postURL,
+                        "title": title
                     }}
                     />
                 }

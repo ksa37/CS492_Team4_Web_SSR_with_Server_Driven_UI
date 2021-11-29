@@ -4,5 +4,10 @@
     flex-direction: row;
     justify-content: space-between;
     font-size: 15px;
-    color: var(--dark_gray_2);
+    align-items: center;
+}
+
+.divider {
+    border-top: 1px solid #EDF0F2;
+    margin: 0;
 }

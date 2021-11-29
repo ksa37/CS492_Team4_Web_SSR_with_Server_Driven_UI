@@ -1,7 +1,21 @@
+.stickyHeader { 
+    position: sticky;
+    top: 0;
+    transition: all .3s;
+    background-color:#F1EDEB;
+    width: 100%;
+    
+    border: 1px solid #E3E5E8;
+    border-bottom: none;
+    border-top-width: 2px;
+    border-top-color: rgba(145,120,103,0.5);
+}
+
 .dramaName {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: bold;
     color: var(--dark_gray_1);
+    width: fit-content;
 }
 
 .dramaCategory {
@@ -9,22 +23,51 @@
     font-size: 14px;
     font-weight: 400;
     color:#968577;
+    width: fit-content;
 }
 
-.menu {
+.btnmenu {
     display: flex;
     flex-direction: row;
-    margin-top: 16px;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.firstunselectedMenu {
+    border: none;
+    background-color: inherit;
     font-size: 15px;
-    font-weight: 600;
     color:#7E695A;
+    padding: 0;
+    padding-right: 11px;
+}
+
+.unselectedMenu {
+    border: none;
+    background-color: inherit;
+    font-size: 15px;
+    color:#7E695A;
+    padding: 6px 11px 6px 11px;
+}
+
+.selectedMenu {
+    background-color: #7E695A;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 11px 6px 11px;
 }
 
 .verticalDivider {
     border-left: 1px solid #D2C9C4;
     height: 16px;
     margin: 0;
-    margin-left: 12px; 
-    margin-right: 12px; 
     margin-top: 2px; 
+}
+
+.contents {
+    border: 1px solid #E3E5E8;
+    border-top: none;
 }

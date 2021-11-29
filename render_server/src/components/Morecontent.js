@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Paper, Typography} from '@mui/material';
 import Link from '@mui/material/Link';
-import styles from './component.module.css'
+import styles from './MoreContent.module.css'
 
 export default function MoreContent({props}){
     const {view_option, more_link} = props;
