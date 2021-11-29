@@ -8,8 +8,10 @@ import { Box } from '@mui/system';
 import News from '../components/news';
 import Photo from '../components/photo';
 import Wiki from '../components/wiki';
-// import View from '../components/view'
+import View from '../components/view'
 import Influencer from '../components/influencer';
+import Drama from '../components/Drama';
+import ViewCardBasic from '../components/ViewCardBasic';
 
 const themeLight = createTheme({
   palette: {
@@ -101,7 +103,11 @@ export default function Home({ data }) {
   return (
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
-    <div className={styles.container}>
+      <div className={styles.container}>
+        <div className="section_drama">
+          <Drama/>  
+        </div>
+        {/* <ViewCardBasic props={json.review}/> */}
         {/* {view_view&&
         <div className="section_view">
         <View props={json.review}/>
@@ -125,9 +131,12 @@ export default function Home({ data }) {
         </div>}
         <Box sx={{ mb: 15 }}></Box>
         <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
-          NAVER
+          <img src="/icons/naver_logo.png" 
+          width="auto"
+          height="21px"
+        />
         </Typography>
-        <Typography style={{ fontSize: 14, verticalAlign: 'center', textAlign: 'center' }}>
+        <Typography style={{ fontSize: 14, fontWeight: '900', color: 'var(--date_gray)', verticalAlign: 'center', textAlign: 'center' }}>
           Team 4
         </Typography>
         <Box sx={{ mb: 5 }}></Box>

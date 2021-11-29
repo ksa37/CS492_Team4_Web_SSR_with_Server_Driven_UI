@@ -63,7 +63,9 @@ export default function ViewCardMultimeda({props}) {
                         "open": open, 
                         "anchorEl": anchorEl, 
                         "handleClick": handleClick, 
-                        "handleClose": handleClose
+                        "handleClose": handleClose,
+                        "url": postURL,
+                        "title": title
                     }}
                     />
                 }
