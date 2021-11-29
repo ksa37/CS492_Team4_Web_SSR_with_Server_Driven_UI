@@ -1,110 +1,88 @@
 {                  
     "Bulguksa": {
         "keyword": "불국사",
-        "view": [ "basicInfo", "photo", "news" ],
-        "basicInfo": {
-            "지정종목": "사적",
-            "지정번호": "제502호" 
-        },
-        "photo": {
-            "tags": [
-                {
-                    "tag_name": "프랑스",
-                    "tag_image_url": "/images/photos/photos_tag_images/paris_tag1.png",
-                    "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%94%84%EB%9E%91%EC%8A%A4%20%ED%8C%8C%EB%A6%AC&pq=%ED%8C%8C%EB%A6%AC"
+        "views": ["basic", "influencer", "review", "wiki", "news"],
+        "basic": {
+            "header": {
+                "title": "경주 불국사",
+                "href": "https://m.terms.naver.com/entry.naver?docId=1104868&cid=40942&categoryId=33380",
+                "subtitle": ["문화재", "慶州 佛國寺"],
+                "tablist": ["전체", "기본정보", "포토", "주변 문화재", "함께 찾은 문화재"],
+                "tablisthref": ["https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EA%B8%B0%EB%B3%B8%EC%A0%95%EB%B3%B4", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%ED%8F%AC%ED%86%A0", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%A3%BC%EB%B3%80%20%EB%AC%B8%ED%99%94%EC%9E%AC", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%ED%95%A8%EA%BB%98%20%EC%B0%BE%EC%9D%80%20%EB%AC%B8%ED%99%94%EC%9E%AC"]
+            },
+            "first_card": {
+                "relimg": {
+                    "imgs": ["/images/Bulguksa/basic/1/1.jpg", "/images/Bulguksa/basic/1/2.jpg", "/images/Bulguksa/basic/1/3.jpg", "/images/Bulguksa/basic/1/4.jpg", "/images/Bulguksa/basic/1/5.jpg", "/images/Bulguksa/basic/1/6.jpg", "/images/Bulguksa/basic/1/7.jpg", "/images/Bulguksa/basic/1/8.jpg", "/images/Bulguksa/basic/1/9.jpg", "/images/Bulguksa/basic/1/10.jpg", "/images/Bulguksa/basic/1/11.jpg", "/images/Bulguksa/basic/1/12.jpg", "/images/Bulguksa/basic/1/13.jpg", "/images/Bulguksa/basic/1/14.jpg", "/images/Bulguksa/basic/1/15.jpg", "/images/Bulguksa/basic/1/16.jpg", "/images/Bulguksa/basic/1/17.jpg", "/images/Bulguksa/basic/1/18.jpg", "/images/Bulguksa/basic/1/19.jpg", "/images/Bulguksa/basic/1/20.jpg", "/images/Bulguksa/basic/1/21.jpg", "/images/Bulguksa/basic/1/22.jpg", "/images/Bulguksa/basic/1/23.jpg", "/images/Bulguksa/basic/1/24.jpg", "/images/Bulguksa/basic/1/25.jpg", "/images/Bulguksa/basic/1/26.jpg", "/images/Bulguksa/basic/1/27.jpg", "/images/Bulguksa/basic/1/28.jpg", "/images/Bulguksa/basic/1/29.jpg", "/images/Bulguksa/basic/1/30.jpg"],
+                    "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%ED%8F%AC%ED%86%A0"
                 },
-                {
-                    "tag_name": "국기",
-                    "tag_image_url": "/images/photos/photos_tag_images/paris_tag2.png",
-                    "tagURL" : "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EA%B5%AD%EA%B8%B0&pq=%ED%8C%8C%EB%A6%AC"
+                "middletitle": {
+                    "text": "기본정보",
+                    "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22isOpen%22%3Atrue%2C%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EA%B8%B0%EB%B3%B8%EC%A0%95%EB%B3%B4"
                 },
-                {
-                    "tag_name": "지도",
-                    "tag_image_url": "/images/photos/photos_tag_images/paris_tag3.png",
-                    "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%A7%80%EB%8F%84&pq=%ED%8C%8C%EB%A6%AC"
-                },
-                {
-                    "tag_name": "생제르맹",
-                    "tag_image_url": "/images/photos/photos_tag_images/paris_tag4.png",
-                    "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%83%9D%EC%A0%9C%EB%A5%B4%EB%A7%B9&pq=%ED%8C%8C%EB%A6%AC"
-                },
-                {
-                    "tag_name": "에펠탑",
-                    "tag_image_url": "/images/photos/photos_tag_images/paris_tag5.png",
-                    "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
-                },
-                {
-                    "tag_name": "야경",
-                    "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
-                    "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
-                }
-            ],
-            "images": [
-                {
-                    "img_path": "/images/photos/photos_images/paris_image1.jpeg",
-                    "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
-                },
-                {
-                    "img_path": "/images/photos/photos_images/paris_image2.jpeg",
-                    "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
-                },
-                {
-                    "img_path": "/images/photos/photos_images/paris_image3.jpeg",
-                    "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
-                },
-                {
-                    "img_path": "/images/photos/photos_images/paris_image3.jpeg",
-                    "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
-                },
-                {
-                    "img_path": "/images/photos/photos_images/paris_image5.jpeg",
-                    "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
-                },
-                {
-                    "img_path": "/images/photos/photos_images/paris_image6.jpeg",
-                    "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
-                },
-                {
-                    "img_path": "/images/photos/photos_images/paris_image7.jpeg",
-                    "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
-                },
-                {
-                    "img_path": "/images/photos/photos_images/paris_image8.jpeg",
-                    "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
-                },
-                {
-                    "img_path": "/images/photos/photos_images/paris_image8.jpeg",
-                    "img_url": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
-                }
-            ],
-            "image_more": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_nmr&query=%ED%8C%8C%EB%A6%AC" 
-        },
-        "news": {
-            "news_posts": [
-                { 
-                    "publisherURL": "http://www.btnnews.tv",
-                    "publisherImgURL": "/images/news/news_publisher_logos/BTN.jpg",
-                    "publisher": "BTN불교TV",
-                    "date": "7시간 전",
-                    "postURL": "http://m.btnnews.tv/news/articleView.html?idxno=68717",
-                    "title": "불국사, 신라불교 최초 공인한 법흥왕 기려..다례재 봉행",
-                    "contents": "신라시대 불교를 공인한 법흥왕을 기리는 추모 다례재가 오늘 불국사 신도회 주최로 경주 코모도 호텔 잔디광장에서 봉행됐습니다. 이영숙 / 불국사 신도회장 (신라불교를 최초 공인한 임금으로서 우리들은 그 동안 그 크신 공헌을 까맣게 잊고 살아오지 않았나 반성하며...",
-                    "contentsImgURL": "/images/news/news_images/BTN_1.jpg",
-                    "relation": "0.9"
-                },
-                { 
-                    "publisherURL": "https://media.naver.com/press/009",
-                    "publisherImgURL": "/images/news/news_publisher_logos/BTN.jpg",
-                    "publisher": "매일경제",
-                    "date": "2일 전",
-                    "postURL": "https://n.news.naver.com/mnews/article/009/0004873767?sid=103",
-                    "title": "세계 1위 여행출판사 '경주' 콕 찍었다 코로나 풀리면 꼭 가라",
-                    "contents": "불국사와 석굴암 등 주요 유적지에 대해서도 언급하며 경주를 충분히 즐기기 위해서는 며칠 간 머물러야 한다고 이 책은 조언했다. 론리 플래닛은 이번에 독일의 '환경수도' 프라이부르크(3위), 미국 남부 중심도시 애틀랜타(4위), 멕시코 유카탄주 최대도시 메리다(8위), 유럽 근대 르네상스의...",
-                    "contentsImgURL": "",
-                    "relation": "0.8"
-                }
-            ],
-            "news_more": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_nmr&query=%ED%8C%8C%EB%A6%AC" 
+                "detailinfo": [
+                    ["지정종목", "사적"],
+                    ["지정일", "2009년 12월 21일"],
+                    ["소재지", "경북 경주시 불국로 385, 등 (진현동)", "http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991"],
+                    ["시대", "통일신라"],
+                    ["종류/분류", "사찰"],
+                    ["크기", "면적 409,315㎡"],
+                    ["경북 경주시 진현동 토함산 기슭에 있는 신라시대 절. 사적이다."]
+                ],
+                "buttonarea": "http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991"
+            },
+            "second_card": {
+                "middletitle": {"text": "주변 문화재", "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22isOpen%22%3Atrue%2C%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%A3%BC%EB%B3%80%20%EB%AC%B8%ED%99%94%EC%9E%AC"},
+                "scrollbox": [
+                    {
+                        "thumb": "/images/Bulguksa/basic/2/1.jpg",
+                        "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371948&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371948%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%82%AC%EB%A6%AC%ED%83%91",
+                        "name": "경주 불국사 사리탑",
+                        "subtext": "두산백과"
+                    },
+                    {
+                        "thumb": "/images/Bulguksa/basic/2/2.jpg",
+                        "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371947&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371947%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EB%8B%A4%EB%B3%B4%ED%83%91",
+                        "name": "경주 불국사 다보탑",
+                        "subtext": "두산백과"
+                    },
+                    {
+                        "thumb": "/images/Bulguksa/basic/2/3.jpg",
+                        "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371949&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371949%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%97%B0%ED%99%94%EA%B5%90%20%EB%B0%8F%20%EC%B9%A0%EB%B3%B4%EA%B5%90",
+                        "name": "경주 불국사 연화교 및 칠보교",
+                        "subtext": "두산백과"
+                    },
+                    {
+                        "thumb": "/images/Bulguksa/basic/2/4.jpg",
+                        "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371950&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371950%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%B2%AD%EC%9A%B4%EA%B5%90%20%EB%B0%8F%20%EB%B0%B1%EC%9A%B4%EA%B5%90",
+                        "name": "경주 불국사 청운교 및 백운교",
+                        "subtext": "두산백과"
+                    },
+                    {
+                        "thumb": "/images/Bulguksa/basic/2/5.jpg",
+                        "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19395172&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219395172%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%82%BC%EC%B8%B5%EC%84%9D%ED%83%91",
+                        "name": "경주 불국사 삼층석탑",
+                        "subtext": "두산백과"
+                    },
+                    {
+                        "thumb": "/images/Bulguksa/basic/2/6.jpg",
+                        "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371234&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371234%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%A7%88%EB%8F%99%20%EC%82%BC%EC%B8%B5%EC%84%9D%ED%83%91",
+                        "name": "경주 마동 삼층석탑",
+                        "subtext": "두산백과"
+                    },
+                    {
+                        "thumb": "/images/Bulguksa/basic/2/7.jpg",
+                        "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19372050&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219372050%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EC%84%9D%EA%B5%B4%EC%95%94%20%EC%84%9D%EA%B5%B4",
+                        "name": "경주 석굴암 석굴",
+                        "subtext": "두산백과"
+                    },
+                    {
+                        "thumb": "/images/Bulguksa/basic/2/8.jpg",
+                        "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19375990&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219375990%22%7D&qvt=0&query=%EC%88%98%EB%B4%89%EC%A0%95",
+                        "name": "수봉정",
+                        "subtext": "두산백과"
+                    }
+                ]
+            }
         },
         "influencer": { 
             "data": [
@@ -152,12 +130,305 @@
             }],
             "morecontent": "https://m.search.naver.com/search.naver?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%AC&sm=mtb_nmr&where=m_influencer",
             "keyword": "bulguksa"
+        },
+        "review": {
+            "tags": [
+                {
+                  "tag_name": "전체",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "카페글",
+                  "tag_image_url": "",
+                  "tagURL" : ""
+                },
+                {
+                  "tag_name": "날씨",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "호텔",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "초등학교",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "리조트",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "추석",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "주변맛집",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "숙박",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "애견",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "에밀레종",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "관람",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "월정교",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "안압지야경",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "겹볒꽃",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "근처펜션",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "첨성대야경",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                },
+                {
+                  "tag_name": "1박2일경주여행",
+                  "tag_image_url": "",
+                  "tagURL": ""
+                }
+            ],
+            "view_posts": [
+                { 
+                    "publisherURL": "https://in.naver.com/hp0210",
+                    "publisherImgURL": "/images/Bulguksa/review/1/1.jpg",
+                    "publisher": "공주의아빠",
+                    "date": "1636894800000",
+                    "postURL": "https://m.blog.naver.com/hp0210/222568052393",
+                    "title": "경주 가볼만한곳 불국사 단풍 11월 중순 절정",
+                    "contents": "경주 불국사 전화번호 054-746-9913 주소 경북 경주시 불국로 385 불국사 영업시간 주말 08:00 - 17:00 매표마감 17:00/ 퇴장시간: 18:00 요금 성인 6,000원, 청소년(만13~18세) 4,000원 어린이(만7~12세)...",
+                    "contentsImgURL": ["/images/Bulguksa/review/1/2.jpg","/images/Bulguksa/review/1/3.jpg","/images/Bulguksa/review/1/4.jpg","/images/Bulguksa/review/1/5.jpg","/images/Bulguksa/review/1/6.jpg","/images/Bulguksa/review/1/7.jpg","/images/Bulguksa/review/1/8.jpg","/images/Bulguksa/review/1/9.jpg","/images/Bulguksa/review/1/10.jpg","/images/Bulguksa/review/1/11.jpg","/images/Bulguksa/review/1/12.jpg"],
+                    "imgNum": 11,
+                    "relation": "",
+                    "tags": [
+                    ],
+                    "more_links": [
+                        {"link_name": "경주 가볼만한곳 1박2일 첨성대부터 불국사까지 알차게(#경주가볼만한곳 #첨성대)",
+                        "link_url": "https://m.blog.naver.com/hp0210/222403116159"
+                        }                        
+                    ]
+                },
+                { 
+                    "publisherURL": "https://m.blog.naver.com/kkali292",
+                    "publisherImgURL": "/images/Bulguksa/review/2/1.jpg",
+                    "publisher": "스타일을 만드는 여자",
+                    "date": "1635983340000",
+                    "postURL": "https://m.blog.naver.com/kkali292/222558095717",
+                    "title": "경주 불국사 단풍보러 다녀왔어요",
+                    "contents": "경주 불국사 단풍구경은 어떠세요? 한,,, 20년 전쯤인가? 친구들이랑 불국사를 다녀온 이후로 지난주에 처음 다녀왔거든요. 또 초등학교때 수학여행,, 아시죠? ㅋㅋ 저희 아이들도 경주...",
+                    "contentsImgURL": ["/images/Bulguksa/review/2/2.jpg","/images/Bulguksa/review/2/3.jpg","/images/Bulguksa/review/2/4.jpg","/images/Bulguksa/review/2/5.jpg","/images/Bulguksa/review/2/6.jpg","/images/Bulguksa/review/2/7.jpg","/images/Bulguksa/review/2/8.jpg","/images/Bulguksa/review/2/9.jpg","/images/Bulguksa/review/2/10.jpg","/images/Bulguksa/review/2/11.jpg","/images/Bulguksa/review/2/12.jpg"],
+                    "imgNum": 11,
+                    "relation": "",
+                    "tags": [
+                        {"tag_name": "경주불국사",
+                        "tagURL":"https://m.search.naver.com/search.naver?where=m_view&sm=mtb_viw.all&query=%EA%B2%BD%EC%A3%BC%EB%B6%88%EA%B5%AD%EC%82%AC"
+                        },
+                        {"tag_name": "불국사",
+                        "tagURL":"https://m.search.naver.com/search.naver?where=m_view&sm=mtb_viw.all&query=%EB%B6%88%EA%B5%AD%EC%82%AC"
+                        },
+                        {"tag_name": "불국사단풍",
+                        "tagURL":"https://m.search.naver.com/search.naver?where=m_view&sm=mtb_viw.all&query=%EB%B6%88%EA%B5%AD%EC%82%AC%EB%8B%A8%ED%92%8D"
+                        }
+                    ],
+                    "more_links": [
+                    ]
+            
+                },
+                { 
+                    "publisherURL": "https://in.naver.com/tcacyc",
+                    "publisherImgURL": "/images/Bulguksa/review/3/1.jpg",
+                    "publisher": "일상탈출",
+                    "date": "1635043200000",
+                    "postURL": "https://m.blog.naver.com/tcacyc/222546516689",
+                    "title": "경주 가볼만한곳 대릉원 불국사 야경투어",
+                    "contents": "당일 여행코스 경주 가볼만한곳 아침 일찍 KTX 역에서 만나 경주 대릉원과 불국사, 그리고... 경주 불국사 경북 경주시 불국로 385 운영시간 : 8시 ~ 18시 30분 이용요금 : 어린 6,000원...",
+                    "contentsImgURL": ["/images/Bulguksa/review/3/2.jpg"],
+                    "imgNum": 33,
+                    "relation": "",
+                    "tags": [
+                    ],
+                    "more_links": [                        
+                    ]
+                },
+                { 
+                    "publisherURL": "https://in.naver.com/jeju8253",
+                    "publisherImgURL": "/images/Bulguksa/review/4/1.jpg",
+                    "publisher": "제주왕자",
+                    "date": "1637371680000",
+                    "postURL": "https://m.blog.naver.com/jeju8253/222573642310",
+                    "title": "경주 가볼만한곳 불국사 절 동궁과월지 야경 등 1박2일 데이트코스 사진찍기좋은곳",
+                    "contents": "불국사 주소: 경북 경주시 불국로 385 불국사 관람 시간: 오전 9시 ~ 오후 5시 입장료: 성인 6000원 경주 불국사 하면 아마 경주 절 중에는 가장 유명한 장소라고 해도 이견은 없을 것으로...",
+                    "contentsImgURL":  ["/images/Bulguksa/review/4/2.jpg"],
+                    "imgNum": 32,
+                    "relation": "",
+                    "tags": [
+                    ],
+                    "more_links": [
+                        {"link_name": "경주 가볼만한곳 유적지 역사 여행 코스 볼거리 확실한 가을 단풍 명소 경주 불국사(#경주가볼만한곳 #경주유적지",
+                        "link_url": "https://m.blog.naver.com/jeju8253/222554307742"
+                        }
+                    ]
+                },
+                { 
+                    "publisherURL": "https://m.blog.naver.com/jinodano84",
+                    "publisherImgURL": "/images/Bulguksa/review/5/1.jpg",
+                    "publisher": "JINOMADE",
+                    "date": "1636558020000",
+                    "postURL": "https://m.blog.naver.com/jinodano84/222564565667",
+                    "title": "[+1000] 너의 천일기념은 천년 고도 경주에서, 경주 불국사 단풍구경",
+                    "contents": "지금 경주 불국사는 단풍이 절정이었어요. 어찌 다들 알고 오셨는지, 다들 어마어마한... 수학여행으로도 경주에 와서 불국사를 오잖아요? 근데 저는 부산에서 중&고등학교를...",
+                    "contentsImgURL":[ "/images/Bulguksa/review/5/2.jpg"],
+                    "imgNum": 23,
+                    "relation": "",
+                    "tags": [
+                    ],
+                    "more_links": [
+                    ]
+                }
+            ],
+            "view_more": "https://m.search.naver.com/search.naver?where=m_view&sm=mtb_nrm&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&mode=normal&nso=" 
+        },
+        "wiki": {
+            "wiki_posts": [
+                {
+                    "publisherURL": "http://www.bulguksa.or.kr/",
+                    "publisherImgURL": "/images/Bulguksa/wiki/1.png",
+                    "publisher": "www.bulguksa.or.kr",
+                    "date": "",
+                    "postURL": "http://www.bulguksa.or.kr/",
+                    "title": "세계문화유산 불국사",
+                    "contents": "1… 행사 사진 BULGUK GALLERY 제49회 신라문화 영산대재와 천… 오시는 길 개인정보처리방침 서비스이용약관 경상북도 경주시 불국로 385 (진현동 15-1) l Tel. 054)746-9913 ㅣ FAX 054)746-1476 ㅣ Email ************@*******.*** 불국사 템플스테이 Tel. 054)746-0983 bulguksa...",
+                    "contentsImgURL": "",
+                    "relation": ""
+                },
+                {
+                    "publisherURL": "http://encykorea.aks.ac.kr/Contents/Item/E0024933",
+                    "publisherImgURL": "/images/Bulguksa/wiki/2.png",
+                    "publisher": "encykorea.aks.ac.kr › contents",
+                    "date": "",
+                    "postURL": "http://encykorea.aks.ac.kr/Contents/Item/E0024933",
+                    "title": "경주 불국사(慶州 佛國寺) - 한국민족문화대백과사전",
+                    "contents": "경상북도 경주시 토함산(吐含山) 서쪽 중턱에 있는 남북국시대 통일신라 김대성의 발원으로 창건한 사찰. 사적.대한불교조계종 제11교구 본사이다.",
+                    "contentsImgURL": "",
+                    "relation": ""
+                },
+                {
+                    "publisherURL": "https://namu.wiki/w/%EB%B6%88%EA%B5%AD%EC%82%AC",
+                    "publisherImgURL": "/images/Bulguksa/wiki/3.png",
+                    "publisher": "namu.wiki › 불국사",
+                    "date": "",
+                    "postURL": "https://namu.wiki/w/%EB%B6%88%EA%B5%AD%EC%82%AC",
+                    "title": "불국사 - 나무위키",
+                    "contents": "경상북도경주시불국로 385 (진현동) 토함산 기슭에 위치한 신라 연간을 기원으로 하는 사찰. 1995년 12월에 토함산 중턱의 암자 석굴암과 공동으로 유네스코 세계문화유산으로 지정되었다.",
+                    "contentsImgURL": "",
+                    "relation": ""
+                },
+                {
+                    "publisherURL": "https://www.gyeongju.go.kr/tour/page.do?mnu_uid=2349&area_uid=260&cmd=2",
+                    "publisherImgURL": "/images/Bulguksa/wiki/1.png",
+                    "publisher": "www.gyeongju.go.kr›tour",
+                    "date": "",
+                    "postURL": "https://www.gyeongju.go.kr/tour/page.do?mnu_uid=2349&area_uid=260&cmd=2",
+                    "title": "경주 불국사 | 불국사·석굴암 | 세계문화유산 | 문화재·역사 | 경주문화관광 - 경주시청",
+                    "contents": "경주 불국사 慶州 佛國寺 기본정보 종목 사적 제502호 분류 유적건조물 수량/면적 409,315㎡ 지정(등록)일 2009년 12월 21일 소재지 경북 경주시 불국로 385, 등 (진현동) 소유자 불국사 외 관리자 불국사 길찾기 좋아요 3 스크랩 9 목록 경주시청이 창작한 불국사·석굴암 저작물은 “공공누리...",
+                    "contentsImgURL": "",
+                    "relation": ""
+                }
+            ],
+            "wiki_more": "https://m.search.naver.com/search.naver?page=2&query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%AC&sm=mtb_pge&start=1&where=m_web"
+        },
+        "news": {
+            "news_posts": [
+                { 
+                    "publisherURL": "https://media.naver.com/press/022",
+                    "publisherImgURL": "/images/Bulguksa/news/1/1.jpg",
+                    "publisher": "세계일보",
+                    "date": "1637683320000",
+                    "postURL": "https://n.news.naver.com/mnews/article/022/0003640940?sid=102",
+                    "title": "코로나19 이후 첫 외국인 단체 관광객, 경주 불국사 등 방문",
+                    "contents": "싱가포르 관광객들이 경주 불국사 앞에서 기념촬영을 하고있다. 지난해 2월 코로나19 사태 이후 처음으로 외국인 단체 관광객이 경북을 방문해 눈길을 끌었다. 23일 경북도문화관광공사에 따르면 싱가포르 단체 관광객 약 20명이 지난 19일과 20일 이틀간 경주 대릉원, 첨성대, 석굴암, 불국사...",
+                    "contentsImgURL": "/images/Bulguksa/news/1/2.jpg",
+                    "relation": "0.9"
+                },
+                { 
+                    "publisherURL": "https://media.naver.com/press/020",
+                    "publisherImgURL": "/images/Bulguksa/news/2/1.jpg",
+                    "publisher": "동아일보",
+                    "date": "1637777340000",
+                    "postURL": "https://n.news.naver.com/mnews/article/020/0003395866?sid=102",
+                    "title": "“APEC 정상회의 유치 땐 경주발전 10년 이상 앞당길 것”",
+                    "contents": "싱가포르에서 온 이들은 19, 20일 대릉원과 첨성대, 석굴암, 불국사 등을 둘러봤다. 대표적 관광지인 경주엑스포대공원 관람객은 10월 말 현재 32만4324명을 기록했다. 지난해 같은 기간 16만9984명보다 91% 증가한 수치다. 올해 말까지 예상되는 관람객은 약 35만 명이다. 주 시장은 “위드 코로나...",
+                    "contentsImgURL": "/images/Bulguksa/news/2/2.jpg",
+                    "relation": "0.8"
+                },
+                { 
+                    "publisherURL": "https://www.ajunews.com/",
+                    "publisherImgURL": "/images/Bulguksa/news/3/1.jpg",
+                    "publisher": "아주경제",
+                    "date": "1637566620000",
+                    "postURL": "https://www.ajunews.com/view/20211122145015567",
+                    "title": "트래블 버블 협정 맺은 싱가포르 단체 관광객, 경북 경주 첫 방문",
+                    "contents": "최주호 기자 cjh@ajunews.com 싱가포르 단체 관광객들이 경주 불국사 앞에서 기념촬영을 하고 있다. [사진=경북문화관광공사 제공] 경상북도와 경북문화관광공사(이하 ‘공사’)는 ‘트래블버블’ 협정국 싱가포르 단체 관광객 약 20명에게 방역 키트‧기념품 등을 증정하며 경주 방문 환영...",
+                    "contentsImgURL": "/images/Bulguksa/news/3/2.jpg",
+                    "relation": "0.7"
+                },
+                { 
+                    "publisherURL": "https://media.naver.com/press/003",
+                    "publisherImgURL": "/images/Bulguksa/news/4/1.jpg",
+                    "publisher": "뉴시스",
+                    "date": "1637215140000",
+                    "postURL": "https://n.news.naver.com/mnews/article/003/0010840961?sid=102",
+                    "title": "경북도, 중국인 유학생 초청 안동~경주 팸투어",
+                    "contents": "이번 팸투어는 ▲경북도청 동락관의 경북도-허난성 국제미술교류전 참관 ▲안동 하회마을, 월영교 및 낙강물길 공원 방문 ▲경주 대릉원, 첨성대, 불국사 방문 및 경주빵 만들기 체험 등으로 이뤄졌다. 이번 팸투어 참가자는 경북대, 계명대, 대구보건대, 대구카톨릭대, 영진전문대에 재학 중인...",
+                    "contentsImgURL": "/images/Bulguksa/news/4/2.jpg",
+                    "relation": "0.6"
+                }
+            ],
+            "news_more": "https://m.search.naver.com/search.naver?where=m_news&sm=mtb_nmr&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&sort=0&nso=so:r,p:all" 
         }
     },
     "Paris": {
         "keyword": "파리",
-        "view": [ "photo", "news", "wiki", "review", "influencer" ],
-        "basicInfo": {},
+        "views": ["influencer", "review", "wiki", "photo", "news"],
+        "basic": {
+
+        },
         "photo": {
             "tags": [
                 {
@@ -655,10 +926,5 @@
                 "morecontent": "https://m.search.naver.com/search.naver?query=%ED%8C%8C%EB%A6%AC&sm=mtb_nmr&where=m_influencer",
                 "keyword": "paris"
             }
-        },
-    "Mogadishu": {
-        "keyword": "모가디슈",
-        "view": [],
-        "basicInfo": {}
-    }
+        }
 }
