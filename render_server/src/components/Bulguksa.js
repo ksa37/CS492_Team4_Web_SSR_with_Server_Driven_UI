@@ -99,7 +99,7 @@ export default function Bulguksa({props}) {
                 />
             </Card>
                  <Paper 
-                    sx={{ maxWidth:746, borderRadius: '8px', mx: "auto", pb: '20px' }}
+                    sx={{ maxWidth:746, borderRadius: '8px', mx: "auto", pt: '10px', pb: '20px' }}
                     style= {{ background: "#e9ecef" }}>
                     <Paper 
                         sx={{ maxWidth:716, borderRadius: '6px', mx: "9px", mb: '12px'}}
