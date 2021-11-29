@@ -95,7 +95,7 @@ export async function getServerSideProps(context) {
 //   const wiki_view = json[1].view.includes("wiki");
 export default function Home({ data }) {
   const json = JSON.parse(data)
-  const view_view = json.view.includes("review");
+  // const view_view = json.view.includes("review");
   const news_view = json.view.includes("news");
   const photo_view = json.view.includes("photo");
   const wiki_view = json.view.includes("wiki");
@@ -112,7 +112,7 @@ export default function Home({ data }) {
         <div className="section_view">
         <View props={json.review}/>
         </div>
-        }
+        } */}
         {news_view && 
         <div className="section_news">
           <News props={json.news}/>
@@ -128,7 +128,7 @@ export default function Home({ data }) {
         {influencer_view&&
         <div className="section_influencer">
           <Influencer props={json.influencer}/>    
-        </div>} */}
+        </div>}
         <Box sx={{ mb: 15 }}></Box>
         <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
           <img src="/icons/naver_logo.png" 
