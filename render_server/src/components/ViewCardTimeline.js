@@ -134,8 +134,8 @@ export default function ViewCardTimeline({props}) {
     return (
         <>
         { Array.from(Array(date_unique_num).keys()).map((num)=>(
-            <Card sx={{ maxWidth: 766, borderTop: 'solid 1px rgb(236, 240, 242)'}} square > 
-            <div key={num} className={styles.timelineDate}>
+            <Card key={num} sx={{ maxWidth: 766, borderTop: 'solid 1px rgb(236, 240, 242)'}} square > 
+            <div className={styles.timelineDate}>
                 {dates[num]}
             </div>
             {view_posts.slice(slice_date[num].start,slice_date[num].end).map((view, index)=>(

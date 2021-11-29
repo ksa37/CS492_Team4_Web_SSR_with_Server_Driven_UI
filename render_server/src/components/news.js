@@ -16,7 +16,7 @@ export default function News({props}) {
   const {news_posts, news_more} = props
   
   const [sortRelated, setSortRelated] = React.useState(true);
-  const isRelated = Boolean(sortRelated);
+  // const isRelated = Boolean(sortRelated);
   const sortRelatedClick = (event) => {
     setSortRelated(true);
   };

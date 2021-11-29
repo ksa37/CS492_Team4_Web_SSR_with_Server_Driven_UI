@@ -30,7 +30,7 @@ var ScrollType = Object.freeze({
 // typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
 export default function PostCard({props, view}) {  
-    const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, imgNum, tags, more_links } = props
+    const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, imgNum, tags, more_links, comments } = props
     const { viewType } = view
 
     const now = Date.now()
@@ -97,7 +97,9 @@ export default function PostCard({props, view}) {
                         "open": open, 
                         "anchorEl": anchorEl, 
                         "handleClick": handleClick, 
-                        "handleClose": handleClose
+                        "handleClose": handleClose,
+                        "url": postURL,
+                        "title": title
                     }}
                     />
                 }
@@ -139,7 +141,7 @@ export default function PostCard({props, view}) {
                     </div>
                 </Link>
             </CardContent>  
-            {viewType == ViewType.VIEW && <Comments props={{'comments':["어머..", "hello","hoho", "merry", "christmas"], 'link': "http://m.naver.com"}}/>}
+            {viewType == ViewType.VIEW && comments&&comments.length>1&&<Comments props={{'comments':comments, 'link': postURL}}/>}
             {viewType == ViewType.VIEW &&<TagArea props={{"tags":tags}}/>}   
             {viewType == ViewType.VIEW &&<LinkArea props={{"more_links":more_links}} link_view={{"link_type": LinkType.VIEWBASIC}}/>}                
         </Card>
