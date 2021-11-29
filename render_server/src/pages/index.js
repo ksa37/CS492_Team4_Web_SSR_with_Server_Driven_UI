@@ -35,7 +35,7 @@ const themeDark = createTheme({
 
 export async function getServerSideProps(context) {
   const {req, } = context
-  const props = {data: '', views: [], keyword: ''}
+  const props = {data: '', views: []}
   if (req.method === "POST") {
     const streamPromise = new Promise((resolve, reject) => {
       let body = ''
@@ -49,7 +49,6 @@ export async function getServerSideProps(context) {
     const json = await streamPromise;
     props.data = json.data;
     props.views = json.views;
-    props.keyword = json.keyword;
   }
   else
   {
@@ -58,13 +57,13 @@ export async function getServerSideProps(context) {
     const string_data = JSON.stringify(data)
     props.data = string_data
     props.views = data.views;
-    props.keyword = 'Bulguksa';
   }
   return { props }
 }
 
-export default function Home({ data, views, keyword }) {
+export default function Home({ data, views}) {
   const json = JSON.parse(data)
+  const keyword = json.keyword
   return (
     <ThemeProvider theme={themeLight}>
       <CssBaseline />
@@ -74,18 +73,16 @@ export default function Home({ data, views, keyword }) {
         </div>
         {views.map((view, index) => {
           switch(view) {
-            /*
             case "basic":
-              if (keyword === 'Bulguksa')
+              if (keyword === '불국사')
               {
                 return (
-                  <div className="section_bulguksa">
+                  <div key={index} className="section_bulguksa">
                     <Bulguksa props={json.basic}/>
                   </div>
                 )
               }
               break;
-            */
             case "influencer":
               return (
                 <div key={index} className="section_influencer">

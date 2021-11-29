@@ -2,10 +2,14 @@ import React from 'react'
 import Link from '@mui/material/Link';
 import MoreVert from './Morevert'
 import styles from './Bulguksa.module.css'
-
-import { Card, CardContent, CardHeader, Divider, Box, Paper } from '@mui/material';
+import { Card, CardHeader, Paper, Button } from '@mui/material';
 
 export default function Bulguksa({props}) {
+    const {header, first_card, second_card} = props
+    const {title, subtitle, tablist} = header
+    const {relimg, middletitle, detailinfo, buttonarea} = first_card
+    const middletitle2 = second_card.middletitle
+    const scrollbox = second_card.scrollbox
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -18,27 +22,27 @@ export default function Bulguksa({props}) {
     
     return (
         <>
-            <Card sx={{ maxWidth: 768 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square>
+            <Card sx={{ maxWidth: 768 }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
                 <CardHeader 
                     sx={{ paddingRight: '8px', '& .MuiCardHeader-action': { padding: 0}}}
                     title= {
-                        <div className={styles.headerInfo}>
-                            <Link underline="none">
-                                <div className={styles.dramaName}>경주 불국사</div>
-                            </Link>
-                            <Link underline="none">
-                                <div className={styles.dramaCategory}>문화재 <hr className={styles.verticalDivider}></hr> 慶州 佛國寺</div>
-                            </Link>
+                        <div className="headerInfo">
+                            <div className={styles.name}>{title}</div>
+                            <div className={styles.category}>
+                                {subtitle[0]}
+                                <hr className={styles.verticalDivider}></hr>
+                                {subtitle[1]}
+                            </div>
                             <div className={styles.menu}>
-                                전체
+                                {tablist[0]}
                                 <hr className={styles.verticalDivider}></hr>
-                                기본정보
+                                {tablist[1]}
                                 <hr className={styles.verticalDivider}></hr>
-                                포토
+                                {tablist[2]}
                                 <hr className={styles.verticalDivider}></hr>
-                                주변 문화재
+                                {tablist[3]}
                                 <hr className={styles.verticalDivider}></hr>
-                                함께 찾는 문화제
+                                {tablist[4]}
                             </div>
                         </div>
                     }
@@ -52,12 +56,109 @@ export default function Bulguksa({props}) {
                     }
                     style={{ textAlign: 'left'}}
                 />
-                <Paper 
-                    sx={{ maxWidth:746, height: 1000, borderRadius: '8px' }}>
+                 <Paper 
+                    sx={{ maxWidth:746, borderRadius: '8px', mx: "auto", pb: '20px' }}
+                    style= {{ background: "#e9ecef" }}>
                     <Paper 
-                        sx={{ maxWidth:716, height: 464, borderRadius: '6px'}}
-                        style= {{ background: "#D2C9C4" }}
+                        sx={{ maxWidth:716, borderRadius: '6px', mx: "9px", mb: '12px'}}
+                        style= {{ background: "#ffffff" }}
                     >
+                        <div className={styles.relimg}>
+                            <span className={styles.child}>
+                                <span><img className={styles.childimg} src='/images/Bulguksa/imgnum.png'/></span>
+                                <span className={styles.childnum}>{relimg.imgs.length}</span>
+                            </span>
+                            <div className={styles.scroll}>
+                                <ul className={styles.scrollul}>
+                                    {relimg.imgs&&relimg.imgs.map((img, index)=> {
+                                        if(index < 10)
+                                        {
+                                            return (
+                                                <li key={index} className={styles.scrollli}>
+                                                    <a href={relimg.href}>
+                                                        <div className={styles.scrollthumb}>
+                                                            <img 
+                                                                src={img}
+                                                                height= "168px"
+                                                                alt="불국사"
+                                                            />
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            )
+                                        }
+                                    })}
+                                </ul>
+                            </div>
+                        </div>
+                        <div className={styles.middletitle}>
+                            <a className={styles.morelink} href={middletitle.href}>
+                                <h3 className={styles.morelinktitle}>{middletitle.text}</h3>
+                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png'></img>
+                            </a>
+                        </div>
+                        <div className={styles.detailinfo}>
+                            <dl className={styles.infotxt}>
+                                {detailinfo&&detailinfo.map((info, index)=> {
+                                    if(info.length === 2)
+                                    {
+                                        return (
+                                            <div key={index} className={styles.infogroup}>
+                                                <dt className={styles.infogroupdt}><span className={styles.bar}/>{info[0]}</dt>
+                                                <dd className={styles.infogroupdd}>{info[1]}</dd>
+                                            </div>
+                                        )
+                                    }
+                                    else if(info.length === 3)
+                                    {
+                                        return (
+                                            <div key={index} className={styles.infogroup}>
+                                                <dt className={styles.infogroupdt}><span className={styles.bar}/>{info[0]}</dt>
+                                                <dd className={styles.infogroupdd}><a href={info[2]}>{info[1]}</a></dd>
+                                            </div>
+                                        )
+                                    }
+                                })}
+                            </dl>
+                            <div className={styles.textexpand}>
+                                {detailinfo[detailinfo.length-1][0]}
+                            </div>
+                        </div>
+                        <div className={styles.buttonarea}>
+                            <div className={styles.buttonbox}>
+                                <ul className={styles.buttonboxul}><li className={styles.buttonboxli}><a className={styles.buttonboxa} href={buttonarea}><img className={styles.buttonareaicon} src='/images/Bulguksa/map.png'></img>지도</a></li></ul>
+                            </div>
+                        </div>
+                    </Paper>
+                    <Paper 
+                        sx={{ maxWidth:716, borderRadius: '6px', mx: "9px"}}
+                        style= {{ background: "#ffffff" }}
+                    >
+                        <div className={styles.middletitle}>
+                            <a className={styles.morelink} href={middletitle2.href}>
+                                <h3 className={styles.morelinktitle}>{middletitle2.text}</h3>
+                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png'></img>
+                            </a>
+                        </div>
+                        <div className={styles.scrollbox}>
+                            <div className={styles.listinfo}>
+                                <ul className={styles.scrollboxul}>
+                                    {scrollbox&&scrollbox.map((scroll, index)=> {
+                                        return (
+                                            <li className={styles.scrollboxli} key={index}>
+                                                <div className={styles.areacard}>
+                                                    <a href={scroll.href}><img src={scroll.thumb} width="87px" height="87px" alt={scroll.name}></img></a>
+                                                    <div className={styles.titlebox}>
+                                                        <a className={styles.titleboxname} href={scroll.href}>{scroll.name}</a>
+                                                        <span className={styles.titleboxsubtext}>{scroll.subtext}</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                        </div>
                     </Paper>
                 </Paper>
             </Card>

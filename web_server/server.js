@@ -21,7 +21,7 @@ function handleRender(req, res) {
             views.push(element)
           }
         });
-        axios.post("http://localhost:3000/", {data: JSON.stringify(json), views: views, keyword: id})
+        axios.post("http://localhost:3000/", {data: JSON.stringify(json), views: views})
           .then((response) => {
             const html = response.data
             res.send(html);
