@@ -1,12 +1,12 @@
-import React from 'react'
+import  React from 'react'
 import Link from '@mui/material/Link';
 import MoreVert from './Morevert'
 import styles from './Bulguksa.module.css'
-import { Card, CardHeader, Paper, Button } from '@mui/material';
+import { Card, CardHeader, Box, Paper } from '@mui/material';
 
 export default function Bulguksa({props}) {
     const {header, first_card, second_card} = props
-    const {title, subtitle, tablist} = header
+    const {title, href, subtitle, tablist, tablisthref} = header
     const {relimg, middletitle, detailinfo, buttonarea} = first_card
     const middletitle2 = second_card.middletitle
     const scrollbox = second_card.scrollbox
@@ -19,43 +19,85 @@ export default function Bulguksa({props}) {
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    var link;
+    if (typeof window !== "undefined") {
+        link = window.location.href;
+    }
+
+    const [offset, setOffset] = React.useState(0);
+    React.useEffect(() => {
+        window.onscroll = () => {
+        setOffset(window.pageYOffset)
+        }
+    }, []);
+
+    var variant;
+    if (offset) variant ='elevation';
+    else variant ='none';
     
+    const [menu, setMenu] = React.useState({
+        darkBtn: 0
+    });
+
+    const changeColor = (btn) => {
+        setMenu({ darkBtn: btn });
+    };
+
     return (
         <>
-            <Card sx={{ maxWidth: 768 }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
+            <Card className={styles.stickyHeader} sx={{ maxWidth: 768, maxHeight: 122 }} style={{backgroundColor: "#e9ecef" }} variant={variant} square>
                 <CardHeader 
-                    sx={{ paddingRight: '8px', '& .MuiCardHeader-action': { padding: 0}}}
+                    sx={{ paddingBottom: '4px', paddingRight: '8px', '& .MuiCardHeader-action': { padding: 0}}}
                     title= {
-                        <div className="headerInfo">
-                            <div className={styles.name}>{title}</div>
+                        <div>
+                            <div className={styles.name}>
+                                <Link className={styles.name} href={href} underline="none"> 
+                                    {title}
+                                </Link>
+                            </div>
                             <div className={styles.category}>
                                 {subtitle[0]}
                                 <hr className={styles.verticalDivider}></hr>
                                 {subtitle[1]}
                             </div>
-                            <div className={styles.menu}>
-                                {tablist[0]}
-                                <hr className={styles.verticalDivider}></hr>
-                                {tablist[1]}
-                                <hr className={styles.verticalDivider}></hr>
-                                {tablist[2]}
-                                <hr className={styles.verticalDivider}></hr>
-                                {tablist[3]}
-                                <hr className={styles.verticalDivider}></hr>
-                                {tablist[4]}
+                            <div className={styles.btnmenu}>
+                                {tablist.map((tab, i) => (
+                                    <div key={i} className={styles.btnmenu}>
+                                    <a href={tablisthref[i]}>
+                                    <button
+                                        className={ 
+                                            menu.darkBtn === i 
+                                            ? styles.selectedMenu 
+                                            : ((i == 0) ? styles.firstunselectedMenu : styles.unselectedMenu) }
+                                    >
+                                    {tab}
+                                    </button>
+                                    </a>
+                                    {(i != tablist.length - 1) && <hr className={styles.verticalDivider}></hr>}
+                                    </div>
+                                ))}
                             </div>
+                            <Box sx={{m: 0.5}}/>
                         </div>
                     }
                     action = {
+                        (offset == 0) &&
                         <MoreVert props = {{
                             "open": open, 
                             "anchorEl": anchorEl, 
                             "handleClick": handleClick, 
-                            "handleClose": handleClose
-                        }}/>
+                            "handleClose": handleClose,
+                            "url": link,
+                            "title": "경주 불국사",
+                            "activeColor": "rgba(145,120,103,1)",
+                            "inactiveColor": "rgba(145,120,103,0.5)"
+                        }}
+                        />
                     }
                     style={{ textAlign: 'left'}}
                 />
+            </Card>
                  <Paper 
                     sx={{ maxWidth:746, borderRadius: '8px', mx: "auto", pb: '20px' }}
                     style= {{ background: "#e9ecef" }}>
@@ -161,7 +203,6 @@ export default function Bulguksa({props}) {
                         </div>
                     </Paper>
                 </Paper>
-            </Card>
         </>
     )
 }
