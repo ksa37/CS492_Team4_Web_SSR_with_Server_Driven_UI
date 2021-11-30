@@ -124,6 +124,7 @@ export default function Home({ data, views}) {
             <img src="/icons/naver_logo.png" 
             width="auto"
             height="21px"
+            alt='naver'
           />
           </Typography>
           <Typography style={{ fontSize: 14, fontWeight: '900', color: 'var(--date_gray)', verticalAlign: 'center', textAlign: 'center' }}>

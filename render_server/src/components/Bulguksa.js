@@ -107,7 +107,7 @@ export default function Bulguksa({props}) {
                     >
                         <div className={styles.relimg}>
                             <span className={styles.child}>
-                                <span><img className={styles.childimg} src='/images/Bulguksa/imgnum.png'/></span>
+                                <span><img className={styles.childimg} src='/images/Bulguksa/imgnum.png' alt='num'/></span>
                                 <span className={styles.childnum}>{relimg.imgs.length}</span>
                             </span>
                             <div className={styles.scroll}>
@@ -136,7 +136,7 @@ export default function Bulguksa({props}) {
                         <div className={styles.middletitle}>
                             <a className={styles.morelink} href={middletitle.href}>
                                 <h3 className={styles.morelinktitle}>{middletitle.text}</h3>
-                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png'></img>
+                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png' alt='more'></img>
                             </a>
                         </div>
                         <div className={styles.detailinfo}>
@@ -168,7 +168,7 @@ export default function Bulguksa({props}) {
                         </div>
                         <div className={styles.buttonarea}>
                             <div className={styles.buttonbox}>
-                                <ul className={styles.buttonboxul}><li className={styles.buttonboxli}><a className={styles.buttonboxa} href={buttonarea}><img className={styles.buttonareaicon} src='/images/Bulguksa/map.png'></img>지도</a></li></ul>
+                                <ul className={styles.buttonboxul}><li className={styles.buttonboxli}><a className={styles.buttonboxa} href={buttonarea}><img className={styles.buttonareaicon} src='/images/Bulguksa/map.png' alt='button'></img>지도</a></li></ul>
                             </div>
                         </div>
                     </Paper>
@@ -179,7 +179,7 @@ export default function Bulguksa({props}) {
                         <div className={styles.middletitle}>
                             <a className={styles.morelink} href={middletitle2.href}>
                                 <h3 className={styles.morelinktitle}>{middletitle2.text}</h3>
-                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png'></img>
+                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png' alt='more'></img>
                             </a>
                         </div>
                         <div className={styles.scrollbox}>
