@@ -1,8 +1,6 @@
 import Container from '@mui/material/Container';
 import Card from '@mui/material/Card';
 import { useState } from 'react';
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import styles from './influencer.module.css'
 import MoreContent from '../components/MoreContent';
@@ -18,12 +16,6 @@ const Blogfan = () => {
     </div>
   )
 }
-
-const Item = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'left',
-}));
 
 const Search = (props) => {
   const [showResults, setShowResults] = useState(false)
