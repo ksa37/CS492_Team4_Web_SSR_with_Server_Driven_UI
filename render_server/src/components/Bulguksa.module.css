@@ -94,7 +94,7 @@
     right: 12px;
     height: 27px;
     line-height: 28px;
-    font-size: 1.4rem;
+    font-size: 0.8rem;
     font-weight: bold;
     color: #fff;
     border: solid 1px rgba(0,0,0,0.05);
@@ -105,18 +105,10 @@
 .childimg{
     display: inline-block;
     overflow: hidden;
-    color: transparent;
     width: 19px;
     height: 19px;
     margin-right: 5px;
     vertical-align: -4px;
-}
-
-.childnum{
-    line-height: 28px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #fff;
 }
 
 .scroll{

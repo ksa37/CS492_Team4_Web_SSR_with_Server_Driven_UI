@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'material-ui-image'
 import styles from "./imagelist.module.css";
 import Link from '@mui/material/Link';
 
