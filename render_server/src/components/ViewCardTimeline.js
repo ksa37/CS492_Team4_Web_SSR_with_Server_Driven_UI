@@ -59,12 +59,14 @@ export default function ViewCardTimeline({props}) {
                                         width='100%'
                                         height='100%'
                                         objectFit='contain'
+                                        alt='default'
                                     />
                                     : <Image className={styles.viewMultiImgBoarder }
                                         src={publisherImgURL}
                                         width='100%'
                                         height='100%'
                                         objectFit='contain'
+                                        alt='publisher'
                                     />}
                                 </div>
                             </Link>

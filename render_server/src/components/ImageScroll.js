@@ -22,6 +22,7 @@ export default function ImageScroll({props, scroll_view}) {
                     <img key={index}
                         className={styles.imageScrollerItem}
                         src={img}
+                        alt={index}
                     />
                 ))}
             </ul>
@@ -33,6 +34,7 @@ export default function ImageScroll({props, scroll_view}) {
                     <img key={index}
                         className={styles.imageScrollerItemTimeLine}
                         src={img}
+                        alt={index}
                     />
                 ))}
             </ul>
@@ -44,6 +46,7 @@ export default function ImageScroll({props, scroll_view}) {
                     <img key={index}
                         className={styles.imageScrollerItemInfluencer}
                         src={img}
+                        alt={index}
                     />
                 ))}
             </ul>

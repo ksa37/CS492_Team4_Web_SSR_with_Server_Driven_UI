@@ -9,6 +9,7 @@ import ImageScroll from './ImageScroll';
 import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 import TagArea from './TagArea';
 import LinkArea from './LinkArea';
+import Linkslist from './Linkslist';
 
 var ViewType = Object.freeze({
     NEWS: 0,
@@ -29,7 +30,7 @@ var ScrollType = Object.freeze({
 // typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
 export default function PostCard({props, view}) {  
-    const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, imgNum, tags, more_links } = props
+    const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, imgNum, tags, more_links, content_links } = props
     const { viewType } = view
 
     const now = Date.now()
@@ -65,6 +66,7 @@ export default function PostCard({props, view}) {
                                     height:'100%',
                                     objectFit:'contain',
                                 }}
+                                alt='default'
                             />
                             : <Image className={styles.publisherImg}
                                 
@@ -74,6 +76,7 @@ export default function PostCard({props, view}) {
                                     height:'100%',
                                     objectFit:'contain',
                                 }}
+                                alt='publisher'
                             />}
                         </div>
                     </Link>
@@ -104,16 +107,30 @@ export default function PostCard({props, view}) {
                 }
             />
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '16px', paddingRight: '16px', marginBottom: '10px' }} variant="contained" >
+                {viewType == ViewType.WIKI ?
+                    <>
+                        <Link href={postURL} underline="none"><div className={styles.title}>{title}</div></Link>
+                        <Divider 
+                            sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
+                        />
+                        <div className={styles.contentsInfo_wiki}>
+                            {(content_links.length !== 0) && 
+                                <div className={styles.contents_wiki}>
+                                    <Linkslist content_links={content_links}/>
+                                </div>}
+                            <Link href={postURL} underline="none">
+                                <div className={styles.contents}>
+                                    <p>{contents}</p>                              
+                                </div>
+                            </Link>
+                        </div>
+                    </>
+                :
                 <Link href={postURL} underline="none">
                     <div className={styles.title}>{title}</div>
-                    { viewType == ViewType.WIKI && <Divider 
-                        sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
-                    />}
                     {viewType == ViewType.VIEW && contentsImgURL.length > 1 &&
                         <>
-                        <ImageScroll props={{'imgs': contentsImgURL}} scroll_view={{"scroll_type": ScrollType.VIEWBASIC}}/>
-                        {/* <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.VIEWBASIC}}/> */}
-                        {/* <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.INFLUENCER}}/> */}
+                            <ImageScroll props={{'imgs': contentsImgURL}} scroll_view={{"scroll_type": ScrollType.VIEWBASIC}}/>
                         </>
                     }
                     <div className={styles.contentsInfo}>
@@ -128,6 +145,7 @@ export default function PostCard({props, view}) {
                                     height:'100%',
                                     objectFit:'contain',
                                 }}
+                                alt='content'
                             /> 
                         </div>}
                         {viewType == ViewType.VIEW && contentsImgURL.length == 1 && <div className={styles.contentsImgBoarder}>
@@ -135,10 +153,12 @@ export default function PostCard({props, view}) {
                                 src={contentsImgURL[0]}
                                 width='87px'
                                 height='87px'
+                                alt='content'
                             /> 
                         </div>}
                     </div>
                 </Link>
+                }
             </CardContent>  
             {viewType == ViewType.VIEW &&<TagArea props={{"tags":tags}}/>}   
             {viewType == ViewType.VIEW &&<LinkArea props={{"more_links":more_links}} link_view={{"link_type": LinkType.VIEWBASIC}}/>}                

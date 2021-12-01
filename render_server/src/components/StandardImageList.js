@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'material-ui-image'
 import styles from "./imagelist.module.css";
 import Link from '@mui/material/Link';
 
@@ -20,6 +19,7 @@ export default function StandardImageList({props}) {
                   <img
                   className={styles.grid_item_img}
                   src={img.img_path}
+                  alt={index}
                   // layout="fill"
                   loading="lazy"
                 />
