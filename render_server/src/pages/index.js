@@ -63,12 +63,6 @@ export async function getServerSideProps(context) {
 
 export default function Home({ data, views}) {
   const json = JSON.parse(data)
-  // const view_view = json.view.includes("review");
-  const news_view = json.view.includes("news");
-  const photo_view = json.view.includes("photo");
-  const wiki_view = json.view.includes("wiki");
-  const influencer_view = json.view.includes("influencer");
-  console.log(influencer_view, news_view, photo_view, 'asg', json)
   const keyword = json.keyword
   return (
     <ThemeProvider theme={themeLight}>
