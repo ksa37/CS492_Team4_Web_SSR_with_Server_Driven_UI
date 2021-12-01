@@ -77,7 +77,7 @@ export async function getServerSideProps(context) {
   }
   else
   {
-    const res = await fetch('http://localhost:5000/Paris')
+    const res = await fetch('http://localhost:5000/Bulguksa')
     const data = await res.json()
     const string_data = JSON.stringify(data)
     props.data = string_data
@@ -100,6 +100,7 @@ export default function Home({ data }) {
   const photo_view = json.view.includes("photo");
   const wiki_view = json.view.includes("wiki");
   const influencer_view = json.view.includes("influencer");
+  console.log(influencer_view, news_view, photo_view, 'asg', json)
   return (
     <ThemeProvider theme={themeLight}>
       <CssBaseline />

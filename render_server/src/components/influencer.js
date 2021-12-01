@@ -89,17 +89,13 @@ export default function Influencer(props) {
         <Container sx={{color: '#0c43b7', fontSize: '1rem', ml:'45px' }} className = {styles.contenttitle}> {each.title} </Container> 
         </Link>  
   
-        <Container className = {styles.flex_allign}>
+        <Container sx={{ display : 'flex' }}>
           <Container>
             <Link href={each.title_content_url} underline="none"> <Container sx={{my: '10px', color: "#404040", fontSize: '1rem' }}> {each.content} </Container> </Link>
             <Container sx={{my: '10px', color: 'grey', fontSize: '1rem' }}> {each.date} </Container>
           </Container>
           <Link href={each.title_content_url} underline="none"> <img className = {styles.image} src={"/images/influencer/blog_" + keyword + "_" + each.key + ".png"}/> </Link>
         </Container>
-        {/* <div className = {styles.f}>
-          <div className = {styles.l}> 1 </div>
-          <div className = {styles.r}> 2 </div>
-        </div> */}
       </Card>)}
       <MoreContent props={{'view_option': "인플루엔서",'more_link':morecontent}}/>
     </>
