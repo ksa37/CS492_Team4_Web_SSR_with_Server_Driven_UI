@@ -107,8 +107,8 @@ export default function Bulguksa({props}) {
                     >
                         <div className={styles.relimg}>
                             <span className={styles.child}>
-                                <span><img className={styles.childimg} src='/images/Bulguksa/imgnum.png'/></span>
-                                <span className={styles.childnum}>{relimg.imgs.length}</span>
+                                <img className={styles.childimg} color='transparent' src='/images/Bulguksa/imgnum.png' alt='num'/>
+                                {relimg.imgs.length}
                             </span>
                             <div className={styles.scroll}>
                                 <ul className={styles.scrollul}>
@@ -122,7 +122,7 @@ export default function Bulguksa({props}) {
                                                             <img 
                                                                 src={img}
                                                                 height= "168px"
-                                                                alt="불국사"
+                                                                alt="Bulguksa"
                                                             />
                                                         </div>
                                                     </a>
@@ -136,7 +136,7 @@ export default function Bulguksa({props}) {
                         <div className={styles.middletitle}>
                             <a className={styles.morelink} href={middletitle.href}>
                                 <h3 className={styles.morelinktitle}>{middletitle.text}</h3>
-                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png'></img>
+                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png' alt='more'/>
                             </a>
                         </div>
                         <div className={styles.detailinfo}>
@@ -168,7 +168,7 @@ export default function Bulguksa({props}) {
                         </div>
                         <div className={styles.buttonarea}>
                             <div className={styles.buttonbox}>
-                                <ul className={styles.buttonboxul}><li className={styles.buttonboxli}><a className={styles.buttonboxa} href={buttonarea}><img className={styles.buttonareaicon} src='/images/Bulguksa/map.png'></img>지도</a></li></ul>
+                                <ul className={styles.buttonboxul}><li className={styles.buttonboxli}><a className={styles.buttonboxa} href={buttonarea}><img className={styles.buttonareaicon} src='/images/Bulguksa/map.png' alt='button'/>지도</a></li></ul>
                             </div>
                         </div>
                     </Paper>
@@ -179,7 +179,7 @@ export default function Bulguksa({props}) {
                         <div className={styles.middletitle}>
                             <a className={styles.morelink} href={middletitle2.href}>
                                 <h3 className={styles.morelinktitle}>{middletitle2.text}</h3>
-                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png'></img>
+                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png' alt='more'/>
                             </a>
                         </div>
                         <div className={styles.scrollbox}>
@@ -189,7 +189,7 @@ export default function Bulguksa({props}) {
                                         return (
                                             <li className={styles.scrollboxli} key={index}>
                                                 <div className={styles.areacard}>
-                                                    <a href={scroll.href}><img src={scroll.thumb} width="87px" height="87px" alt={scroll.name}></img></a>
+                                                    <a href={scroll.href}><img src={scroll.thumb} width="87px" height="87px" alt={scroll.name}/></a>
                                                     <div className={styles.titlebox}>
                                                         <a className={styles.titleboxname} href={scroll.href}>{scroll.name}</a>
                                                         <span className={styles.titleboxsubtext}>{scroll.subtext}</span>

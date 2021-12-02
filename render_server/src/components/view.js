@@ -118,10 +118,12 @@ export default function View({props}){
                         {   currentViewType==index
                             ? <img 
                                 src={option.src_open}
-                                height={16} width={16}/>
+                                height={16} width={16}
+                                alt={index}/>
                             : <img 
                             src={option.src_close}
-                            height={16} width={16}/>
+                            height={16} width={16}
+                            alt={index}/>
                         }
                         </IconButton>
                     ))}

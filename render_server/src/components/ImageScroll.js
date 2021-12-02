@@ -46,6 +46,7 @@ export default function ImageScroll({props, scroll_view}) {
                     <img key={index}
                         className={cn(styles.imageScrollerItem, scroll_item_css)}
                         src={img}
+                        alt={index}
                     />
                 ))}
             </ul>
