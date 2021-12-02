@@ -87,9 +87,17 @@ function ViewCardTimelinePost({props}) {
                         <div className={styles.title}>{title}</div>
                         <div className={styles.contentsInfo}>
                         <div className={styles.contents}>{contents}</div>
+                        {/* {contentsImgURL.length == 1 && <div className={styles.contentsImgBoarder}>
+                            <Image className={styles.contentsImg}
+                                src={contentsImgURL[0]}
+                                width='87px'
+                                height='87px'
+                            /> 
+                        </div>} */}
                         </div>
                     </a>
                 </Link>
+                
             </div>
             {<LinkArea props={{"more_links":more_links}} link_view={{"link_type": LinkType.VIEWTIMELINE}}/>}
         </div>          

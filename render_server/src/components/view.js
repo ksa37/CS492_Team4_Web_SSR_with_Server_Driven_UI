@@ -36,7 +36,7 @@ const selectView = [
 
 export default function View({props}){
     const view_option = "VIEW";
-    const {tags, view_posts, view_cafe_posts, view_more} = props
+    const {tags, view_posts, view_cafe_posts, view_weather_posts, view_more} = props
 
     {/* Tag change keeped even when view type changes*/}
 
@@ -63,12 +63,19 @@ export default function View({props}){
       const setViewTag = (index) => {
         if (currentViewType==0){
             setBasicTag(index);
+            console.log("setting basic tag")
+            console.log(index)
+            console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
         }
         else if (currentViewType==1){
             setTimelineTag(index);
+            console.log("setting timeline tag")
+            console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
         }
         else if (currentViewType==2){
             setMultimediaTag(index);
+            console.log("setting multimedia tag")
+            console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
         }
       };
 
@@ -209,15 +216,15 @@ export default function View({props}){
                 ? <>{view_cafe_posts&&view_cafe_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
                 : <></> }
             {currentViewType==0 && currentTimelineTag==2
-                ? <>{view_cafe_posts&&view_cafe_posts.slice(0, 5).map((view, index) => 
+                ? <>{view_weather_posts&&view_weather_posts.slice(0, 5).map((view, index) => 
                     <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
                     )}</> 
                 : <></>}
             {currentViewType==1 && currentBasicTag==2
-                ? <>{view_cafe_posts&&<ViewCardTimeline props={{'view_posts': view_cafe_posts.slice(0,5)}}/>} </>
+                ? <>{view_weather_posts&&<ViewCardTimeline props={{'view_posts': view_weather_posts.slice(0,5)}}/>} </>
                 : <></> }
             {currentViewType==2 && currentMultimediaTag==2
-                ? <>{view_cafe_posts&&view_cafe_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
+                ? <>{view_weather_posts&&view_weather_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
                 : <></> }
             
 
