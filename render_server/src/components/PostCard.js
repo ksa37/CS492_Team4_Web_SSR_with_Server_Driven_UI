@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 import TagArea from './TagArea';
 import LinkArea from './LinkArea';
 import Comments from './Comments';
+import GrayboxLink from './GrayBoxLink';
 
 var ViewType = Object.freeze({
     NEWS: 0,
@@ -113,8 +114,8 @@ export default function PostCard({props, view}) {
                     {viewType == ViewType.VIEW && contentsImgURL.length > 1 &&
                         <>
                         <ImageScroll props={{'imgs': contentsImgURL}} scroll_view={{"scroll_type": ScrollType.VIEWBASIC}}/>
-                        {/* <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.VIEWBASIC}}/> */}
-                        {/* <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.INFLUENCER}}/> */}
+                        {/* <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.VIEWTIMELINE}}/>
+                        <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.INFLUENCER}}/> */}
                         </>
                     }
                     <div className={styles.contentsInfo}>
@@ -141,6 +142,7 @@ export default function PostCard({props, view}) {
                     </div>
                 </Link>
             </CardContent>  
+            <GrayboxLink props={{"publisher": publisher, "gray_tag":"파리여행", "link": postURL}}/>
             {viewType == ViewType.VIEW && comments&&comments.length>1&&<Comments props={{'comments':comments, 'link': postURL}}/>}
             {viewType == ViewType.VIEW &&<TagArea props={{"tags":tags}}/>}   
             {viewType == ViewType.VIEW &&<LinkArea props={{"more_links":more_links}} link_view={{"link_type": LinkType.VIEWBASIC}}/>}                
