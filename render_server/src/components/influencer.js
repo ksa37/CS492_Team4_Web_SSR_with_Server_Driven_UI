@@ -80,7 +80,7 @@ export default function Influencer(props) {
         <div className = {styles.f}>
           <div>
             <Link href={each.title_content_url} underline="none"> <div className = {styles.content}> {each.content} </div> </Link>
-            <Container sx={{my: '10px', color: 'grey', fontSize: '1rem' }}> {each.date} </Container>
+            <div className = {styles.date}> {each.date} </div>
           </div>
           <Link href={each.title_content_url} underline="none"> <img className = {styles.image} src={"/images/influencer/blog_" + keyword + "_" + each.key + ".png"} alt={each.key}/> </Link> 
         </div>
