@@ -1,13 +1,10 @@
 import React from 'react'
-// import Link from 'next/link'
-import Link from '@mui/material/Link';
 import styles from './postCard.module.css'
-// import Image from "next/image"
-import MoreVert from './MoreVert'
+import MoreVert from './Morevert'
 import DateConvertor from './DateConvertor'
 import Image from 'material-ui-image'
 
-import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack, Typography} from '@mui/material';
+import { Card, CardContent, CardHeader, Divider, Paper, Stack} from '@mui/material';
 
 export default function ViewCardBasic({props, view}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, tags, more_links} = props
@@ -43,7 +40,6 @@ export default function ViewCardBasic({props, view}) {
                                 width='100%'
                                 height='100%'
                                 objectFit='contain'
-                                alt='default'
                             />
                             : <Image className={styles.publisherImg}
                                 
@@ -52,7 +48,6 @@ export default function ViewCardBasic({props, view}) {
                                 width='100%'
                                 height='100%'
                                 objectFit='contain'
-                                alt='publisher'
                             />}
                         </div>
                     </a>
@@ -96,7 +91,6 @@ export default function ViewCardBasic({props, view}) {
                                 src={contentsImgURL}
                                 width='87px'
                                 height='87px'
-                                alt='content'
                             /> 
                         </div>}
                     </div>
@@ -135,7 +129,6 @@ export default function ViewCardBasic({props, view}) {
                         src={"icons/link.png"}
                         height={11}
                         width={11}
-                        alt='link'
                     />
                     <span> 유지니의 #파리여행 콘텐츠 더보기</span>
                     <img
@@ -143,7 +136,6 @@ export default function ViewCardBasic({props, view}) {
                         src={'/icons/forward.svg'}
                         width={7}
                         height={11}
-                        alt='forward'
                     />
                     {/* <div className={styles.linkBoxForward} /> */}
                     

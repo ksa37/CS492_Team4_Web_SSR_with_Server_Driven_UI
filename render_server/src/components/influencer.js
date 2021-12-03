@@ -1,7 +1,7 @@
 import { Container, Card, Grid, Link, Paper} from '@mui/material';
 import { useState } from 'react';
 import styles from './influencer.module.css'
-import MoreContent from '../components/MoreContent';
+import MoreContent from '../components/Morecontent';
 
 const Blogfan = () => {
   const [showResults, setShowResults] = useState(false)
@@ -21,8 +21,8 @@ const Search = (props) => {
   return (
     <div>
       { showResults ? 
-      <div className = {styles.rightallign} onClick={onClick} > <img className = {styles.influencer_icon} src="/images/influencer/after.png" alt='after'/>  </div> 
-      : <div className = {styles.rightallign} onClick={onClick} > <img className = {styles.influencer_icon} src="/images/influencer/before.png" alt='before'/>  </div>}
+      <div className = {styles.rightallign} onClick={onClick} > <img className = {styles.influencer_icon} src="/images/influencer/after.png"/>  </div> 
+      : <div className = {styles.rightallign} onClick={onClick} > <img className = {styles.influencer_icon} src="/images/influencer/before.png"/>  </div>}
       { showResults ? <Results props={props}/> : null }
     </div>
   )

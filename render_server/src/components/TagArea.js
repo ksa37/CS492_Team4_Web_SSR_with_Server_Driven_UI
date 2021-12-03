@@ -1,6 +1,5 @@
 import React from 'react'
-import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack, Typography} from '@mui/material';
-import Link from '@mui/material/Link';
+import { Paper, Stack } from '@mui/material';
 import styles from './postCard.module.css'
 
 export default function TagArea({props}){

@@ -1,12 +1,12 @@
 import React from 'react'
 import Link from '@mui/material/Link';
 import styles from './postCard.module.css'
-import MoreVert from './MoreVert'
+import MoreVert from './Morevert'
 import DateConvertor from './DateConvertor'
 import Image from 'material-ui-image'
 import TagArea from './TagArea';
 
-import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack} from '@mui/material';
+import { Card, CardContent, CardHeader} from '@mui/material';
 
 export default function ViewCardMultimeda({props}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, tags, more_links} = props
@@ -40,14 +40,12 @@ export default function ViewCardMultimeda({props}) {
                                 width='100%'
                                 height='100%'
                                 objectFit='contain'
-                                alt='default'
                             />
                             : <Image className={styles.viewMultiImgBoarder }
                                 src={publisherImgURL}
                                 width='100%'
                                 height='100%'
                                 objectFit='contain'
-                                alt='publisher'
                             />}
                         </div>
                     </Link>
@@ -77,7 +75,6 @@ export default function ViewCardMultimeda({props}) {
                     className={styles.viewMultiImg}
                     src={contentsImgURL[0]}
                     layout="fill"
-                    alt='content'
                 /> 
             </div>}
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '18px', paddingRight: '18px', paddingBottom: '15px', paddingTop: '14px',

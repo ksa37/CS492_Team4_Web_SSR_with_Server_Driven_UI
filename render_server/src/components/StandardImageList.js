@@ -10,17 +10,10 @@ export default function StandardImageList({props}) {
           <div key={index} className={styles.grid_item} >
             <Link href={img.img_url} underline="none">
               <div>
-                {/* <Image
-                  src={img.img_path}
-                  style={{
-                    width:'197px',
-                    height:'197px',
-                  }}/> */}
                   <img
                   className={styles.grid_item_img}
                   src={img.img_path}
                   alt={index}
-                  // layout="fill"
                   loading="lazy"
                 />
               </div>

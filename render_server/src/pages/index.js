@@ -33,6 +33,41 @@ const themeDark = createTheme({
   }
 });
 
+// export async function getServerSideProps(context) {
+//   const res = await fetch('http://localhost:5000/keywords')
+//   const data = await res.json()
+//   const string_data = JSON.stringify(data)
+//   const props = {data: ''}
+//   props.data = string_data
+//   /*
+//   const {req, } = context
+//   const props = {data: ''}
+//   if (req.method === "POST") {
+//     const streamPromise = new Promise((resolve, reject) => {
+//       let body = ''
+//       req.on('data', ( data ) => {
+//         body += data
+//       });
+//       req.on('end', () => {
+//         resolve(body);
+//       });
+//     });
+//     const body = await streamPromise;
+//       props.data = body;
+//   }
+//   return { props }
+//   */
+//   return { props }
+// }
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; 
+}
+
+const random_keywords = ['Bulguksa','Paris']
+
 export async function getServerSideProps(context) {
   const {req, } = context
   const props = {data: '', views: []}
@@ -52,6 +87,12 @@ export async function getServerSideProps(context) {
   }
   else
   {
+    // const keyword_num  = random_keywords.length
+    // console.log(keyword_num)
+    // const random_keyword = random_keywords[getRandomIntInclusive(1, keyword_num)]
+    // const random_fetch = 'http://localhost:5000/'+random_keyword
+    // const res = await fetch('http://localhost:5000/Paris')
+    // const res = await fetch(random_fetch)
     const res = await fetch('http://localhost:5000/Bulguksa')
     const data = await res.json()
     const string_data = JSON.stringify(data)
@@ -124,7 +165,6 @@ export default function Home({ data, views}) {
             <img src="/icons/naver_logo.png" 
             width="auto"
             height="21px"
-            alt='naver'
           />
           </Typography>
           <Typography style={{ fontSize: 14, fontWeight: '900', color: 'var(--date_gray)', verticalAlign: 'center', textAlign: 'center' }}>

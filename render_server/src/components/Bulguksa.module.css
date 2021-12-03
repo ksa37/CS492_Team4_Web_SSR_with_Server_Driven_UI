@@ -16,7 +16,7 @@
 .name {
     font-size: 18px;
     font-weight: bold;
-    color: var(--dark_gray_1);
+    color: #000;
     width: fit-content;
 }
 
@@ -64,12 +64,23 @@
     padding: 6px 11px 6px 11px;
 }
 
-.verticalDivider {
-    border-left: 0px solid;
-    border-color: #D2C9C4;
+.titlebar {
     background-color: rgba(135,142,154,0.3);
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 4px 9px 0;
+    vertical-align: top;
+    color: rgba(107,112,122,0.8);
+}
+
+.tabbar {
+    background-color: rgba(135,142,154,0.3);
+    display: inline-block;
+    width: 1px;
     height: 16px;
-    margin: 0;
+    vertical-align: -2px;
+    margin-right: 4px;
 }
 
 .contents {
@@ -86,6 +97,31 @@
     letter-spacing: -0.3px;
 }
 
+.relimg .count{
+    bottom: 21px;
+    display: inline-block;
+    position: absolute;
+    padding: 0 5px 0 7px;
+    right: 12px;
+    height: 27px;
+    line-height: 28px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    border: solid 1px rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+}
+
+.relimg .count .countimg{
+    display: inline-block;
+    overflow: hidden;
+    color: transparent;
+    width: 19px;
+    height: 19px;
+    margin-right: 5px;
+    vertical-align: -4px;
+}
 .child{
     bottom: 21px;
     display: inline-block;
@@ -94,7 +130,7 @@
     right: 12px;
     height: 27px;
     line-height: 28px;
-    font-size: 0.8rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #fff;
     border: solid 1px rgba(0,0,0,0.05);
@@ -105,10 +141,18 @@
 .childimg{
     display: inline-block;
     overflow: hidden;
+    color: transparent;
     width: 19px;
     height: 19px;
     margin-right: 5px;
     vertical-align: -4px;
+}
+
+.childnum{
+    line-height: 28px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
 }
 
 .scroll{

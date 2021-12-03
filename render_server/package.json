@@ -5,8 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "json": "json-server ./data.json --port 5000"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/react": "^11.5.0",
@@ -17,14 +16,17 @@
     "@mui/lab": "^5.0.0-alpha.55",
     "@mui/material": "^5.1.0",
     "@mui/styled-engine-sc": "^5.1.0",
+    "classnames": "^2.3.1",
     "material-ui-image": "^3.3.2",
     "next": "12.0.3",
+    "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "resize-observer-polyfill": "^1.5.1",
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.5.0",
+    "@svgr/webpack": "^6.1.0",
     "eslint": "7",
     "eslint-config-next": "12.0.3"
   }

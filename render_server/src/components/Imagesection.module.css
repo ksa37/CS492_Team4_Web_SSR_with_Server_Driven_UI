@@ -1,0 +1,23 @@
+.imagesection {
+  position: relative;
+  margin: 0 auto;
+}
+  
+.btn {
+  display: block;
+  width: 100%;
+  border: none;
+  background: #f4f7f8;
+  font-size: 0.9rem;
+  line-height: 48px;
+  outline: none;
+}
+  
+.item {
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -1px;
+}
+  

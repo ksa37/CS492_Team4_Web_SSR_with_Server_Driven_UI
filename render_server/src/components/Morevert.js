@@ -3,7 +3,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import styles from './MoreVert.module.css'
 
-import MoreVertIcon from "@material-ui/icons/MoreVert";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 import BookmarkIcon from '../../public/icons/bookmark.svg'; 
 
 import { IconButton, Box } from '@mui/material';
@@ -56,7 +56,6 @@ export default function MoreVert({props}) {
                     "icon": <img src="/icons/naver_share.png" 
                                 width="auto"
                                 height="16px"
-                                alt='share'
                                 />
                 }}/>
                 <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
@@ -94,7 +93,7 @@ export default function MoreVert({props}) {
                                 
                                 }},
                     "text": "Keep 바로가기",
-                    "icon": <img src='/icons/forward.svg' alt='forward'/>
+                    "icon": <img src='/icons/forward.svg'/>
                 }}/>
             </Menu>
         </div>
