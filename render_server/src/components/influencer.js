@@ -84,14 +84,6 @@ export default function Influencer(props) {
           </div>
           <Link href={each.title_content_url} underline="none"> <img className = {styles.image} src={"/images/influencer/blog_" + keyword + "_" + each.key + ".png"} alt={each.key}/> </Link> 
         </div>
-
-        {/* <div className = {styles.f}> */}
-            {/* <div className = {styles.l}>L</div>
-            <div className = {styles.r}>R</div>
-            <div> L2 </div>
-            <div className = {styles.t}>T</div>
-            <div className = {styles.b}>B</div> */}
-        {/* </div> */}
       </Card>)}
       <MoreContent props={{'view_option': "인플루엔서",'more_link':morecontent}}/>
     </>

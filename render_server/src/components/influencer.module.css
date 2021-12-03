@@ -11,13 +11,13 @@
 }
 .fanicon_before {
   width: 68px;
-  height: 30px;
+  height: 35px;
   float: right;
   margin-right: 18px;
 }
 .fanicon_after {
   width: 52px;
-  height: 30px;
+  height: 35px;
   float: right;
   margin-right: 18px;
 }
@@ -118,8 +118,8 @@
   float: left;
 }
 .influencer_icon {
-  height: 15px;
-  width: 15px;
+  height: 20px;
+  width: 20px;
   margin: auto 0;
 }
 .service {
