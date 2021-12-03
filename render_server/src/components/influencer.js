@@ -2,7 +2,13 @@ import { Container, Card, Grid, Link, Paper} from '@mui/material';
 import { useState } from 'react';
 import styles from './influencer.module.css'
 import MoreContent from '../components/Morecontent';
-
+import ImageScroll from './ImageScroll';
+var ScrollType = Object.freeze({
+  VIEWBASIC: 0,
+  VIEWTIMELINE: 1,
+  INFLUENCER: 2
+});
+      
 const Blogfan = () => {
   const [showResults, setShowResults] = useState(false)
   const onClick = () => setShowResults(!showResults)
@@ -42,9 +48,13 @@ const Results = (props) => {
 
 export default function Influencer(props) {
   const [showResults, setShowResults] = useState(false)
-  const { data, keyword, morecontent } = props.props
+  const { data, keyword, morecontent, contentsImgURL } = props.props
+  // const [dummy, setdummy] = useState(false)
+  // const dum = () => {
+  //   setdummy(!dummy)
+  // }
   return (
-    <>
+    <>    
     <Card sx={{ maxWidth: 766, lineHeight: "50px"}}>
       <div className = {styles.influencer}> 인플루언서 </div> 
       <img className = {styles.influencer_icon} src="/images/influencer/icon_img.png" alt='icon'/>
@@ -69,9 +79,23 @@ export default function Influencer(props) {
           <div className = {styles.subheader}> {each.blogdetails} </div> 
           <div className = {styles.detailsdepth}> {each.detailsdepth} </div>
           {/* <Search props = {each.detailsdepth}/> */}
+          {/* <div className = {styles.rightallign2} onClick={dum} > {dummy ?  <div className = {styles.rightallign}> <img className = {styles.influencer_icon} src="/images/influencer/after.png"/>  </div> 
+          : <div className = {styles.rightallign}> <img className = {styles.influencer_icon} src="/images/influencer/before.png"/>  </div>} </div>  */}
         </Container>
+        
+        {/* {dummy && 
+        <Paper sx={{ width: 730, lineHeight: "20px", border: 1, borderColor: 'grey.100', ml: "18px", mr: "18px", mb: "5px", mt: "5px" }}>
+          <Grid sx={{ width: 710, lineHeight: "20px", border: 1, borderColor: 'grey.100', ml: "15px", mr: "10px", fontSize: '0.8rem', mt: "5px" }}>
+            <div className = {styles.typ_grey}> 여행 스타일:<div className = {styles.typ_black}>{each.detailsdepth[0]}</div> </div>
+            <div className = {styles.typ_grey}> 창작 분야:  <div className = {styles.typ_black}>{each.detailsdepth[1]}</div></div>
+          </Grid>
+          <Link href = {each.avatar_name}> <div className = {styles.flipscreen}> 자세히 보기 </div> </Link>
+        </Paper>} */}
 
         <Search props = {{"details": each.detailsdepth, "url": each.avatar_name_url}}/>
+
+        <Container sx = {{mt: "27px"}}>{keyword === 'bulguksa' && <ImageScroll props={{'imgs': each.contentsImgURL}} scroll_view={{"scroll_type": ScrollType.INFLUENCER}}/>}
+        </Container>
         
         <Link href={each.title_content_url} underline="none"> 
         <Grid sx={{color: '#0c43b7', fontSize: '1rem', ml:'20px' }} className = {styles.contenttitle}> {each.title} </Grid> 
@@ -82,9 +106,11 @@ export default function Influencer(props) {
             <Link href={each.title_content_url} underline="none"> <div className = {styles.content}> {each.content} </div> </Link>
             <div className = {styles.date}> {each.date} </div>
           </div>
-          <Link href={each.title_content_url} underline="none"> <img className = {styles.image} src={"/images/influencer/blog_" + keyword + "_" + each.key + ".png"} alt={each.key}/> </Link> 
+          <Link href={each.title_content_url} underline="none"> 
+          {keyword !== 'bulguksa' && <img className = {styles.image} src={"/images/influencer/blog_" + keyword + "_" + each.key + ".png"} alt={each.key}/>} 
+          </Link> 
         </div>
-      </Card>)}
+        </Card>)}
       <MoreContent props={{'view_option': "인플루엔서",'more_link':morecontent}}/>
     </>
   )

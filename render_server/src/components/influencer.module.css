@@ -25,6 +25,7 @@
   width: 15px;
   height: 15px;
   margin: auto 0;
+  float: left;
 }
 .flex2 {
   float: left;
@@ -79,11 +80,13 @@
   font-size: 14px;
   color: #666;
   font-weight: 700;
+  float: left;
 }
 .detailsdepth {
   font-size: 14px;
   color: #666;
   margin-left: 10px;
+  float: left;
 }
 .magintop {
   margin-top: 6px;
@@ -132,6 +135,9 @@
 .rightallign {
   float: right;
   margin-right: 18px;
+}
+.rightallign2 {
+  float: right;
 }
 .flex {
   display: flex;

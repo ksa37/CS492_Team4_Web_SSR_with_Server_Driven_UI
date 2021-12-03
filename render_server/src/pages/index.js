@@ -120,7 +120,7 @@ export default function Home({ data, views}) {
                 return (
                   <div key={index}>
                     <div className="section_bulguksa">
-                      <Bulguksa props={json.basic}/>
+                      {/* <Bulguksa props={json.basic}/> */}
                     </div>
                     <div className="section_drama">
                       <Drama/>  
