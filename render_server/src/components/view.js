@@ -80,12 +80,10 @@ export default function View({props}){
                         {   currentViewType==index
                             ? <img 
                                 src={option.src_open}
-                                height={16} width={16}
-                                alt={index}/>
+                                height={16} width={16}/>
                             : <img 
                             src={option.src_close}
-                            height={16} width={16}
-                            alt={index}/>
+                            height={16} width={16}/>
                         }
                         </IconButton>
                     ))}

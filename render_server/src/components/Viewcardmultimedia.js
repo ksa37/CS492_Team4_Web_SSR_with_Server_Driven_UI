@@ -40,14 +40,12 @@ export default function ViewCardMultimeda({props}) {
                                 width='100%'
                                 height='100%'
                                 objectFit='contain'
-                                alt='default'
                             />
                             : <Image className={styles.viewMultiImgBoarder }
                                 src={publisherImgURL}
                                 width='100%'
                                 height='100%'
                                 objectFit='contain'
-                                alt='publisher'
                             />}
                         </div>
                     </Link>
@@ -76,9 +74,7 @@ export default function ViewCardMultimeda({props}) {
                 <img
                     className={styles.viewMultiImg}
                     src={contentsImgURL[0]}
-                    // layout="fill"
-                    alt='content'
-                    // style={{objectFit: 'cover'}}
+                    layout="fill"
                 /> 
             </div>}
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '18px', paddingRight: '18px', paddingBottom: '15px', paddingTop: '14px',
