@@ -14,11 +14,7 @@
 .dramaName {
     font-size: 18px;
     font-weight: bold;
-<<<<<<< HEAD
     color: #000;
-=======
-    color: var(--dark_gray_1);
->>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
     width: fit-content;
 }
 

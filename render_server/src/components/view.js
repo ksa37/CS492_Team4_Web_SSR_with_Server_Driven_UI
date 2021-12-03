@@ -33,26 +33,6 @@ const selectView = [
 export default function View({props}){
     const view_option = "VIEW";
     const {tags, view_posts, view_cafe_posts, view_weather_posts, view_more} = props
-<<<<<<< HEAD
-=======
-
-    {/* Tag change keeped even when view type changes*/}
-
-    // const [currentIndices, setContentIndices] = useState({'view_type':0, 'tag':0})
-    // const updateIndices = (changetype, index) => {
-    //     var key = '';
-    //     if (changetype==0)
-    //         key = 'view_type';
-    //     else if (changetype==1)
-    //         key = 'tag';
-
-    //     setContentIndices({
-    //       ...currentIndices,
-    //       [key]: index
-    //     });
-    //   };
-
->>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
       const [currentViewType, setViewType] = useState(0);
       const [currentBasicTag, setBasicTag] = useState(0);
       const [currentTimelineTag, setTimelineTag] = useState(0);
@@ -91,26 +71,6 @@ export default function View({props}){
                 style = {{ textAlign: 'left'}}
                 action = {
                     <>
-<<<<<<< HEAD
-=======
-                    {/* Tag change keeped even when view type changes*/}
-                    {/* {selectView&&selectView.map((option, index)=>(
-                        <IconButton
-                            key={index}
-                            name='view_type'
-                            onClick={()=> updateIndices(0,index)}
-                        >
-                        {   currentIndices.view_type==index
-                            ? <img 
-                                src={option.src_open}
-                                height={16} width={16}/>
-                            : <img 
-                            src={option.src_close}
-                            height={16} width={16}/>
-                        }
-                        </IconButton>
-                    ))} */}
->>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
                     {selectView&&selectView.map((option, index)=>(
                         <IconButton
                             key={index}
@@ -173,32 +133,6 @@ export default function View({props}){
                 </Grid>
             </Paper>
 
-<<<<<<< HEAD
-=======
-            {/* Tag change keeped even when view type changes*/}
-            {/* {currentIndices.view_type==0 && currentIndices.tag==0
-                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => 
-                    <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
-
-                    )}</> 
-                : <></> }
-            {currentIndices.view_type==1 && currentIndices.tag==0
-                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardTimeline key={index} props={view} />)} </>
-                : <></> }
-            {currentIndices.view_type==2 && currentIndices.tag==0
-                ? <>{view_posts&&view_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
-                : <></> }
-            {currentIndices.view_type==0 && currentIndices.tag==1
-                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardTimeline key={index} props={view} />)} </>
-                : <></> }
-            {currentIndices.view_type==1 && currentIndices.tag==1
-                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => 
-                    <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
-
-                    )}</> 
-                : <></>} */}
-
->>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
             {currentViewType==0 && currentBasicTag==0
                 ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => 
                     <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
@@ -240,8 +174,4 @@ export default function View({props}){
         <MoreContent props={{'view_option':view_option,'more_link':view_more}}/>
     </>
     )
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
