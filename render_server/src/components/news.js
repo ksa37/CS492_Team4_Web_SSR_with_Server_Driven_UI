@@ -1,7 +1,7 @@
 import React from 'react'
 import PostCard from './PostCard'
 import styles from './news.module.css'
-import MoreContent from '../components/MoreContent';
+import MoreContent from '../components/Morecontent';
 
 import { Card, CardHeader } from '@mui/material';
 import Dot from '../../public/icons/dot.svg'; 

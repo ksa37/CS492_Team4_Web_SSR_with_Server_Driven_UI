@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from '@mui/material/Link';
 import styles from './imageScroll.module.css'
 import cn from 'classnames';
 
