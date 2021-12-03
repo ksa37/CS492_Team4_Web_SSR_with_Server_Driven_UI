@@ -3,13 +3,13 @@ import Link from '@mui/material/Link';
 import MoreVert from './Morevert'
 import styles from './Bulguksa.module.css'
 import { Card, CardHeader, Box, Paper } from '@mui/material';
+import Bpage0 from './Bpage0'
+import Bpage1 from './Bpage1'
+import Bpage2 from './Bpage2'
 
 export default function Bulguksa({props}) {
-    const {header, first_card, second_card} = props
-    const {title, href, subtitle, tablist, tablisthref} = header
-    const {relimg, middletitle, detailinfo, buttonarea} = first_card
-    const middletitle2 = second_card.middletitle
-    const scrollbox = second_card.scrollbox
+    const {header, first_card, second_card_whole, second_card_basic, third_card_basic} = props
+    const {title, href, subtitle, tablist, tablisthref, video} = header
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -58,23 +58,37 @@ export default function Bulguksa({props}) {
                             </div>
                             <div className={styles.category}>
                                 {subtitle[0]}
-                                <hr className={styles.verticalDivider}></hr>
+                                <div className={styles.titlebar}></div>
                                 {subtitle[1]}
                             </div>
                             <div className={styles.btnmenu}>
                                 {tablist.map((tab, i) => (
                                     <div key={i} className={styles.btnmenu}>
-                                    <a href={tablisthref[i]}>
-                                    <button
-                                        className={ 
-                                            menu.darkBtn === i 
-                                            ? styles.selectedMenu 
-                                            : ((i == 0) ? styles.firstunselectedMenu : styles.unselectedMenu) }
-                                    >
-                                    {tab}
-                                    </button>
-                                    </a>
-                                    {(i != tablist.length - 1) && <hr className={styles.verticalDivider}></hr>}
+                                        {
+                                            i < 3 ?
+                                            <button
+                                                onClick={changeColor.bind(this, i)}
+                                                className={menu.darkBtn === i ?
+                                                    styles.selectedMenu 
+                                                    :
+                                                    ((i == 0) ? styles.firstunselectedMenu : styles.unselectedMenu) }
+                                                >
+                                                    {tab}
+                                                </button>
+                                            :
+                                            <a href={tablisthref[i]}>
+                                                <button className={menu.darkBtn === i ?
+                                                    styles.selectedMenu 
+                                                    :
+                                                    ((i == 0) ? styles.firstunselectedMenu : styles.unselectedMenu) }
+                                                >
+                                                    {tab}
+                                                </button>
+                                            </a>
+                                        }
+                                        {(i != tablist.length - 1) 
+                                        && !(i === menu.darkBtn || i + 1 === menu.darkBtn) 
+                                        && <div className={styles.tabbar}></div>}
                                     </div>
                                 ))}
                             </div>
@@ -107,8 +121,8 @@ export default function Bulguksa({props}) {
                     >
                         <div className={styles.relimg}>
                             <span className={styles.child}>
-                                <img className={styles.childimg} color='transparent' src='/images/Bulguksa/imgnum.png' alt='num'/>
-                                {relimg.imgs.length}
+                                <span><img className={styles.childimg} src='/images/Bulguksa/imgnum.png' alt='num'/></span>
+                                <span className={styles.childnum}>{relimg.imgs.length}</span>
                             </span>
                             <div className={styles.scroll}>
                                 <ul className={styles.scrollul}>
@@ -122,7 +136,7 @@ export default function Bulguksa({props}) {
                                                             <img 
                                                                 src={img}
                                                                 height= "168px"
-                                                                alt="Bulguksa"
+                                                                alt="불국사"
                                                             />
                                                         </div>
                                                     </a>
@@ -136,7 +150,7 @@ export default function Bulguksa({props}) {
                         <div className={styles.middletitle}>
                             <a className={styles.morelink} href={middletitle.href}>
                                 <h3 className={styles.morelinktitle}>{middletitle.text}</h3>
-                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png' alt='more'/>
+                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png' alt='more'></img>
                             </a>
                         </div>
                         <div className={styles.detailinfo}>
@@ -168,7 +182,7 @@ export default function Bulguksa({props}) {
                         </div>
                         <div className={styles.buttonarea}>
                             <div className={styles.buttonbox}>
-                                <ul className={styles.buttonboxul}><li className={styles.buttonboxli}><a className={styles.buttonboxa} href={buttonarea}><img className={styles.buttonareaicon} src='/images/Bulguksa/map.png' alt='button'/>지도</a></li></ul>
+                                <ul className={styles.buttonboxul}><li className={styles.buttonboxli}><a className={styles.buttonboxa} href={buttonarea}><img className={styles.buttonareaicon} src='/images/Bulguksa/map.png' alt='button'></img>지도</a></li></ul>
                             </div>
                         </div>
                     </Paper>
@@ -179,7 +193,7 @@ export default function Bulguksa({props}) {
                         <div className={styles.middletitle}>
                             <a className={styles.morelink} href={middletitle2.href}>
                                 <h3 className={styles.morelinktitle}>{middletitle2.text}</h3>
-                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png' alt='more'/>
+                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png' alt='more'></img>
                             </a>
                         </div>
                         <div className={styles.scrollbox}>
@@ -189,7 +203,7 @@ export default function Bulguksa({props}) {
                                         return (
                                             <li className={styles.scrollboxli} key={index}>
                                                 <div className={styles.areacard}>
-                                                    <a href={scroll.href}><img src={scroll.thumb} width="87px" height="87px" alt={scroll.name}/></a>
+                                                    <a href={scroll.href}><img src={scroll.thumb} width="87px" height="87px" alt={scroll.name}></img></a>
                                                     <div className={styles.titlebox}>
                                                         <a className={styles.titleboxname} href={scroll.href}>{scroll.name}</a>
                                                         <span className={styles.titleboxsubtext}>{scroll.subtext}</span>

@@ -1,6 +1,6 @@
 import PostCard from '../components/PostCard'
 import { Box } from '@mui/material';
-import MoreContent from '../components/MoreContent';
+import MoreContent from '../components/Morecontent';
 
 var ViewType = Object.freeze({
     NEWS: 0,

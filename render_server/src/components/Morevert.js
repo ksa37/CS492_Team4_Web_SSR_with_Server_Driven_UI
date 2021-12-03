@@ -3,7 +3,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import styles from './MoreVert.module.css'
 
-import MoreVertIcon from "@material-ui/icons/MoreVert";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 import BookmarkIcon from '../../public/icons/bookmark.svg'; 
 
 import { IconButton, Box } from '@mui/material';
