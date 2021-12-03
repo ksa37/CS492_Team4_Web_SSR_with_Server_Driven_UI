@@ -76,8 +76,9 @@ export default function ViewCardMultimeda({props}) {
                 <img
                     className={styles.viewMultiImg}
                     src={contentsImgURL[0]}
-                    layout="fill"
+                    // layout="fill"
                     alt='content'
+                    // style={{objectFit: 'cover'}}
                 /> 
             </div>}
             <CardContent sx={{ m: 0, p: 0, paddingLeft: '18px', paddingRight: '18px', paddingBottom: '15px', paddingTop: '14px',
