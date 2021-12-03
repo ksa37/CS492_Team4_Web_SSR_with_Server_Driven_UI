@@ -1,7 +1,7 @@
-import Container from '@mui/material/Container';
-import Card from '@mui/material/Card';
+import { Container, Card, Grid, Link} from '@mui/material';
+// import Card from '@mui/material/Card';
 import { useState } from 'react';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import styles from './influencer.module.css'
 import MoreContent from '../components/MoreContent';
 
@@ -48,23 +48,16 @@ export default function Influencer(props) {
   const { data, keyword, morecontent } = props.props
   return (
     <>
-    <Card sx={{ maxWidth: 768, lineHeight: "79px"}}>
-       <Container sx={{ display: 'flex' }}>
-
-          <Container sx={{ fontSize: '1rem', fontWeight : "700", display: 'flex'}}> 
-          <div>인플루언서 </div> 
+    <Card sx={{ maxWidth: 766, lineHeight: "50px"}}>
+      <Grid sx={{ display: 'flex' }}>
+          <div className = {styles.influencer}> 인플루언서 </div> 
           <img className = {styles.influencer_icon} src="/images/influencer/icon_img.png" alt='icon'/>
-          </Container>
+          <Link sx={{ color: "#0c43b7", fontSize: '15px', ml: "500px"}} href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> 
+      </Grid>
+    </Card>
 
-          <Container sx={{ color: "#0c43b7", fontSize: '1rem' }} className = {styles.contenttitle_rightend}> 
-          <Link href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> 
-          </Container>
-
-        </Container>
-      </Card>
-
-      {data.map((each) => 
-      <Card sx={{ maxWidth: 768, my: '10px'}} key = {each.name}>
+    {data.map((each) => 
+      <Card sx={{ maxWidth: 768}} key = {each.name}>
         <Container sx={{ maxWidth: 768, mt:"10px" }}>
           <Link href={each.avatar_name_url}> 
           <img className = {styles.avatar} src={"/images/influencer/avatar_" + keyword + "_" + each.key + ".png"} alt={each.key}/>
