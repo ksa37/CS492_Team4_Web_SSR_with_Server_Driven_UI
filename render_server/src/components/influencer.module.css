@@ -2,20 +2,29 @@
   color: grey;
   font-weight: 600;
   display: flex;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 .typ_black {
   color: grey;
   font-weight: 200;
-  margin-left: 10px;
 }
-.fanicon {
-  width: 70px;
-  height: 40px;
+.fanicon_before {
+  width: 68px;
+  height: 30px;
   float: right;
+  margin-right: 18px;
+}
+.fanicon_after {
+  width: 52px;
+  height: 30px;
+  float: right;
+  margin-right: 18px;
 }
 .blogicon {
   width: 15px;
   height: 15px;
+  margin: auto 0;
 }
 .flex2 {
   float: left;
@@ -72,7 +81,7 @@
   font-weight: 700;
 }
 .detailsdepth {
-  font-size: 1rem;
+  font-size: 14px;
   color: #666;
   margin-left: 10px;
 }
@@ -104,28 +113,59 @@
   font-size: 17px;
   font-weight: 700;
   margin-left: 18px;
+  float: left;
 }
 .influencer_icon {
   height: 15px;
   width: 15px;
   margin: auto 0;
 }
+.service {
+  color: #0c43b7;
+  font-size: 15px;
+  float: right;
+  margin-right: 18px;
+  /* sx={{ color: "#0c43b7", fontSize: '15px', right}} */
+}
 .rightallign {
-  margin-left: 700px;
-  display: block;
-  z-index: 100;
+  float: right;
+  margin-right: 18px;
 }
 .flex {
   display: flex;
 }
 .flipscreen {
   color: grey;
-  font-weight: 200;
-  margin-left: 10px;
-  font-size: 0.8rem;
+  font-weight: 400;
+  margin-left: 15px;
+  font-size: 14px;
 }
 .avatar {
   float: left;
   height: 38px;
   width: 38px;
+}
+.content {
+  color: #404040;
+  font-size: 16px;
+  float: left;
+  margin-left: 19px;
+}
+.f {
+  display: flex;
+  margin-top: 5px;
+}
+.l {
+  float: left;
+}
+.r {
+  float: right;
+}
+.t {
+  float: left;
+  vertical-align: top;
+}
+.b {
+  float: left;
+  vertical-align: bottom;
 }
