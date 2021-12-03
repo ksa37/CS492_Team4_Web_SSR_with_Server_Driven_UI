@@ -112,27 +112,6 @@ export default function Bulguksa({props}) {
                     style={{ textAlign: 'left'}}
                 />
             </Card>
-<<<<<<< HEAD
-            {
-                menu.darkBtn === 0 ?
-                <Card className={styles.contents} sx={{ maxWidth: 768, mb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
-                    <Bpage0 first_card={first_card} second_card={second_card_whole}/>
-                </Card>
-                :
-                menu.darkBtn === 1 ?
-                <Card className={styles.contents} sx={{ maxWidth: 768, mb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
-                    <Bpage1 first_card={first_card} second_card={second_card_basic} third_card={third_card_basic}/>
-                </Card>
-                :
-                menu.darkBtn === 2 ?
-                <Card className={styles.contents} sx={{ maxWidth: 768, mb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
-                    <Bpage2 first_card={first_card}/>
-                </Card>
-                :
-                <>
-                </>
-            }
-=======
                  <Paper 
                     sx={{ maxWidth:746, borderRadius: '8px', mx: "auto", pt: '10px', pb: '20px' }}
                     style= {{ background: "#e9ecef" }}>
@@ -238,7 +217,6 @@ export default function Bulguksa({props}) {
                         </div>
                     </Paper>
                 </Paper>
->>>>>>> parent of db5b1f7 (Pull develop branch and change VIEW Multimedia css to fit size)
         </>
     )
 }
