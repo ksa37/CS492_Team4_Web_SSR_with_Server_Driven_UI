@@ -50,12 +50,14 @@ function ViewCardTimelinePost({props}) {
                                 width='100%'
                                 height='100%'
                                 objectFit='contain'
+                                alt="default"
                             />
                             : <Image className={styles.viewMultiImgBoarder }
                                 src={publisherImgURL}
                                 width='100%'
                                 height='100%'
                                 objectFit='contain'
+                                alt="publisher"
                             />}
                         </div>
                     </Link>
@@ -87,13 +89,6 @@ function ViewCardTimelinePost({props}) {
                         <div className={styles.title}>{title}</div>
                         <div className={styles.contentsInfo}>
                         <div className={styles.contents}>{contents}</div>
-                        {/* {contentsImgURL.length == 1 && <div className={styles.contentsImgBoarder}>
-                            <Image className={styles.contentsImg}
-                                src={contentsImgURL[0]}
-                                width='87px'
-                                height='87px'
-                            /> 
-                        </div>} */}
                         </div>
                     </a>
                 </Link>
@@ -110,7 +105,7 @@ export default function ViewCardTimeline({props}) {
     view_posts&&view_posts.sort((a, b) => parseInt(a.date) < parseInt(b.date) ? 1 : -1);
 
     const datelist = view_posts&&view_posts.map(view_post => view_post.date)
-    const datelist_converted = datelist&&datelist.map((date, index) => (
+    const datelist_converted = datelist&&datelist.map((date) => (
         DateConvertor(date)
     ))
 

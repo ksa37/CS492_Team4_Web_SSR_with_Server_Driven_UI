@@ -27,8 +27,8 @@ const Search = (props) => {
   return (
     <div>
       { showResults ? 
-      <div className = {styles.rightallign} onClick={onClick} > <img className = {styles.influencer_icon} src="/images/influencer/after.png"/>  </div> 
-      : <div className = {styles.rightallign} onClick={onClick} > <img className = {styles.influencer_icon} src="/images/influencer/before.png"/>  </div>}
+      <div className = {styles.rightallign} onClick={onClick} > <img className = {styles.influencer_icon} src="/images/influencer/after.png" alt='after'/>  </div> 
+      : <div className = {styles.rightallign} onClick={onClick} > <img className = {styles.influencer_icon} src="/images/influencer/before.png" alt='before'/>  </div>}
       { showResults ? <Results props={props}/> : null }
     </div>
   )
