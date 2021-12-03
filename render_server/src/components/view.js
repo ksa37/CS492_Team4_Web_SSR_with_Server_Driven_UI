@@ -1,12 +1,8 @@
-// import Image from 'next/image'
-import Image from 'material-ui-image'
+
 import React,{ useState } from 'react';
-import MoreContent from './MoreContent';
-import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Container, Chip, CssBaseline, Divider, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
-// import Link from 'next/link'
-import Link from '@mui/material/Link'
+import MoreContent from './Morecontent';
+import { Card, CardHeader, Chip, Grid, IconButton, Paper, Stack, Typography } from '@mui/material';
 import PostCard from './PostCard';
-import ViewCardBasic from './ViewCardBasic';
 import ViewCardMultimeda from './ViewCardMultimedia'
 import ViewCardTimeline from './ViewCardTimeline';
 

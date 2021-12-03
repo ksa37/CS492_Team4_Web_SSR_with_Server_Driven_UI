@@ -2,10 +2,10 @@ import React from 'react'
 import Link from '@mui/material/Link';
 import styles from './postCard.module.css'
 import Image from 'material-ui-image'
-import MoreVert from './MoreVert'
+import MoreVert from './Morevert'
 import DateConvertor from './DateConvertor'
 import ImageScroll from './ImageScroll';
-import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack} from '@mui/material';
+import { Card, CardHeader} from '@mui/material';
 import LinkArea from './LinkArea';
 
 var LinkType = Object.freeze({
