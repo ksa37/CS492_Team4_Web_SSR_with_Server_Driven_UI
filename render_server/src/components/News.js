@@ -1,7 +1,7 @@
 import React from 'react'
-import PostCard from './Postcard'
-import styles from './News.module.css'
-import MoreContent from './Morecontent';
+import PostCard from './PostCard'
+import styles from './news.module.css'
+import MoreContent from '../components/Morecontent';
 
 import { Card, CardHeader } from '@mui/material';
 import Dot from '../../public/icons/dot.svg'; 
@@ -16,7 +16,7 @@ export default function News({props}) {
   const {news_posts, news_more} = props
   
   const [sortRelated, setSortRelated] = React.useState(true);
-  const isRelated = Boolean(sortRelated);
+  // const isRelated = Boolean(sortRelated);
   const sortRelatedClick = (event) => {
     setSortRelated(true);
   };

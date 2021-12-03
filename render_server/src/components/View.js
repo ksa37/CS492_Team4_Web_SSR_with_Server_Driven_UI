@@ -1,10 +1,10 @@
+
 import React,{ useState } from 'react';
 import MoreContent from './Morecontent';
-import { Card, CardHeader, Chip, Grid, IconButton, Paper, Stack, Typography} from '@mui/material';
-import PostCard from './Postcard';
-import ViewCardBasic from './Viewcardbasic';
-import ViewCardMultimeda from './Viewcardmultimedia'
-import ViewCardTimeline from './Viewcardtimeline';
+import { Card, CardHeader, Chip, Grid, IconButton, Paper, Stack, Typography } from '@mui/material';
+import PostCard from './PostCard';
+import ViewCardMultimeda from './ViewCardMultimedia'
+import ViewCardTimeline from './ViewCardTimeline';
 
 var ViewType = Object.freeze({
     NEWS: 0,
@@ -64,10 +64,12 @@ export default function View({props}){
                         {   currentItem.tab==option.tab
                             ? <img 
                                 src={option.src_open}
-                                height={16} width={16}/>
+                                height={16} width={16}
+                                alt={index}/>
                             : <img 
                             src={option.src_close}
-                            height={16} width={16}/>
+                            height={16} width={16}
+                            alt={index}/>
                         }
                         </IconButton>
                     ))}

@@ -45,7 +45,9 @@
     font-size: 18px;
     font-weight: 500;
     color:rgba( 39, 105, 189, 1 );
+    margin-top: 4px; 
 }
+
 
 .contentsInfo {
     display: flex;
@@ -53,6 +55,21 @@
     justify-content: flex-start;
     margin-top:7px; 
     /* margin-top: 12px;  */
+}
+
+.contentsInfo_wiki {
+    display: block;
+    margin-top:7px; 
+}
+
+.contents_wiki {
+    /* flex-basis: 626px; */
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 24px;
+    color: var(--dark_gray_2);
+    padding-bottom: 2px;
+    /* flex: 200; */
 }
 
 .contents {

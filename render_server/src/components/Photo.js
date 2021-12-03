@@ -1,6 +1,6 @@
 import React from 'react';
-import StandardImageList from './Standardimagelist';
-import MoreContent from './Morecontent';
+import StandardImageList from '../components/StandardImageList';
+import MoreContent from '../components/Morecontent';
 import { Avatar, Card, CardHeader, Chip, Grid, Paper, Stack, Typography} from '@mui/material';
 
 export default function Photo({props}) {

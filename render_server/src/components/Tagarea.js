@@ -1,6 +1,6 @@
 import React from 'react'
-import { Paper, Stack} from '@mui/material';
-import styles from './Postcard.module.css'
+import { Paper, Stack } from '@mui/material';
+import styles from './postCard.module.css'
 
 export default function TagArea({props}){
     const {tags} = props

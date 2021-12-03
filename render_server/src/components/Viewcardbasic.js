@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './Postcard.module.css'
+import styles from './postCard.module.css'
 import MoreVert from './Morevert'
-import DateConvertor from './Dateconvertor'
+import DateConvertor from './DateConvertor'
 import Image from 'material-ui-image'
 
 import { Card, CardContent, CardHeader, Divider, Paper, Stack} from '@mui/material';
@@ -40,6 +40,7 @@ export default function ViewCardBasic({props, view}) {
                                 width='100%'
                                 height='100%'
                                 objectFit='contain'
+                                alt='default'
                             />
                             : <Image className={styles.publisherImg}
                                 
@@ -48,6 +49,7 @@ export default function ViewCardBasic({props, view}) {
                                 width='100%'
                                 height='100%'
                                 objectFit='contain'
+                                alt='publisher'
                             />}
                         </div>
                     </a>
@@ -70,7 +72,9 @@ export default function ViewCardBasic({props, view}) {
                         "open": open, 
                         "anchorEl": anchorEl, 
                         "handleClick": handleClick, 
-                        "handleClose": handleClose
+                        "handleClose": handleClose,
+                        "url": postURL,
+                        "title": title
                     }}
                     />
                 }
@@ -89,6 +93,7 @@ export default function ViewCardBasic({props, view}) {
                                 src={contentsImgURL}
                                 width='87px'
                                 height='87px'
+                                alt='content'
                             /> 
                         </div>}
                     </div>
@@ -97,7 +102,7 @@ export default function ViewCardBasic({props, view}) {
             <Paper 
               className="group_option_tag_wrap" 
               style={{overflow: 'auto', paddingBottom: 18}}
-              elevation='0'
+              elevation={0}
               square
             >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:18, paddingRight:18}}> 
@@ -127,6 +132,7 @@ export default function ViewCardBasic({props, view}) {
                         src={"icons/link.png"}
                         height={11}
                         width={11}
+                        alt='link'
                     />
                     <span> 유지니의 #파리여행 콘텐츠 더보기</span>
                     <img
@@ -134,6 +140,7 @@ export default function ViewCardBasic({props, view}) {
                         src={'/icons/forward.svg'}
                         width={7}
                         height={11}
+                        alt='forward'
                     />
                     {/* <div className={styles.linkBoxForward} /> */}
                     

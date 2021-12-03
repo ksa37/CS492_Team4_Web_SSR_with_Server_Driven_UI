@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Linkarea.module.css'
+import styles from './linkArea.module.css'
 
 var LinkType = Object.freeze({
     VIEWBASIC: 0,

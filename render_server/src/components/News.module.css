@@ -19,7 +19,7 @@
 .viewName {
     font-size: 16px;
     font-weight: 700;
-    color:rgba( 2, 2, 2, 1 );
+    color: var(--dark_gray_1);
 }
 
 .viewOptions {

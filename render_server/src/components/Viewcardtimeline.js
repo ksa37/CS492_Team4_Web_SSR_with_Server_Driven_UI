@@ -1,12 +1,12 @@
 import React from 'react'
 import Link from '@mui/material/Link';
-import styles from './Postcard.module.css'
+import styles from './postCard.module.css'
 import Image from 'material-ui-image'
 import MoreVert from './Morevert'
-import DateConvertor from './Dateconvertor'
-import ImageScroll from './Imagescroll';
+import DateConvertor from './DateConvertor'
+import ImageScroll from './ImageScroll';
 import { Card, CardHeader} from '@mui/material';
-import LinkArea from './Linkarea';
+import LinkArea from './LinkArea';
 
 var LinkType = Object.freeze({
     VIEWBASIC: 0,
@@ -59,12 +59,14 @@ export default function ViewCardTimeline({props}) {
                                         width='100%'
                                         height='100%'
                                         objectFit='contain'
+                                        alt='default'
                                     />
                                     : <Image className={styles.viewMultiImgBoarder }
                                         src={publisherImgURL}
                                         width='100%'
                                         height='100%'
                                         objectFit='contain'
+                                        alt='publisher'
                                     />}
                                 </div>
                             </Link>
@@ -82,7 +84,9 @@ export default function ViewCardTimeline({props}) {
                                 "open": open, 
                                 "anchorEl": anchorEl, 
                                 "handleClick": handleClick, 
-                                "handleClose": handleClose
+                                "handleClose": handleClose,
+                                "url": postURL,
+                                "title": title
                             }}
                             />
                         }

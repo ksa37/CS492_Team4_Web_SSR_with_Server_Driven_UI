@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./Standardimagelist.module.css";
+import styles from "./imagelist.module.css";
 import Link from '@mui/material/Link';
 
 
@@ -19,6 +19,7 @@ export default function StandardImageList({props}) {
                   <img
                   className={styles.grid_item_img}
                   src={img.img_path}
+                  alt={index}
                   // layout="fill"
                   loading="lazy"
                 />
@@ -29,3 +30,4 @@ export default function StandardImageList({props}) {
     </div>
   )
 }
+

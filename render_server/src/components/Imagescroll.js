@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './Imagescroll.module.css'
+import styles from './imageScroll.module.css'
 
 var ScrollType = Object.freeze({
     VIEWBASIC: 0,
@@ -8,7 +8,8 @@ var ScrollType = Object.freeze({
   });
 
 export default function ImageScroll({props, scroll_view}) {
-    const {imgs, link} = props
+    const {imgs} = props
+    // const {imgs, link} = props
     const {scroll_type} = scroll_view
     
     return(
@@ -20,6 +21,7 @@ export default function ImageScroll({props, scroll_view}) {
                     <img key={index}
                         className={styles.imageScrollerItem}
                         src={img}
+                        alt={index}
                     />
                 ))}
             </ul>
@@ -31,6 +33,7 @@ export default function ImageScroll({props, scroll_view}) {
                     <img key={index}
                         className={styles.imageScrollerItemTimeLine}
                         src={img}
+                        alt={index}
                     />
                 ))}
             </ul>
@@ -42,6 +45,7 @@ export default function ImageScroll({props, scroll_view}) {
                     <img key={index}
                         className={styles.imageScrollerItemInfluencer}
                         src={img}
+                        alt={index}
                     />
                 ))}
             </ul>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Paper, Typography} from '@mui/material';
 import Link from '@mui/material/Link';
-import styles from './Morecontent.module.css'
+import styles from './MoreContent.module.css'
 
 export default function MoreContent({props}){
     const {view_option, more_link} = props;
@@ -13,7 +13,7 @@ export default function MoreContent({props}){
                         {<div className={styles.moreContentText}>
                             <Box sx={{m: 0.5}}/>
                             <Typography  style={{ fontSize: 16, verticalAlign:'center', textAlign:'center'}}>
-                                {view_option} 더보기 {<img src="/icons/forward_arrow.svg"/>}
+                                {view_option} 더보기 {<img src="/icons/forward_arrow.svg" alt='arrow'/>}
                             </Typography>
                             <Box sx={{m: 0.5}}/>
                         </div> 

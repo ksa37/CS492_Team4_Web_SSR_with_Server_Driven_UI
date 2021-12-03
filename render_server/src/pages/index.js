@@ -4,13 +4,13 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import { CssBaseline, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import Link from '@mui/material/Link';
 
-import News from '../components/News';
-import Photo from '../components/Photo';
-import Wiki from '../components/Wiki';
-import View from '../components/View'
-import Influencer from '../components/Influencer';
+import News from '../components/news';
+import Photo from '../components/photo';
+import Wiki from '../components/wiki';
+import View from '../components/view'
+import Influencer from '../components/influencer';
+import Drama from '../components/Drama';
 import Bulguksa from '../components/Bulguksa';
 import Linkbox from '../components/Linkbox';
 
@@ -77,8 +77,13 @@ export default function Home({ data, views}) {
               if (keyword === '불국사')
               {
                 return (
-                  <div key={index} className="section_bulguksa">
-                    <Bulguksa props={json.basic}/>
+                  <div key={index}>
+                    <div className="section_bulguksa">
+                      <Bulguksa props={json.basic}/>
+                    </div>
+                    <div className="section_drama">
+                      <Drama/>  
+                    </div>
                   </div>
                 )
               }
@@ -114,14 +119,18 @@ export default function Home({ data, views}) {
                 </div>
               )
           }})}
-        <Box sx={{ mb: 15 }}></Box>
-        <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
-          NAVER
-        </Typography>
-        <Typography style={{ fontSize: 14, verticalAlign: 'center', textAlign: 'center' }}>
-          Team 4
-        </Typography>
-        <Box sx={{ mb: 5 }}></Box>
+          <Box sx={{ mb: 15 }}></Box>
+          <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>
+            <img src="/icons/naver_logo.png" 
+            width="auto"
+            height="21px"
+            alt='naver'
+          />
+          </Typography>
+          <Typography style={{ fontSize: 14, fontWeight: '900', color: 'var(--date_gray)', verticalAlign: 'center', textAlign: 'center' }}>
+            Team 4
+          </Typography>
+          <Box sx={{ mb: 5 }}></Box>
       </div>
     </ThemeProvider>
   )
