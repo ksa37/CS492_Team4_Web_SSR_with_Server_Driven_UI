@@ -29,19 +29,34 @@ const selectView = [
     }
 ];
 
-const useTabs = (initialTabs, allTabs) => {
-    const [currentIndex, setContentIndex] = useState(initialTabs);
-    return {
-      currentItem: allTabs[currentIndex],
-      contentChange: setContentIndex
-    };
-};
 
 export default function View({props}){
     const view_option = "VIEW";
-    const {tags, view_posts, view_more} = props
+    const {tags, view_posts, view_cafe_posts, view_weather_posts, view_more} = props
+      const [currentViewType, setViewType] = useState(0);
+      const [currentBasicTag, setBasicTag] = useState(0);
+      const [currentTimelineTag, setTimelineTag] = useState(0);
+      const [currentMultimediaTag, setMultimediaTag] = useState(0);
+      const tagsForViewType = [currentBasicTag, currentTimelineTag, currentMultimediaTag];
 
-    const { currentItem, contentChange } = useTabs(0, selectView);
+      const setViewTag = (index) => {
+        if (currentViewType==0){
+            setBasicTag(index);
+            console.log("setting basic tag")
+            console.log(index)
+            console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
+        }
+        else if (currentViewType==1){
+            setTimelineTag(index);
+            console.log("setting timeline tag")
+            console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
+        }
+        else if (currentViewType==2){
+            setMultimediaTag(index);
+            console.log("setting multimedia tag")
+            console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
+        }
+      };
 
     return(
     <>
@@ -59,9 +74,10 @@ export default function View({props}){
                     {selectView&&selectView.map((option, index)=>(
                         <IconButton
                             key={index}
-                            onClick={()=>contentChange(index)}
+                            name='view_type'
+                            onClick={()=> setViewType(index)}
                         >
-                        {   currentItem.tab==option.tab
+                        {   currentViewType==index
                             ? <img 
                                 src={option.src_open}
                                 height={16} width={16}
@@ -86,39 +102,74 @@ export default function View({props}){
                 direction="row"
                 alignItems="center"
                 style={{minHeight:66}}
-                
                 >
                 <Stack direction="row" spacing={1} style= {{paddingLeft:12, paddingRight:12}}>
-                {tags&&tags.map((item, index) => (
-                    <Chip 
-                    key={index} 
-                    component="a" 
-                    href={item.tagURL}
-                    label={item["tag_name"]}
-                    variant="outlined"
-                    sx={{backgroundColor: "#ffffff"}}
-                    clickable
-                    />
-                ))}
+                    {tags&&tags.map((item, index) => (
+                        <>
+                        { tagsForViewType[currentViewType]==index
+                            ? <Chip 
+                            key={index} 
+                            name='tag'
+                            label={item["tag_name"]}
+                            variant="outlined"
+                            sx={{backgroundColor: "#06c755", color: "#ffffff", fontWeight: "bold", borderColor:"#06c755", "&&:hover":{backgroundColor:"#06c755"}}}
+                            clickable
+                            onClick={() => setViewTag(index)}
+                            />
+                            : <Chip 
+                            key={index} 
+                            name='tag'
+                            label={item["tag_name"]}
+                            variant="outlined"
+                            sx={{backgroundColor: "#ffffff", color: "#666", "&&:hover":{backgroundColor:"#ffffff" }}}
+                            clickable
+                            onClick={() => setViewTag(index)}
+                            />
+                        }
+                        {}
+                        </>
+                    ))}
                 </Stack>
                 </Grid>
             </Paper>
-            {currentItem.tab=="basic" 
+
+            {currentViewType==0 && currentBasicTag==0
                 ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => 
                     <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
-
                     )}</> 
                 : <></> }
-            {currentItem.tab=="timeline" 
-                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardTimeline key={index} props={view} />)} </>
+            {currentViewType==1 && currentTimelineTag==0
+                ? <>{view_posts&&<ViewCardTimeline props={{'view_posts': view_posts.slice(0,5)}}/>} </>
                 : <></> }
-            {currentItem.tab=="multimedia" 
+            {currentViewType==2 && currentMultimediaTag==0
                 ? <>{view_posts&&view_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
                 : <></> }
+            
+            {currentViewType==0 && currentTimelineTag==1
+                ? <>{view_cafe_posts&&view_cafe_posts.slice(0, 5).map((view, index) => 
+                    <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
+                    )}</> 
+                : <></>}
+            {currentViewType==1 && currentBasicTag==1
+                ? <>{view_cafe_posts&&<ViewCardTimeline props={{'view_posts': view_cafe_posts.slice(0,5)}}/>} </>
+                : <></> }
+            {currentViewType==2 && currentMultimediaTag==1
+                ? <>{view_cafe_posts&&view_cafe_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
+                : <></> }
+            {currentViewType==0 && currentTimelineTag==2
+                ? <>{view_weather_posts&&view_weather_posts.slice(0, 5).map((view, index) => 
+                    <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
+                    )}</> 
+                : <></>}
+            {currentViewType==1 && currentBasicTag==2
+                ? <>{view_weather_posts&&<ViewCardTimeline props={{'view_posts': view_weather_posts.slice(0,5)}}/>} </>
+                : <></> }
+            {currentViewType==2 && currentMultimediaTag==2
+                ? <>{view_weather_posts&&view_weather_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
+                : <></> }
+            
 
-            {/* {view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardBasic key={index} props={view} view={{"viewType": "NEWS"}}/>)}
-            {view_posts&&view_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} view={{"viewType": "NEWS"}}/>)}
-            {view_posts&&view_posts.slice(0, 1).map((view, index) => <ViewCardTimeline key={index} props={view} view={{"viewType": "NEWS"}}/>)} */}
+            
         </Card>
         <MoreContent props={{'view_option':view_option,'more_link':view_more}}/>
     </>

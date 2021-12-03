@@ -52,9 +52,9 @@ export default function Bulguksa({props}) {
                     title= {
                         <div>
                             <div className={styles.name}>
-                                <Link className={styles.name} href={href} underline="none"> 
+                                <a className={styles.name} href={href} underline="none"> 
                                     {title}
-                                </Link>
+                                </a>
                             </div>
                             <div className={styles.category}>
                                 {subtitle[0]}

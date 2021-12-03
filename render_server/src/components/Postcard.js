@@ -9,6 +9,8 @@ import ImageScroll from './ImageScroll';
 import { Card, CardContent, CardHeader, Divider } from '@mui/material';
 import TagArea from './TagArea';
 import LinkArea from './LinkArea';
+import Comments from './Comments';
+import GrayboxLink from './GrayBoxLink';
 import Linkslist from './Linkslist';
 
 var ViewType = Object.freeze({
@@ -27,10 +29,9 @@ var ScrollType = Object.freeze({
     VIEWTIMELINE: 1,
     INFLUENCER: 2
 });
-// typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
 export default function PostCard({props, view}) {  
-    const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, imgNum, tags, more_links, content_links } = props
+    const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, imgNum, tags, more_links, content_links, comments, gray_link } = props
     const { viewType } = view
 
     const now = Date.now()
@@ -45,9 +46,6 @@ export default function PostCard({props, view}) {
     const handleClose = () => {
         setAnchorEl(null);
     };
-    // if (viewType==ViewType.VIEW){
-    //     console.log(contentsImgURL.length);
-    // }
     
     return (
         <Card sx={{ maxWidth: 766 }} square > 
@@ -130,7 +128,7 @@ export default function PostCard({props, view}) {
                     <div className={styles.title}>{title}</div>
                     {viewType == ViewType.VIEW && contentsImgURL.length > 1 &&
                         <>
-                            <ImageScroll props={{'imgs': contentsImgURL}} scroll_view={{"scroll_type": ScrollType.VIEWBASIC}}/>
+                        <ImageScroll props={{'imgs': contentsImgURL}} scroll_view={{"scroll_type": ScrollType.VIEWBASIC}}/>
                         </>
                     }
                     <div className={styles.contentsInfo}>
@@ -160,7 +158,9 @@ export default function PostCard({props, view}) {
                 </Link>
                 }
             </CardContent>  
-            {viewType == ViewType.VIEW &&<TagArea props={{"tags":tags}}/>}   
+            {viewType == ViewType.VIEW && gray_link&&<GrayboxLink props={{"publisher": publisher, "gray_tag":gray_link.gray_tag, "link": gray_link.link}}/>}
+            {viewType == ViewType.VIEW && comments&&comments.length>=1&&<Comments props={{'comments':comments, 'link': postURL}}/>}
+            {viewType == ViewType.VIEW && tags.length>=1&&<TagArea props={{"tags":tags}}/>}   
             {viewType == ViewType.VIEW &&<LinkArea props={{"more_links":more_links}} link_view={{"link_type": LinkType.VIEWBASIC}}/>}                
         </Card>
     )

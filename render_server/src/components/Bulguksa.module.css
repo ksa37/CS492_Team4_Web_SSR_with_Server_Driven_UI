@@ -16,7 +16,7 @@
 .name {
     font-size: 18px;
     font-weight: bold;
-    color: var(--dark_gray_1);
+    color: #000;
     width: fit-content;
 }
 

@@ -23,8 +23,6 @@ export default function ViewCardMultimeda({props}) {
         setAnchorEl(null);
     };
 
-    // const more_links_exist = more_links.length!=0;
-
     return (
         <Card sx={{ maxWidth: 766 }} square > 
             <CardHeader 
@@ -76,7 +74,6 @@ export default function ViewCardMultimeda({props}) {
                 <img
                     className={styles.viewMultiImg}
                     src={contentsImgURL[0]}
-                    layout="fill"
                     alt='content'
                 /> 
             </div>}
