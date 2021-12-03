@@ -29,7 +29,6 @@ var ScrollType = Object.freeze({
     VIEWTIMELINE: 1,
     INFLUENCER: 2
 });
-// typeScript 에서는 바꾸기 https://engineering.linecorp.com/ko/blog/typescript-enum-tree-shaking/
 
 export default function PostCard({props, view}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, imgNum, tags, more_links, content_links, comments, gray_link } = props
@@ -47,9 +46,12 @@ export default function PostCard({props, view}) {
     const handleClose = () => {
         setAnchorEl(null);
     };
+<<<<<<< HEAD
+=======
     // if (viewType==ViewType.VIEW){
     //     console.log(contentsImgURL.length);
     // }
+>>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
     
     return (
         <Card sx={{ maxWidth: 766 }} square > 
@@ -133,8 +135,11 @@ export default function PostCard({props, view}) {
                     {viewType == ViewType.VIEW && contentsImgURL.length > 1 &&
                         <>
                         <ImageScroll props={{'imgs': contentsImgURL}} scroll_view={{"scroll_type": ScrollType.VIEWBASIC}}/>
+<<<<<<< HEAD
+=======
                         {/* <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.VIEWTIMELINE}}/>
                         <ImageScroll props={{'imgs': contentsImgURL, 'link': postURL}} scroll_view={{"scroll_type": ScrollType.INFLUENCER}}/> */}
+>>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
                         </>
                     }
                     <div className={styles.contentsInfo}>

@@ -33,6 +33,8 @@ const selectView = [
 export default function View({props}){
     const view_option = "VIEW";
     const {tags, view_posts, view_cafe_posts, view_weather_posts, view_more} = props
+<<<<<<< HEAD
+=======
 
     {/* Tag change keeped even when view type changes*/}
 
@@ -50,6 +52,7 @@ export default function View({props}){
     //     });
     //   };
 
+>>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
       const [currentViewType, setViewType] = useState(0);
       const [currentBasicTag, setBasicTag] = useState(0);
       const [currentTimelineTag, setTimelineTag] = useState(0);
@@ -88,6 +91,8 @@ export default function View({props}){
                 style = {{ textAlign: 'left'}}
                 action = {
                     <>
+<<<<<<< HEAD
+=======
                     {/* Tag change keeped even when view type changes*/}
                     {/* {selectView&&selectView.map((option, index)=>(
                         <IconButton
@@ -105,6 +110,7 @@ export default function View({props}){
                         }
                         </IconButton>
                     ))} */}
+>>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
                     {selectView&&selectView.map((option, index)=>(
                         <IconButton
                             key={index}
@@ -167,6 +173,8 @@ export default function View({props}){
                 </Grid>
             </Paper>
 
+<<<<<<< HEAD
+=======
             {/* Tag change keeped even when view type changes*/}
             {/* {currentIndices.view_type==0 && currentIndices.tag==0
                 ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => 
@@ -190,6 +198,7 @@ export default function View({props}){
                     )}</> 
                 : <></>} */}
 
+>>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
             {currentViewType==0 && currentBasicTag==0
                 ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => 
                     <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
@@ -231,4 +240,8 @@ export default function View({props}){
         <MoreContent props={{'view_option':view_option,'more_link':view_more}}/>
     </>
     )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2

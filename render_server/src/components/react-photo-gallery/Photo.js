@@ -22,6 +22,7 @@ const Photo = ({ index, onClick, photo, margin, direction, top, left, key, href 
         style={onClick ? { ...imgStyle, ...imgWithClick } : imgStyle}
         {...photo}
         onClick={onClick ? handleClick : null}
+        alt={key}
       />
       :
       <a href={href}>
@@ -30,6 +31,7 @@ const Photo = ({ index, onClick, photo, margin, direction, top, left, key, href 
           style={onClick ? { ...imgStyle, ...imgWithClick } : imgStyle}
           {...photo}
           onClick={onClick ? handleClick : null}
+          alt={key}
         />
       </a>
   );

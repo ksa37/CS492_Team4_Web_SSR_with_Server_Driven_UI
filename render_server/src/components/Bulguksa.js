@@ -52,9 +52,9 @@ export default function Bulguksa({props}) {
                     title= {
                         <div>
                             <div className={styles.name}>
-                                <Link className={styles.name} href={href} underline="none"> 
+                                <a className={styles.name} href={href} underline="none"> 
                                     {title}
-                                </Link>
+                                </a>
                             </div>
                             <div className={styles.category}>
                                 {subtitle[0]}
@@ -112,111 +112,25 @@ export default function Bulguksa({props}) {
                     style={{ textAlign: 'left'}}
                 />
             </Card>
-                 <Paper 
-                    sx={{ maxWidth:746, borderRadius: '8px', mx: "auto", pt: '10px', pb: '20px' }}
-                    style= {{ background: "#e9ecef" }}>
-                    <Paper 
-                        sx={{ maxWidth:716, borderRadius: '6px', mx: "9px", mb: '12px'}}
-                        style= {{ background: "#ffffff" }}
-                    >
-                        <div className={styles.relimg}>
-                            <span className={styles.child}>
-                                <span><img className={styles.childimg} src='/images/Bulguksa/imgnum.png' alt='num'/></span>
-                                <span className={styles.childnum}>{relimg.imgs.length}</span>
-                            </span>
-                            <div className={styles.scroll}>
-                                <ul className={styles.scrollul}>
-                                    {relimg.imgs&&relimg.imgs.map((img, index)=> {
-                                        if(index < 10)
-                                        {
-                                            return (
-                                                <li key={index} className={styles.scrollli}>
-                                                    <a href={relimg.href}>
-                                                        <div className={styles.scrollthumb}>
-                                                            <img 
-                                                                src={img}
-                                                                height= "168px"
-                                                                alt="불국사"
-                                                            />
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                            )
-                                        }
-                                    })}
-                                </ul>
-                            </div>
-                        </div>
-                        <div className={styles.middletitle}>
-                            <a className={styles.morelink} href={middletitle.href}>
-                                <h3 className={styles.morelinktitle}>{middletitle.text}</h3>
-                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png' alt='more'></img>
-                            </a>
-                        </div>
-                        <div className={styles.detailinfo}>
-                            <dl className={styles.infotxt}>
-                                {detailinfo&&detailinfo.map((info, index)=> {
-                                    if(info.length === 2)
-                                    {
-                                        return (
-                                            <div key={index} className={styles.infogroup}>
-                                                <dt className={styles.infogroupdt}><span className={styles.bar}/>{info[0]}</dt>
-                                                <dd className={styles.infogroupdd}>{info[1]}</dd>
-                                            </div>
-                                        )
-                                    }
-                                    else if(info.length === 3)
-                                    {
-                                        return (
-                                            <div key={index} className={styles.infogroup}>
-                                                <dt className={styles.infogroupdt}><span className={styles.bar}/>{info[0]}</dt>
-                                                <dd className={styles.infogroupdd}><a href={info[2]}>{info[1]}</a></dd>
-                                            </div>
-                                        )
-                                    }
-                                })}
-                            </dl>
-                            <div className={styles.textexpand}>
-                                {detailinfo[detailinfo.length-1][0]}
-                            </div>
-                        </div>
-                        <div className={styles.buttonarea}>
-                            <div className={styles.buttonbox}>
-                                <ul className={styles.buttonboxul}><li className={styles.buttonboxli}><a className={styles.buttonboxa} href={buttonarea}><img className={styles.buttonareaicon} src='/images/Bulguksa/map.png' alt='button'></img>지도</a></li></ul>
-                            </div>
-                        </div>
-                    </Paper>
-                    <Paper 
-                        sx={{ maxWidth:716, borderRadius: '6px', mx: "9px"}}
-                        style= {{ background: "#ffffff" }}
-                    >
-                        <div className={styles.middletitle}>
-                            <a className={styles.morelink} href={middletitle2.href}>
-                                <h3 className={styles.morelinktitle}>{middletitle2.text}</h3>
-                                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png' alt='more'></img>
-                            </a>
-                        </div>
-                        <div className={styles.scrollbox}>
-                            <div className={styles.listinfo}>
-                                <ul className={styles.scrollboxul}>
-                                    {scrollbox&&scrollbox.map((scroll, index)=> {
-                                        return (
-                                            <li className={styles.scrollboxli} key={index}>
-                                                <div className={styles.areacard}>
-                                                    <a href={scroll.href}><img src={scroll.thumb} width="87px" height="87px" alt={scroll.name}></img></a>
-                                                    <div className={styles.titlebox}>
-                                                        <a className={styles.titleboxname} href={scroll.href}>{scroll.name}</a>
-                                                        <span className={styles.titleboxsubtext}>{scroll.subtext}</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        )
-                                    })}
-                                </ul>
-                            </div>
-                        </div>
-                    </Paper>
-                </Paper>
+            {
+                menu.darkBtn === 0 ?
+                <Card className={styles.contents} sx={{ maxWidth: 768, mb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
+                    <Bpage0 first_card={first_card} second_card={second_card_whole}/>
+                </Card>
+                :
+                menu.darkBtn === 1 ?
+                <Card className={styles.contents} sx={{ maxWidth: 768, mb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
+                    <Bpage1 first_card={first_card} second_card={second_card_basic} third_card={third_card_basic}/>
+                </Card>
+                :
+                menu.darkBtn === 2 ?
+                <Card className={styles.contents} sx={{ maxWidth: 768, mb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
+                    <Bpage2 first_card={first_card}/>
+                </Card>
+                :
+                <>
+                </>
+            }
         </>
     )
 }

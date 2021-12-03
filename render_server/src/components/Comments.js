@@ -1,5 +1,8 @@
 import React from 'react'
+<<<<<<< HEAD
+=======
 import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack, Typography} from '@mui/material';
+>>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
 import Link from '@mui/material/Link';
 import styles from './comments.module.css'
 
@@ -7,6 +10,8 @@ export default function Comments({props}){
     const {comments, link} = props
 
     return (
+<<<<<<< HEAD
+=======
         // <Paper 
         // className="group_option_tag_wrap" 
         // style={{overflow: 'auto', paddingBottom: 18}}
@@ -21,6 +26,7 @@ export default function Comments({props}){
         //     ))}
         //     </Stack>
         // </Paper>
+>>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
         <div className={styles.totalComment}>
             <div className={styles.commentsWrap}>
                 <div>
@@ -41,6 +47,10 @@ export default function Comments({props}){
                                      <img 
                                         src="/icons/forward_arrow.svg"
                                         style={{paddingTop:'10px'}}
+<<<<<<< HEAD
+                                        alt="forward"
+=======
+>>>>>>> 4eb85f7651b68a2f7e9edd858b75bdbaf70f33f2
                                      />
                                     </span>
                                     더보기 
