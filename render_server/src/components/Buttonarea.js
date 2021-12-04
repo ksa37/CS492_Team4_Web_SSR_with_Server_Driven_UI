@@ -2,12 +2,31 @@ import  React from 'react'
 import styles from './Bulguksa.module.css'
 
 export default function Buttonarea({buttonarea}) {
+    const {mapURL, shareURL, title} = buttonarea
+    
     return (
-    <>
-        <div className={styles.buttonarea}>
-            <div className={styles.buttonbox}>
-                <ul className={styles.buttonboxul}><li className={styles.buttonboxli}><a className={styles.buttonboxa} href={buttonarea}><img className={styles.buttonareaicon} src='/images/Bulguksa/map.png' alt='button'/>지도</a></li></ul>
-            </div>
+    <>  
+        <div className={styles.btnArea}>
+            <a className={styles.mapbtnArea} href={mapURL}>
+                <img className={styles.mapIcon} src='/images/Bulguksa/map.png' alt='map_button'/>
+                지도
+            </a>
+            <a className={styles.sharebtnArea} onClick={shareNaverLink( shareURL, `[공유] ${title}` )}>
+                <img src='/images/Bulguksa/map.png' alt='share_button'/>
+            </a>
         </div>
+        
     </>)
+}
+
+function shareNaverLink(url, title) { 
+    var encodeUrl = encodeURIComponent( url ); 
+    var encodeTitle = encodeURIComponent( title );
+    var link = `https://share.naver.com/web/shareView.nhn?url=${encodeUrl}&title=${encodeTitle}`; 
+    
+    // console.log("share Naver", encodeUrl, encodeTitle)
+    if (typeof window !== "undefined") {
+        // browser code
+        window.open( link, 'share', 'width=500, height=500' ); 
+    }
 }

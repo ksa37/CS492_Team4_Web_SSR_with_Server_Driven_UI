@@ -8,7 +8,7 @@
     border: 1px solid #E3E5E8;
     border-bottom: none;
     border-top-width: 2px;
-    border-top-color: rgba(145,120,103,0.5);
+    border-top-color: #BBBEC6;
 
     z-index: 5;
 }
@@ -23,6 +23,7 @@
 .category {
     display: flex;
     flex-direction: row;
+    align-items: center;
     margin-top: 4px;
     font-size: 14px;
     font-weight: 400;
@@ -34,6 +35,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 4px;
     margin-bottom: 10px;
 }
 
@@ -69,8 +71,9 @@
     display: inline-block;
     width: 1px;
     height: 12px;
-    margin: 4px 9px 0;
-    vertical-align: top;
+    margin-left: 8px;
+    margin-right: 8px;
+    /* vertical-align: top; */
     color: rgba(107,112,122,0.8);
 }
 
@@ -338,57 +341,41 @@
     font-size: 0.9rem;
 }
 
-.buttonarea{
-    padding: 0 15px 6px;
-    margin-top: 8px;
+.btnArea {
     display: flex;
-    position: relative;
-    margin: 14px 0 0;
-    width: 100%;
+    flex-direction: row;
+    margin-top: 8px;
+    height: 45px;
 }
 
-.buttonbox{
-    flex: 1;
-    display:block
-}
-
-.buttonboxul{
-    width: 100%;
-    display: table;
+.mapbtnArea{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     background-color: #fafbfc;
     border: 1px solid #e3e6e8;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.buttonboxli{
-    font-size: 1.6rem;
-    display: table-cell;
-    position: relative;
-    color: rgba(0, 0, 0, 0.87);
-}
-
-.buttonboxa{
-    display: block;
-    line-height: 2.4rem;
-    white-space: nowrap;
-    font-weight: normal;
+    border-radius: 3px;
+    width: 100%;
+    /* padding: 10px; */
+    font-size: 16px;
+    font-weight: 400;
     color: #424242;
-    letter-spacing: -0.3px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-align: center;
 }
 
-.buttonareaicon{
-    display: inline-block;
-    overflow: hidden;
-    color: transparent;
+.mapIcon{
     width: 16px;
     height: 21px;
     margin-right: 4px;
-    vertical-align: -4px;
+}
+
+.sharebtnArea{
+    background-color: #FFFFFF;
+    border: 1px solid #e3e6e8;
+    border-radius: 3px;
+    width: 45px;
+    flex-shrink: 0;
+    margin-left: 6px; 
 }
 
 .scrollbox{

@@ -56,14 +56,16 @@ export default function Bulguksa({props}) {
                                     {title}
                                 </a>
                             </div>
-                            <div className={styles.category}>
-                                {category[0]}
-                                <div className={styles.titlebar}></div>
-                                {category[1]}
-                            </div>
+                            { (offset == 0) &&
+                                <div className={styles.category}>
+                                    {category[0]}
+                                    <div className={styles.titlebar}></div>
+                                    {category[1]}
+                                </div>
+                            }
                             <div className={styles.btnmenu}>
                                 {tablist.map((tab, i) => (
-                                    <div key={i} className={styles.btnmenu}>
+                                    <div key={i}>
                                         {
                                             i < 3 ?
                                             <button
@@ -104,8 +106,8 @@ export default function Bulguksa({props}) {
                             "handleClose": handleClose,
                             "url": link,
                             "title": "경주 불국사",
-                            "activeColor": "rgba(145,120,103,1)",
-                            "inactiveColor": "rgba(145,120,103,0.5)"
+                            "activeColor": "#888E99",
+                            "inactiveColor": "#BBBEC6"
                         }}
                         />
                     }

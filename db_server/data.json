@@ -30,7 +30,11 @@
                     ["크기", "면적 409,315㎡"]
                 ],
                 "textexpand": "경북 경주시 진현동 토함산 기슭에 있는 신라시대 절. 사적이다.",
-                "buttonarea": "http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991",
+                "buttonarea": {
+                    "mapURL": "http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991",
+                    "shareURL": "https://m.terms.naver.com/entry.naver?docId=1104868&cid=40942&categoryId=33380",
+                    "title": "경주 불국사"
+                },
                 "video": {
                     "img": "/images/Bulguksa/basic/3/1.jpg",
                     "href": "https://tv.naver.com/v/11478389",
