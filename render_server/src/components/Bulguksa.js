@@ -104,7 +104,7 @@ export default function Bulguksa({props}) {
                             "anchorEl": anchorEl, 
                             "handleClick": handleClick, 
                             "handleClose": handleClose,
-                            "url": link,
+                            "url": href,
                             "title": "경주 불국사",
                             "activeColor": "#888E99",
                             "inactiveColor": "#BBBEC6"
