@@ -8,11 +8,13 @@ export default function Buttonarea({buttonarea}) {
     <>  
         <div className={styles.btnArea}>
             <a className={styles.mapbtnArea} href={mapURL}>
-                <img className={styles.mapIcon} src='/images/Bulguksa/map.png' alt='map_button'/>
+                <img className={styles.mapIcon} src='/icons/map.png' alt='map_button'/>
                 지도
             </a>
-            <a className={styles.sharebtnArea} onClick={shareNaverLink( shareURL, `[공유] ${title}` )}>
-                <img src='/images/Bulguksa/map.png' alt='share_button'/>
+            <a className={styles.sharebtnArea} onClick={() => {
+                shareNaverLink( shareURL, `[공유] ${title}` )
+                }}>
+                <img className={styles.shareIcon} src='/icons/share.png' alt='share_button'/>
             </a>
         </div>
         
