@@ -17,7 +17,7 @@ export default function BasicSelect() {
   return (
     <Box className={styles.wrap} sx={{ minWidth: 120 }}>
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Keyword</InputLabel>
+        <InputLabel id="demo-simple-select-label">Select the keyword</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"

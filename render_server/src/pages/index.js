@@ -122,9 +122,9 @@ export default function Home({ data, views}) {
                     <div className="section_drama">
                       <Drama/>  
                     </div>
-                    {/* <div className="section_bulguksa">
+                    <div className="section_bulguksa">
                       <Bulguksa props={json.basic}/>
-                    </div> */}
+                    </div>
                   </div>
                 )
               }
