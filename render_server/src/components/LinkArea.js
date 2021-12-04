@@ -1,6 +1,4 @@
 import React from 'react'
-import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack, Typography} from '@mui/material';
-import Link from '@mui/material/Link';
 import styles from './linkArea.module.css'
 
 var LinkType = Object.freeze({

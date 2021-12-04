@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from '@mui/material/Link';
-import MoreVert from './MoreVert'
+import MoreVert from './Morevert'
 import styles from './drama.module.css'
 import HeaderMenuButton from './HeaderMenuButton';
 
@@ -84,9 +84,9 @@ export default function Drama({props}) {
             title= {
                 <div>
                     <div className={styles.dramaName}>
-                        <Link className={styles.dramaName} href={keywordURL} underline="none"> 
+                        <a className={styles.dramaName} href={keywordURL} underline="none"> 
                             {keyword}
-                        </Link>
+                        </a>
                     </div>
                     { (offset == 0) &&
                         <div className={styles.dramaCategory}>
@@ -144,7 +144,6 @@ export default function Drama({props}) {
                     sx={{ maxWidth: 716, height: 464, borderRadius: '6px'}}
                     style= {{ background: "#D2C9C4" }}
                 > {btn}
-        {/* // {drama_videos&&drama_videos.map((video) => <PostCard key={video.title} props={video} view={{"viewType": ViewType.NEWS }}/>)} */}
                 </Paper>
             ))}
             {mockdata.map((data, i) => (

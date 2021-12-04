@@ -1,12 +1,12 @@
 import React from 'react'
 import Link from '@mui/material/Link';
 import styles from './postCard.module.css'
-import MoreVert from './MoreVert'
+import MoreVert from './Morevert'
 import DateConvertor from './DateConvertor'
 import Image from 'material-ui-image'
 import TagArea from './TagArea';
 
-import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack} from '@mui/material';
+import { Card, CardContent, CardHeader} from '@mui/material';
 
 export default function ViewCardMultimeda({props}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, tags, more_links} = props
@@ -22,8 +22,6 @@ export default function ViewCardMultimeda({props}) {
     const handleClose = () => {
         setAnchorEl(null);
     };
-
-    // const more_links_exist = more_links.length!=0;
 
     return (
         <Card sx={{ maxWidth: 766 }} square > 
@@ -76,7 +74,6 @@ export default function ViewCardMultimeda({props}) {
                 <img
                     className={styles.viewMultiImg}
                     src={contentsImgURL[0]}
-                    layout="fill"
                     alt='content'
                 /> 
             </div>}

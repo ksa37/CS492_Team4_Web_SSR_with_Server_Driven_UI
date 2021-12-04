@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Link from '@mui/material/Link';
 import styles from './influencer.module.css'
-import MoreContent from '../components/MoreContent';
+import MoreContent from '../components/Morecontent';
 
 const Blogfan = () => {
   const [showResults, setShowResults] = useState(false)

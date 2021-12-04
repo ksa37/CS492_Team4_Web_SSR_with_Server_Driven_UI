@@ -16,7 +16,7 @@
 .name {
     font-size: 18px;
     font-weight: bold;
-    color: var(--dark_gray_1);
+    color: #000;
     width: fit-content;
 }
 
@@ -64,12 +64,23 @@
     padding: 6px 11px 6px 11px;
 }
 
-.verticalDivider {
-    border-left: 0px solid;
-    border-color: #D2C9C4;
+.titlebar {
     background-color: rgba(135,142,154,0.3);
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 4px 9px 0;
+    vertical-align: top;
+    color: rgba(107,112,122,0.8);
+}
+
+.tabbar {
+    background-color: rgba(135,142,154,0.3);
+    display: inline-block;
+    width: 1px;
     height: 16px;
-    margin: 0;
+    vertical-align: -2px;
+    margin-right: 4px;
 }
 
 .contents {
@@ -86,7 +97,7 @@
     letter-spacing: -0.3px;
 }
 
-.child{
+.relimg .count{
     bottom: 21px;
     display: inline-block;
     position: absolute;
@@ -99,10 +110,10 @@
     color: #fff;
     border: solid 1px rgba(0,0,0,0.05);
     background-color: rgba(0,0,0,0.5);
-    z-index: 20;
+    z-index: 3;
 }
 
-.childimg{
+.relimg .count .countimg{
     display: inline-block;
     overflow: hidden;
     width: 19px;
@@ -111,14 +122,14 @@
     vertical-align: -4px;
 }
 
-.scroll{
+.relimg .imgscroll{
     overflow: hidden;
     padding-bottom: 10px;
     margin-bottom: -10px;
     display: block;
 }
 
-.scrollul{
+.relimg .imgscroll .imglist{
     white-space: nowrap;
     font-size: 0;
     line-height: 0;
@@ -126,31 +137,71 @@
     margin: 0;
     padding: 0;
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 }
 
-.scrollli{
+.relimg .imgscroll .imglist .imgli:only-child{
+    width: calc(100% - 18px);
+}
+
+.relimg .imgscroll .imglist .imgli:last-child{
+    margin-right: 9px;
+}
+
+.relimg .imgscroll .imglist .imgli:first-child{
+    margin-left: 9px;
+}
+
+.relimg .imgscroll .imglist .imgli{
     display: inline-block;
     vertical-align: top;
 }
 
-.scrollul .scrollli:first-child{
-    margin-left: 9px;
+.relimg .imgscroll .imglist .imgli+.imgli{
+    margin-left: 1px;
 }
 
-.scrollthumb{
+.relimg .imgscroll .imglist .imgli .thumb{
     position: relative;
     overflow: hidden;
-    display: block;
-    cursor: pointer;
+    height: 168px;
+    vertical-align: top;
 }
 
+.relimg .imgscroll .imglist .imgli:only-child .thumb{
+    width: 100%;
+}
+
+.relimg .imgscroll .imglist .imgli:only-child .thumb .thumbimg{
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+.relimg .imgscroll .imglist .imgli .thumb .icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.relimg .imgscroll .imglist .imgli .thumb .time{
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    bottom: 7px;
+    line-height: 15px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #fff;
+    z-index: 3;
+}
 
 .middletitle{
-    padding: 0 15px;
     position: relative;
     overflow: hidden;
     display: block;
@@ -188,7 +239,6 @@
 
 
 .detailinfo{
-    padding: 0 30px;
     margin-top: 8.5px;
     position: relative;
     padding-bottom: 5px;
@@ -197,63 +247,95 @@
     letter-spacing: -0.3px;
 }
 
-.infotxt{
-    line-height: 1.8rem;
-    padding-left: 15px;
+.detailinfo .infotxt{
+    line-height: 1.6rem;
     margin: 0;
     padding: 0;
-    display: block;
 }
 
-.infogroup{
+.detailinfo .infotxt .infogroup{
+    padding-left: 15px;
     position: relative;
-    display: block;
 }
 
-.infogroupdt{
+.detailinfo .infotxt .infodt{
     float: left;
+    margin-bottom: 2px;
+    padding-right: 11px;
     letter-spacing: -0.3px;
     color: #8f8f8f;
     margin: 0;
     padding: 0;
+    font-size: 0.9rem;
 }
 
-.infogroupdd{
-    overflow: hidden;
-    color: #424242;
-    word-break: break-word;
-    margin: 0;
-    padding: 0;
-    margin-inline-start: 80px;
-}
 
-.bar{
+.detailinfo .infotxt .infogroup:first-child .bar{
     border-radius: 10px 10px 0 0;
+}
+
+.detailinfo .bar{
     background-color: rgba(135,142,154,0.2);
     display: inline-block;
     position: absolute;
     top: 5px;
-    left: -15px;
     bottom: -7px;
+    left: 0px;
     width: 3px;
     height: auto;
     opacity: 0.9;
 }
 
+.detailinfo .infotxt .infogroup .infodd{
+    padding-right: 7px;
+    margin-left: 79px;
+}
+
+.detailinfo .infotxt .infodd{
+    overflow: hidden;
+    margin-bottom: 2px;
+    color: #424242;
+    word-break: break-word;
+    margin: 0;
+    padding: 0;
+    margin-inline-start: 40px;
+    font-size: 0.9rem;
+}
+
 .textexpand{
-    overflow: visible;
-    left: -15px;
     padding-top: 6px;
     margin-top: 4.5px;
     margin-bottom: 0;
     margin: 8px 0 0;
     letter-spacing: -0.3px;
     position: relative;
-    display: block;
-    line-height: 1.8rem;
-    color: var(--G-color-text3);
+    line-height: 1.7rem;
+    color: #424242;
     word-wrap: break-word;
     word-break: break-all;
+    vertical-align: top;
+}
+
+.introbox{
+    padding: 8.5px 0px 15.5px;
+    line-height: 1.7rem;
+    color: #424242;
+    overflow: hidden;
+    display: -webkit-box;
+    max-height: 12rem;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    word-break: break-all;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    letter-spacing: -0.3px;
+    font-size: 0.9rem;
 }
 
 .buttonarea{
@@ -316,16 +398,15 @@
     padding-bottom: 4px;
     display: block;
     letter-spacing: -0.3px;
-    overflow: hidden;
 }
 
-.listinfo{
+.scrollbox .listinfo{
     overflow: hidden;
     padding-bottom: 10px;
     margin-bottom: -10px;
 }
 
-.scrollboxul{
+.scrollbox .listinfo .infoul{
     display: table;
     padding-top: 1px;
     padding-left: 16px;
@@ -339,15 +420,13 @@
     padding-bottom: 5px;
     list-style: none;
     margin: 0;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
 }
 
-.scrollboxli{
+.scrollbox .listinfo .infoul>li:first-child{
     margin-left: 0;
+}
+
+.scrollbox .listinfo .infoul>li{
     display: table-cell;
     height: 1px;
     position: relative;
@@ -355,20 +434,15 @@
     white-space: normal;
     vertical-align: top;
     z-index: 2;
-    width: 87px;
-    margin: 0;
-    padding: 0;
-    border-spacing: 9px 0;
-    border-collapse: separate;
 }
 
-.areacard{
+.scrollbox .listinfo .infoul>li .areacard{
     height: 100%;
     box-shadow: 0 2px 3px 0 rgba(155, 168, 174, 0.08), 0 0 2px 0 rgba(136, 148, 158, 0.3);
     display: block;
 }
 
-.titlebox{
+.scrollbox .infoul>li .titlebox{
     display: table;
     width: 100%;
     padding: 9px 11px 9px;
@@ -378,7 +452,7 @@
     box-sizing: border-box;
 }
 
-.titleboxname{
+.scrollbox .infoul>li .titlebox .name{
     overflow: hidden;
     display: -webkit-box;
     max-height: 4rem;
@@ -388,25 +462,98 @@
     word-break: break-all;
     word-wrap: break-word;
     color: var(--G-color-text2);
-    font-size: 1.0rem;
+    font-size: 0.9rem;
     font-weight: normal;
-    line-height: 1.4rem;
+    line-height: 1.3rem;
     color: #242424;
 }
 
-.titleboxsubtext{
+.scrollbox .infoul>li .titlebox .subtext{
     overflow: hidden;
-    display: block;
+    display: -webkit-box;
     max-height: 4rem;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     word-break: break-all;
     word-wrap: break-word;
-    margin: 3px 0 0 0;
-    color: var(--G-color-text5);
-    font-size: 0.8rem;
-    line-height: 1.2rem;
-    margin-top: 3px;
     color: #8f8f8f;
+    font-size: 0.7rem;
+    line-height: 1.1rem;
+}
+
+.proinfobox{
+    padding: 10.5px 0px 15px;
+    display: block;
+    letter-spacing: -0.3px;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+
+.proinfobox .proinfotxt{
+    line-height: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+
+.proinfobox .proinfotxt .infogroup{
+    position: relative;
+}
+
+.proinfobox .proinfodt{
+    float: left;
+    padding-left: 14px;
+    margin-bottom: 3px;
+    color: #8f8f8f;
+    white-space: nowrap;
+}
+
+.proinfobox .proinfodt .bar{
+    background-color: rgba(135,142,154,0.2);
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 3px;
+    bottom: -7px;
+    height: auto;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+.proinfobox .proinfodd{
+    overflow: hidden;
+    padding-left: 12px;
+    margin-bottom: 3px;
+    color: #424242;
+    display: block;
+    margin-inline-start: 40px;
+}
+
+.moviephotolist{
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
+    letter-spacing: -0.3px;
+    box-shadow: 0 2px 3px 0 rgba(155, 168, 174, 0.08), 0 0 2px 0 rgba(136, 148, 158, 0.3);
+    -webkit-text-size-adjust: none;
+    color: #000;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+
+.moviephotolist .gridbox{
+    position: relative;
+    overflow: hidden;
+    margin: -1px 0 0 -1px;
+    font-size: 0;
+    line-height: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
 }

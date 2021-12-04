@@ -1,13 +1,10 @@
 import React from 'react'
-// import Link from 'next/link'
-import Link from '@mui/material/Link';
 import styles from './postCard.module.css'
-// import Image from "next/image"
-import MoreVert from './MoreVert'
+import MoreVert from './Morevert'
 import DateConvertor from './DateConvertor'
 import Image from 'material-ui-image'
 
-import { Avatar, Button, Card, CardContent, CardHeader, Divider, Grid, Paper, Stack, Typography} from '@mui/material';
+import { Card, CardContent, CardHeader, Divider, Paper, Stack} from '@mui/material';
 
 export default function ViewCardBasic({props, view}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, tags, more_links} = props
