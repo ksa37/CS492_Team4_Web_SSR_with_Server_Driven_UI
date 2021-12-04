@@ -9,7 +9,7 @@ import Bpage2 from './Bpage2'
 
 export default function Bulguksa({props}) {
     const {header, first_card, second_card_whole, second_card_basic, third_card_basic} = props
-    const {title, href, subtitle, tablist, tablisthref, video} = header
+    const {title, href, category, tablist, tablisthref, video} = header
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -57,9 +57,9 @@ export default function Bulguksa({props}) {
                                 </a>
                             </div>
                             <div className={styles.category}>
-                                {subtitle[0]}
+                                {category[0]}
                                 <div className={styles.titlebar}></div>
-                                {subtitle[1]}
+                                {category[1]}
                             </div>
                             <div className={styles.btnmenu}>
                                 {tablist.map((tab, i) => (

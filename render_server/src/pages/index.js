@@ -118,29 +118,31 @@ export default function Home({ data, views}) {
               if (keyword === '불국사')
               {
                 return (
-                  <div key={index}>
-                    <div className="section_drama">
-                      <Drama/>  
-                    </div>
-                    <div className="section_bulguksa">
-                      <Bulguksa props={json.basic}/>
-                    </div>
+                  <div key={index} className="section_bulguksa">
+                    <Bulguksa props={json.basic}/>
+                  </div>
+                )
+              }
+              if (keyword === '술꾼도시여자들') {
+                return (
+                  <div key={index} className="section_drama">
+                    <Drama props={json.basic}/>
                   </div>
                 )
               }
               break;
-            // case "influencer":
-            //   return (
-            //     <div key={index} className="section_influencer">
-            //       <Influencer props={json.influencer}/>
-            //     </div>
-            //   )
-            // case "review":
-            //   return (
-            //     <div key={index} className="section_review">
-            //       <View props={json.review}/>
-            //     </div>
-            //   )
+            case "influencer":
+              return (
+                <div key={index} className="section_influencer">
+                  <Influencer props={json.influencer}/>
+                </div>
+              )
+            case "review":
+              return (
+                <div key={index} className="section_review">
+                  <View props={json.review}/>
+                </div>
+              )
             case "wiki":
               return (
                 <div key={index} className="section_wiki">
@@ -153,12 +155,12 @@ export default function Home({ data, views}) {
                   <News props={json.news}/>
                 </div>
               )
-            // case "photo":
-            //   return (
-            //     <div key={index} className="section_photo">
-            //       <Photo props={json.photo}/>
-            //     </div>
-            //   )
+            case "photo":
+              return (
+                <div key={index} className="section_photo">
+                  <Photo props={json.photo}/>
+                </div>
+              )
           }})}
           <Box sx={{ mb: 15 }}></Box>
           <Typography style={{ fontSize: 16, fontWeight: '900', verticalAlign: 'center', textAlign: 'center' }}>

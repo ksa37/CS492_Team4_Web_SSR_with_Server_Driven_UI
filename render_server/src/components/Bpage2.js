@@ -13,7 +13,7 @@ export default function Bpage2({first_card}) {
             sx={{ maxWidth:746, borderRadius: '6px', mx: "9px", px: '15px', pt:"18px", pb:"21px"}}
             style= {{ background: "#ffffff" }}
         >
-            <Imagesection data={relimg} id={id}/>
+            <Imagesection key={id} data={relimg} id={id}/>
         </Paper>
         <Paper sx={{maxWidth:746, height: 50, mx: "9px", mb: "12px"}}
             style={{backgroundColor: '#f4f7f8'}}>
