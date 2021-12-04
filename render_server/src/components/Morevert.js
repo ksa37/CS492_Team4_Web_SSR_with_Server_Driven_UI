@@ -27,8 +27,6 @@ export default function MoreVert({props}) {
                 { open
                 ? <MoreVertIcon style={{color: activeColor}}/>
                 : <MoreVertIcon style={{color: inactiveColor}}/>
-                // ? <MoreVertIcon style={{color: '#8F8F8F'}}/>
-                // : <MoreVertIcon style={{color: '#D1D3D6'}}/>
                 }   
             </IconButton>
             <Menu

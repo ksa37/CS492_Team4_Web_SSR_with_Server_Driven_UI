@@ -4,14 +4,13 @@ import MoreVert from './Morevert'
 import styles from './drama.module.css'
 import HeaderMenuButton from './HeaderMenuButton';
 import DramaVideos from './DramaVideos';
-import ForwardIcon from '../../public/icons/forward.svg'; 
 
 import { Card, CardHeader, Box, Divider, Paper } from '@mui/material';
 
 export default function Drama({props}) {
     const {header, videos} = props
     const {title, href, category, categoryURL, tablist, tablisthref} = header
-    const {showMore, videoData} = videos
+    // const {showMore, videoData} = videos
 
     // for ... button in header
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -52,12 +51,12 @@ export default function Drama({props}) {
         setMenu({ darkBtn: btn });
     };
 
-    // for '펼쳐보기'
-    const [viewAll, setViewAll] = React.useState(true);
-    const setViewAllClick = (event) => {
-        setViewAll(!viewAll);
-        // console.log(viewAll)
-    };
+    // // for '펼쳐보기'
+    // const [viewAll, setViewAll] = React.useState(true);
+    // const setViewAllClick = (event) => {
+    //     setViewAll(!viewAll);
+    //     // console.log(viewAll)
+    // };
 
     return (
         <>
@@ -119,17 +118,18 @@ export default function Drama({props}) {
         />
         </Card>
         <Card className={styles.contents} sx={{ maxWidth: 768 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square>
-        <Paper
+        { menu.darkBtn === 3 && <DramaVideos props={videos}></DramaVideos> }
+        {/* <Paper
             sx={{ px: "15px", py: "21px", mx: "11px", maxWidth:746, borderRadius: '8px 8px 0px 0px' }}>
-            {/* {tablist.map((btn, i) => (
-                (menu.darkBtn === i) && 
-                <Paper 
-                    key={i}
-                    sx={{ maxWidth: 716, height: 464, borderRadius: '6px'}}
-                    style= {{ background: "#D2C9C4" }}
-                > {btn}
-                </Paper>
-            ))} */}
+            // {tablist.map((btn, i) => (
+            //     (menu.darkBtn === i) && 
+            //     <Paper 
+            //         key={i}
+            //         sx={{ maxWidth: 716, height: 464, borderRadius: '6px'}}
+            //         style= {{ background: "#D2C9C4" }}
+            //     > {btn}
+            //     </Paper>
+            // ))} }
             {
                 menu.darkBtn === 3 &&
                 videoData.map((data, i) => {
@@ -170,8 +170,8 @@ export default function Drama({props}) {
                         </Paper> 
                     </a>
             </div>
-        }     
-      </Card>
+        }    */}
+      </Card> 
     </>
     )
 }
