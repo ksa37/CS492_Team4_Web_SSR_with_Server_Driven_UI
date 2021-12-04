@@ -2,15 +2,13 @@ import React from 'react'
 import Link from '@mui/material/Link';
 import MoreVert from './Morevert'
 import styles from './drama.module.css'
-import HeaderMenuButton from './HeaderMenuButton';
 import DramaVideos from './DramaVideos';
 
-import { Card, CardHeader, Box, Divider, Paper } from '@mui/material';
+import { Card, CardHeader, Box } from '@mui/material';
 
 export default function Drama({props}) {
     const {header, videos} = props
     const {title, href, category, categoryURL, tablist, tablisthref} = header
-    // const {showMore, videoData} = videos
 
     // for ... button in header
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -50,13 +48,6 @@ export default function Drama({props}) {
     const changeColor = (btn) => {
         setMenu({ darkBtn: btn });
     };
-
-    // // for '펼쳐보기'
-    // const [viewAll, setViewAll] = React.useState(true);
-    // const setViewAllClick = (event) => {
-    //     setViewAll(!viewAll);
-    //     // console.log(viewAll)
-    // };
 
     return (
         <>
@@ -119,58 +110,6 @@ export default function Drama({props}) {
         </Card>
         <Card className={styles.contents} sx={{ maxWidth: 768 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square>
         { menu.darkBtn === 3 && <DramaVideos props={videos}></DramaVideos> }
-        {/* <Paper
-            sx={{ px: "15px", py: "21px", mx: "11px", maxWidth:746, borderRadius: '8px 8px 0px 0px' }}>
-            // {tablist.map((btn, i) => (
-            //     (menu.darkBtn === i) && 
-            //     <Paper 
-            //         key={i}
-            //         sx={{ maxWidth: 716, height: 464, borderRadius: '6px'}}
-            //         style= {{ background: "#D2C9C4" }}
-            //     > {btn}
-            //     </Paper>
-            // ))} }
-            {
-                menu.darkBtn === 3 &&
-                videoData.map((data, i) => {
-                    // mockdata.map((data, i) => {
-                    if (viewAll && i < 4) {
-                        return ( <DramaVideos key={i} props={data} info={{"viewAll": viewAll}}></DramaVideos> )
-                    }
-                    if (!viewAll && i < 8) {
-                        return ( <DramaVideos key={i} props={data} info={{"viewAll": viewAll}}></DramaVideos> )
-                    }
-                })
-            }
-            {menu.darkBtn === 3 && !viewAll && 
-                <a className={styles.showMore} href={showMore}>
-                    공식영상 더보기
-                    <ForwardIcon className={styles.icon} style={{ stroke: "#B3B4B6", width: "7px", height: "11px" }}/>
-                </a>
-            }
-        </Paper>
-        { menu.darkBtn === 3 && 
-            <div>
-                <Divider sx={{ mx: "11px", background: "#ECF0F2" }}/>
-                    <a onClick={setViewAllClick} style={{ cursor: "pointer" }} >
-                        <Paper 
-                            variant="elevation"
-                            sx={{ py: "12px", mb: "21px", mx: "11px", borderRadius: '0 0 8px 8px'}}
-                            style={{backgroundColor: "#FAFBFB" }}>
-                                {viewAll ?
-                                <div className={styles.viewAll}>
-                                    펼쳐보기 
-                                    <ForwardIcon className={styles.iconDown} style={{ stroke: "#8A8D8F", width: '9px', height: '16px' }}/>
-                                </div>
-                                :<div className={styles.viewAll}>
-                                    접기 
-                                    <ForwardIcon className={styles.iconUp} style={{ stroke: "#8A8D8F", width: '9px', height: '16px' }}/>
-                                </div>
-                                }
-                        </Paper> 
-                    </a>
-            </div>
-        }    */}
       </Card> 
     </>
     )
