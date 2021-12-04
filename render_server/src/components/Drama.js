@@ -3,6 +3,7 @@ import Link from '@mui/material/Link';
 import MoreVert from './Morevert'
 import styles from './drama.module.css'
 import HeaderMenuButton from './HeaderMenuButton';
+import DramaVideos from './DramaVideos';
 import ForwardIcon from '../../public/icons/forward.svg'; 
 
 import { Card, CardHeader, Box, Divider, Paper } from '@mui/material';
@@ -13,12 +14,13 @@ export default function Drama({props}) {
     var keyword = "술꾼도시여자들"
     var categoryURL = "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blFB&x_csa=%7B%22pkid%22%3A%22356%22%7D&qvt=0&query=%EC%9B%B9%EB%93%9C%EB%9D%BC%EB%A7%88"
     var category = "웹드라마"
+    var showMore = "https://tv.naver.com/v/22495407/list/739104"
     var mockdata = [
         {
             "title": "[술꾼도시여자들] 🍺술도녀 보내기 아쉬운 분들을 위한 역대급 분량 하드털이 메이킹",
             "publisher": "네이버TV",
             "viewCount": "4,534",
-            "date": "1638198000000",
+            "date": "2021.11.30.",
             "videoURL": "https://tv.naver.com/v/23826103",
             "videoLength": "24:36",
             "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211130_183%2FagfL7_1638280758457AMaev_JPEG%2F1638280716455.jpg"
@@ -27,7 +29,7 @@ export default function Drama({props}) {
             "title": "[술꾼도시여자들] 이선빈X한선화에게 사랑받는(?) 정은지💓 지구방위대씬 비하인드",
             "publisher": "네이버TV",
             "viewCount": "2,066",
-            "date": "1638198000000",
+            "date": "2021.11.30.",
             "videoURL": "https://tv.naver.com/v/23826072",
             "videoLength": "12:59",
             "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211130_262%2F3Hciy_1638280544584Oo8ki_JPEG%2F1638280476322.jpg"
@@ -36,7 +38,7 @@ export default function Drama({props}) {
             "title": "[술꾼도시여자들] 이선빈X최시원 베드씬부터 한선화의 데이트, 정은지X동생의 꽁냥 모먼트",
             "publisher": "네이버TV",
             "viewCount": "16,894",
-            "date": "1637506800000",
+            "date": "2021.11.22.",
             "videoURL": "https://tv.naver.com/v/23677808",
             "videoLength": "14:10",
             "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211122_75%2Fk3TeH_1637590335132ofURX_JPEG%2F1637590244966.jpg"
@@ -45,7 +47,7 @@ export default function Drama({props}) {
             "title": "[술꾼도시여자들] 술도녀에게 닥친 인생 최대 시련ㅣ11화 예고",
             "publisher": "네이버TV",
             "viewCount": "22,318",
-            "date": "1637506800000",
+            "date": "2021.11.22.",
             "videoURL": "https://tv.naver.com/v/23677888",
             "videoLength": "00:56",
             "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211122_19%2FAMixR_1637590566041ADSeJ_JPEG%2F1637590533723.jpg"
@@ -54,7 +56,7 @@ export default function Drama({props}) {
             "title": "[술꾼도시여자들] 정은지, 이선빈 얼굴에 냉수 뿌린 이유는? 열연 돋보인 장례식씬 메이킹",
             "publisher": "네이버TV",
             "viewCount": "4,220",
-            "date": "1637506800000",
+            "date": "2021.11.22.",
             "videoURL": "https://tv.naver.com/v/23677736",
             "videoLength": "10:15",
             "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211122_296%2FH9CpO_1637590120907Iy20U_JPEG%2F1637590004889.jpg"
@@ -119,7 +121,8 @@ export default function Drama({props}) {
     // console.log(offset); 
     
     const [menu, setMenu] = React.useState({
-        darkBtn: 0
+        darkBtn: 3
+        // darkBtn: 0
     });
 
     const changeColor = (btn) => {
@@ -127,10 +130,10 @@ export default function Drama({props}) {
     };
 
     // for '펼쳐보기'
-    const [viewAll, setViewAll] = React.useState(false);
+    const [viewAll, setViewAll] = React.useState(true);
     const setViewAllClick = (event) => {
         setViewAll(!viewAll);
-        console.log(viewAll)
+        // console.log(viewAll)
     };
 
     return (
@@ -194,9 +197,8 @@ export default function Drama({props}) {
         </Card>
         <Card className={styles.contents} sx={{ maxWidth: 768 }} style={{backgroundColor: "#F1EDEB" }} variant='outlined' square>
         <Paper
-            // sx={{ px: "15px", py: "21px", mb: "21px", mx: "11px", maxWidth:746, borderRadius: '8px' }}>
             sx={{ px: "15px", py: "21px", mx: "11px", maxWidth:746, borderRadius: '8px 8px 0px 0px' }}>
-            {btns.map((btn, i) => (
+            {/* {btns.map((btn, i) => (
                 (menu.darkBtn === i) && 
                 <Paper 
                     key={i}
@@ -204,63 +206,48 @@ export default function Drama({props}) {
                     style= {{ background: "#D2C9C4" }}
                 > {btn}
                 </Paper>
-            ))}
-            {mockdata.map((data, i) => (
-                (menu.darkBtn === 3) && 
-                <Paper 
-                    key={i}
-                    sx={{ maxWidth: 716, borderRadius: '6px', mb: '12px'}}
-                    style= {{ background: "#FFFFFF" }}
-                > 
-                    <a href={data.videoURL}>
-                        <div className={styles.thumb}>
-                            <img 
-                                className={styles.img}
-                                src={data.thumbImg}
-                                alt="video"
-                            />
-                            <div className={styles.icon}>
-                                <img color='transparent'
-                                src='/images/Bulguksa/video.png'
-                                width='28px'
-                                height='32px'
-                                alt='icon'/>
-                            </div>
-                            <span className={styles.time}>{data.videoLength}</span>
-                        </div>
-                    </a>
-                    <div className={styles.videoInfo}>
-                        <a href={data.videoURL}>
-                            <div className={styles.videoTitle}>{data.title}</div>
-                            <div className={styles.subInfo}>
-                                {data.publisher}
-                                <div className={styles.verticalDivider2}></div>
-                                {data.viewCount}
-                                <div className={styles.verticalDivider2}></div>
-                                {data.date}
-                            </div>
-                        </a>
-                    </div>
-        {/* // {drama_videos&&drama_videos.map((video) => <PostCard key={video.title} props={video} view={{"viewType": ViewType.NEWS }}/>)} */}
-                </Paper>
-            ))}
-            
+            ))} */}
+            {
+                menu.darkBtn === 3 &&
+                mockdata.map((data, i) => {
+                            if (viewAll && i < 4) {
+                                return ( <DramaVideos key={i} props={data} info={{"viewAll": viewAll}}></DramaVideos> )
+                            }
+                            if (!viewAll && i < 8) {
+                                return ( <DramaVideos key={i} props={data} info={{"viewAll": viewAll}}></DramaVideos> )
+                            }
+                })
+            }
+            {menu.darkBtn === 3 && !viewAll && 
+                <a className={styles.showMore} href={showMore}>
+                    공식영상 더보기
+                    <ForwardIcon className={styles.icon} style={{ stroke: "#B3B4B6", width: "7px", height: "11px" }}/>
+                </a>
+            }
         </Paper>
-        <Divider sx={{ mx: "11px", background: "#ECF0F2" }}/>
-        <a onClick={setViewAllClick} style={{ cursor: "pointer" }} >
-            <Paper 
-                variant="elevation"
-                sx={{ py: "16px", mb: "21px", mx: "11px", borderRadius: '0 0 8px 8px'}}
-                style={{backgroundColor: "#FAFBFB" }}>
-                    <div className={styles.viewAll}>
-                        펼쳐보기 
-                        <ForwardIcon className={styles.icon} style={{ stroke: "#8A8D8F", width: '9px', height: '16px' }}/>
-                    </div>
-            </Paper> 
-        </a>
+        { menu.darkBtn === 3 && 
+            <div>
+                <Divider sx={{ mx: "11px", background: "#ECF0F2" }}/>
+                    <a onClick={setViewAllClick} style={{ cursor: "pointer" }} >
+                        <Paper 
+                            variant="elevation"
+                            sx={{ py: "12px", mb: "21px", mx: "11px", borderRadius: '0 0 8px 8px'}}
+                            style={{backgroundColor: "#FAFBFB" }}>
+                                {viewAll ?
+                                <div className={styles.viewAll}>
+                                    펼쳐보기 
+                                    <ForwardIcon className={styles.iconDown} style={{ stroke: "#8A8D8F", width: '9px', height: '16px' }}/>
+                                </div>
+                                :<div className={styles.viewAll}>
+                                    접기 
+                                    <ForwardIcon className={styles.iconUp} style={{ stroke: "#8A8D8F", width: '9px', height: '16px' }}/>
+                                </div>
+                                }
+                        </Paper> 
+                    </a>
+            </div>
+        }     
       </Card>
-
-      {/* <MoreContent props={{'view_option': "뉴스",'more_link':news_more}}/> */}
-        </>
+    </>
     )
 }
