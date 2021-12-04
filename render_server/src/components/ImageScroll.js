@@ -45,47 +45,10 @@ export default function ImageScroll({props, scroll_view}) {
                     <img key={index}
                         className={cn(styles.imageScrollerItem, scroll_item_css)}
                         src={img}
+                        alt={index}
                     />
                 ))}
             </ul>
         </div>
-        
-
-
-        // <>
-        // {scroll_type==ScrollType.VIEWBASIC &&
-        // <div className={styles.imageScroller}>
-        //     <ul className={styles.imageScrollerContainer}>
-        //         {imgs&&imgs.map((img, index)=> (
-        //             <img key={index}
-        //                 className={styles.imageScrollerItem}
-        //                 src={img}
-        //             />
-        //         ))}
-        //     </ul>
-        // </div>}
-        // {scroll_type==ScrollType.VIEWTIMELINE &&
-        // <div className={styles.imageScrollerTimeLine}>
-        //     <ul className={styles.imageScrollerContainerTimeLine}>
-        //         {imgs&&imgs.map((img, index)=> (
-        //             <img key={index}
-        //                 className={styles.imageScrollerItemTimeLine}
-        //                 src={img}
-        //             />
-        //         ))}
-        //     </ul>
-        // </div>}
-        // {scroll_type==ScrollType.INFLUENCER &&
-        // <div className={styles.imageScrollerInfluencer}>
-        //     <ul className={styles.imageScrollerContainerInfluencer}>
-        //         {imgs&&imgs.map((img, index)=> (
-        //             <img key={index}
-        //                 className={styles.imageScrollerItemInfluencer}
-        //                 src={img}
-        //             />
-        //         ))}
-        //     </ul>
-        // </div>}
-        // </>
     )
 }

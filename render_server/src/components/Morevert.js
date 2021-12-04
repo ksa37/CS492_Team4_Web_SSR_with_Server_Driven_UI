@@ -56,6 +56,7 @@ export default function MoreVert({props}) {
                     "icon": <img src="/icons/naver_share.png" 
                                 width="auto"
                                 height="16px"
+                                alt='share'
                                 />
                 }}/>
                 <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
@@ -93,7 +94,7 @@ export default function MoreVert({props}) {
                                 
                                 }},
                     "text": "Keep 바로가기",
-                    "icon": <img src='/icons/forward.svg'/>
+                    "icon": <img src='/icons/forward.svg' alt='forward'/>
                 }}/>
             </Menu>
         </div>
