@@ -58,9 +58,9 @@ export default function Drama({props}) {
             title= {
                 <div>
                     <div className={styles.dramaName}>
-                        <Link className={styles.dramaName} href={keywordURL} underline="none"> 
+                        <a className={styles.dramaName} href={keywordURL} underline="none"> 
                             {keyword}
-                        </Link>
+                        </a>
                     </div>
                     { (offset == 0) &&
                         <div className={styles.dramaCategory}>

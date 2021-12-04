@@ -13,6 +13,7 @@ export default function StandardImageList({props}) {
                   <img
                   className={styles.grid_item_img}
                   src={img.img_path}
+                  alt={index}
                   loading="lazy"
                 />
               </div>

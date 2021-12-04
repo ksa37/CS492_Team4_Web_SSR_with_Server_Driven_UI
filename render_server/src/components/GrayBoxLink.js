@@ -17,6 +17,7 @@ export default function GrayboxLink({props}){
                 src={"icons/link.png"}
                 height={11}
                 width={11}
+                alt='link'
             />
             {/*  {publisher}의 #{gray_tag} 콘텐츠 더보기 */}
             <span>{text}</span>
@@ -25,6 +26,7 @@ export default function GrayboxLink({props}){
                 src={'/icons/forward.svg'}
                 width={7}
                 height={11}
+                alt='forward'
             />     
         </span>
     </a>
