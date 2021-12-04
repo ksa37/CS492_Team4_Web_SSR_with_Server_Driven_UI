@@ -1,6 +1,6 @@
 import  React from 'react'
 import Link from '@mui/material/Link';
-import MoreVert from './Morevert'
+import MoreVert from './MoreVert'
 import styles from './Bulguksa.module.css'
 import { Card, CardHeader, Box, Paper } from '@mui/material';
 

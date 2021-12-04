@@ -12,6 +12,32 @@ export default function Drama({props}) {
     var keyword = "술꾼도시여자들"
     var categoryURL = "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blFB&x_csa=%7B%22pkid%22%3A%22356%22%7D&qvt=0&query=%EC%9B%B9%EB%93%9C%EB%9D%BC%EB%A7%88"
     var category = "웹드라마"
+    var mockdata = [
+        {
+            "title": "[술꾼도시여자들] 이선빈X최시원 베드씬부터 한선화의 데이트, 정은지X동생의 꽁냥 모먼트",
+            "publisher": "네이버TV",
+            "viewCount": "16894",
+            "date": "1637506800000",
+            "videoURL": "https://tv.naver.com/v/23677808",
+            "videoLength": "850"
+        },
+        {
+            "title": "[술꾼도시여자들] 술도녀에게 닥친 인생 최대 시련ㅣ11화 예고",
+            "publisher": "네이버TV",
+            "viewCount": "22318",
+            "date": "1637506800000",
+            "videoURL": "https://tv.naver.com/v/23677888",
+            "videoLength": "56"
+        },
+        {
+            "title": "[술꾼도시여자들] 정은지, 이선빈 얼굴에 냉수 뿌린 이유는? 열연 돋보인 장례식씬 메이킹",
+            "publisher": "네이버TV",
+            "viewCount": "4220",
+            "date": "1637506800000",
+            "videoURL": "https://tv.naver.com/v/23677736",
+            "videoLength": "615"
+        }
+    ]
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -118,6 +144,17 @@ export default function Drama({props}) {
                     sx={{ maxWidth: 716, height: 464, borderRadius: '6px'}}
                     style= {{ background: "#D2C9C4" }}
                 > {btn}
+        {/* // {drama_videos&&drama_videos.map((video) => <PostCard key={video.title} props={video} view={{"viewType": ViewType.NEWS }}/>)} */}
+                </Paper>
+            ))}
+            {mockdata.map((data, i) => (
+                (menu.darkBtn === 3) && 
+                <Paper 
+                    key={i}
+                    sx={{ maxWidth: 716, height: 100, borderRadius: '6px'}}
+                    // sx={{ maxWidth: 716, height: 464, borderRadius: '6px'}}
+                    style= {{ background: "#D2C9C4" }}
+                > {data.title} {data.date} 
         {/* // {drama_videos&&drama_videos.map((video) => <PostCard key={video.title} props={video} view={{"viewType": ViewType.NEWS }}/>)} */}
                 </Paper>
             ))}
