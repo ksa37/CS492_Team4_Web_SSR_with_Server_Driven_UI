@@ -114,17 +114,17 @@ export default function Bulguksa({props}) {
             </Card>
             {
                 menu.darkBtn === 0 ?
-                <Card className={styles.contents} sx={{ maxWidth: 768, mb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
+                <Card className={styles.contents} sx={{ maxWidth: 768, pb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
                     <Bpage0 first_card={first_card} second_card={second_card_whole}/>
                 </Card>
                 :
                 menu.darkBtn === 1 ?
-                <Card className={styles.contents} sx={{ maxWidth: 768, mb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
+                <Card className={styles.contents} sx={{ maxWidth: 768, pb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
                     <Bpage1 first_card={first_card} second_card={second_card_basic} third_card={third_card_basic}/>
                 </Card>
                 :
                 menu.darkBtn === 2 ?
-                <Card className={styles.contents} sx={{ maxWidth: 768, mb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
+                <Card className={styles.contents} sx={{ maxWidth: 768, pb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
                     <Bpage2 first_card={first_card}/>
                 </Card>
                 :

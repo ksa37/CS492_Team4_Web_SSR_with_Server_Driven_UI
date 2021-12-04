@@ -557,3 +557,17 @@
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
+
+.showMore {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    color: #424242;
+    font-weight: 500;
+}
+
+.showMore .img {
+    margin-left: 8px;
+}
