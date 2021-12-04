@@ -5,6 +5,7 @@ import styles from './MoreVert.module.css'
 
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import BookmarkIcon from '../../public/icons/bookmark.svg'; 
+import ForwardIcon from '../../public/icons/forward.svg'; 
 
 import { IconButton, Box } from '@mui/material';
 
@@ -67,7 +68,7 @@ export default function MoreVert({props}) {
                     <MorevertMenuItem props = {{
                         "onClick": setKeepClick,
                         "text": "Keep에 저장",
-                        "icon": <BookmarkIcon style={{stroke: '#B3B4B6'}}/>
+                        "icon": <BookmarkIcon style={{ stroke: '#B3B4B6'}}/>
                     }}/>
                     <Box style={{ backgroundColor: "transparent", height: "8px" }}/>
                     <div className={styles.divider}/>
@@ -77,7 +78,8 @@ export default function MoreVert({props}) {
                     <MorevertMenuItem props = {{
                         "onClick": setKeepClick,
                         "text": "저장된 문서입니다.",
-                        "icon": <BookmarkIcon style={{stroke: 'var(--naver_green)', fill: '#FFFFFF'}}/>,
+                        "icon": <BookmarkIcon style={{ stroke: "var(--naver_green)", fill: '#FFFFFF'}}/>,
+                        // "icon": <BookmarkIcon style={{ stroke: "#5ECA69", fill: '#FFFFFF'}}/>,
                         "bgColor": 'var(--naver_green)',
                         "color": '#FFFFFF'
                     }}/>
@@ -94,7 +96,7 @@ export default function MoreVert({props}) {
                                 
                                 }},
                     "text": "Keep 바로가기",
-                    "icon": <img src='/icons/forward.svg' alt='forward'/>
+                    "icon": <ForwardIcon style={{ stroke: "#B3B4B6", width: "7px", height: "11px" }}/>,
                 }}/>
             </Menu>
         </div>
