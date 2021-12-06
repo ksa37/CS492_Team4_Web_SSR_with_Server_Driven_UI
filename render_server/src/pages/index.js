@@ -110,6 +110,7 @@ export default function Home({ data, views}) {
       <CssBaseline />
       <div className={styles.container}>
         <div className="section_link">
+          <Box sx={{ mb: 1 }}></Box>
           <Linkbox />
         </div>
         {views.map((view, index) => {
