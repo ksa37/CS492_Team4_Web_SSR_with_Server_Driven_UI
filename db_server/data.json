@@ -6,7 +6,7 @@
             "header": {
                 "title": "경주 불국사",
                 "href": "https://m.terms.naver.com/entry.naver?docId=1104868&cid=40942&categoryId=33380",
-                "subtitle": ["문화재", "慶州 佛國寺"],
+                "category": ["문화재", "慶州 佛國寺"],
                 "tablist": ["전체", "기본정보", "포토", "주변 문화재", "함께 찾은 문화재"],
                 "tablisthref": ["https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EA%B8%B0%EB%B3%B8%EC%A0%95%EB%B3%B4", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%ED%8F%AC%ED%86%A0", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%A3%BC%EB%B3%80%20%EB%AC%B8%ED%99%94%EC%9E%AC", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%ED%95%A8%EA%BB%98%20%EC%B0%BE%EC%9D%80%20%EB%AC%B8%ED%99%94%EC%9E%AC"]
             },
@@ -30,7 +30,11 @@
                     ["크기", "면적 409,315㎡"]
                 ],
                 "textexpand": "경북 경주시 진현동 토함산 기슭에 있는 신라시대 절. 사적이다.",
-                "buttonarea": "http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991",
+                "buttonarea": {
+                    "mapURL": "http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991",
+                    "shareURL": "https://m.terms.naver.com/entry.naver?docId=1104868&cid=40942&categoryId=33380",
+                    "title": "경주 불국사"
+                },
                 "video": {
                     "img": "/images/Bulguksa/basic/3/1.jpg",
                     "href": "https://tv.naver.com/v/11478389",
@@ -1549,5 +1553,198 @@
                 "morecontent": "https://m.search.naver.com/search.naver?query=%ED%8C%8C%EB%A6%AC&sm=mtb_nmr&where=m_influencer",
                 "keyword": "paris"
             }
+    },
+    "WorkLaterDrinkNow": {
+        "keyword": "술꾼도시여자들",
+        "views": ["basic", "wiki", "news"],
+        "basic": {
+            "header": {
+                "title": "술꾼도시여자들",
+                "href": "https://m.tving.com/app/theme.tving?pocCode=POCD0600&themeSeq=109682&utm_source=portal&utm_medium=search&utm_campaign=WorkLaterDrinkNow&utm_content=eventpage",
+                "category": "웹드라마",
+                "tablist": ["전체", "기본정보", "등장인물", "공식영상", "함께 볼만한 웹드라마"],
+                "categoryURL": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blFB&x_csa=%7B%22pkid%22%3A%22356%22%7D&qvt=0&query=%EC%9B%B9%EB%93%9C%EB%9D%BC%EB%A7%88",
+                "tablisthref": ["https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EA%B8%B0%EB%B3%B8%EC%A0%95%EB%B3%B4", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%ED%8F%AC%ED%86%A0", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%A3%BC%EB%B3%80%20%EB%AC%B8%ED%99%94%EC%9E%AC", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%ED%95%A8%EA%BB%98%20%EC%B0%BE%EC%9D%80%20%EB%AC%B8%ED%99%94%EC%9E%AC"]
+            },
+            "videos": {
+                "showMore": "https://tv.naver.com/v/22495407/list/739104",
+                "videoData": [
+                    {
+                        "title": "[술꾼도시여자들] 🍺술도녀 보내기 아쉬운 분들을 위한 역대급 분량 하드털이 메이킹",
+                        "publisher": "네이버TV",
+                        "viewCount": "4,534",
+                        "date": "2021.11.30.",
+                        "videoURL": "https://tv.naver.com/v/23826103",
+                        "videoLength": "24:36",
+                        "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211130_183%2FagfL7_1638280758457AMaev_JPEG%2F1638280716455.jpg"
+                    },
+                    {
+                        "title": "[술꾼도시여자들] 이선빈X한선화에게 사랑받는(?) 정은지💓 지구방위대씬 비하인드",
+                        "publisher": "네이버TV",
+                        "viewCount": "2,066",
+                        "date": "2021.11.30.",
+                        "videoURL": "https://tv.naver.com/v/23826072",
+                        "videoLength": "12:59",
+                        "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211130_262%2F3Hciy_1638280544584Oo8ki_JPEG%2F1638280476322.jpg"
+                    },
+                    {
+                        "title": "[술꾼도시여자들] 이선빈X최시원 베드씬부터 한선화의 데이트, 정은지X동생의 꽁냥 모먼트",
+                        "publisher": "네이버TV",
+                        "viewCount": "16,894",
+                        "date": "2021.11.22.",
+                        "videoURL": "https://tv.naver.com/v/23677808",
+                        "videoLength": "14:10",
+                        "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211122_75%2Fk3TeH_1637590335132ofURX_JPEG%2F1637590244966.jpg"
+                    },
+                    {
+                        "title": "[술꾼도시여자들] 술도녀에게 닥친 인생 최대 시련ㅣ11화 예고",
+                        "publisher": "네이버TV",
+                        "viewCount": "22,318",
+                        "date": "2021.11.22.",
+                        "videoURL": "https://tv.naver.com/v/23677888",
+                        "videoLength": "00:56",
+                        "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211122_19%2FAMixR_1637590566041ADSeJ_JPEG%2F1637590533723.jpg"
+                    },
+                    {
+                        "title": "[술꾼도시여자들] 정은지, 이선빈 얼굴에 냉수 뿌린 이유는? 열연 돋보인 장례식씬 메이킹",
+                        "publisher": "네이버TV",
+                        "viewCount": "4,220",
+                        "date": "2021.11.22.",
+                        "videoURL": "https://tv.naver.com/v/23677736",
+                        "videoLength": "10:15",
+                        "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211122_296%2FH9CpO_1637590120907Iy20U_JPEG%2F1637590004889.jpg"
+                    },
+                    {
+                        "title": "[술꾼도시여자들] 수험생분들을 위한 술도녀팀의 응원💓 수능대박나고 내년에 술 먹자!",
+                        "publisher": "네이버TV",
+                        "viewCount": "18,626",
+                        "date": "2021.11.15.",
+                        "videoURL": "https://tv.naver.com/v/23538553",
+                        "videoLength": "00:56",
+                        "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211115_49%2FgZblp_1636968668450d8h5q_JPEG%2F1636968588451.jpg"
+                    },
+                    {
+                        "title": "[술꾼도시여자들]갑작스러운 이선빈 아빠의 죽음, 곁을 지키는 한선화와 정은지ㅣ9화 예고",
+                        "publisher": "네이버TV",
+                        "viewCount": "72,356",
+                        "date": "2021.11.15.",
+                        "videoURL": "https://tv.naver.com/v/23538482",
+                        "videoLength": "00:33",
+                        "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211115_225%2F2J4T2_1636968444441Q9NJz_JPEG%2F1636968387611.jpg"
+                    },
+                    {
+                        "title": "[술꾼도시여자들] '가끔 넘어져도 괜찮아!' 정은지의 청춘을 위한 인생 한잔ㅣ스페셜MV",
+                        "publisher": "네이버TV",
+                        "viewCount": "18,430",
+                        "date": "2021.11.15.",
+                        "videoURL": "https://tv.naver.com/v/23538046",
+                        "videoLength": "03:16",
+                        "thumbImg": "https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211115_176%2F5qFdc_16369672438573DSkl_JPEG%2F1636967136238.jpg"
+                    }
+                ]
+            }
+        },
+        "wiki": {
+            "wiki_posts": [
+                {
+                    "publisherURL": "https://namu.wiki/w/%EC%88%A0%EA%BE%BC%EB%8F%84%EC%8B%9C%EC%B2%98%EB%85%80%EB%93%A4",
+                    "publisherImgURL": "/images/wiki/namuwiki.png",
+                    "publisher": "namu.wiki › 술꾼도시처녀들",
+                    "date": "",
+                    "postURL": "https://namu.wiki/w/%EC%88%A0%EA%BE%BC%EB%8F%84%EC%8B%9C%EC%B2%98%EB%85%80%EB%93%A4",
+                    "title": "술꾼도시처녀들 - 나무위키",
+                    "contents": "자세한 내용은 술꾼도시여자들 문서를 참고하십시오. 2021년 6월 9일 TVING 오리지널 드라마 《술꾼도시여자들》로 제작되었고 10월 22일에 1화와 2화가 공개가 되었다. 매주 금요일 오후 4시에 2편씩 공개된다. 이선빈, 한선화, 정은지, 최시원이 캐스팅되었다.언론에 공개된 정보에선 기존 캐릭터들의 설정이 상당히 바뀐 것으로 보인다.",
+                    "contentsImgURL": "",
+                    "relation": "",
+                    "content_links": []
+                },
+                {
+                    "publisherURL": "https://namu.wiki/w/%EC%88%A0%EA%BE%BC%EB%8F%84%EC%8B%9C%EC%97%AC%EC%9E%90%EB%93%A4",
+                    "publisherImgURL": "/images/wiki/namuwiki.png",
+                    "publisher": "namu.wiki › 술꾼도시여자들",
+                    "date": "",
+                    "postURL": "https://namu.wiki/w/%EC%88%A0%EA%BE%BC%EB%8F%84%EC%8B%9C%EC%97%AC%EC%9E%90%EB%93%A4",
+                    "title": "술꾼도시여자들 - 나무위키",
+                    "contents": "2021년10월 22일부터 방영 중인 TVING 오리지널 드라마. 카카오웹툰 《술꾼도시처녀들》을 원작으로 한다.",
+                    "contentsImgURL": "",
+                    "relation": "",
+                    "content_links": []
+                },
+                {
+                    "publisherURL": "https://webtoon.kakao.com/content/%EC%88%A0%EA%BE%BC%EB%8F%84%EC%8B%9C%EC%B2%98%EB%85%80%EB%93%A4/1090",
+                    "publisherImgURL": "/images/wiki/kakao_webtoon.png",
+                    "publisher": "webtoon.kakao.com › content",
+                    "date": "",
+                    "postURL": "https://webtoon.kakao.com/content/%EC%88%A0%EA%BE%BC%EB%8F%84%EC%8B%9C%EC%B2%98%EB%85%80%EB%93%A4/1090",
+                    "title": "술꾼도시처녀들 | 카카오웹툰 - KAKAO WEBTOON",
+                    "contents": "01 19 술꾼도시처녀들 작품과같은 코믹/일상 작품들 술꾼도시처녀들 미깡 코믹/일상 1억 72.9만 첫 화 보기 [특별편] 10화 서른이 되면 (마지막 화+후기) 20일 후 무료 [특별편] 9화 선배가 되다 13일 후 무료 [특별편] 8화 숙취해소제 6일 후 무료 무료 [특별편] 7화 신입사원 21.12.03... 이용권 0장 미리보기 3개 ...",
+                    "contentsImgURL": "",
+                    "relation": "",
+                    "content_links": []
+                },
+                {
+                    "publisherURL": "https://www.yna.co.kr/view/AKR20210708103200005",
+                    "publisherImgURL": "/images/wiki/yna.png",
+                    "publisher": "www.yna.co.kr › view",
+                    "date": "",
+                    "postURL": "https://www.yna.co.kr/view/AKR20210708103200005",
+                    "title": "최시원, 티빙 드라마 '술꾼도시여자들' 주연 | 연합뉴스",
+                    "contents": "(서울=연합뉴스) 이정현 기자 = SM엔터테인먼트는 가수 겸 배우 최시원이 티빙 새 오리지널 드라마 '술꾼도시여자들' 주인공으로 나선다고 8일 ...",
+                    "contentsImgURL": "",
+                    "relation": "",
+                    "content_links": []
+                }
+            ],
+            "wiki_more": "https://m.search.naver.com/search.naver?page=2&query=%EC%88%A0%EA%BE%BC%EB%8F%84%EC%8B%9C%EC%97%AC%EC%9E%90%EB%93%A4&sm=mtb_pge&start=1&where=m_web"
+        },
+        "news": {
+            "news_posts": [
+                { 
+                    "publisherURL": "https://media.naver.com/press/031",
+                    "publisherImgURL": "https://search.pstatic.net/common/?src=https%3A%2F%2Fmimgnews.pstatic.net%2Fimage%2Fupload%2Foffice_logo%2F031%2F2020%2F11%2F27%2Flogo_031_18_20201127143830.jpg&type=f54_54&expire=24&refresh=true",
+                    "publisher": "아이뉴스24",
+                    "date": "1638597660000",
+                    "postURL": "https://n.news.naver.com/article/031/0000640420",
+                    "title": "“저세상 텐션“ 술꾼도시여자들…역대급 인기 사그라들 줄 모른다",
+                    "contents": "'술꾼'과 '도시 여자'란 신선한 단어의 조합이 이목을 끌고, 친구와 소소한 술 한잔에 담긴 여자들의 우애 그리고 걸판지게 내뱉는 대사들에 요즘 말로 '가슴이 웅장'해진다.'술도녀'는 1화를 무료 공개하는 파격적인 공개 방식을 택했다. 앞서 티빙은 킬러 콘텐츠였던 환승연애 1화를 유튜브에 무료로 공개하기도 했다. 아울러 몰아보기를 할 수 있도록 한 주에 2회씩 공개하고, 길이를 40분 안팎으로 제작해 숏폼 콘텐츠에 익숙한 MZ(밀레니얼+Z)세대를 공략했다.",
+                    "contentsImgURL": "https://search.pstatic.net/common/?src=https%3A%2F%2Fimgnews.pstatic.net%2Fimage%2Forigin%2F031%2F2021%2F12%2F04%2F640420.jpg&type=ofullfill174_174&expire=2&refresh=true",
+                    "relation": "0.9"
+                },
+                { 
+                    "publisherURL": "https://media.naver.com/press/108",
+                    "publisherImgURL": "https://search.pstatic.net/common/?src=https%3A%2F%2Fmimgnews.pstatic.net%2Fimage%2Fupload%2Foffice_logo%2F108%2F2017%2F08%2F28%2Flogo_108_18_20170828172528.jpg&type=f54_54&expire=24&refresh=true",
+                    "publisher": "스타뉴스",
+                    "date": "1638509760000",
+                    "postURL": "https://n.news.naver.com/entertain/article/108/0003010274",
+                    "title": "한선화 '술꾼도시미녀'[★포토]",
+                    "contents": "티빙 '술꾼도시여자들'의 배우 한선화가 3일 진행된 라운드 인터뷰를 위해 포즈를 취하고 있다. '술꾼도시여자들'은 하루 끝의 술 한잔이 인생의 신념인 세 여자의 일상을 그린 본격 기승전술 드라마다. /사진제공=키이스트 2021.12.03",
+                    "contentsImgURL": "https://search.pstatic.net/common/?src=https%3A%2F%2Fimgnews.pstatic.net%2Fimage%2Forigin%2F108%2F2021%2F12%2F03%2F3010274.jpg&type=ofullfill174_174&expire=2&refresh=true",
+                    "relation": "0.6"
+                },
+                { 
+                    "publisherURL": "https://media.naver.com/press/032",
+                    "publisherImgURL": "https://search.pstatic.net/common/?src=https%3A%2F%2Fmimgnews.pstatic.net%2Fimage%2Fupload%2Foffice_logo%2F032%2F2018%2F10%2F11%2Flogo_032_18_20181011174611.png&type=f54_54&expire=24&refresh=true",
+                    "publisher": "경향신문",
+                    "date": "1638434760000",
+                    "postURL": "https://n.news.naver.com/article/032/0003113944",
+                    "title": "‘술꾼도시여자들’ 위소영 작가 “척박한 인생 조금은 느슨하게 살아도 되지 않을까요” [인터뷰]",
+                    "contents": "티빙(TVING) 오리지널 드라마 <술꾼도시여자들>(술도녀)은 이런 ‘현실 인생’을 다뤘다. 연인은 나를 떠나고, 친구는 내게 쌍욕을 하며, 직장은 나를... 그는 “술 되게 좋아하는 세 여자 아이들이 ‘한잔 적시는’ 이야기인데 딱 어떤 결말이 있는 거야 말로 비현실적이라고 생각했다. 인생사가...",
+                    "contentsImgURL": "https://search.pstatic.net/common/?src=https%3A%2F%2Fimgnews.pstatic.net%2Fimage%2Forigin%2F032%2F2021%2F12%2F02%2F3113944.jpg&type=ofullfill174_174&expire=2&refresh=true",
+                    "relation": "0.8"
+                },
+                { 
+                    "publisherURL": "https://media.naver.com/press/408",
+                    "publisherImgURL": "https://search.pstatic.net/common/?src=https%3A%2F%2Fmimgnews.pstatic.net%2Fimage%2Fupload%2Foffice_logo%2F408%2F2017%2F08%2F29%2Flogo_408_18_20170829145329.jpg&type=f54_54&expire=24&refresh=true",
+                    "publisher": "MBC연예",
+                    "date": "1638575520000",
+                    "postURL": "https://n.news.naver.com/entertain/article/408/0000140356",
+                    "title": "이광수, 여자친구 이선빈 '술꾼도시여자들' 열혈팬 자처 [인터뷰M]",
+                    "contents": "이선빈이 최근 OTT 화제작으로 꼽히고 있는 티빙(TVING) 오리지널 웹드라마 '술꾼도시여자들'(극본 위소영·연출 김정식) 인터뷰를 통해 소회를 밝혔다. 하루 끝의 술 한잔이 인생의 신념인 세 여자의 일상을 그린 일명 '기승전술' 드라마. 현실감 넘치는 연출과 이선빈, 한선화, 정은지, 최시원의 의 뛰어난 연기로 큰 사랑을 받았다.",
+                    "contentsImgURL": "https://search.pstatic.net/common/?src=https%3A%2F%2Fimgnews.pstatic.net%2Fimage%2Forigin%2F408%2F2021%2F12%2F04%2F140356.jpg&type=ofullfill174_174&expire=2&refresh=true",
+                    "relation": "0.7"
+                }
+            ],
+            "news_more": "https://m.search.naver.com/search.naver?where=m_news&sm=mtb_nmr&query=%EC%88%A0%EA%BE%BC%EB%8F%84%EC%8B%9C%EC%97%AC%EC%9E%90%EB%93%A4&sort=0&nso=so:r,p:all" 
         }
+    }
 }

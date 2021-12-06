@@ -9,7 +9,7 @@ import Bpage2 from './Bpage2'
 
 export default function Bulguksa({props}) {
     const {header, first_card, second_card_whole, second_card_basic, third_card_basic} = props
-    const {title, href, subtitle, tablist, tablisthref, video} = header
+    const {title, href, category, tablist, tablisthref, video} = header
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -56,14 +56,16 @@ export default function Bulguksa({props}) {
                                     {title}
                                 </a>
                             </div>
-                            <div className={styles.category}>
-                                {subtitle[0]}
-                                <div className={styles.titlebar}></div>
-                                {subtitle[1]}
-                            </div>
+                            { (offset == 0) &&
+                                <div className={styles.category}>
+                                    {category[0]}
+                                    <div className={styles.titlebar}></div>
+                                    {category[1]}
+                                </div>
+                            }
                             <div className={styles.btnmenu}>
                                 {tablist.map((tab, i) => (
-                                    <div key={i} className={styles.btnmenu}>
+                                    <div key={i}>
                                         {
                                             i < 3 ?
                                             <button
@@ -102,10 +104,10 @@ export default function Bulguksa({props}) {
                             "anchorEl": anchorEl, 
                             "handleClick": handleClick, 
                             "handleClose": handleClose,
-                            "url": link,
+                            "url": href,
                             "title": "경주 불국사",
-                            "activeColor": "rgba(145,120,103,1)",
-                            "inactiveColor": "rgba(145,120,103,0.5)"
+                            "activeColor": "#888E99",
+                            "inactiveColor": "#BBBEC6"
                         }}
                         />
                     }
@@ -114,17 +116,17 @@ export default function Bulguksa({props}) {
             </Card>
             {
                 menu.darkBtn === 0 ?
-                <Card className={styles.contents} sx={{ maxWidth: 768, mb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
+                <Card className={styles.contents} sx={{ maxWidth: 768, pb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
                     <Bpage0 first_card={first_card} second_card={second_card_whole}/>
                 </Card>
                 :
                 menu.darkBtn === 1 ?
-                <Card className={styles.contents} sx={{ maxWidth: 768, mb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
+                <Card className={styles.contents} sx={{ maxWidth: 768, pb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
                     <Bpage1 first_card={first_card} second_card={second_card_basic} third_card={third_card_basic}/>
                 </Card>
                 :
                 menu.darkBtn === 2 ?
-                <Card className={styles.contents} sx={{ maxWidth: 768, mb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
+                <Card className={styles.contents} sx={{ maxWidth: 768, pb:"20px" }} style={{backgroundColor: "#e9ecef" }} variant='outlined' square>
                     <Bpage2 first_card={first_card}/>
                 </Card>
                 :

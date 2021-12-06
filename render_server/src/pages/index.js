@@ -118,13 +118,15 @@ export default function Home({ data, views}) {
               if (keyword === '불국사')
               {
                 return (
-                  <div key={index}>
-                    <div className="section_bulguksa">
-                      {/* <Bulguksa props={json.basic}/> */}
-                    </div>
-                    <div className="section_drama">
-                      <Drama/>  
-                    </div>
+                  <div key={index} className="section_bulguksa">
+                    <Bulguksa props={json.basic}/>
+                  </div>
+                )
+              }
+              if (keyword === '술꾼도시여자들') {
+                return (
+                  <div key={index} className="section_drama">
+                    <Drama props={json.basic}/>
                   </div>
                 )
               }
