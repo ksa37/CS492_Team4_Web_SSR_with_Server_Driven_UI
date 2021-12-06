@@ -62,13 +62,13 @@ Select box에서 원하는 키워드를 클릭한 후 'LINK' 버튼을 누르면
     (파리)   ```http://localhost:4000/?id=Paris```    
     (술꾼도시여자들) ```http://localhost:4000/?id=WorkLaterDrinkNow```  
 
-2. view 선택
+2. view 선택   
     view 옵션은 url 뒤에 views를 key로 하는 query string을 추가함으로써 선택할 수 있다.   
     ```http://localhost:4000/?id=Paris&views[]=influencer&views[]=review ```   
     위 경우 파리 키워드에 관한 인플루언서 페이지와 VIEW 페이지를 (query string 순서에 맞게) 순서대로 확인할 수 있다.
 
     구현된 page들의 종류는 아래와 같다. (각 page에 대한 자세한 사항은 WIKI 참고)
-    - 인플루언서 / query string value: *influencer*  
+    - 인플루언서 / query string value: *influencer*
     ![influencer](screenshots/influencer.png)
     - VIEW / query string value: *review*   
     ![view](screenshots/view.png)
