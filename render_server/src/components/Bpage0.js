@@ -33,7 +33,7 @@ export default function Bpage0({first_card, second_card}) {
                                                 <img 
                                                     src={img}
                                                     height= "168px"
-                                                    alt="Bulguksa"
+                                                    alt={"scroll_"+index}
                                                 />
                                             </div>
                                         </a>
@@ -61,7 +61,7 @@ export default function Bpage0({first_card, second_card}) {
                             return (
                                 <li key={index}>
                                     <div className={styles.areacard}>
-                                        <a href={scroll.href}><img src={scroll.thumb} width="87px" height="87px" alt={scroll.name}/></a>
+                                        <a href={scroll.href}><img src={scroll.thumb} width="87px" height="87px" alt={scroll.name + " img"}/></a>
                                         <div className={styles.titlebox}>
                                             <a className={styles.name} href={scroll.href}>{scroll.name}</a>
                                             <span className={styles.subtext}>{scroll.subtext}</span>
