@@ -2,7 +2,7 @@
 
 ## Brief overview
 
-Render server와 web server를 개발하여 Naver 모바일(m.naver.com) 검색 화면 결과 중에서 N개의 화면을 구현하는 프로젝트 
+Render server와 web server를 개발하여 Naver 모바일(https://m.naver.com) 검색 화면 결과 중에서 N개의 화면을 구현하는 프로젝트 
 
 ## Basic info
 
