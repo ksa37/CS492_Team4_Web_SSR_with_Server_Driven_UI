@@ -59,7 +59,7 @@ export default function Influencer(props) {
       <Card sx={{ maxWidth: 768, lineHeight: "50px"}} square>
       <div className = {styles.influencer}> 인플루언서 </div> 
       <img className = {styles.influencer_icon} src="/images/influencer/icon_img.png" alt='icon'/>
-      <Link className = {styles.service} href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> 
+      <Link className = {styles.service} underline="none" href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> 
       </Card>
       {data.map((each) => 
       <Card sx={{ maxWidth: 766}} key = {each.name} square>

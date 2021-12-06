@@ -25,6 +25,7 @@
   width: 15px;
   height: 15px;
   margin: auto 0;
+  margin-right: 6px;
   float: left;
 }
 .flex2 {
@@ -152,12 +153,14 @@
   float: left;
   height: 38px;
   width: 38px;
+  margin-right: 4px;
 }
 .content {
   color: #404040;
   font-size: 16px;
   float: left;
   margin-left: 19px;
+  margin-right: 19px;
 }
 .date {
   margin-top: 10px;
@@ -169,6 +172,7 @@
 .f {
   display: flex;
   margin-top: 5px;
+  margin-bottom: 18px;
 }
 .l {
   float: left;
