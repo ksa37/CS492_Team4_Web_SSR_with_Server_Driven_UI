@@ -2,20 +2,30 @@
   color: grey;
   font-weight: 600;
   display: flex;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 .typ_black {
   color: grey;
   font-weight: 200;
-  margin-left: 10px;
 }
-.fanicon {
-  width: 70px;
-  height: 40px;
+.fanicon_before {
+  width: 68px;
+  height: 35px;
   float: right;
+  margin-right: 18px;
+}
+.fanicon_after {
+  width: 52px;
+  height: 35px;
+  float: right;
+  margin-right: 18px;
 }
 .blogicon {
   width: 15px;
   height: 15px;
+  margin: auto 0;
+  float: left;
 }
 .flex2 {
   float: left;
@@ -25,21 +35,20 @@
 }
 .header {
   color: grey;
-  font-size: 1rem;
-  margin-left: 5px;
+  font-size: 14px;
+  margin-left: 2px;
   /* margin-top: 5px; */
 }
 .header_sub {
   color: grey;
-  font-size: 1.1rem;
+  font-size: 14px;
   float: left;
   /* line-height: 1.5rem; */
 }
 .header_sub_lft {
   color: grey;
-  font-size: 1.1rem;
-  /* line-height: 1.5rem; */
-  margin-left: 5px;
+  font-size: 14px;
+  margin-left: 4px;
   float: left;
 }
 .flexend {
@@ -65,25 +74,29 @@
   /* margin-top: 5px; */
   font-weight: 700;
   color: #242424;
-  font-size: 1rem;
+  font-size: 14px;
 }
 .subheader {
-  font-size: 1rem;
+  font-size: 14px;
   color: #666;
   font-weight: 700;
+  float: left;
 }
 .detailsdepth {
-  font-size: 1rem;
+  font-size: 14px;
   color: #666;
   margin-left: 10px;
+  float: left;
 }
 .magintop {
   margin-top: 6px;
 }
 .image {
-  width: 100px;
-  height: 100px;
-  transition: all 0.2s ease-in-out;
+  width: 87px;
+  height: 87px;
+  margin-left: 18px;
+  margin-right: 18px;
+  /* transition: all 0.2s ease-in-out; */
 }
 .image:hover {
   -webkit-transform: scale(1.3);
@@ -95,40 +108,79 @@
 }
 .rightend {
   text-align: right;
+  color: '#0c43b7';
+  font-size: 17px;
 }
 .right {
   margin-left: 250px;
+}
+.influencer {
+  font-size: 17px;
+  font-weight: 700;
+  margin-left: 18px;
+  float: left;
 }
 .influencer_icon {
   height: 20px;
   width: 20px;
   margin: auto 0;
 }
+.service {
+  color: #0c43b7;
+  font-size: 15px;
+  float: right;
+  margin-right: 18px;
+  /* sx={{ color: "#0c43b7", fontSize: '15px', right}} */
+}
 .rightallign {
-  margin-left: 700px;
-  display: block;
-  z-index: 100;
+  float: right;
+  margin-right: 18px;
+}
+.rightallign2 {
+  float: right;
 }
 .flex {
   display: flex;
 }
 .flipscreen {
   color: grey;
-  font-weight: 200;
-  margin-left: 10px;
-  font-size: 0.8rem;
+  font-weight: 400;
+  margin-left: 15px;
+  font-size: 14px;
 }
-/* .l {
+.avatar {
+  float: left;
+  height: 38px;
+  width: 38px;
+}
+.content {
+  color: #404040;
+  font-size: 16px;
+  float: left;
+  margin-left: 19px;
+}
+.date {
+  margin-top: 10px;
+  color: grey;
+  font-weight: 400;
+  font-size: 15px;
+  margin-left: 19px;
+}
+.f {
+  display: flex;
+  margin-top: 5px;
+}
+.l {
   float: left;
 }
 .r {
   float: right;
 }
-.f {
-  display: flex;
-} */
-.avatar {
+.t {
   float: left;
-  height: 65px;
-  width: 65px;
+  vertical-align: top;
+}
+.b {
+  float: left;
+  vertical-align: bottom;
 }
