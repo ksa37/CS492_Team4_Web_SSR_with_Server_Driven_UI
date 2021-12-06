@@ -64,19 +64,19 @@ export default function View({props}){
       const setViewTag = (index) => {
         if (currentViewType==0){
             setBasicTag(index);
-            console.log("setting basic tag")
-            console.log(index)
-            console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
+            // console.log("setting basic tag")
+            // console.log(index)
+            // console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
         }
         else if (currentViewType==1){
             setTimelineTag(index);
-            console.log("setting timeline tag")
-            console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
+            // console.log("setting timeline tag")
+            // console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
         }
         else if (currentViewType==2){
             setMultimediaTag(index);
-            console.log("setting multimedia tag")
-            console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
+            // console.log("setting multimedia tag")
+            // console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
         }
         
         // switch(index) {
@@ -231,7 +231,6 @@ export default function View({props}){
                     )
                     break;
                 case 2:
-                    console.log('multimedia')
                     return (
                         <>{posts[currentMultimediaTag]&&posts[currentMultimediaTag].slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
                     )
