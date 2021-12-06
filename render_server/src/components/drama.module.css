@@ -9,6 +9,7 @@
     border-bottom: none;
     border-top-width: 2px;
     border-top-color: rgba(145,120,103,0.5);
+    z-index: 5;
 }
 
 .dramaName {
