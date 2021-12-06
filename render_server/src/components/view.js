@@ -219,8 +219,6 @@ export default function View({props}){
             {(() => {
                 switch (currentViewType) {
                 case 0:
-                    
-                    // console.log(current_posts)
                     return (
                         <>{posts[currentBasicTag]&&posts[currentBasicTag].slice(0, 5).map((view, index) => 
                         <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/> )}</> 
@@ -228,13 +226,11 @@ export default function View({props}){
                     )
                     break;
                 case 1:
-                    // console.log('timeline')
                     return (
                         <>{posts[currentTimelineTag]&&<ViewCardTimeline props={{'view_posts': posts[currentTimelineTag].slice(0,5)}}/>} </>
                     )
                     break;
                 case 2:
-                    // console.log('multimedia')
                     return (
                         <>{posts[currentMultimediaTag]&&posts[currentMultimediaTag].slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
                     )
@@ -243,46 +239,7 @@ export default function View({props}){
                     return <></>
                 }
             })()}
-
-
-{/* 
-            {currentViewType==0 && currentBasicTag==0
-                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => 
-                    <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
-                    )}</> 
-                : <></> }
-            {currentViewType==1 && currentTimelineTag==0
-                ? <>{view_posts&&<ViewCardTimeline props={{'view_posts': view_posts.slice(0,5)}}/>} </>
-                : <></> }
-            {currentViewType==2 && currentMultimediaTag==0
-                ? <>{view_posts&&view_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
-                : <></> }
-            
-            {currentViewType==0 && currentTimelineTag==1
-                ? <>{view_cafe_posts&&view_cafe_posts.slice(0, 5).map((view, index) => 
-                    <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
-                    )}</> 
-                : <></>}
-            {currentViewType==1 && currentBasicTag==1
-                ? <>{view_cafe_posts&&<ViewCardTimeline props={{'view_posts': view_cafe_posts.slice(0,5)}}/>} </>
-                : <></> }
-            {currentViewType==2 && currentMultimediaTag==1
-                ? <>{view_cafe_posts&&view_cafe_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
-                : <></> }
-            {currentViewType==0 && currentTimelineTag==2
-                ? <>{view_weather_posts&&view_weather_posts.slice(0, 5).map((view, index) => 
-                    <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
-                    )}</> 
-                : <></>}
-            {currentViewType==1 && currentBasicTag==2
-                ? <>{view_weather_posts&&<ViewCardTimeline props={{'view_posts': view_weather_posts.slice(0,5)}}/>} </>
-                : <></> }
-            {currentViewType==2 && currentMultimediaTag==2
-                ? <>{view_weather_posts&&view_weather_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
-                : <></> } */}
-            
-
-            
+                    
         </Card>
         <MoreContent props={{'view_option':view_option,'more_link':view_more}}/>
     </>
