@@ -10,8 +10,8 @@ Render server와 web server를 개발하여 Naver 모바일(m.naver.com) 검색 
 - **Team members' email**: (김민형 이메일), (김수아 이메일), wldbs0507@kaist.ac.kr, (최지호 이메일)
 
 
-# How to run
-## Install
+## How to run project
+### Install
 ```
 $ git clone https://github.com/di-uni/CS492_Team4_Web_SSR_with_Server_Driven_UI.git
 $ cd CS492_Team4_Web_SSR_with_Server_Driven_UI
@@ -19,19 +19,18 @@ $ npm install
 ```
 Clone the project and install all packages required for this project   
 
----
-## Run web server
+### Run web server
 ```
 $ cd web_server
 $ npm run web
 ```
-## Run db server
+### Run db server
 ```
 $ cd ..
 $ cd db_server
 $ npm run json
 ```
-## Run render server (Dev)
+### Run render server (Dev)
 ```
 $ cd ..
 $ cd render_server
@@ -40,7 +39,7 @@ $ npm run dev
 Runs the project in the development mode.   
 Open https://localhost:4000 to view it in the browser.
 
-## Run render server (Build)
+### Run render server (Build)
 ```
 (in render_server directory)
 $ npm run build
@@ -50,8 +49,8 @@ Runs the project after build.
 Open https://localhost:4000 to view it in the browser.
 
 
-# Detailed description
-## How to Use 
+## Detailed description
+### How to Use 
 ### 1. keyword 선택      
 이번 프로젝트에서 구현된 키워드는 `불국사`, `파리`, `술꾼도시여자들` 총 3가지이다.  
 키워드를 선택해서 해당 키워드와 관련된 페이지를 보기 위해선 두 가지 방법이 있는데, 하나는 페이지 상단의 select box를 이용하는 것이다. 
@@ -59,9 +58,9 @@ Open https://localhost:4000 to view it in the browser.
 Select box에서 원하는 키워드를 클릭한 후 'LINK' 버튼을 누르면 된다.
 
 다른 방법은 url 뒤에 id를 key로 하는 query string을 추가하는 것이다.   
-```http://localhost:4000/?id=Bulguksa ``` (불국사)   
-```http://localhost:4000/?id=Paris ``` (파리)   
-```http://localhost:4000/?id=WorkLaterDrinkNow ```(술꾼도시여자들)   
+(불국사)  ```http://localhost:4000/?id=Bulguksa```     
+(파리)   ```http://localhost:4000/?id=Paris```    
+(술꾼도시여자들) ```http://localhost:4000/?id=WorkLaterDrinkNow```  
 
 ### 2. view 선택
 view 옵션은 url 뒤에 views를 key로 하는 query string을 추가함으로써 선택할 수 있다.   
