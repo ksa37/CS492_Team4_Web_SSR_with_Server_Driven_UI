@@ -88,7 +88,7 @@ function ViewCardTimelinePost({props}) {
                     <a>
                         <div className={styles.title}>{title}</div>
                         <div className={styles.contentsInfo}>
-                        <div className={styles.contents}>{contents}</div>
+                        <div className={styles.contents}><p>{contents}</p></div>
                         </div>
                     </a>
                 </Link>
