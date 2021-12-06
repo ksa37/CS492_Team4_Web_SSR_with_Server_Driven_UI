@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, '../render_server/public')));
 app.use(handleRender);
 function handleRender(req, res) {
   const id = req.query.id ? req.query.id : 'Bulguksa';
-  if ((id === "Paris") || (id === "Bulguksa"))
+  if ((id === "Paris") || (id === "Bulguksa") || (id === "WorkLaterDrinkNow"))
   {
     const views_input = req.query.views ?  req.query.views : ["basic", "influencer", "review", "wiki", "photo", "news"];
     axios.get(`http://localhost:5000/${id}`)
