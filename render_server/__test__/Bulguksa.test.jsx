@@ -9,7 +9,7 @@ describe('Bulguksa', () => {
       "header": {
           "title": "경주 불국사",
           "href": "https://m.terms.naver.com/entry.naver?docId=1104868&cid=40942&categoryId=33380",
-          "subtitle": ["문화재", "慶州 佛國寺"],
+          "category": ["문화재", "慶州 佛國寺"],
           "tablist": ["전체", "기본정보", "포토", "주변 문화재", "함께 찾은 문화재"],
           "tablisthref": ["https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EA%B8%B0%EB%B3%B8%EC%A0%95%EB%B3%B4", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%ED%8F%AC%ED%86%A0", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%A3%BC%EB%B3%80%20%EB%AC%B8%ED%99%94%EC%9E%AC", "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%ED%95%A8%EA%BB%98%20%EC%B0%BE%EC%9D%80%20%EB%AC%B8%ED%99%94%EC%9E%AC"]
       },
@@ -33,7 +33,11 @@ describe('Bulguksa', () => {
               ["크기", "면적 409,315㎡"]
           ],
           "textexpand": "경북 경주시 진현동 토함산 기슭에 있는 신라시대 절. 사적이다.",
-          "buttonarea": "http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991",
+          "buttonarea": {
+              "mapURL": "http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991",
+              "shareURL": "https://m.terms.naver.com/entry.naver?docId=1104868&cid=40942&categoryId=33380",
+              "title": "경주 불국사"
+          },
           "video": {
               "img": "/images/Bulguksa/basic/3/1.jpg",
               "href": "https://tv.naver.com/v/11478389",
@@ -89,6 +93,18 @@ describe('Bulguksa', () => {
                   "thumb": "/images/Bulguksa/basic/2/8.jpg",
                   "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19375990&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219375990%22%7D&qvt=0&query=%EC%88%98%EB%B4%89%EC%A0%95",
                   "name": "수봉정",
+                  "subtext": "두산백과"
+              },
+              {
+                  "thumb": "/images/Bulguksa/basic/2/9.jpg",
+                  "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19376339&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219376339%22%7D&qvt=0&query=%EA%B0%90%EC%82%B0%EC%82%AC%EC%A7%80%20%EC%82%BC%EC%B8%B5%EC%84%9D%ED%83%91",
+                  "name": "감산사지 삼층석탑",
+                  "subtext": "두산백과"
+              },
+              {
+                  "thumb": "/images/Bulguksa/basic/2/10.jpg",
+                  "href": "https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19373294&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219373294%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EA%B5%AC%EC%A0%95%EB%8F%99%20%EA%B3%A0%EB%B6%84%EA%B5%B0",
+                  "name": "경주 구정동 고분군",
                   "subtext": "두산백과"
               }
           ]
@@ -154,14 +170,15 @@ describe('Bulguksa', () => {
     const dt1 = screen.getByText(/소재지/i)
     const dd1 = screen.getByText(/경북 경주시 불국로 385, 등 \(진현동\)/i)
     const div1 = screen.getByText(/경북 경주시 진현동 토함산 기슭에 있는 신라시대 절\. 사적이다\./i)
-    const img5 = screen.getByAltText(/button/i)
+    const img5 = screen.getByAltText(/map_button/i)
+    const img6 = screen.getByAltText(/share_button/i)
     const div2 = screen.getByText(/지도/i)
     const h31 = screen.getByRole('heading', {
       level: 3,
       name: /주변 문화재/i,
     })
-    const img6 = screen.getByAltText(/주변 문화재/i)
-    const img7 = screen.getByAltText(/경주 불국사 사리탑/i)
+    const img7 = screen.getByAltText(/주변 문화재/i)
+    const img8 = screen.getByAltText(/경주 불국사 사리탑/i)
     const link1 = screen.getByRole('link', {
       name: /경주 불국사 사리탑(?!.)/i,
     })
@@ -174,6 +191,7 @@ describe('Bulguksa', () => {
     expect(img5).toBeInTheDocument()
     expect(img6).toBeInTheDocument()
     expect(img7).toBeInTheDocument()
+    expect(img8).toBeInTheDocument()
     expect(span0).toBeInTheDocument()
     expect(h30).toBeInTheDocument()
     expect(h31).toBeInTheDocument()
@@ -194,8 +212,8 @@ describe('Bulguksa', () => {
     expect(img5.closest('a')).toHaveAttribute('href', 'http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991')
     expect(div2.closest('a')).toHaveAttribute('href', 'http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991')
     expect(h31.closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22isOpen%22%3Atrue%2C%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%A3%BC%EB%B3%80%20%EB%AC%B8%ED%99%94%EC%9E%AC')
-    expect(img6.closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22isOpen%22%3Atrue%2C%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%A3%BC%EB%B3%80%20%EB%AC%B8%ED%99%94%EC%9E%AC')
-    expect(img7.closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371948&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371948%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%82%AC%EB%A6%AC%ED%83%91')
+    expect(img7.closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22isOpen%22%3Atrue%2C%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%A3%BC%EB%B3%80%20%EB%AC%B8%ED%99%94%EC%9E%AC')
+    expect(img8.closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371948&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371948%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%82%AC%EB%A6%AC%ED%83%91')
     expect(link1).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371948&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371948%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%82%AC%EB%A6%AC%ED%83%91')
 
     //Case for Bulguksa page1
