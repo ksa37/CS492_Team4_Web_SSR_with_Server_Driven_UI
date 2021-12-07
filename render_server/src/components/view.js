@@ -58,48 +58,18 @@ export default function View({props}){
       const [currentMultimediaTag, setMultimediaTag] = useState(0);
       const tagsForViewType = [currentBasicTag, currentTimelineTag, currentMultimediaTag];
       const posts = [view_posts, view_cafe_posts, view_weather_posts]
-      var current_posts = view_posts;
 
       const setViewTag = (index) => {
         if (currentViewType==0){
             setBasicTag(index);
-            // console.log("setting basic tag")
-            // console.log(index)
-            // console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
         }
         else if (currentViewType==1){
-            setTimelineTag(index);
-            // console.log("setting timeline tag")
-            // console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
+            setTimelineTag(index);        
         }
         else if (currentViewType==2){
             setMultimediaTag(index);
-            // console.log("setting multimedia tag")
-            // console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
         }
-        
-        // switch(index) {
-        //     case 0:
-        //         console.log('changing post 0')
-        //         current_posts = view_posts
-        //         break;
-        //     case 1:
-        //         console.log('changing post 1')
-        //         current_posts = view_cafe_posts
-        //         break;
-        //     case 2:
-        //         console.log('changing post 2')
-        //         current_posts = view_weather_posts
-        //         break;
-        //     default:
-        //         current_posts = null
-        //         break;
-        // }
       };
-
-      
-
-
 
     return(
     <>
@@ -114,23 +84,6 @@ export default function View({props}){
                 style = {{ textAlign: 'left'}}
                 action = {
                     <>
-                    {/* Tag change keeped even when view type changes*/}
-                    {/* {selectView&&selectView.map((option, index)=>(
-                        <IconButton
-                            key={index}
-                            name='view_type'
-                            onClick={()=> updateIndices(0,index)}
-                        >
-                        {   currentIndices.view_type==index
-                            ? <img 
-                                src={option.src_open}
-                                height={16} width={16}/>
-                            : <img 
-                            src={option.src_close}
-                            height={16} width={16}/>
-                        }
-                        </IconButton>
-                    ))} */}
                     {selectView&&selectView.map((option, index)=>(
                         <IconButton
                             key={index}
@@ -143,9 +96,9 @@ export default function View({props}){
                                 height={16} width={16}
                                 alt={index}/>
                             : <img 
-                            src={option.src_close}
-                            height={16} width={16}
-                            alt={index}/>
+                                src={option.src_close}
+                                height={16} width={16}
+                                alt={index}/>
                         }
                         </IconButton>
                     ))}
@@ -192,29 +145,6 @@ export default function View({props}){
                 </Stack>
                 </Grid>
             </Paper>
-
-            {/* Tag change keeped even when view type changes*/}
-            {/* {currentIndices.view_type==0 && currentIndices.tag==0
-                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => 
-                    <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
-
-                    )}</> 
-                : <></> }
-            {currentIndices.view_type==1 && currentIndices.tag==0
-                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardTimeline key={index} props={view} />)} </>
-                : <></> }
-            {currentIndices.view_type==2 && currentIndices.tag==0
-                ? <>{view_posts&&view_posts.slice(0, 3).map((view, index) => <ViewCardMultimeda key={index} props={view} />)}</>
-                : <></> }
-            {currentIndices.view_type==0 && currentIndices.tag==1
-                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => <ViewCardTimeline key={index} props={view} />)} </>
-                : <></> }
-            {currentIndices.view_type==1 && currentIndices.tag==1
-                ? <>{view_posts&&view_posts.slice(0, 5).map((view, index) => 
-                    <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/>
-
-                    )}</> 
-                : <></>} */}
             {(() => {
                 switch (currentViewType) {
                 case 0:
