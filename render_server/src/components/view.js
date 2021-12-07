@@ -6,6 +6,7 @@ import PostCard from './PostCard';
 import ViewCardBasic from './ViewCardBasic';
 import ViewCardMultimeda from './ViewCardMultimedia'
 import ViewCardTimeline from './ViewCardTimeline';
+import { string } from 'prop-types';
 
 var ViewType = Object.freeze({
     NEWS: 0,
@@ -93,11 +94,11 @@ export default function View({props}){
                             ? <img 
                                 src={option.src_open}
                                 height={16} width={16}
-                                alt={index}/>
+                                alt={option.tab}/>
                             : <img 
                                 src={option.src_close}
                                 height={16} width={16}
-                                alt={index}/>
+                                alt={option.tab}/>
                         }
                         </IconButton>
                     ))}

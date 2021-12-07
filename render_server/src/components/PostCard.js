@@ -74,7 +74,7 @@ export default function PostCard({props, view}) {
                                     height:'100%',
                                     objectFit:'contain',
                                 }}
-                                alt='publisher'
+                                alt={publisher}
                             />}
                         </div>
                     </Link>
@@ -143,7 +143,7 @@ export default function PostCard({props, view}) {
                                     height:'100%',
                                     objectFit:'contain',
                                 }}
-                                alt='content'
+                                alt={contentsImgURL}
                             /> 
                         </div>}
                         {viewType == ViewType.VIEW && contentsImgURL.length == 1 && <div className={styles.contentsImgBoarder}>
@@ -151,7 +151,7 @@ export default function PostCard({props, view}) {
                                 src={contentsImgURL[0]}
                                 width='87px'
                                 height='87px'
-                                alt='content'
+                                alt={contentsImgURL}
                             /> 
                         </div>}
                     </div>
