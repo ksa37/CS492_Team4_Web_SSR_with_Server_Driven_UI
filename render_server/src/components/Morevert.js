@@ -14,7 +14,6 @@ export default function MoreVert({props}) {
     const [keep, setKeep] = React.useState(true);
     const setKeepClick = (event) => {
         setKeep(!keep);
-        // console.log(keep)
     };
 
     return (
@@ -49,7 +48,6 @@ export default function MoreVert({props}) {
                 <MorevertMenuItem props = {{
                     "onClick": () => {
                         shareNaverLink( url, `[공유] ${title}` )
-                        // shareNaverLink( 'https://n.news.naver.com/mnews/article/366/0000772471?sid=101', '이 링크를 공유' )
                         },
                     "text": "공유하기",
                     "icon": <img src="/icons/naver_share.png" 
@@ -77,7 +75,6 @@ export default function MoreVert({props}) {
                         "onClick": setKeepClick,
                         "text": "저장된 문서입니다.",
                         "icon": <BookmarkIcon style={{ stroke: "var(--naver_green)", fill: '#FFFFFF'}}/>,
-                        // "icon": <BookmarkIcon style={{ stroke: "#5ECA69", fill: '#FFFFFF'}}/>,
                         "bgColor": 'var(--naver_green)',
                         "color": '#FFFFFF'
                     }}/>
@@ -89,7 +86,6 @@ export default function MoreVert({props}) {
                 <MorevertMenuItem props = {{
                     "onClick": () => {
                                 if (typeof window !== "undefined") {
-                                    // window.location.replace( "https://keep.naver.com/" ); 
                                     window.location.href = "https://keep.naver.com/";
                                 
                                 }},
@@ -123,7 +119,6 @@ function shareNaverLink(url, title) {
     var encodeTitle = encodeURIComponent( title );
     var link = `https://share.naver.com/web/shareView.nhn?url=${encodeUrl}&title=${encodeTitle}`; 
     
-    // console.log("share Naver", encodeUrl, encodeTitle)
     if (typeof window !== "undefined") {
         // browser code
         window.open( link, 'share', 'width=500, height=500' ); 

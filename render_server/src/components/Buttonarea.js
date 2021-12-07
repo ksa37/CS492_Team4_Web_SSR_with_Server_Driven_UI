@@ -26,7 +26,6 @@ function shareNaverLink(url, title) {
     var encodeTitle = encodeURIComponent( title );
     var link = `https://share.naver.com/web/shareView.nhn?url=${encodeUrl}&title=${encodeTitle}`; 
     
-    // console.log("share Naver", encodeUrl, encodeTitle)
     if (typeof window !== "undefined") {
         // browser code
         window.open( link, 'share', 'width=500, height=500' ); 
