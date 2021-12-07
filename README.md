@@ -7,7 +7,7 @@ Render server와 web server를 개발하여 Naver 모바일(https://m.naver.com)
 ## Basic info
 
 - **Team members' name**: 김민형, 김수아, 박지윤, 최지호
-- **Team members' email**: isa000@kaist.ac.kr, ksa37@kaist.ac.kr, wldbs0507@kaist.ac.kr, (최지호 이메일)
+- **Team members' email**: isa000@kaist.ac.kr, ksa37@kaist.ac.kr, wldbs0507@kaist.ac.kr, legitimation@kaist.ac.kr
 
 
 ## How to run project
