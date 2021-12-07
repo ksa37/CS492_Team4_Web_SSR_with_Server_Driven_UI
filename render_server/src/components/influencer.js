@@ -51,15 +51,15 @@ export default function Influencer(props) {
   const { data, keyword, morecontent, contentsImgURL } = props.props
   return (
     <>    
-    <Card sx={{ maxWidth: 766, lineHeight: "50px"}}>
+    <Card sx={{ maxWidth: 768}} variant='outlined' square>
+      <Card sx={{ maxWidth: 768, lineHeight: "50px"}} square>
       <div className = {styles.influencer}> 인플루언서 </div> 
       <img className = {styles.influencer_icon} src="/images/influencer/icon_img.png" alt='icon'/>
       <Link className = {styles.service} href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> 
-    </Card>
-
-    {data.map((each) => 
-      <Card sx={{ maxWidth: 768}} key = {each.name}>
-        <Grid sx={{ maxWidth: 768, mt:"10px", ml:"18px" }}>
+      </Card>
+      {data.map((each) => 
+      <Card sx={{ maxWidth: 766}} key = {each.name} square>
+        <Grid sx={{ maxWidth: 766, mt:"10px", ml:"18px" }}>
           <Link href={each.avatar_name_url}> <img className = {styles.avatar} src={"/images/influencer/avatar_" + keyword + "_" + each.key + ".png"} alt={each.key}/> </Link>
           <div className = {styles.flex}> 
             <Link href={each.avatar_name_url} underline="none"> <div className = {styles.title}>{each.name}</div> </Link> 
@@ -95,7 +95,10 @@ export default function Influencer(props) {
           </Link> 
         </div>
         </Card>)}
-      <MoreContent props={{'view_option': "인플루엔서",'more_link':morecontent}}/>
+    </Card>
+    
+    
+      <MoreContent props={{'view_option': "인플루언서",'more_link':morecontent}}/>
     </>
   )
 }
