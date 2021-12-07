@@ -28,7 +28,6 @@ export default function BasicSelect() {
           <MenuItem value={'http://localhost:4000/?id=Bulguksa'}>불국사</MenuItem>
           <MenuItem value={'http://localhost:4000/?id=Paris'}>파리</MenuItem>
           <MenuItem value={'http://localhost:4000/?id=WorkLaterDrinkNow'}>술꾼도시여자들</MenuItem>
-          {/* <MenuItem value={'https://www.google.com/'}>google</MenuItem> */}
         </Select>
       </FormControl>
       <Button className={styles.linkBtn} variant="contained" href={href}>
