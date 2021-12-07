@@ -7,7 +7,7 @@ Render server와 web server를 개발하여 Naver 모바일(https://m.naver.com)
 ## Basic info
 
 - **Team members' name**: 김민형, 김수아, 박지윤, 최지호
-- **Team members' email**: (김민형 이메일), (김수아 이메일), wldbs0507@kaist.ac.kr, (최지호 이메일)
+- **Team members' email**: isa000@kaist.ac.kr, ksa37@kaist.ac.kr, wldbs0507@kaist.ac.kr, legitimation@kaist.ac.kr
 
 
 ## How to run project
@@ -15,25 +15,27 @@ Render server와 web server를 개발하여 Naver 모바일(https://m.naver.com)
 ```
 $ git clone https://github.com/di-uni/CS492_Team4_Web_SSR_with_Server_Driven_UI.git
 $ cd CS492_Team4_Web_SSR_with_Server_Driven_UI
-$ npm install 
 ```
 Clone the project and install all packages required for this project   
 
 ### Run web server
 ```
 $ cd web_server
+$ npm install 
 $ npm run web
 ```
 ### Run db server
 ```
 $ cd ..
 $ cd db_server
+$ npm install 
 $ npm run json
 ```
 ### Run render server (Dev)
 ```
 $ cd ..
 $ cd render_server
+$ npm install 
 $ npm run dev
 ```
 Runs the project in the development mode.   
