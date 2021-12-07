@@ -2,7 +2,12 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Bulguksa from '../src/components/Bulguksa'
 import userEvent from '@testing-library/user-event'
- 
+
+function replace_text(text){
+  var new_text = text.replace(/\./g, '\\.').replace(/\(/g, '\\(').replace(/\)/g, '\\)').replace(/\+/g, '\\+').replace(/\?/g, '\\?').replace(/\*/g, '\\*').replace(/\{/g, '\\{').replace(/\}/g, '\\}').replace(/\|/g, '\\|').replace(/\^/g, '\\^').replace(/\$/g, '\\$')
+  return new_text;
+}
+
 describe('Bulguksa', () => {
   it('renders a Bulguksa page', () => {
     const bulguksa = {
@@ -126,23 +131,23 @@ describe('Bulguksa', () => {
 
     //Case for header
     const link0 = screen.getByRole('link', {
-      name: /(?<!.)경주 불국사(?!.)/i,
+      name: RegExp(`(?<!.)${bulguksa.header.title}(?!.)`, "i"),
     })
-    const div0 = screen.getByText(/慶州 佛國寺/i)
+    const div0 = screen.getByText(RegExp(bulguksa.header.category[1], "i"))
     const button0 = screen.getByRole('button', {
-      name: /전체/i,
+      name: RegExp(`(?<!.)${bulguksa.header.tablist[0]}(?!.)`, "i"),
     })
     const button1 = screen.getByRole('button', {
-      name: /기본정보/i,
+      name: RegExp(`(?<!.)${bulguksa.header.tablist[1]}(?!.)`, "i"),
     })
     const button2 = screen.getByRole('button', {
-      name: /포토/i,
+      name: RegExp(`(?<!.)${bulguksa.header.tablist[2]}(?!.)`, "i"),
     })
     const button3 = screen.getByRole('button', {
-      name: /주변 문화재/i,
+      name: RegExp(`(?<!.)${bulguksa.header.tablist[3]}(?!.)`, "i"),
     })
     const button4 = screen.getByRole('button', {
-      name: /함께 찾은 문화재/i,
+      name: RegExp(`(?<!.)${bulguksa.header.tablist[4]}(?!.)`, "i"),
     })
     
     expect(link0).toBeInTheDocument()
@@ -152,69 +157,83 @@ describe('Bulguksa', () => {
     expect(button2).toBeInTheDocument()
     expect(button3).toBeInTheDocument()
     expect(button4).toBeInTheDocument()
-    expect(link0).toHaveAttribute('href', 'https://m.terms.naver.com/entry.naver?docId=1104868&cid=40942&categoryId=33380')
+    expect(link0).toHaveAttribute('href', bulguksa.header.href)
 
     //Case for Bulguksa page0
     const img0 = screen.getByAltText(/num/i)
     const span0 = screen.getByText(/30/i)
-    const img1 = screen.getByAltText(/scroll_0/i)
-    const img2 = screen.getByAltText(/scroll_1/i)
-    const img3 = screen.getByAltText(/scroll_2/i)
+    expect(img0).toBeInTheDocument()
+    expect(span0).toBeInTheDocument()
+
+    for(var i = 0; i < 10; i++)
+    {
+      const img1 = screen.getByAltText(RegExp(`(?<!.)scroll_${i}(?!.)`, "i"))
+      expect(img1).toBeInTheDocument()
+      expect(img1.closest('div').closest('a')).toHaveAttribute('href', bulguksa.first_card.relimg.ahref)
+    }
+
     const h30 = screen.getByRole('heading', {
       level: 3,
-      name: /기본정보/i,
+      name: RegExp(`(?<!.)${bulguksa.first_card.middletitle.text}(?!.)`, "i"),
     })
-    const img4 = screen.getByAltText(/기본정보/i)
-    const dt0 = screen.getByText(/지정종목/i)
-    const dd0 = screen.getByText(/(?<!.)사적(?!.)/i)
-    const dt1 = screen.getByText(/소재지/i)
-    const dd1 = screen.getByText(/경북 경주시 불국로 385, 등 \(진현동\)/i)
-    const div1 = screen.getByText(/경북 경주시 진현동 토함산 기슭에 있는 신라시대 절\. 사적이다\./i)
-    const img5 = screen.getByAltText(/map_button/i)
-    const img6 = screen.getByAltText(/share_button/i)
-    const div2 = screen.getByText(/지도/i)
-    const h31 = screen.getByRole('heading', {
-      level: 3,
-      name: /주변 문화재/i,
-    })
-    const img7 = screen.getByAltText(/주변 문화재/i)
-    const img8 = screen.getByAltText(/경주 불국사 사리탑/i)
-    const link1 = screen.getByRole('link', {
-      name: /경주 불국사 사리탑(?!.)/i,
-    })
-    
-    expect(img0).toBeInTheDocument()
-    expect(img1).toBeInTheDocument()
+    const img2 = screen.getByAltText(RegExp(`(?<!.)${bulguksa.first_card.middletitle.text}(?!.)`, "i"))
+    expect(h30).toBeInTheDocument()
     expect(img2).toBeInTheDocument()
+    expect(h30.closest('a')).toHaveAttribute('href', bulguksa.first_card.middletitle.href)
+    expect(img2.closest('a')).toHaveAttribute('href', bulguksa.first_card.middletitle.href)
+
+    for(var i = 0; i < bulguksa.first_card.detailinfo.length; i++)
+    {
+      if (bulguksa.first_card.detailinfo[i].length === 2)
+      {
+        const dt0 = screen.getByText(RegExp(`(?<!.)${replace_text(bulguksa.first_card.detailinfo[i][0])}(?!.)`, "i"))
+        const dd0 = screen.getByText(RegExp(`(?<!.)${replace_text(bulguksa.first_card.detailinfo[i][1])}(?!.)`, "i"))
+        expect(dt0).toBeInTheDocument()
+        expect(dd0).toBeInTheDocument()
+      }
+      else
+      {
+        const dt0 = screen.getByText(RegExp(`(?<!.)${replace_text(bulguksa.first_card.detailinfo[i][0])}(?!.)`, "i"))
+        const dd0 = screen.getByText(RegExp(`(?<!.)${replace_text(bulguksa.first_card.detailinfo[i][1][0])}(?!.)`, "i"))
+        expect(dt0).toBeInTheDocument()
+        expect(dd0).toBeInTheDocument()
+        expect(dd0).toHaveAttribute('href', bulguksa.first_card.detailinfo[i][1][1])
+      }
+    }
+
+    const div1 = screen.getByText(RegExp(`(?<!.)${replace_text(bulguksa.first_card.textexpand)}(?!.)`, "i"))
+    expect(div1).toBeInTheDocument()
+
+    const img3 = screen.getByAltText(/map_button/i)
+    const img4 = screen.getByAltText(/share_button/i)
+    const div2 = screen.getByText(/지도/i)
     expect(img3).toBeInTheDocument()
     expect(img4).toBeInTheDocument()
-    expect(img5).toBeInTheDocument()
-    expect(img6).toBeInTheDocument()
-    expect(img7).toBeInTheDocument()
-    expect(img8).toBeInTheDocument()
-    expect(span0).toBeInTheDocument()
-    expect(h30).toBeInTheDocument()
-    expect(h31).toBeInTheDocument()
-    expect(dt0).toBeInTheDocument()
-    expect(dt1).toBeInTheDocument()
-    expect(dd0).toBeInTheDocument()
-    expect(dd1).toBeInTheDocument()
-    expect(div1).toBeInTheDocument()
     expect(div2).toBeInTheDocument()
-    expect(link1).toBeInTheDocument()
+    expect(img3.closest('a')).toHaveAttribute('href', bulguksa.first_card.buttonarea.mapURL)
+    expect(div2.closest('a')).toHaveAttribute('href', bulguksa.first_card.buttonarea.mapURL)
 
-    expect(img1.closest('div').closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%ED%8F%AC%ED%86%A0')
-    expect(img2.closest('div').closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%ED%8F%AC%ED%86%A0')
-    expect(img3.closest('div').closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%ED%8F%AC%ED%86%A0')
-    expect(h30.closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22isOpen%22%3Atrue%2C%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EA%B8%B0%EB%B3%B8%EC%A0%95%EB%B3%B4')
-    expect(img4.closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22isOpen%22%3Atrue%2C%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EA%B8%B0%EB%B3%B8%EC%A0%95%EB%B3%B4')
-    expect(dd1).toHaveAttribute('href', 'http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991')
-    expect(img5.closest('a')).toHaveAttribute('href', 'http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991')
-    expect(div2.closest('a')).toHaveAttribute('href', 'http://map.naver.com?title=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&y=35.7862812&x=129.3298991')
-    expect(h31.closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22isOpen%22%3Atrue%2C%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%A3%BC%EB%B3%80%20%EB%AC%B8%ED%99%94%EC%9E%AC')
-    expect(img7.closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22isOpen%22%3Atrue%2C%22pkid%22%3A648%7D&pkid=648&os=19371944&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371944%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%A3%BC%EB%B3%80%20%EB%AC%B8%ED%99%94%EC%9E%AC')
-    expect(img8.closest('a')).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371948&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371948%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%82%AC%EB%A6%AC%ED%83%91')
-    expect(link1).toHaveAttribute('href', 'https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blZH&x_csa=%7B%22pkid%22%3A648%7D&pkid=648&os=19371948&x_nqx=%7B%22theme%22%3A%22culturalassets%22%2C%22pkid%22%3A%22648%22%2C%22os%22%3A%2219371948%22%7D&qvt=0&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC%20%EC%82%AC%EB%A6%AC%ED%83%91')
+    const h31 = screen.getByRole('heading', {
+      level: 3,
+      name: RegExp(`(?<!.)${bulguksa.second_card_whole.middletitle.text}(?!.)`, "i"),
+    })
+    const img5 = screen.getByAltText(RegExp(`(?<!.)${bulguksa.second_card_whole.middletitle.text}(?!.)`, "i"))
+    expect(h31).toBeInTheDocument()
+    expect(img5).toBeInTheDocument()
+    expect(h31.closest('a')).toHaveAttribute('href', bulguksa.second_card_whole.middletitle.href)
+    expect(img5.closest('a')).toHaveAttribute('href', bulguksa.second_card_whole.middletitle.href)
+
+    for(var i = 0; i < bulguksa.second_card_whole.scrollbox.length; i++)
+    {
+      const img6 = screen.getByAltText(RegExp(`(?<!.)${bulguksa.second_card_whole.scrollbox[i].name+" img"}(?!.)`, "i"))
+      const link1 = screen.getByRole('link', {
+        name: RegExp(`(?<!.)${bulguksa.second_card_whole.scrollbox[i].name}(?!.)`, "i"),
+      })
+      expect(img6).toBeInTheDocument()
+      expect(link1).toBeInTheDocument()
+      expect(img6.closest('a')).toHaveAttribute('href', bulguksa.second_card_whole.scrollbox[i].href)
+      expect(link1).toHaveAttribute('href', bulguksa.second_card_whole.scrollbox[i].href)
+    }
 
     //Case for Bulguksa page1
     userEvent.click(button1)
