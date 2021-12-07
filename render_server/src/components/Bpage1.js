@@ -1,6 +1,6 @@
 import  React from 'react'
 import styles from './Bulguksa.module.css'
-import { Paper } from '@mui/material'
+import { Paper, Divider } from '@mui/material'
 import Middletitle from './Middletitle'
 import Detailinfo from './Detailinfo'
 import Buttonarea from './Buttonarea'
@@ -15,7 +15,7 @@ export default function Bpage1({first_card, second_card, third_card}) {
     return (
     <>
         <Paper 
-            sx={{ maxWidth:746, borderRadius: '6px', mx: "9px", mb: "12px", px: '15px', pt:"9px", pb:"21px"}}
+            sx={{ maxWidth:746, borderRadius: '6px', mx: "11px", mb: "12px", px: '15px', pt:"9px", pb:"21px"}}
             style= {{ background: "#ffffff" }}
         >
             <div className={styles.relimg}>
@@ -47,18 +47,26 @@ export default function Bpage1({first_card, second_card, third_card}) {
             <Buttonarea buttonarea={buttonarea}/>
         </Paper>
         <Paper 
-            sx={{ maxWidth:746, borderRadius: '6px', mx: "9px", px: "15px", pt: "9px", pb: "16px"}}
+            sx={{ maxWidth:746, borderRadius: '6px', mx: "11px", px: "15px", pt: "9px", pb: "16px", borderRadius: '8px 8px 0 0'}}
             style= {{ background: "#ffffff" }}
         >
             <Middletitle href={"#"} text={text}/>
             <Textexpand textexpand={description} pagenum={1}/>
         </Paper>
-        <Paper 
-            sx={{ maxWidth:746, borderRadius: '6px', mx: "9px", mb: "12px"}}
-            style= {{ background: "#ffffff" }}
-        >
-            <Morecontent props={{'view_option': "지식백과",'more_link':dict_more}}/>
-        </Paper>
+
+        <Divider sx={{ mx: "11px", background: "#ECF0F2" }}/>
+        <a href={dict_more} style={{ cursor: "pointer" }} >
+            <Paper 
+                variant="elevation"
+                sx={{ py: "12px", mb: "21px", mx: "11px", borderRadius: '0 0 8px 8px'}}
+                style={{backgroundColor: "#FAFBFB" }}>
+                <div className={styles.showMore}>
+                    지식백과 더보기 
+                    <img className={styles.img} src="/icons/forward_arrow.svg" alt='arrow' />
+                </div>
+            </Paper> 
+        </a>
+        
         <Paper 
             sx={{ maxWidth:746, borderRadius: '6px', mx: "9px", mb: "1px", px: '15px', pt:"9px", pb:"21px"}}
             style= {{ background: "#ffffff" }}

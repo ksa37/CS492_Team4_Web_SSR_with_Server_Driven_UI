@@ -1,7 +1,8 @@
 import  React from 'react'
-import { Paper } from '@mui/material'
+import { Divider, Paper } from '@mui/material'
 import Imagesection from "./Imagesection";
 import styles from "./Imagesection.module.css";
+import ForwardIcon from '../../public/icons/forward.svg'; 
 
 export default function Bpage2({first_card}) {
     const {relimg, middletitle, detailinfo, buttonarea, video} = first_card
@@ -10,22 +11,36 @@ export default function Bpage2({first_card}) {
     return (
     <>
         <Paper 
-            sx={{ maxWidth:746, borderRadius: '6px', mx: "9px", px: '15px', pt:"18px", pb:"21px"}}
+            sx={{ maxWidth:746, borderRadius: '6px', mx: "11px", px: '15px', pt:"18px", pb:"21px", borderRadius: '8px 8px 0 0'}}
             style= {{ background: "#ffffff" }}
         >
-            <Imagesection data={relimg} id={id}/>
+            <Imagesection key={id} data={relimg} id={id}/>
         </Paper>
-        <Paper sx={{maxWidth:746, height: 50, mx: "9px", mb: "12px"}}
-            style={{backgroundColor: '#f4f7f8'}}>
+        <Divider sx={{ mx: "11px", background: "#ECF0F2" }}/>
             {btf ?
-                <button className={styles.btn} onClick={() => setid(1)}>
-                    접기
-                </button>  
+                <a onClick={() => setid(1)}>
+                    <Paper 
+                        variant="elevation"
+                        sx={{ py: "12px", mb: "21px", mx: "11px", borderRadius: '0 0 8px 8px'}}
+                        style={{backgroundColor: "#FAFBFB" }}>
+                        <div className={styles.viewAll}>
+                            접기 
+                            <ForwardIcon className={styles.iconUp} style={{ stroke: "#8A8D8F", width: '9px', height: '16px' }}/>
+                        </div>
+                    </Paper> 
+                </a>  
                 :
-                <button className={styles.btn} onClick={() => setid(id + 1)}>
-                    펼쳐보기
-                </button>      
+                <a onClick={() => setid(id + 1)}>
+                    <Paper 
+                        variant="elevation"
+                        sx={{ py: "12px", mb: "21px", mx: "11px", borderRadius: '0 0 8px 8px'}}
+                        style={{backgroundColor: "#FAFBFB" }}>
+                        <div className={styles.viewAll}>
+                            펼쳐보기 
+                            <ForwardIcon className={styles.iconDown} style={{ stroke: "#8A8D8F", width: '9px', height: '16px' }}/>
+                        </div>
+                    </Paper> 
+                </a>      
             }
-        </Paper>
     </>)
 }

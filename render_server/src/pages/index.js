@@ -33,33 +33,6 @@ const themeDark = createTheme({
   }
 });
 
-// export async function getServerSideProps(context) {
-//   const res = await fetch('http://localhost:5000/keywords')
-//   const data = await res.json()
-//   const string_data = JSON.stringify(data)
-//   const props = {data: ''}
-//   props.data = string_data
-//   /*
-//   const {req, } = context
-//   const props = {data: ''}
-//   if (req.method === "POST") {
-//     const streamPromise = new Promise((resolve, reject) => {
-//       let body = ''
-//       req.on('data', ( data ) => {
-//         body += data
-//       });
-//       req.on('end', () => {
-//         resolve(body);
-//       });
-//     });
-//     const body = await streamPromise;
-//       props.data = body;
-//   }
-//   return { props }
-//   */
-//   return { props }
-// }
-
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -87,12 +60,6 @@ export async function getServerSideProps(context) {
   }
   else
   {
-    // const keyword_num  = random_keywords.length
-    // console.log(keyword_num)
-    // const random_keyword = random_keywords[getRandomIntInclusive(1, keyword_num)]
-    // const random_fetch = 'http://localhost:5000/'+random_keyword
-    // const res = await fetch('http://localhost:5000/Paris')
-    // const res = await fetch(random_fetch)
     const res = await fetch('http://localhost:5000/Bulguksa')
     const data = await res.json()
     const string_data = JSON.stringify(data)
@@ -118,13 +85,15 @@ export default function Home({ data, views}) {
               if (keyword === '불국사')
               {
                 return (
-                  <div key={index}>
-                    <div className="section_bulguksa">
-                      <Bulguksa props={json.basic}/>
-                    </div>
-                    <div className="section_drama">
-                      <Drama/>  
-                    </div>
+                  <div key={index} className="section_bulguksa">
+                    <Bulguksa props={json.basic}/>
+                  </div>
+                )
+              }
+              if (keyword === '술꾼도시여자들') {
+                return (
+                  <div key={index} className="section_drama">
+                    <Drama props={json.basic}/>
                   </div>
                 )
               }
