@@ -43,7 +43,7 @@ Array [
       }
     >
       <div
-        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-undefined css-1vam7s3-MuiGrid-root"
+        className="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
         style={
           Object {
             "minHeight": 66,
@@ -80,6 +80,7 @@ Array [
               className="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarMedium MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
             >
               <img
+                alt="프랑스"
                 className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
                 src="/images/photos/photos_tag_images/paris_tag1.png"
               />
@@ -111,6 +112,7 @@ Array [
               className="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarMedium MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
             >
               <img
+                alt="국기"
                 className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
                 src="/images/photos/photos_tag_images/paris_tag2.png"
               />
@@ -142,6 +144,7 @@ Array [
               className="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarMedium MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
             >
               <img
+                alt="지도"
                 className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
                 src="/images/photos/photos_tag_images/paris_tag3.png"
               />
@@ -173,6 +176,7 @@ Array [
               className="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarMedium MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
             >
               <img
+                alt="생제르맹"
                 className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
                 src="/images/photos/photos_tag_images/paris_tag4.png"
               />
@@ -204,6 +208,7 @@ Array [
               className="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarMedium MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
             >
               <img
+                alt="에펠탑"
                 className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
                 src="/images/photos/photos_tag_images/paris_tag5.png"
               />
@@ -235,6 +240,7 @@ Array [
               className="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarMedium MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
             >
               <img
+                alt="야경"
                 className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
                 src="/images/photos/photos_tag_images/paris_tag6.png"
               />
@@ -266,6 +272,7 @@ Array [
               className="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarMedium MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
             >
               <img
+                alt="여행"
                 className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
                 src="/images/photos/photos_tag_images/paris_tag7.jpeg"
               />
@@ -297,6 +304,7 @@ Array [
               className="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarMedium MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
             >
               <img
+                alt="관광지"
                 className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
                 src="/images/photos/photos_tag_images/paris_tag8.jpeg"
               />
@@ -328,6 +336,7 @@ Array [
               className="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarMedium MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
             >
               <img
+                alt="개선문"
                 className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
                 src="/images/photos/photos_tag_images/paris_tag9.jpeg"
               />
@@ -359,6 +368,7 @@ Array [
               className="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarMedium MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
             >
               <img
+                alt="거리"
                 className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
                 src="/images/photos/photos_tag_images/paris_tag10.jpeg"
               />
@@ -390,6 +400,7 @@ Array [
               className="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarMedium MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
             >
               <img
+                alt="올림픽"
                 className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
                 src="/images/photos/photos_tag_images/paris_tag11.jpeg"
               />
@@ -421,6 +432,7 @@ Array [
               className="MuiAvatar-root MuiAvatar-circular MuiChip-avatar MuiChip-avatarMedium MuiChip-avatarColorDefault css-1wlk0hk-MuiAvatar-root"
             >
               <img
+                alt="풍경"
                 className="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
                 src="/images/photos/photos_tag_images/paris_tag12.jpeg"
               />

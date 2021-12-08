@@ -12,11 +12,11 @@ export default function Comments({props}){
                     <ul className={styles.listComment}>
                         {comments&&comments.map((comment, index)=>(
                             <li key={index} className={styles.commentBx}>
-                                <Link href={link} underline="none" className={styles.commentBxInner}>
+                                <a href={link} underline="none" className={styles.commentBxInner}>
                                     <div className={styles.txtArea}>
                                         <p style={{margin:'0'}}><i className={styles.icoReply}>RE</i>{comment}</p>
                                     </div>
-                                </Link>
+                                </a>
                             </li> 
                         ))}
                         <li className={styles.commentBx}>
