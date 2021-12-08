@@ -14,7 +14,7 @@ Array [
          인플루언서 
       </div>
       <img
-        alt="icon"
+        alt="header_icon"
         className="influencer_icon"
         src="/images/influencer/icon_img.png"
       />
@@ -41,7 +41,7 @@ Array [
         >
            
           <img
-            alt="1"
+            alt="1avatar"
             className="avatar"
             src="/images/influencer/avatar_bulguksa_1.png"
           />
@@ -80,18 +80,15 @@ Array [
         >
           국내 전문
         </div>
-        <div>
-          <div
+        <div
+          data-testid="1button"
+        >
+          <img
+            alt="1fan"
+            className="fanicon_before"
             onClick={[Function]}
-          >
-             
-            <img
-              alt="fan"
-              className="fanicon_before"
-              src="/images/influencer/fanicon.png"
-            />
-              
-          </div>
+            src="/images/influencer/fanicon.png"
+          />
         </div>
       </div>
       <div
@@ -103,7 +100,7 @@ Array [
         }
       >
         <img
-          alt="icon"
+          alt="1icon"
           className="blogicon"
           src="/images/influencer/blogicon.png"
         />
@@ -130,7 +127,7 @@ Array [
         >
            
           <img
-            alt="before"
+            alt="1before"
             className="influencer_icon"
             src="/images/influencer/before.png"
           />
@@ -268,7 +265,7 @@ Array [
         >
            
           <img
-            alt="2"
+            alt="2avatar"
             className="avatar"
             src="/images/influencer/avatar_bulguksa_2.png"
           />
@@ -307,18 +304,15 @@ Array [
         >
            국내 전문
         </div>
-        <div>
-          <div
+        <div
+          data-testid="2button"
+        >
+          <img
+            alt="2fan"
+            className="fanicon_before"
             onClick={[Function]}
-          >
-             
-            <img
-              alt="fan"
-              className="fanicon_before"
-              src="/images/influencer/fanicon.png"
-            />
-              
-          </div>
+            src="/images/influencer/fanicon.png"
+          />
         </div>
       </div>
       <div
@@ -330,7 +324,7 @@ Array [
         }
       >
         <img
-          alt="icon"
+          alt="2icon"
           className="blogicon"
           src="/images/influencer/blogicon.png"
         />
@@ -357,7 +351,7 @@ Array [
         >
            
           <img
-            alt="before"
+            alt="2before"
             className="influencer_icon"
             src="/images/influencer/before.png"
           />
@@ -495,7 +489,7 @@ Array [
         >
            
           <img
-            alt="3"
+            alt="3avatar"
             className="avatar"
             src="/images/influencer/avatar_bulguksa_3.png"
           />
@@ -534,18 +528,15 @@ Array [
         >
           유럽 전문
         </div>
-        <div>
-          <div
+        <div
+          data-testid="3button"
+        >
+          <img
+            alt="3fan"
+            className="fanicon_before"
             onClick={[Function]}
-          >
-             
-            <img
-              alt="fan"
-              className="fanicon_before"
-              src="/images/influencer/fanicon.png"
-            />
-              
-          </div>
+            src="/images/influencer/fanicon.png"
+          />
         </div>
       </div>
       <div
@@ -557,7 +548,7 @@ Array [
         }
       >
         <img
-          alt="icon"
+          alt="3icon"
           className="blogicon"
           src="/images/influencer/blogicon.png"
         />
@@ -584,7 +575,7 @@ Array [
         >
            
           <img
-            alt="before"
+            alt="3before"
             className="influencer_icon"
             src="/images/influencer/before.png"
           />
