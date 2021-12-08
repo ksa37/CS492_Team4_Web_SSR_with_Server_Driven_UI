@@ -1,0 +1,472 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+Array [
+  <div
+    className="MuiPaper-root MuiPaper-none MuiCard-root stickyHeader css-1yeasr5-MuiPaper-root-MuiCard-root"
+    style={
+      Object {
+        "backgroundColor": "#F1EDEB",
+      }
+    }
+  >
+    <div
+      className="MuiCardHeader-root css-18x4way-MuiCardHeader-root"
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
+    >
+      <div
+        className="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+      >
+        <span
+          className="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1qvr50w-MuiTypography-root"
+        >
+          <div>
+            <div
+              className="dramaName"
+            >
+              <a
+                className="dramaName"
+                href="https://m.tving.com/app/theme.tving?pocCode=POCD0600&themeSeq=109682&utm_source=portal&utm_medium=search&utm_campaign=WorkLaterDrinkNow&utm_content=eventpage"
+                underline="none"
+              >
+                술꾼도시여자들
+              </a>
+            </div>
+            <a
+              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+              href="https://m.search.naver.com/search.naver?where=m&sm=mtb_etc&mra=blFB&x_csa=%7B%22pkid%22%3A%22356%22%7D&qvt=0&query=%EC%9B%B9%EB%93%9C%EB%9D%BC%EB%A7%88"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                className="dramaCategory"
+              >
+                웹드라마
+              </div>
+            </a>
+            <div
+              className="btnmenu"
+            >
+              <div
+                className="btnmenu"
+              >
+                <button
+                  className="firstunselectedMenu"
+                  onClick={[Function]}
+                >
+                  전체
+                </button>
+                <div
+                  className="verticalDivider"
+                />
+              </div>
+              <div
+                className="btnmenu"
+              >
+                <button
+                  className="unselectedMenu"
+                  onClick={[Function]}
+                >
+                  기본정보
+                </button>
+                <div
+                  className="verticalDivider"
+                />
+              </div>
+              <div
+                className="btnmenu"
+              >
+                <button
+                  className="unselectedMenu"
+                  onClick={[Function]}
+                >
+                  등장인물
+                </button>
+              </div>
+              <div
+                className="btnmenu"
+              >
+                <button
+                  className="selectedMenu"
+                  onClick={[Function]}
+                >
+                  공식영상
+                </button>
+              </div>
+              <div
+                className="btnmenu"
+              >
+                <button
+                  className="unselectedMenu"
+                  onClick={[Function]}
+                >
+                  함께 볼만한 웹드라마
+                </button>
+              </div>
+            </div>
+            <div
+              className="MuiBox-root css-1kxrbkv"
+            />
+          </div>
+        </span>
+      </div>
+      <div
+        className="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+      >
+        <div>
+          <button
+            className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-bnzas2-MuiButtonBase-root-MuiIconButton-root"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "backgroundColor": "transparent",
+              }
+            }
+            tabIndex={0}
+            type="button"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="MoreVertIcon button"
+              focusable="false"
+              style={
+                Object {
+                  "color": "rgba(145,120,103,0.5)",
+                }
+              }
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="MuiPaper-root MuiPaper-outlined MuiCard-root contents css-b4hzzr-MuiPaper-root-MuiCard-root"
+    style={
+      Object {
+        "backgroundColor": "#F1EDEB",
+      }
+    }
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1umbu0d-MuiPaper-root"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1jca0ss-MuiPaper-root"
+        style={
+          Object {
+            "background": "#FFFFFF",
+          }
+        }
+      >
+        <a
+          href="https://tv.naver.com/v/23826103"
+        >
+          <div
+            className="thumb"
+          >
+            <img
+              alt="video"
+              className="img"
+              src="https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211130_183%2FagfL7_1638280758457AMaev_JPEG%2F1638280716455.jpg"
+            />
+            <div
+              className="icon"
+            >
+              <img
+                alt="icon"
+                color="transparent"
+                height="32px"
+                src="/images/Bulguksa/video.png"
+                width="28px"
+              />
+            </div>
+            <span
+              className="time"
+            >
+              24:36
+            </span>
+          </div>
+        </a>
+        <div
+          className="videoInfo"
+        >
+          <a
+            href="https://tv.naver.com/v/23826103"
+          >
+            <div
+              className="videoTitle"
+            >
+              [술꾼도시여자들] 🍺술도녀 보내기 아쉬운 분들을 위한 역대급 분량 하드털이 메이킹
+            </div>
+            <div
+              className="subInfo"
+            >
+              네이버TV
+              <div
+                className="verticalDivider2"
+              />
+              4,534
+              <div
+                className="verticalDivider2"
+              />
+              2021.11.30.
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1jca0ss-MuiPaper-root"
+        style={
+          Object {
+            "background": "#FFFFFF",
+          }
+        }
+      >
+        <a
+          href="https://tv.naver.com/v/23826072"
+        >
+          <div
+            className="thumb"
+          >
+            <img
+              alt="video"
+              className="img"
+              src="https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211130_262%2F3Hciy_1638280544584Oo8ki_JPEG%2F1638280476322.jpg"
+            />
+            <div
+              className="icon"
+            >
+              <img
+                alt="icon"
+                color="transparent"
+                height="32px"
+                src="/images/Bulguksa/video.png"
+                width="28px"
+              />
+            </div>
+            <span
+              className="time"
+            >
+              12:59
+            </span>
+          </div>
+        </a>
+        <div
+          className="videoInfo"
+        >
+          <a
+            href="https://tv.naver.com/v/23826072"
+          >
+            <div
+              className="videoTitle"
+            >
+              [술꾼도시여자들] 이선빈X한선화에게 사랑받는(?) 정은지💓 지구방위대씬 비하인드
+            </div>
+            <div
+              className="subInfo"
+            >
+              네이버TV
+              <div
+                className="verticalDivider2"
+              />
+              2,066
+              <div
+                className="verticalDivider2"
+              />
+              2021.11.30.
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1jca0ss-MuiPaper-root"
+        style={
+          Object {
+            "background": "#FFFFFF",
+          }
+        }
+      >
+        <a
+          href="https://tv.naver.com/v/23677808"
+        >
+          <div
+            className="thumb"
+          >
+            <img
+              alt="video"
+              className="img"
+              src="https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211122_75%2Fk3TeH_1637590335132ofURX_JPEG%2F1637590244966.jpg"
+            />
+            <div
+              className="icon"
+            >
+              <img
+                alt="icon"
+                color="transparent"
+                height="32px"
+                src="/images/Bulguksa/video.png"
+                width="28px"
+              />
+            </div>
+            <span
+              className="time"
+            >
+              14:10
+            </span>
+          </div>
+        </a>
+        <div
+          className="videoInfo"
+        >
+          <a
+            href="https://tv.naver.com/v/23677808"
+          >
+            <div
+              className="videoTitle"
+            >
+              [술꾼도시여자들] 이선빈X최시원 베드씬부터 한선화의 데이트, 정은지X동생의 꽁냥 모먼트
+            </div>
+            <div
+              className="subInfo"
+            >
+              네이버TV
+              <div
+                className="verticalDivider2"
+              />
+              16,894
+              <div
+                className="verticalDivider2"
+              />
+              2021.11.22.
+            </div>
+          </a>
+        </div>
+      </div>
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-1jca0ss-MuiPaper-root"
+        style={
+          Object {
+            "background": "#FFFFFF",
+          }
+        }
+      >
+        <a
+          href="https://tv.naver.com/v/23677888"
+        >
+          <div
+            className="thumb"
+          >
+            <img
+              alt="video"
+              className="img"
+              src="https://search.pstatic.net/common?type=f&size=327x180&quality=75&direct=true&src=https%3A%2F%2Fphinf.pstatic.net%2Ftvcast%2F20211122_19%2FAMixR_1637590566041ADSeJ_JPEG%2F1637590533723.jpg"
+            />
+            <div
+              className="icon"
+            >
+              <img
+                alt="icon"
+                color="transparent"
+                height="32px"
+                src="/images/Bulguksa/video.png"
+                width="28px"
+              />
+            </div>
+            <span
+              className="time"
+            >
+              00:56
+            </span>
+          </div>
+        </a>
+        <div
+          className="videoInfo"
+        >
+          <a
+            href="https://tv.naver.com/v/23677888"
+          >
+            <div
+              className="videoTitle"
+            >
+              [술꾼도시여자들] 술도녀에게 닥친 인생 최대 시련ㅣ11화 예고
+            </div>
+            <div
+              className="subInfo"
+            >
+              네이버TV
+              <div
+                className="verticalDivider2"
+              />
+              22,318
+              <div
+                className="verticalDivider2"
+              />
+              2021.11.22.
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr
+      className="MuiDivider-root MuiDivider-fullWidth css-1buw4dk-MuiDivider-root"
+    />
+    <a
+      onClick={[Function]}
+      style={
+        Object {
+          "cursor": "pointer",
+        }
+      }
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-btjtr2-MuiPaper-root"
+        style={
+          Object {
+            "backgroundColor": "#FAFBFB",
+          }
+        }
+      >
+        <div
+          className="viewAll"
+        >
+          펼쳐보기
+          <test-file-stub
+            className="iconDown"
+            style={
+              Object {
+                "height": "16px",
+                "stroke": "#8A8D8F",
+                "width": "9px",
+              }
+            }
+          />
+        </div>
+      </div>
+    </a>
+  </div>,
+]
+`;
