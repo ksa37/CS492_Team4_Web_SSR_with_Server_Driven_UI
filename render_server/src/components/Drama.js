@@ -24,7 +24,6 @@ export default function Drama({props}) {
     var link; 
     if (typeof window !== "undefined") {
         link = window.location.href;
-        // console.log(link);
     }
 
     // for header
@@ -38,11 +37,9 @@ export default function Drama({props}) {
     var variant;
     if (offset) variant ='elevation';
     else variant ='none';
-    // console.log(offset); 
     
     const [menu, setMenu] = React.useState({
         darkBtn: 3
-        // darkBtn: 0
     });
 
     const changeColor = (btn) => {

@@ -1,5 +1,4 @@
 import  React from 'react'
-import Link from '@mui/material/Link';
 import MoreVert from './Morevert'
 import styles from './Bulguksa.module.css'
 import { Card, CardHeader, Box, Paper } from '@mui/material';
@@ -9,7 +8,7 @@ import Bpage2 from './Bpage2'
 
 export default function Bulguksa({props}) {
     const {header, first_card, second_card_whole, second_card_basic, third_card_basic} = props
-    const {title, href, category, tablist, tablisthref, video} = header
+    const {title, href, category, tablist, tablisthref} = header
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {

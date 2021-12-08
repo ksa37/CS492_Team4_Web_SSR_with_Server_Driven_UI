@@ -49,21 +49,17 @@ const Results = (props) => {
 export default function Influencer(props) {
   const [showResults, setShowResults] = useState(false)
   const { data, keyword, morecontent, contentsImgURL } = props.props
-  // const [dummy, setdummy] = useState(false)
-  // const dum = () => {
-  //   setdummy(!dummy)
-  // }
   return (
     <>    
-    <Card sx={{ maxWidth: 766, lineHeight: "50px"}}>
+    <Card sx={{ maxWidth: 768}} variant='outlined' square>
+      <Card sx={{ maxWidth: 768, lineHeight: "50px"}} square>
       <div className = {styles.influencer}> 인플루언서 </div> 
       <img className = {styles.influencer_icon} src="/images/influencer/icon_img.png" alt='icon'/>
       <Link className = {styles.service} href = "https://in.naver.com/"> 서비스 홈 바로가기 </Link> 
-    </Card>
-
-    {data.map((each) => 
-      <Card sx={{ maxWidth: 768}} key = {each.name}>
-        <Grid sx={{ maxWidth: 768, mt:"10px", ml:"18px" }}>
+      </Card>
+      {data.map((each) => 
+      <Card sx={{ maxWidth: 766}} key = {each.name} square>
+        <Grid sx={{ maxWidth: 766, mt:"10px", ml:"18px" }}>
           <Link href={each.avatar_name_url}> <img className = {styles.avatar} src={"/images/influencer/avatar_" + keyword + "_" + each.key + ".png"} alt={each.key}/> </Link>
           <div className = {styles.flex}> 
             <Link href={each.avatar_name_url} underline="none"> <div className = {styles.title}>{each.name}</div> </Link> 
@@ -78,19 +74,7 @@ export default function Influencer(props) {
           <img className = {styles.blogicon} src="/images/influencer/blogicon.png" alt='icon'/> 
           <div className = {styles.subheader}> {each.blogdetails} </div> 
           <div className = {styles.detailsdepth}> {each.detailsdepth} </div>
-          {/* <Search props = {each.detailsdepth}/> */}
-          {/* <div className = {styles.rightallign2} onClick={dum} > {dummy ?  <div className = {styles.rightallign}> <img className = {styles.influencer_icon} src="/images/influencer/after.png"/>  </div> 
-          : <div className = {styles.rightallign}> <img className = {styles.influencer_icon} src="/images/influencer/before.png"/>  </div>} </div>  */}
         </Container>
-        
-        {/* {dummy && 
-        <Paper sx={{ width: 730, lineHeight: "20px", border: 1, borderColor: 'grey.100', ml: "18px", mr: "18px", mb: "5px", mt: "5px" }}>
-          <Grid sx={{ width: 710, lineHeight: "20px", border: 1, borderColor: 'grey.100', ml: "15px", mr: "10px", fontSize: '0.8rem', mt: "5px" }}>
-            <div className = {styles.typ_grey}> 여행 스타일:<div className = {styles.typ_black}>{each.detailsdepth[0]}</div> </div>
-            <div className = {styles.typ_grey}> 창작 분야:  <div className = {styles.typ_black}>{each.detailsdepth[1]}</div></div>
-          </Grid>
-          <Link href = {each.avatar_name}> <div className = {styles.flipscreen}> 자세히 보기 </div> </Link>
-        </Paper>} */}
 
         <Search props = {{"details": each.detailsdepth, "url": each.avatar_name_url}}/>
 
@@ -111,7 +95,10 @@ export default function Influencer(props) {
           </Link> 
         </div>
         </Card>)}
-      <MoreContent props={{'view_option': "인플루엔서",'more_link':morecontent}}/>
+    </Card>
+    
+    
+      <MoreContent props={{'view_option': "인플루언서",'more_link':morecontent}}/>
     </>
   )
 }

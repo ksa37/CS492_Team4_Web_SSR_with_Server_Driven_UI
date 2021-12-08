@@ -1,51 +1,52 @@
 import React from 'react'
-import Link from '@mui/material/Link';
+import Link from '@mui/material/Link'
 import styles from './postCard.module.css'
 import MoreVert from './Morevert'
 import DateConvertor from './DateConvertor'
 import Image from 'material-ui-image'
-import ImageScroll from './ImageScroll';
+import ImageScroll from './ImageScroll'
 
-import { Card, CardContent, CardHeader, Divider } from '@mui/material';
-import TagArea from './TagArea';
-import LinkArea from './LinkArea';
-import Comments from './Comments';
-import GrayboxLink from './GrayBoxLink';
-import Linkslist from './Linkslist';
+import { Card, CardContent, CardHeader, Divider } from '@mui/material'
+import TagArea from './TagArea'
+import LinkArea from './LinkArea'
+import Comments from './Comments'
+import GrayboxLink from './GrayBoxLink'
+import Linkslist from './Linkslist'
 
 var ViewType = Object.freeze({
     NEWS: 0,
     WIKI: 1,
     VIEW: 2
-});
+})
 
 var LinkType = Object.freeze({
     VIEWBASIC: 0,
     VIEWTIMELINE: 1
-  });
+  })
 
 var ScrollType = Object.freeze({
     VIEWBASIC: 0,
     VIEWTIMELINE: 1,
     INFLUENCER: 2
-});
+})
 
-export default function PostCard({props, view}) {  
+export default function PostCard({props, view, index}) {  
     const { publisherURL, publisherImgURL, publisher, date, postURL, title, contents, contentsImgURL, imgNum, tags, more_links, content_links, comments, gray_link } = props
     const { viewType } = view
+    const i = index === undefined ? 0 : index;
 
     const now = Date.now()
     var converted_date = DateConvertor(date)
 
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
+    const [anchorEl, setAnchorEl] = React.useState(null)
+    const open = Boolean(anchorEl)
     const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
+        setAnchorEl(event.currentTarget)
         console.log(event.currentTarget)
-    };
+    }
     const handleClose = () => {
-        setAnchorEl(null);
-    };
+        setAnchorEl(null)
+    }
     
     return (
         <Card sx={{ maxWidth: 766 }} square > 
@@ -64,7 +65,7 @@ export default function PostCard({props, view}) {
                                     height:'100%',
                                     objectFit:'contain',
                                 }}
-                                alt='default'
+                                alt={i + " thumb"}
                             />
                             : <Image className={styles.publisherImg}
                                 
@@ -74,7 +75,7 @@ export default function PostCard({props, view}) {
                                     height:'100%',
                                     objectFit:'contain',
                                 }}
-                                alt='publisher'
+                                alt={i + " thumb"}
                             />}
                         </div>
                     </Link>
@@ -99,7 +100,8 @@ export default function PostCard({props, view}) {
                         "handleClick": handleClick, 
                         "handleClose": handleClose,
                         "url": postURL,
-                        "title": title
+                        "title": title,
+                        "id": i
                     }}
                     />
                 }
@@ -108,7 +110,8 @@ export default function PostCard({props, view}) {
                 {viewType == ViewType.WIKI ?
                     <>
                         <Link href={postURL} underline="none"><div className={styles.title}>{title}</div></Link>
-                        <Divider 
+                        <Divider
+                            data-testid={i + ' divider'}
                             sx={{mt: 1.25, mb: 1.25, color: 'gray.light' }} // theme.spacing value (the default for the value is 8px
                         />
                         <div className={styles.contentsInfo_wiki}>

@@ -23,7 +23,7 @@ export default function Detailinfo({detailinfo, pagenum}) {
                                 <dt className={pagenum===0? styles.infodt : styles.proinfodt}><span className={styles.bar}/>{info[0]}</dt>
                                 <dd className={pagenum===0? styles.infodd : styles.proinfodd}>
                                     {info[1]&&info[1].map((text, index2) => {
-                                        if(index[2] === info[1].length - 1)
+                                        if(index2 === info[1].length - 1)
                                         {
                                             return (<a key={index2} href={info[2][index2]}>{text}</a>)
                                         }

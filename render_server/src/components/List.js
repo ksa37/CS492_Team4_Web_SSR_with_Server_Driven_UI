@@ -14,6 +14,7 @@ export default function List({ id, data }) {
                     width: data.ratios[12 * j + i],
                     height: 1,
                     href: data.hrefs[12 * j + i],
+                    lindex: 12 * j
                 })
             }
         }

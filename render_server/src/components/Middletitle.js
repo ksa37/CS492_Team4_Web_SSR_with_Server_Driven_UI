@@ -12,7 +12,7 @@ export default function Middletitle({href, text}) {
         <div className={styles.middletitle}>
             <a className={styles.morelink} href={href}>
                 <h3 className={styles.morelinktitle}>{text}</h3>
-                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png' alt='more'/>
+                <img className={styles.morelinkicon} src='/images/Bulguksa/more.png' alt={text}/>
             </a>
         </div>
         }
