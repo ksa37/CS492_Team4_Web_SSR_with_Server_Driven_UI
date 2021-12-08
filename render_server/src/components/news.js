@@ -73,8 +73,8 @@ export default function News({props}) {
             style={{ textAlign: 'left'}}
         />
         {news_posts&&news_posts
-          .map((news) => 
-          <PostCard key={news.publisherURL} props={news} view={{"viewType": ViewType.NEWS }}/>)}
+          .map((news, index) => 
+          <PostCard key={news.publisherURL} props={news} view={{"viewType": ViewType.NEWS }} index={index}/>)}
       </Card>
       <MoreContent props={{'view_option': "뉴스",'more_link':news_more}}/>
       </>
