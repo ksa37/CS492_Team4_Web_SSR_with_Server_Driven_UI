@@ -1,0 +1,1265 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+Array [
+  <div
+    className="MuiPaper-root MuiPaper-outlined MuiCard-root css-b4hzzr-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      className="MuiCardHeader-root api_title_area css-185gdzj-MuiCardHeader-root"
+      style={
+        Object {
+          "textAlign": "left",
+        }
+      }
+    >
+      <div
+        className="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+      >
+        <span
+          className="MuiTypography-root MuiTypography-h5 MuiCardHeader-title css-1qvr50w-MuiTypography-root"
+        >
+          <div
+            className="viewHeader"
+          >
+            <div
+              className="viewName"
+            >
+              뉴스
+            </div>
+            <div
+              className="viewOptions"
+            >
+              <button
+                className="btn"
+                onClick={[Function]}
+              >
+                <div
+                  className="viewSort"
+                >
+                  <test-file-stub
+                    className="sortDot"
+                    fill="var(--naver_green)"
+                  />
+                  관련도순
+                </div>
+              </button>
+              <button
+                className="btn"
+                onClick={[Function]}
+              >
+                <div
+                  className="viewSort"
+                >
+                  <test-file-stub
+                    className="sortDot"
+                    fill="var(--date_gray)"
+                  />
+                  <div
+                    className="inactiveSort"
+                  >
+                    최신순
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiCard-root css-1xdevdl-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        className="MuiCardHeader-root css-cva3as-MuiCardHeader-root"
+        variant="contained"
+      >
+        <div
+          className="MuiCardHeader-avatar css-1ssile9-MuiCardHeader-avatar"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+            href="https://media.naver.com/press/022"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              className="publisherImgBoarder"
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "objectFit": "contain",
+                    "paddingTop": "calc(1 / 1 * 100%)",
+                    "position": "relative",
+                    "width": "100%",
+                  }
+                }
+              >
+                <img
+                  alt="0 thumb"
+                  className="publisherImg"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/images/Bulguksa/news/1/1.jpg"
+                  style={
+                    Object {
+                      "filterBrightness": 0,
+                      "filterSaturate": 20,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "inherit",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "
+        filterBrightness 2250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        filterSaturate 3000ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "height": "100%",
+                      "justifyContent": "center",
+                      "left": 0,
+                      "pointerEvents": "none",
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <div
+                    className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                    role="progressbar"
+                    style={
+                      Object {
+                        "height": 48,
+                        "width": 48,
+                      }
+                    }
+                  >
+                    <svg
+                      className="MuiCircularProgress-svg"
+                      viewBox="22 22 44 44"
+                    >
+                      <circle
+                        className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                        cx={44}
+                        cy={44}
+                        fill="none"
+                        r={20.2}
+                        strokeWidth={3.6}
+                        style={Object {}}
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+        >
+          <span
+            className="MuiTypography-root MuiTypography-body2 MuiCardHeader-title css-et1ao3-MuiTypography-root"
+          >
+            <div
+              className="publishInfo"
+            >
+              <a
+                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                href="https://media.naver.com/press/022"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="publisher"
+                >
+                  세계일보
+                </div>
+              </a>
+              <div
+                className="verticalDivider"
+              />
+              <div
+                className="date"
+              >
+                2021.11.24.
+              </div>
+            </div>
+          </span>
+        </div>
+        <div
+          className="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+        >
+          <div>
+            <button
+              className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-bnzas2-MuiButtonBase-root-MuiIconButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                }
+              }
+              tabIndex={0}
+              type="button"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="0 button"
+                focusable="false"
+                style={
+                  Object {
+                    "color": "#D1D3D6",
+                  }
+                }
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiCardContent-root css-n7ubfh-MuiCardContent-root"
+        variant="contained"
+      >
+        <a
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+          href="https://n.news.naver.com/mnews/article/022/0003640940?sid=102"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <div
+            className="title"
+          >
+            코로나19 이후 첫 외국인 단체 관광객, 경주 불국사 등 방문
+          </div>
+          <div
+            className="contentsInfo"
+          >
+            <div
+              className="contents"
+            >
+              <p>
+                싱가포르 관광객들이 경주 불국사 앞에서 기념촬영을 하고있다. 지난해 2월 코로나19 사태 이후 처음으로 외국인 단체 관광객이 경북을 방문해 눈길을 끌었다. 23일 경북도문화관광공사에 따르면 싱가포르 단체 관광객 약 20명이 지난 19일과 20일 이틀간 경주 대릉원, 첨성대, 석굴암, 불국사...
+              </p>
+            </div>
+            <div
+              className="contentsImgBoarder"
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "objectFit": "contain",
+                    "paddingTop": "calc(1 / 1 * 100%)",
+                    "position": "relative",
+                    "width": "88px",
+                  }
+                }
+              >
+                <img
+                  alt="content"
+                  className="contentsImg"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/images/Bulguksa/news/1/2.jpg"
+                  style={
+                    Object {
+                      "filterBrightness": 0,
+                      "filterSaturate": 20,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "inherit",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "
+        filterBrightness 2250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        filterSaturate 3000ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "height": "100%",
+                      "justifyContent": "center",
+                      "left": 0,
+                      "pointerEvents": "none",
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <div
+                    className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                    role="progressbar"
+                    style={
+                      Object {
+                        "height": 48,
+                        "width": 48,
+                      }
+                    }
+                  >
+                    <svg
+                      className="MuiCircularProgress-svg"
+                      viewBox="22 22 44 44"
+                    >
+                      <circle
+                        className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                        cx={44}
+                        cy={44}
+                        fill="none"
+                        r={20.2}
+                        strokeWidth={3.6}
+                        style={Object {}}
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiCard-root css-1xdevdl-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        className="MuiCardHeader-root css-cva3as-MuiCardHeader-root"
+        variant="contained"
+      >
+        <div
+          className="MuiCardHeader-avatar css-1ssile9-MuiCardHeader-avatar"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+            href="https://media.naver.com/press/020"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              className="publisherImgBoarder"
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "objectFit": "contain",
+                    "paddingTop": "calc(1 / 1 * 100%)",
+                    "position": "relative",
+                    "width": "100%",
+                  }
+                }
+              >
+                <img
+                  alt="1 thumb"
+                  className="publisherImg"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/images/Bulguksa/news/2/1.jpg"
+                  style={
+                    Object {
+                      "filterBrightness": 0,
+                      "filterSaturate": 20,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "inherit",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "
+        filterBrightness 2250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        filterSaturate 3000ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "height": "100%",
+                      "justifyContent": "center",
+                      "left": 0,
+                      "pointerEvents": "none",
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <div
+                    className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                    role="progressbar"
+                    style={
+                      Object {
+                        "height": 48,
+                        "width": 48,
+                      }
+                    }
+                  >
+                    <svg
+                      className="MuiCircularProgress-svg"
+                      viewBox="22 22 44 44"
+                    >
+                      <circle
+                        className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                        cx={44}
+                        cy={44}
+                        fill="none"
+                        r={20.2}
+                        strokeWidth={3.6}
+                        style={Object {}}
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+        >
+          <span
+            className="MuiTypography-root MuiTypography-body2 MuiCardHeader-title css-et1ao3-MuiTypography-root"
+          >
+            <div
+              className="publishInfo"
+            >
+              <a
+                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                href="https://media.naver.com/press/020"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="publisher"
+                >
+                  동아일보
+                </div>
+              </a>
+              <div
+                className="verticalDivider"
+              />
+              <div
+                className="date"
+              >
+                2021.11.25.
+              </div>
+            </div>
+          </span>
+        </div>
+        <div
+          className="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+        >
+          <div>
+            <button
+              className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-bnzas2-MuiButtonBase-root-MuiIconButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                }
+              }
+              tabIndex={0}
+              type="button"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="1 button"
+                focusable="false"
+                style={
+                  Object {
+                    "color": "#D1D3D6",
+                  }
+                }
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiCardContent-root css-n7ubfh-MuiCardContent-root"
+        variant="contained"
+      >
+        <a
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+          href="https://n.news.naver.com/mnews/article/020/0003395866?sid=102"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <div
+            className="title"
+          >
+            “APEC 정상회의 유치 땐 경주발전 10년 이상 앞당길 것”
+          </div>
+          <div
+            className="contentsInfo"
+          >
+            <div
+              className="contents"
+            >
+              <p>
+                싱가포르에서 온 이들은 19, 20일 대릉원과 첨성대, 석굴암, 불국사 등을 둘러봤다. 대표적 관광지인 경주엑스포대공원 관람객은 10월 말 현재 32만4324명을 기록했다. 지난해 같은 기간 16만9984명보다 91% 증가한 수치다. 올해 말까지 예상되는 관람객은 약 35만 명이다. 주 시장은 “위드 코로나...
+              </p>
+            </div>
+            <div
+              className="contentsImgBoarder"
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "objectFit": "contain",
+                    "paddingTop": "calc(1 / 1 * 100%)",
+                    "position": "relative",
+                    "width": "88px",
+                  }
+                }
+              >
+                <img
+                  alt="content"
+                  className="contentsImg"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/images/Bulguksa/news/2/2.jpg"
+                  style={
+                    Object {
+                      "filterBrightness": 0,
+                      "filterSaturate": 20,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "inherit",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "
+        filterBrightness 2250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        filterSaturate 3000ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "height": "100%",
+                      "justifyContent": "center",
+                      "left": 0,
+                      "pointerEvents": "none",
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <div
+                    className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                    role="progressbar"
+                    style={
+                      Object {
+                        "height": 48,
+                        "width": 48,
+                      }
+                    }
+                  >
+                    <svg
+                      className="MuiCircularProgress-svg"
+                      viewBox="22 22 44 44"
+                    >
+                      <circle
+                        className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                        cx={44}
+                        cy={44}
+                        fill="none"
+                        r={20.2}
+                        strokeWidth={3.6}
+                        style={Object {}}
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiCard-root css-1xdevdl-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        className="MuiCardHeader-root css-cva3as-MuiCardHeader-root"
+        variant="contained"
+      >
+        <div
+          className="MuiCardHeader-avatar css-1ssile9-MuiCardHeader-avatar"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+            href="https://www.ajunews.com/"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              className="publisherImgBoarder"
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "objectFit": "contain",
+                    "paddingTop": "calc(1 / 1 * 100%)",
+                    "position": "relative",
+                    "width": "100%",
+                  }
+                }
+              >
+                <img
+                  alt="2 thumb"
+                  className="publisherImg"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/images/Bulguksa/news/3/1.jpg"
+                  style={
+                    Object {
+                      "filterBrightness": 0,
+                      "filterSaturate": 20,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "inherit",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "
+        filterBrightness 2250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        filterSaturate 3000ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "height": "100%",
+                      "justifyContent": "center",
+                      "left": 0,
+                      "pointerEvents": "none",
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <div
+                    className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                    role="progressbar"
+                    style={
+                      Object {
+                        "height": 48,
+                        "width": 48,
+                      }
+                    }
+                  >
+                    <svg
+                      className="MuiCircularProgress-svg"
+                      viewBox="22 22 44 44"
+                    >
+                      <circle
+                        className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                        cx={44}
+                        cy={44}
+                        fill="none"
+                        r={20.2}
+                        strokeWidth={3.6}
+                        style={Object {}}
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+        >
+          <span
+            className="MuiTypography-root MuiTypography-body2 MuiCardHeader-title css-et1ao3-MuiTypography-root"
+          >
+            <div
+              className="publishInfo"
+            >
+              <a
+                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                href="https://www.ajunews.com/"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="publisher"
+                >
+                  아주경제
+                </div>
+              </a>
+              <div
+                className="verticalDivider"
+              />
+              <div
+                className="date"
+              >
+                2021.11.22.
+              </div>
+            </div>
+          </span>
+        </div>
+        <div
+          className="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+        >
+          <div>
+            <button
+              className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-bnzas2-MuiButtonBase-root-MuiIconButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                }
+              }
+              tabIndex={0}
+              type="button"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="2 button"
+                focusable="false"
+                style={
+                  Object {
+                    "color": "#D1D3D6",
+                  }
+                }
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiCardContent-root css-n7ubfh-MuiCardContent-root"
+        variant="contained"
+      >
+        <a
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+          href="https://www.ajunews.com/view/20211122145015567"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <div
+            className="title"
+          >
+            트래블 버블 협정 맺은 싱가포르 단체 관광객, 경북 경주 첫 방문
+          </div>
+          <div
+            className="contentsInfo"
+          >
+            <div
+              className="contents"
+            >
+              <p>
+                최주호 기자 cjh@ajunews.com 싱가포르 단체 관광객들이 경주 불국사 앞에서 기념촬영을 하고 있다. [사진=경북문화관광공사 제공] 경상북도와 경북문화관광공사(이하 ‘공사’)는 ‘트래블버블’ 협정국 싱가포르 단체 관광객 약 20명에게 방역 키트‧기념품 등을 증정하며 경주 방문 환영...
+              </p>
+            </div>
+            <div
+              className="contentsImgBoarder"
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "objectFit": "contain",
+                    "paddingTop": "calc(1 / 1 * 100%)",
+                    "position": "relative",
+                    "width": "88px",
+                  }
+                }
+              >
+                <img
+                  alt="content"
+                  className="contentsImg"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/images/Bulguksa/news/3/2.jpg"
+                  style={
+                    Object {
+                      "filterBrightness": 0,
+                      "filterSaturate": 20,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "inherit",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "
+        filterBrightness 2250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        filterSaturate 3000ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "height": "100%",
+                      "justifyContent": "center",
+                      "left": 0,
+                      "pointerEvents": "none",
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <div
+                    className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                    role="progressbar"
+                    style={
+                      Object {
+                        "height": 48,
+                        "width": 48,
+                      }
+                    }
+                  >
+                    <svg
+                      className="MuiCircularProgress-svg"
+                      viewBox="22 22 44 44"
+                    >
+                      <circle
+                        className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                        cx={44}
+                        cy={44}
+                        fill="none"
+                        r={20.2}
+                        strokeWidth={3.6}
+                        style={Object {}}
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiCard-root css-1xdevdl-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        className="MuiCardHeader-root css-cva3as-MuiCardHeader-root"
+        variant="contained"
+      >
+        <div
+          className="MuiCardHeader-avatar css-1ssile9-MuiCardHeader-avatar"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+            href="https://media.naver.com/press/003"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              className="publisherImgBoarder"
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "objectFit": "contain",
+                    "paddingTop": "calc(1 / 1 * 100%)",
+                    "position": "relative",
+                    "width": "100%",
+                  }
+                }
+              >
+                <img
+                  alt="3 thumb"
+                  className="publisherImg"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/images/Bulguksa/news/4/1.jpg"
+                  style={
+                    Object {
+                      "filterBrightness": 0,
+                      "filterSaturate": 20,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "inherit",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "
+        filterBrightness 2250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        filterSaturate 3000ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "height": "100%",
+                      "justifyContent": "center",
+                      "left": 0,
+                      "pointerEvents": "none",
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <div
+                    className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                    role="progressbar"
+                    style={
+                      Object {
+                        "height": 48,
+                        "width": 48,
+                      }
+                    }
+                  >
+                    <svg
+                      className="MuiCircularProgress-svg"
+                      viewBox="22 22 44 44"
+                    >
+                      <circle
+                        className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                        cx={44}
+                        cy={44}
+                        fill="none"
+                        r={20.2}
+                        strokeWidth={3.6}
+                        style={Object {}}
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div
+          className="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+        >
+          <span
+            className="MuiTypography-root MuiTypography-body2 MuiCardHeader-title css-et1ao3-MuiTypography-root"
+          >
+            <div
+              className="publishInfo"
+            >
+              <a
+                className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                href="https://media.naver.com/press/003"
+                onBlur={[Function]}
+                onFocus={[Function]}
+              >
+                <div
+                  className="publisher"
+                >
+                  뉴시스
+                </div>
+              </a>
+              <div
+                className="verticalDivider"
+              />
+              <div
+                className="date"
+              >
+                2021.11.18.
+              </div>
+            </div>
+          </span>
+        </div>
+        <div
+          className="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+        >
+          <div>
+            <button
+              className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-bnzas2-MuiButtonBase-root-MuiIconButton-root"
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onContextMenu={[Function]}
+              onDragLeave={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                }
+              }
+              tabIndex={0}
+              type="button"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="3 button"
+                focusable="false"
+                style={
+                  Object {
+                    "color": "#D1D3D6",
+                  }
+                }
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        className="MuiCardContent-root css-n7ubfh-MuiCardContent-root"
+        variant="contained"
+      >
+        <a
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+          href="https://n.news.naver.com/mnews/article/003/0010840961?sid=102"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+          <div
+            className="title"
+          >
+            경북도, 중국인 유학생 초청 안동~경주 팸투어
+          </div>
+          <div
+            className="contentsInfo"
+          >
+            <div
+              className="contents"
+            >
+              <p>
+                이번 팸투어는 ▲경북도청 동락관의 경북도-허난성 국제미술교류전 참관 ▲안동 하회마을, 월영교 및 낙강물길 공원 방문 ▲경주 대릉원, 첨성대, 불국사 방문 및 경주빵 만들기 체험 등으로 이뤄졌다. 이번 팸투어 참가자는 경북대, 계명대, 대구보건대, 대구카톨릭대, 영진전문대에 재학 중인...
+              </p>
+            </div>
+            <div
+              className="contentsImgBoarder"
+            >
+              <div
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "objectFit": "contain",
+                    "paddingTop": "calc(1 / 1 * 100%)",
+                    "position": "relative",
+                    "width": "88px",
+                  }
+                }
+              >
+                <img
+                  alt="content"
+                  className="contentsImg"
+                  onError={[Function]}
+                  onLoad={[Function]}
+                  src="/images/Bulguksa/news/4/2.jpg"
+                  style={
+                    Object {
+                      "filterBrightness": 0,
+                      "filterSaturate": 20,
+                      "height": "100%",
+                      "left": 0,
+                      "objectFit": "inherit",
+                      "opacity": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transition": "
+        filterBrightness 2250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        filterSaturate 3000ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <div
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "height": "100%",
+                      "justifyContent": "center",
+                      "left": 0,
+                      "pointerEvents": "none",
+                      "position": "absolute",
+                      "top": 0,
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <div
+                    className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                    role="progressbar"
+                    style={
+                      Object {
+                        "height": 48,
+                        "width": 48,
+                      }
+                    }
+                  >
+                    <svg
+                      className="MuiCircularProgress-svg"
+                      viewBox="22 22 44 44"
+                    >
+                      <circle
+                        className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                        cx={44}
+                        cy={44}
+                        fill="none"
+                        r={20.2}
+                        strokeWidth={3.6}
+                        style={Object {}}
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>,
+  <a
+    className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+    href="https://m.search.naver.com/search.naver?where=m_news&sm=mtb_nmr&query=%EA%B2%BD%EC%A3%BC%20%EB%B6%88%EA%B5%AD%EC%82%AC&sort=0&nso=so:r,p:all"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-96237p-MuiPaper-root"
+      style={
+        Object {
+          "backgroundColor": "#f4f7f8",
+          "borderRadius": 0,
+          "height": 50,
+        }
+      }
+    >
+      <div
+        className="moreContentInfo"
+      >
+        뉴스
+         더보기
+        <img
+          alt="arrow"
+          className="img"
+          src="/icons/forward_arrow.svg"
+        />
+      </div>
+    </div>
+  </a>,
+]
+`;

@@ -37,7 +37,7 @@ export default function Photo({props}) {
                     component="a" 
                     href={item.tagURL}
                     avatar={<Avatar src ={item["tag_image_url"]} alt={item.tag_name} />}
-                    alt={item.tag_name}
+                    label={item["tag_name"]}
                     variant="outlined"
                     sx={{backgroundColor: "#ffffff"}}
                     clickable

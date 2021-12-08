@@ -93,18 +93,19 @@ describe('Wiki', () => {
       const img0 = screen.getByAltText(RegExp(`(?<!.)${i+" thumb"}(?!.)`, "i"))
       expect(img0).toBeInTheDocument()
       expect(img0.closest('div').closest('div').closest('a')).toHaveAttribute('href', wiki.wiki_posts[i].publisherURL)
+
       const link0 = screen.getByRole('link', {
         name: RegExp(`(?<!.)${replace_text(wiki.wiki_posts[i].publisher)}(?!.)`, "i"),
       })
       expect(link0).toBeInTheDocument()
       expect(link0.closest('a')).toHaveAttribute('href', wiki.wiki_posts[i].publisherURL)
-      const button0 = screen.getByTestId(RegExp(`(?<!.)${i+" button"}(?!.)`, "i"))
-      expect(button0).toBeInTheDocument()
+
       const link1 = screen.getByRole('link', {
         name: RegExp(`(?<!.)${replace_text(wiki.wiki_posts[i].title)}(?!.)`, "i"),
       })
       expect(link1).toBeInTheDocument()
       expect(link1.closest('a')).toHaveAttribute('href', wiki.wiki_posts[i].publisherURL)
+
       const hr0 = screen.getByTestId(RegExp(`(?<!.)${i+" divider"}(?!.)`, "i"))
       expect(hr0).toBeInTheDocument()
       if(wiki.wiki_posts[i].content_links.length !== 0)
@@ -121,12 +122,41 @@ describe('Wiki', () => {
       const link3 = screen.getByText(RegExp(`(?<!.)${replace_text(wiki.wiki_posts[i].contents)}(?!.)`, "i"))
       expect(link3).toBeInTheDocument()
       expect(link3.closest('div').closest('a')).toHaveAttribute('href', wiki.wiki_posts[i].postURL)
+      const div0 = screen.getByText(/(?<!.)더보기(?!.)/i)
+      const img1 = screen.getByAltText(/arrow/i)
+      expect(div0).toBeInTheDocument()
+      expect(img1).toBeInTheDocument()
+      expect(div0.closest('div').closest('a')).toHaveAttribute('href', wiki.wiki_more)
+  
+      const button0 = screen.getByTestId(RegExp(`${i+" button"}`, "i"))
+      expect(button0).toBeInTheDocument()
+      /*
+      const button0 = await screen.findByTestId(RegExp(`${i+" button"}`, "i"))
+      expect(button0).toBeInTheDocument()
+      userEvent.click(button0)
+      const div1 = await screen.findByText(RegExp(`(?<!.)공유하기(?!.)`, "i"))
+      expect(div1).toBeInTheDocument()
+      const div2 = await screen.findByText(RegExp(`(?<!.)Keep에 저장(?!.)`, "i"))
+      expect(div2).toBeInTheDocument()
+      const div3 = await screen.findByText(RegExp(`(?<!.)Keep 바로가기(?!.)`, "i"))
+      expect(div3).toBeInTheDocument()
+      userEvent.click(div2)
+      expect(div2).not.toBeInTheDocument()
+      const div4 = await screen.findByText(RegExp(`(?<!.)저장된 문서입니다\.(?!.)`, "i"))
+      expect(div4).toBeInTheDocument()
+      userEvent.click(div4)
+      const div5 = await screen.findByText(RegExp(`(?<!.)Keep에 저장(?!.)`, "i"))
+      expect(div5).toBeInTheDocument()
+      userEvent.click(div5)
+      userEvent.keyboard('{esc}')
+      await waitForElementToBeRemoved(() => div5)
+      userEvent.click(button0)
+      const div6 = await screen.findByText(RegExp(`(?<!.)저장된 문서입니다\.(?!.)`, "i"))
+      expect(div6).toBeInTheDocument()
+      userEvent.keyboard('{esc}')
+      await waitForElementToBeRemoved(() => div6)
+      */
     }
-    const div0 = screen.getByText(/(?<!.)더보기(?!.)/i)
-    const img1 = screen.getByAltText(/arrow/i)
-    expect(div0).toBeInTheDocument()
-    expect(img1).toBeInTheDocument()
-    expect(div0.closest('div').closest('a')).toHaveAttribute('href', wiki.wiki_more)
   })
 })
  

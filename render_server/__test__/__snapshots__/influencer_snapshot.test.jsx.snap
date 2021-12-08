@@ -1,0 +1,728 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+Array [
+  <div
+    className="MuiPaper-root MuiPaper-outlined MuiCard-root css-b4hzzr-MuiPaper-root-MuiCard-root"
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiCard-root css-14q5k8x-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        className="influencer"
+      >
+         인플루언서 
+      </div>
+      <img
+        alt="header_icon"
+        className="influencer_icon"
+        src="/images/influencer/icon_img.png"
+      />
+      <a
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways service css-1iwtne7-MuiTypography-root-MuiLink-root"
+        href="https://in.naver.com/"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+         서비스 홈 바로가기 
+      </a>
+    </div>
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiCard-root css-1xdevdl-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        className="MuiGrid-root css-1e4xmnq-MuiGrid-root"
+      >
+        <a
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+          href="https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+           
+          <img
+            alt="1avatar"
+            className="avatar"
+            src="/images/influencer/avatar_bulguksa_1.png"
+          />
+           
+        </a>
+        <div
+          className="flex"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+            href="https://in.naver.com/soltmon?query=%EB%B6%88%EA%B5%AD%EC%82%AC"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+             
+            <div
+              className="title"
+            >
+              쏠트몬
+            </div>
+             
+          </a>
+          <div
+            className="header"
+          >
+            팬 9,163
+          </div>
+        </div>
+        <div
+          className="header_sub"
+        >
+          여행 전문작가
+        </div>
+        <div
+          className="header_sub_lft"
+        >
+          국내 전문
+        </div>
+        <div
+          data-testid="1button"
+        >
+          <img
+            alt="1fan"
+            className="fanicon_before"
+            onClick={[Function]}
+            src="/images/influencer/fanicon.png"
+          />
+        </div>
+      </div>
+      <div
+        className="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+        style={
+          Object {
+            "display": "flex",
+          }
+        }
+      >
+        <img
+          alt="1icon"
+          className="blogicon"
+          src="/images/influencer/blogicon.png"
+        />
+        <div
+          className="subheader"
+        >
+           
+          2012 파워블로그
+           
+        </div>
+        <div
+          className="detailsdepth"
+        >
+           
+          도심 여행
+          선호 여행 리뷰
+           
+        </div>
+      </div>
+      <div>
+        <div
+          className="rightallign"
+          onClick={[Function]}
+        >
+           
+          <img
+            alt="1before"
+            className="influencer_icon"
+            src="/images/influencer/before.png"
+          />
+            
+        </div>
+      </div>
+      <div
+        className="MuiContainer-root MuiContainer-maxWidthLg css-16wa1d5-MuiContainer-root"
+      >
+        <div
+          className="imageScrollerInfluencer"
+        >
+          <ul
+            className="imageScrollerContainer imageScrollerContainerInfluencer"
+          >
+            <img
+              alt={0}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/3/1.PNG"
+            />
+            <img
+              alt={1}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/3/2.PNG"
+            />
+            <img
+              alt={2}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/3/3.PNG"
+            />
+            <img
+              alt={3}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/3/4.PNG"
+            />
+            <img
+              alt={4}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/3/5.PNG"
+            />
+            <img
+              alt={5}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/3/6.PNG"
+            />
+            <img
+              alt={6}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/3/7.PNG"
+            />
+            <img
+              alt={7}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/3/8.PNG"
+            />
+            <img
+              alt={8}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/3/9.PNG"
+            />
+            <img
+              alt={9}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/3/10.PNG"
+            />
+            <img
+              alt={10}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/3/11.PNG"
+            />
+          </ul>
+        </div>
+      </div>
+      <a
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+        href="https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          className="MuiGrid-root contenttitle css-rpi8cc-MuiGrid-root"
+        >
+           
+          경주 가볼만한곳 불타는 단풍 가을 불국사
+           
+        </div>
+      </a>
+      <div
+        className="f"
+      >
+        <div>
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+            href="https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+             
+            <div
+              className="content"
+            >
+               
+              가을 경주 가볼만한곳 단풍이 아름다운 불국사입니다. 인기 여행지기도 하고 어릴 때 한 번쯤은 수학여행 등으로 어쩔 수 없이 오게 되는 한국인의 명소 한국에서 학
+               
+            </div>
+             
+          </a>
+          <div
+            className="date"
+          >
+             
+            2021.11.05
+             
+          </div>
+        </div>
+        <a
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+          href="https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        />
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiCard-root css-1xdevdl-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        className="MuiGrid-root css-1e4xmnq-MuiGrid-root"
+      >
+        <a
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+          href="https://in.naver.com/byunyo?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%AC"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+           
+          <img
+            alt="2avatar"
+            className="avatar"
+            src="/images/influencer/avatar_bulguksa_2.png"
+          />
+           
+        </a>
+        <div
+          className="flex"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+            href="https://in.naver.com/byunyo?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%AC"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+             
+            <div
+              className="title"
+            >
+              어람
+            </div>
+             
+          </a>
+          <div
+            className="header"
+          >
+            팬 4,855
+          </div>
+        </div>
+        <div
+          className="header_sub"
+        >
+          여행 전문블로거
+        </div>
+        <div
+          className="header_sub_lft"
+        >
+           국내 전문
+        </div>
+        <div
+          data-testid="2button"
+        >
+          <img
+            alt="2fan"
+            className="fanicon_before"
+            onClick={[Function]}
+            src="/images/influencer/fanicon.png"
+          />
+        </div>
+      </div>
+      <div
+        className="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+        style={
+          Object {
+            "display": "flex",
+          }
+        }
+      >
+        <img
+          alt="2icon"
+          className="blogicon"
+          src="/images/influencer/blogicon.png"
+        />
+        <div
+          className="subheader"
+        >
+           
+          이달의 블로그 (2021.1)
+           
+        </div>
+        <div
+          className="detailsdepth"
+        >
+           
+          자연경관 선호
+          여행 리뷰
+           
+        </div>
+      </div>
+      <div>
+        <div
+          className="rightallign"
+          onClick={[Function]}
+        >
+           
+          <img
+            alt="2before"
+            className="influencer_icon"
+            src="/images/influencer/before.png"
+          />
+            
+        </div>
+      </div>
+      <div
+        className="MuiContainer-root MuiContainer-maxWidthLg css-16wa1d5-MuiContainer-root"
+      >
+        <div
+          className="imageScrollerInfluencer"
+        >
+          <ul
+            className="imageScrollerContainer imageScrollerContainerInfluencer"
+          >
+            <img
+              alt={0}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/2/1.PNG"
+            />
+            <img
+              alt={1}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/2/2.PNG"
+            />
+            <img
+              alt={2}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/2/3.PNG"
+            />
+            <img
+              alt={3}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/2/4.PNG"
+            />
+            <img
+              alt={4}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/2/5.PNG"
+            />
+            <img
+              alt={5}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/2/6.PNG"
+            />
+            <img
+              alt={6}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/2/7.PNG"
+            />
+            <img
+              alt={7}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/2/8.PNG"
+            />
+            <img
+              alt={8}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/2/9.PNG"
+            />
+            <img
+              alt={9}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/2/10.PNG"
+            />
+            <img
+              alt={10}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/2/11.PNG"
+            />
+          </ul>
+        </div>
+      </div>
+      <a
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+        href="https://in.naver.com/byunyo/contents/369761082338656?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%AC"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          className="MuiGrid-root contenttitle css-rpi8cc-MuiGrid-root"
+        >
+           
+          단풍으로 붉게 물든 경주 불국사
+           
+        </div>
+      </a>
+      <div
+        className="f"
+      >
+        <div>
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+            href="https://in.naver.com/byunyo/contents/369761082338656?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%AC"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+             
+            <div
+              className="content"
+            >
+               
+              단풍 명소로 단연코 으뜸이라 할 수 있는 경주 불국사 단풍은 절정으로 지나고 있습니다. 오늘 흐린 날이지만 잠시 단풍 구경 다녀왔는데요 평일인지 휴일인지 분간이 안 갈 정도로 많은 인파로 아침부
+               
+            </div>
+             
+          </a>
+          <div
+            className="date"
+          >
+             
+            2021.11.11
+             
+          </div>
+        </div>
+        <a
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+          href="https://in.naver.com/byunyo/contents/369761082338656?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%AC"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        />
+      </div>
+    </div>
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiCard-root css-1xdevdl-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        className="MuiGrid-root css-1e4xmnq-MuiGrid-root"
+      >
+        <a
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+          href="https://in.naver.com/youujjung?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%AC"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        >
+           
+          <img
+            alt="3avatar"
+            className="avatar"
+            src="/images/influencer/avatar_bulguksa_3.png"
+          />
+           
+        </a>
+        <div
+          className="flex"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+            href="https://in.naver.com/youujjung?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%AC"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+             
+            <div
+              className="title"
+            >
+              쩡유의트래블라이프
+            </div>
+             
+          </a>
+          <div
+            className="header"
+          >
+            팬 5,291
+          </div>
+        </div>
+        <div
+          className="header_sub"
+        >
+          여행 전문블로거
+        </div>
+        <div
+          className="header_sub_lft"
+        >
+          유럽 전문
+        </div>
+        <div
+          data-testid="3button"
+        >
+          <img
+            alt="3fan"
+            className="fanicon_before"
+            onClick={[Function]}
+            src="/images/influencer/fanicon.png"
+          />
+        </div>
+      </div>
+      <div
+        className="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+        style={
+          Object {
+            "display": "flex",
+          }
+        }
+      >
+        <img
+          alt="3icon"
+          className="blogicon"
+          src="/images/influencer/blogicon.png"
+        />
+        <div
+          className="subheader"
+        >
+           
+          블로그 이웃 8,300+
+           
+        </div>
+        <div
+          className="detailsdepth"
+        >
+           
+          SNS 핫플 매니아
+          경험/노하우 공유
+           
+        </div>
+      </div>
+      <div>
+        <div
+          className="rightallign"
+          onClick={[Function]}
+        >
+           
+          <img
+            alt="3before"
+            className="influencer_icon"
+            src="/images/influencer/before.png"
+          />
+            
+        </div>
+      </div>
+      <div
+        className="MuiContainer-root MuiContainer-maxWidthLg css-16wa1d5-MuiContainer-root"
+      >
+        <div
+          className="imageScrollerInfluencer"
+        >
+          <ul
+            className="imageScrollerContainer imageScrollerContainerInfluencer"
+          >
+            <img
+              alt={0}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/1/1.PNG"
+            />
+            <img
+              alt={1}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/1/2.png"
+            />
+            <img
+              alt={2}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/1/3.png"
+            />
+            <img
+              alt={3}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/1/4.png"
+            />
+            <img
+              alt={4}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/1/5.png"
+            />
+            <img
+              alt={5}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/1/6.png"
+            />
+            <img
+              alt={6}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/1/7.png"
+            />
+            <img
+              alt={7}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/1/8.png"
+            />
+            <img
+              alt={8}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/1/9.png"
+            />
+            <img
+              alt={9}
+              className="imageScrollerItem imageScrollerItemInfluencer"
+              src="/images/Bulguksa/influencer/1/10.png"
+            />
+          </ul>
+        </div>
+      </div>
+      <a
+        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+        href="https://in.naver.com/youujjung/contents/373175694222656?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%ACC"
+        onBlur={[Function]}
+        onFocus={[Function]}
+      >
+        <div
+          className="MuiGrid-root contenttitle css-rpi8cc-MuiGrid-root"
+        >
+           
+          경주 불국사 근처 맛집 콩이랑부터 카페까지 추천!
+           
+        </div>
+      </a>
+      <div
+        className="f"
+      >
+        <div>
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+            href="https://in.naver.com/youujjung/contents/373175694222656?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%ACC"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+             
+            <div
+              className="content"
+            >
+               
+              G Y E O N G J U 경주 불국사 근처 맛집 콩이랑 + 카페 하프라운드, 바실라 후기 글/사진. 쩡유 안녕하세요 여행블로거 쩡유입니다 :&gt; 요즘 날씨가 좋아서 주말에 경주 여행, 나들이 가시는 분들도 많
+               
+            </div>
+             
+          </a>
+          <div
+            className="date"
+          >
+             
+            6일 전
+             
+          </div>
+        </div>
+        <a
+          className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+          href="https://in.naver.com/youujjung/contents/373175694222656?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%ACC"
+          onBlur={[Function]}
+          onFocus={[Function]}
+        />
+      </div>
+    </div>
+  </div>,
+  <a
+    className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+    href="https://m.search.naver.com/search.naver?query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%AC&sm=mtb_nmr&where=m_influencer"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-96237p-MuiPaper-root"
+      style={
+        Object {
+          "backgroundColor": "#f4f7f8",
+          "borderRadius": 0,
+          "height": 50,
+        }
+      }
+    >
+      <div
+        className="moreContentInfo"
+      >
+        인플루언서
+         더보기
+        <img
+          alt="arrow"
+          className="img"
+          src="/icons/forward_arrow.svg"
+        />
+      </div>
+    </div>
+  </a>,
+]
+`;

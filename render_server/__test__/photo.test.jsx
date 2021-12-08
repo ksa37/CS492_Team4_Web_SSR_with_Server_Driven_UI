@@ -121,7 +121,7 @@ describe('View', () => {
 
         for (var i=0; i<photo.tags.length; i++) {
             const tag_link =  screen.getByRole('link', {
-                name: photo.tags[i].tag_name
+                name: photo.tags[i].tag_name+ ' '+ photo.tags[i].tag_name
             })
             expect(tag_link).toBeInTheDocument()
             expect(tag_link).toHaveAttribute('href', photo.tags[i].tagURL)
