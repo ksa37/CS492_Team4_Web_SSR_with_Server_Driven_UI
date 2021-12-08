@@ -37,14 +37,14 @@ export default function ViewCardMultimeda({props}) {
                                 src="/images/default_publisher.png" 
                                 width='100%'
                                 height='100%'
-                                objectFit='contain'
+                                objectfit='contain'
                                 alt='default'
                             />
                             : <Image className={styles.viewMultiImgBoarder }
                                 src={publisherImgURL}
                                 width='100%'
                                 height='100%'
-                                objectFit='contain'
+                                objectfit='contain'
                                 alt='publisher'
                             />}
                         </div>

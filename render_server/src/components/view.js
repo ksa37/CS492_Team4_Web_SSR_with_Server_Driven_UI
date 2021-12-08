@@ -150,7 +150,7 @@ export default function View({props}){
                 case 0:
                     return (
                         <>{posts[currentBasicTag]&&posts[currentBasicTag].slice(0, 5).map((view, index) => 
-                        <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/> )}</> 
+                        <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}} index={index}/> )}</> 
    
                     )
                     break;

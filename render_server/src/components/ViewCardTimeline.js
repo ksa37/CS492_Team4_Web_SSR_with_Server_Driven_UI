@@ -49,14 +49,14 @@ function ViewCardTimelinePost({props}) {
                                 src="/images/default_publisher.png" 
                                 width='100%'
                                 height='100%'
-                                objectFit='contain'
+                                objectfit='contain'
                                 alt="default"
                             />
                             : <Image className={styles.viewMultiImgBoarder }
                                 src={publisherImgURL}
                                 width='100%'
                                 height='100%'
-                                objectFit='contain'
+                                objectfit='contain'
                                 alt="publisher"
                             />}
                         </div>
@@ -85,12 +85,10 @@ function ViewCardTimelinePost({props}) {
             }
             <div>
                 <Link href={postURL} underline="none">
-                    <a>
                         <div className={styles.title}>{title}</div>
                         <div className={styles.contentsInfo}>
                         <div className={styles.contents}><p>{contents}</p></div>
                         </div>
-                    </a>
                 </Link>
                 
             </div>

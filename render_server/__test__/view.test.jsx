@@ -2,7 +2,18 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import View from '../src/components/view'
 import userEvent from '@testing-library/user-event'
-
+function replace_text(text){
+    var new_text = text.replace(/\./g, '\\.').replace(/\(/g, '\\(')
+    .replace(/\)/g, '\\)').replace(/\+/g, '\\+')
+    .replace(/\?/g, '\\?').replace(/\*/g, '\\*')
+    .replace(/\{/g, '\\{').replace(/\}/g, '\\}')
+    .replace(/\[/g, '\\[').replace(/\]/g, '\\]')
+    .replace(/\|/g, '\\|').replace(/\^/g, '\\^')
+    .replace(/\$/g, '\\$').replace(/\~/g, '\\~')
+    .replace(/\,/g, '\\,').replace(/\'/g, '\\\'')
+    .replace(/\//g, '\\/')
+    return new_text;
+  }
 describe('View', () => {
     it('renders a VIEW page', () => {
         const review = {
@@ -120,7 +131,7 @@ describe('View', () => {
                     "date": "1635483180000",
                     "postURL": "https://m.post.naver.com/viewer/postView.naver?volumeNo=32649551&memberNo=15792726&vType=VERTICAL",
                     "title": "낭만과 고독 사이, 11월의 파리",
-                    "contents": "11월의 파리는 쌀쌀하다.소나기도 자주 내리고,흐린 날도 더러 있다.그럼에도 여행은 낭만적이다.때론 고독하기도 하고.  파리의 낭만적인, 혹은 고독한 거리 L'Horizon 120 Rue de...",
+                    "contents": "11월의 파리는 쌀쌀하다.소나기도 자주 내리고,흐린 날도 더러 있다.그럼에도 여행은 낭만적이다.때론 고독하기도 하고.  파리의 낭만적인, 혹은 고독한 거리 L Horizon 120 Rue de...",
                     "contentsImgURL": ["/images/view/blog_img3.jpeg"],
                     "imgNum": 8,
                     "relation": "",
@@ -503,6 +514,10 @@ describe('View', () => {
                 ],
                 "view_more": "https://m.search.naver.com/search.naver?where=m_view&sm=mtb_nrm&query=%ED%8C%8C%EB%A6%AC&mode=normal&nso=" 
                 };
+
+
+        const view_options = ["basic", "timeline", "multimedia"];
+
         render(<View props={review} />)
         
         //At first, by default it is basic VIEW option (using PostCard)
@@ -516,27 +531,14 @@ describe('View', () => {
         //button
         //View option button
         const bt1_view_type = screen.getByRole('button', {
-            name: /basic/i,
+            name: view_options[0]
         })
         const bt2_view_type = screen.getByRole('button', {
-            name: /timeline/i,
+            name: view_options[1]
         })
         const bt3_view_type = screen.getByRole('button', {
-            name: /multimedia/i,
+            name: view_options[2]
         })
-
-        //3 tags to click(which are really having contents)
-        const bt1_tag = screen.getByRole('button', {
-            name: /전체/i,
-        })
-        const bt2_tag = screen.getByRole('button', {
-            name: /카페글/i,
-        })
-        const bt3_tag = screen.getByRole('button', {
-            name: /날씨/i,
-        })
-        
-
         expect(bt1_view_type).toBeInTheDocument()
         expect(bt2_view_type).toBeInTheDocument()
         expect(bt3_view_type).toBeInTheDocument()
@@ -544,24 +546,24 @@ describe('View', () => {
         expect(bt2_view_type).toHaveAttribute('name', 'view_type')
         expect(bt3_view_type).toHaveAttribute('name', 'view_type')
 
-        expect(bt1_tag).toBeInTheDocument()
-        expect(bt2_tag).toBeInTheDocument()
-        expect(bt3_tag).toBeInTheDocument()
-        expect(bt1_tag).toHaveAttribute('name','tag')
-        expect(bt2_tag).toHaveAttribute('name','tag')
-        expect(bt3_tag).toHaveAttribute('name','tag')
-
+        for(var i=0; i<review.tags.length; i++){
+            const bt_tag = screen.getByRole('button', {
+                name: review.tags[i].tag_name
+            })
+            expect(bt_tag).toBeInTheDocument()
+            expect(bt_tag).toHaveAttribute('name','tag')
+        }
 
         //img
         //For icon img choosing view type
-        const img1_view_type = screen.getByRole('img', {
-            name: /basic/i,
+        var img1_view_type = screen.getByRole('img', {
+            name: view_options[0]
         })
-        const img2_view_type = screen.getByRole('img', {
-            name: /timeline/i,
+        var img2_view_type = screen.getByRole('img', {
+            name: view_options[1]
         })
-        const img3_view_type = screen.getByRole('img', {
-            name: /multimedia/i,
+        var img3_view_type = screen.getByRole('img', {
+            name: view_options[2]
         })
 
         expect(img1_view_type).toBeInTheDocument()
@@ -573,27 +575,20 @@ describe('View', () => {
         expect(img2_view_type).toHaveAttribute('src', "/icons/view_timeline1.png")
         expect(img3_view_type).toHaveAttribute('src', "/icons/view_multimedia1.png")
 
-        //For post publisher & content img
-        const img_publisher = screen.getByRole('img', {
-            name: 'Chez Amy (·ㅅ·)♥',
-        })
-
-        const img_content = screen.getByRole('img', {
-            name: '/images/view/blog_img2.png',
-        })
-
-        expect(img_publisher).toBeInTheDocument()
-        expect(img_content).toBeInTheDocument()
-
-        //img1_view_type should be in default view_basic2(colored, chosen)
-        expect(img_publisher).toHaveAttribute('src', "/images/view/blog_logo2.jpeg") 
-        expect(img_content).toHaveAttribute('src', '/images/view/blog_img2.png')
-
-        //link
-        const content_link = screen.getByRole('link', {
-            name: "호탤스닷컴 11월 할인코드 파리여행 준비해볼까~ 0 1 2 3 4 5 6 7 8 9 10 직접 보여드릴게요, 파리 숙소를 검색했더니 다양한 호텔들이 나와요. 여기서 기본적으로... 다시가고 싶은 파리여행 뭘해도 재밌었다, 라는 생각이 드는 파리. 2020년 1월에...",
-        })
-
+        // For post publisher & content img
+        for(var i = 0; i < review.view_posts.length; i++){
+            const img0 = screen.getByAltText(RegExp(`(?<!.)${i+" thumb"}(?!.)`, "i"))
+            expect(img0).toBeInTheDocument()
+            expect(img0.closest('div').closest('div').closest('a')).toHaveAttribute('href', review.view_posts[i].publisherURL)
+            const link0 = screen.getByRole('link', {
+                name: RegExp(`(?<!.)${replace_text(review.view_posts[i].publisher)}(?!.)`, "i"),
+            })
+            expect(link0).toBeInTheDocument()
+            expect(link0.closest('a')).toHaveAttribute('href', review.view_posts[i].publisherURL)
+            const button0 = screen.getByTestId(RegExp(`(?<!.)${i+" button"}(?!.)`, "i"))
+            expect(button0).toBeInTheDocument()
+        }
+        
         const gray_tag_link = screen.getByRole('link', {
             name: "#파리블랙프라이데이",
         })
@@ -606,12 +601,94 @@ describe('View', () => {
             name: "VIEW 더보기 arrow",
         })
 
-        expect(content_link).toBeInTheDocument()
         expect(gray_tag_link).toBeInTheDocument()
         expect(more_posts_link).toBeInTheDocument()
         expect(more_contents_link).toBeInTheDocument()
 
-        //
+        //3 tags to click(which are really having contents)
+        const bt1_tag = screen.getByRole('button', {
+            name: /전체/i,
+        })
+        const bt2_tag = screen.getByRole('button', {
+            name: /카페글/i,
+        })
+        const bt3_tag = screen.getByRole('button', {
+            name: /날씨/i,
+        })
+
+        // When you click 카페글 tag
+        userEvent.click(bt2_tag)
+
+        for(var i = 0; i < review.view_cafe_posts.length; i++){
+            const img0 = screen.getByAltText(RegExp(`(?<!.)${i+" thumb"}(?!.)`, "i"))
+            expect(img0).toBeInTheDocument()
+            expect(img0.closest('div').closest('div').closest('a')).toHaveAttribute('href', review.view_cafe_posts[i].publisherURL)
+    
+            const button0 = screen.getByTestId(RegExp(`(?<!.)${i+" button"}(?!.)`, "i"))
+            expect(button0).toBeInTheDocument()
+            
+        }
+
+        // When you click 날씨 tag
+        userEvent.click(bt3_tag)
+
+        for(var i = 0; i < review.view_weather_posts.length; i++){
+            const img0 = screen.getByAltText(RegExp(`(?<!.)${i+" thumb"}(?!.)`, "i"))
+            expect(img0).toBeInTheDocument()
+            expect(img0.closest('div').closest('div').closest('a')).toHaveAttribute('href', review.view_weather_posts[i].publisherURL)
+            const link0 = screen.getByRole('link', {
+                name: RegExp(`(?<!.)${replace_text(review.view_weather_posts[i].publisher)}(?!.)`, "i"),
+            })
+            expect(link0).toBeInTheDocument()
+            expect(link0.closest('a')).toHaveAttribute('href', review.view_weather_posts[i].publisherURL)
+            const button0 = screen.getByTestId(RegExp(`(?<!.)${i+" button"}(?!.)`, "i"))
+            expect(button0).toBeInTheDocument()
+        }
+        // When you click view option timeline icon 
+        // Tag should be 전체
+        userEvent.click(bt2_view_type)
+
+        // Checking view type icon image changed
+        img1_view_type = screen.getByRole('img', {
+            name: view_options[0]
+        })
+        img2_view_type = screen.getByRole('img', {
+            name: view_options[1]
+        })
+        img3_view_type = screen.getByRole('img', {
+            name: view_options[2]
+        })
+        expect(img1_view_type).toBeInTheDocument()
+        expect(img2_view_type).toBeInTheDocument()
+        expect(img3_view_type).toBeInTheDocument()
+        //img2_view_type should be with src view_timeline2(colored, chosen)
+        expect(img1_view_type).toHaveAttribute('src', "/icons/view_basic1.png") 
+        expect(img2_view_type).toHaveAttribute('src', "/icons/view_timeline2.png")
+        expect(img3_view_type).toHaveAttribute('src', "/icons/view_multimedia1.png")
+
+
+        // When you click view option timeline icon
+        // Tag should be 전체
+        userEvent.click(bt3_view_type)
+
+        // Checking view type icon image changed
+        img1_view_type = screen.getByRole('img', {
+            name: view_options[0]
+        })
+        img2_view_type = screen.getByRole('img', {
+            name: view_options[1]
+        })
+        img3_view_type = screen.getByRole('img', {
+            name: view_options[2]
+        })
+        expect(img1_view_type).toBeInTheDocument()
+        expect(img2_view_type).toBeInTheDocument()
+        expect(img3_view_type).toBeInTheDocument()
+        //img3_view_type should be with src view_multimedia2(colored, chosen)
+        expect(img1_view_type).toHaveAttribute('src', "/icons/view_basic1.png") 
+        expect(img2_view_type).toHaveAttribute('src', "/icons/view_timeline1.png")
+        expect(img3_view_type).toHaveAttribute('src', "/icons/view_multimedia2.png")
+        
         // debug();
 
     })
