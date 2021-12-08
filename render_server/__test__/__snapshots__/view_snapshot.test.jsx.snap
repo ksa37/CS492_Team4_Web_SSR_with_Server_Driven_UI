@@ -53,7 +53,7 @@ Array [
           type="button"
         >
           <img
-            alt={0}
+            alt="basic"
             height={16}
             src="/icons/view_basic2.png"
             width={16}
@@ -80,7 +80,7 @@ Array [
           type="button"
         >
           <img
-            alt={1}
+            alt="timeline"
             height={16}
             src="/icons/view_timeline1.png"
             width={16}
@@ -107,7 +107,7 @@ Array [
           type="button"
         >
           <img
-            alt={2}
+            alt="multimedia"
             height={16}
             src="/icons/view_multimedia1.png"
             width={16}
@@ -128,7 +128,7 @@ Array [
       }
     >
       <div
-        className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-undefined css-1vam7s3-MuiGrid-root"
+        className="MuiGrid-root MuiGrid-container css-1vam7s3-MuiGrid-root"
         style={
           Object {
             "minHeight": 66,
@@ -817,7 +817,7 @@ Array [
                 }
               >
                 <img
-                  alt="0 thumb"
+                  alt="1 thumb"
                   className="publisherImg"
                   onError={[Function]}
                   onLoad={[Function]}
@@ -948,7 +948,7 @@ Array [
               <svg
                 aria-hidden={true}
                 className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="0 button"
+                data-testid="1 button"
                 focusable="false"
                 style={
                   Object {
@@ -1177,7 +1177,7 @@ Array [
                 }
               >
                 <img
-                  alt="0 thumb"
+                  alt="2 thumb"
                   className="publisherImg"
                   onError={[Function]}
                   onLoad={[Function]}
@@ -1308,7 +1308,7 @@ Array [
               <svg
                 aria-hidden={true}
                 className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="0 button"
+                data-testid="2 button"
                 focusable="false"
                 style={
                   Object {
@@ -1536,7 +1536,7 @@ Array [
                 }
               >
                 <img
-                  alt="0 thumb"
+                  alt="3 thumb"
                   className="publisherImg"
                   onError={[Function]}
                   onLoad={[Function]}
@@ -1667,7 +1667,7 @@ Array [
               <svg
                 aria-hidden={true}
                 className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="0 button"
+                data-testid="3 button"
                 focusable="false"
                 style={
                   Object {
@@ -1860,7 +1860,7 @@ Array [
                 }
               >
                 <img
-                  alt="0 thumb"
+                  alt="4 thumb"
                   className="publisherImg"
                   onError={[Function]}
                   onLoad={[Function]}
@@ -1991,7 +1991,7 @@ Array [
               <svg
                 aria-hidden={true}
                 className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                data-testid="0 button"
+                data-testid="4 button"
                 focusable="false"
                 style={
                   Object {

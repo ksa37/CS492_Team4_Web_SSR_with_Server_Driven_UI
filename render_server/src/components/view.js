@@ -6,6 +6,7 @@ import PostCard from './PostCard';
 import ViewCardBasic from './ViewCardBasic';
 import ViewCardMultimeda from './ViewCardMultimedia'
 import ViewCardTimeline from './ViewCardTimeline';
+import { string } from 'prop-types';
 
 var ViewType = Object.freeze({
     NEWS: 0,
@@ -34,32 +35,42 @@ const selectView = [
 export default function View({props}){
     const view_option = "VIEW";
     const {tags, view_posts, view_cafe_posts, view_weather_posts, view_more} = props
-    const [currentViewType, setViewType] = useState(0);
-    const [currentBasicTag, setBasicTag] = useState(0);
-    const [currentTimelineTag, setTimelineTag] = useState(0);
-    const [currentMultimediaTag, setMultimediaTag] = useState(0);
-    const tagsForViewType = [currentBasicTag, currentTimelineTag, currentMultimediaTag];
-    const posts = [view_posts, view_cafe_posts, view_weather_posts]
-    var current_posts = view_posts;
 
-    const setViewTag = (index) => {
+    {/* Tag change keeped even when view type changes*/}
+
+    // const [currentIndices, setContentIndices] = useState({'view_type':0, 'tag':0})
+    // const updateIndices = (changetype, index) => {
+    //     var key = '';
+    //     if (changetype==0)
+    //         key = 'view_type';
+    //     else if (changetype==1)
+    //         key = 'tag';
+
+    //     setContentIndices({
+    //       ...currentIndices,
+    //       [key]: index
+    //     });
+    //   };
+
+      const [currentViewType, setViewType] = useState(0);
+      const [currentBasicTag, setBasicTag] = useState(0);
+      const [currentTimelineTag, setTimelineTag] = useState(0);
+      const [currentMultimediaTag, setMultimediaTag] = useState(0);
+      const tagsForViewType = [currentBasicTag, currentTimelineTag, currentMultimediaTag];
+      const posts = [view_posts, view_cafe_posts, view_weather_posts]
+
+      const setViewTag = (index) => {
         if (currentViewType==0){
             setBasicTag(index);
-            // console.log("setting basic tag")
-            // console.log(index)
-            // console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
         }
         else if (currentViewType==1){
-            setTimelineTag(index);
-            // console.log("setting timeline tag")
-            // console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
+            setTimelineTag(index);        
         }
         else if (currentViewType==2){
             setMultimediaTag(index);
-            // console.log("setting multimedia tag")
-            // console.log(currentViewType, currentBasicTag, currentTimelineTag, currentMultimediaTag)
         }
-    };
+      };
+
     return(
     <>
         <Card sx={{ maxWidth: 768}} variant='outlined' square>
@@ -83,11 +94,11 @@ export default function View({props}){
                             ? <img 
                                 src={option.src_open}
                                 height={16} width={16}
-                                alt={index}/>
+                                alt={option.tab}/>
                             : <img 
-                            src={option.src_close}
-                            height={16} width={16}
-                            alt={index}/>
+                                src={option.src_close}
+                                height={16} width={16}
+                                alt={option.tab}/>
                         }
                         </IconButton>
                     ))}
@@ -139,7 +150,7 @@ export default function View({props}){
                 case 0:
                     return (
                         <>{posts[currentBasicTag]&&posts[currentBasicTag].slice(0, 5).map((view, index) => 
-                        <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}}/> )}</> 
+                        <PostCard key={index} props={view} view={{"viewType": ViewType.VIEW}} index={index}/> )}</> 
    
                     )
                     break;

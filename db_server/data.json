@@ -173,94 +173,58 @@
         "review": {
             "tags": [
                 {
-                  "tag_name": "전체",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "전체"
                 },
                 {
-                  "tag_name": "카페글",
-                  "tag_image_url": "",
-                  "tagURL" : ""
+                  "tag_name": "카페글"
                 },
                 {
-                  "tag_name": "날씨",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "날씨"
                 },
                 {
-                  "tag_name": "호텔",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "호텔"
                 },
                 {
-                  "tag_name": "초등학교",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "초등학교"
                 },
                 {
-                  "tag_name": "리조트",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "리조트"
                 },
                 {
-                  "tag_name": "추석",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "추석"
                 },
                 {
-                  "tag_name": "주변맛집",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "주변맛집"
                 },
                 {
-                  "tag_name": "숙박",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "숙박"
                 },
                 {
-                  "tag_name": "애견",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "애견"
                 },
                 {
-                  "tag_name": "에밀레종",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "에밀레종"
                 },
                 {
-                  "tag_name": "관람",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "관람"
                 },
                 {
-                  "tag_name": "월정교",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "월정교"
                 },
                 {
-                  "tag_name": "안압지야경",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "안압지야경"
                 },
                 {
-                  "tag_name": "겹볒꽃",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "겹볒꽃"
                 },
                 {
-                  "tag_name": "근처펜션",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "근처펜션"
                 },
                 {
-                  "tag_name": "첨성대야경",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "첨성대야경"
                 },
                 {
-                  "tag_name": "1박2일경주여행",
-                  "tag_image_url": "",
-                  "tagURL": ""
+                  "tag_name": "1박2일경주여행"
                 }
             ],
             "view_posts": [
@@ -996,69 +960,43 @@
     "review": {
         "tags": [
             {
-              "tag_name": "전체",
-              "tag_image_url": "/images/photos/photos_tag_images/paris_tag1.png",
-              "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%94%84%EB%9E%91%EC%8A%A4%20%ED%8C%8C%EB%A6%AC&pq=%ED%8C%8C%EB%A6%AC"
+              "tag_name": "전체"
             },
             {
-              "tag_name": "카페글",
-              "tag_image_url": "/images/photos/photos_tag_images/paris_tag2.png",
-              "tagURL" : "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EA%B5%AD%EA%B8%B0&pq=%ED%8C%8C%EB%A6%AC"
+              "tag_name": "카페글"
             },
             {
-              "tag_name": "날씨",
-              "tag_image_url": "/images/photos/photos_tag_images/paris_tag3.png",
-              "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%A7%80%EB%8F%84&pq=%ED%8C%8C%EB%A6%AC"
+              "tag_name": "날씨"
             },
             {
-              "tag_name": "맛집",
-              "tag_image_url": "/images/photos/photos_tag_images/paris_tag4.png",
-              "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%83%9D%EC%A0%9C%EB%A5%B4%EB%A7%B9&pq=%ED%8C%8C%EB%A6%AC"
+              "tag_name": "맛집"
             },
             {
-              "tag_name": "물랑루즈",
-              "tag_image_url": "/images/photos/photos_tag_images/paris_tag5.png",
-              "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%97%90%ED%8E%A0%ED%83%91&pq=%ED%8C%8C%EB%A6%AC"
+              "tag_name": "물랑루즈"
             },
             {
-              "tag_name": "쇼핑",
-              "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
-              "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
+              "tag_name": "쇼핑"
             },
             {
-                "tag_name": "코스",
-                "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
-                "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
+                "tag_name": "코스"
             },
             {
-                "tag_name": "모나리자",
-                "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
-                "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
+                "tag_name": "모나리자"
             },
             {
-                "tag_name": "야경",
-                "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
-                "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
+                "tag_name": "야경"
             },
             {
-                "tag_name": "에펠탑",
-                "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
-                "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
+                "tag_name": "에펠탑"
             },
             {
-                "tag_name": "예약",
-                "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
-                "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
+                "tag_name": "예약"
             },
             {
-                "tag_name": "루브르박물관",
-                "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
-                "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
+                "tag_name": "루브르박물관"
             },
             {
-                "tag_name": "베르사유궁전",
-                "tag_image_url": "/images/photos/photos_tag_images/paris_tag6.png",
-                "tagURL": "https://m.search.naver.com/search.naver?where=m_image&mode=imgonly&nso=so%3Ar%2Ca%3Aall%2Cp%3Aall&sm=mtb_imt&query=%ED%8C%8C%EB%A6%AC%20%EC%95%BC%EA%B2%BD&pq=%ED%8C%8C%EB%A6%AC"
+                "tag_name": "베르사유궁전"
             }
           ],
         "view_posts": [

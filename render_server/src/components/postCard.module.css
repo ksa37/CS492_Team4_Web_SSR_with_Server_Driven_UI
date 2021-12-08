@@ -103,15 +103,7 @@
     /* flex: 1 88px;  */
 }
 
-/* .divider {
-    border-top: 1px solid #EDF0F2;
-    margin: 0;
-} */
-
-.tagArea {
-    padding-bottom: 18px;
-}
-
+/* TagArea.js */
 .tagButton {
     display: inline-block;
     background-color: #f4f7f8;
@@ -126,7 +118,7 @@
 
 }
 
-
+/* ViewCardMultimedia.js */
 
 .viewMultiImg {
     /* display: flex; */
@@ -150,7 +142,7 @@
     
 }
 
-/* ViewCardTimeline */
+/* ViewCardTimeline.js */
 .timelineDate {
     display: block;
     padding-left: 17px;
@@ -169,16 +161,6 @@
     list-style: none;
 }
 
-/* .timelineContent :not(:first-child)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 15px;
-    bottom: 0;
-    z-index: 1;
-    width: 2px;
-    background-color: #ecf0f2;
-} */
 
 .timelineContentInner {
     margin-left: 20px;
@@ -190,9 +172,6 @@
     /* border-bottom: solid 1px rgb(236, 240, 242); */
 }
 
-/* .timelineContent :not(:first-child) {
-    border-top: solid 1px rgb(236, 240, 242);
-} */
 .timelineLine{
     content: '';
     position: absolute;
@@ -216,6 +195,8 @@
     border: 2px solid rgba(184,184,184,.9);
     background-color:#fff;
 }
+
+/* GrayBoxLink.js */
 
 .linkBox {
     display: block;
