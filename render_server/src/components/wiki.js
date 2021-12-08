@@ -12,10 +12,10 @@ export default function Wiki({props}) {
     return (
         <>
         {wiki_posts&&wiki_posts.map(
-            (wiki) => 
+            (wiki, index) => 
                 <div key={wiki.publisherURL} >
                     <Box sx={{mb: 1.25}}>
-                        <PostCard props={wiki} view={{ "viewType": ViewType.WIKI }}/>
+                        <PostCard props={wiki} view={{ "viewType": ViewType.WIKI }} index={index}/>
                     </Box>
                 </div>
         )}
