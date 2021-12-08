@@ -25,7 +25,7 @@ export default function Bpage2({first_card}) {
                         style={{backgroundColor: "#FAFBFB" }}>
                         <div className={styles.viewAll}>
                             접기 
-                            <ForwardIcon className={styles.iconUp} style={{ stroke: "#8A8D8F", width: '9px', height: '16px' }}/>
+                            <ForwardIcon className={styles.iconUp} data-testid="up" style={{ stroke: "#8A8D8F", width: '9px', height: '16px' }}/>
                         </div>
                     </Paper> 
                 </a>  
@@ -37,7 +37,7 @@ export default function Bpage2({first_card}) {
                         style={{backgroundColor: "#FAFBFB" }}>
                         <div className={styles.viewAll}>
                             펼쳐보기 
-                            <ForwardIcon className={styles.iconDown} style={{ stroke: "#8A8D8F", width: '9px', height: '16px' }}/>
+                            <ForwardIcon className={styles.iconDown} data-testid="down" style={{ stroke: "#8A8D8F", width: '9px', height: '16px' }}/>
                         </div>
                     </Paper> 
                 </a>      
