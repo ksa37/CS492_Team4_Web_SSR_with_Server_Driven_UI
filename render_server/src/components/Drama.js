@@ -60,11 +60,11 @@ export default function Drama({props}) {
                         </a>
                     </div>
                     { (offset == 0) &&
-                        <div className={styles.dramaCategory}>
-                            <Link className={styles.dramaCategory} href={categoryURL} underline="none"> 
+                        <Link href={categoryURL} underline="none"> 
+                            <div className={styles.dramaCategory}>
                                 {category}
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                     }
                     <div className={styles.btnmenu}>
                         {tablist.map((btn, i) => (
