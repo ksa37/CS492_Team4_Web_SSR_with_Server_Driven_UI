@@ -19,10 +19,8 @@ Array [
         src="/images/influencer/icon_img.png"
       />
       <a
-        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways service css-1iwtne7-MuiTypography-root-MuiLink-root"
+        className="service"
         href="https://in.naver.com/"
-        onBlur={[Function]}
-        onFocus={[Function]}
       >
          서비스 홈 바로가기 
       </a>
