@@ -31,6 +31,7 @@ $ cd db_server
 $ npm install 
 $ npm run json
 ```
+
 ### Run render server (Dev)
 ```
 $ cd ..
@@ -39,7 +40,6 @@ $ npm install
 $ npm run dev
 ```
 Runs the project in the development mode.   
-Open https://localhost:4000 to view it in the browser.
 
 ### Run render server (Build)
 ```
@@ -47,9 +47,14 @@ Open https://localhost:4000 to view it in the browser.
 $ npm run build
 $ npm run start
 ```
-Runs the project after build.   
-Open https://localhost:4000 to view it in the browser.
+Runs the project after build.
 
+### Run web server
+```
+$ cd web_server
+$ npm run web
+```
+Open https://localhost:4000 to view it in the browser.
 
 ## Detailed description
 ### How to Use 
@@ -91,10 +96,10 @@ Select box에서 원하는 키워드를 클릭한 후 'LINK' 버튼을 누르면
 - db server : JSON 기반의 mock data를 저장하고 있는 서버
     - http://localhost:5000
 - web server : 사용자 요청처리, render server와 db server와의 통신 역할
-    - http://localhost:3000
+    - http://localhost:4000
     - express 사용
 - render server : 화면 생성/UI 기능을 제공하고 있는 서버
-    - http://localhost:4000
+    - http://localhost:3000
     - Next js, javascript 사용   
 
 
