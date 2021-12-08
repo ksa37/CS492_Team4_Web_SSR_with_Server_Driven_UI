@@ -1,5 +1,9 @@
 {
   "root": true,
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+  ],
   "extends": ["next/core-web-vitals"],
   "plugins": ["testing-library"],
   "overrides": [
