@@ -15,14 +15,20 @@ Render server와 web server를 개발하여 Naver 모바일(https://m.naver.com)
 ```
 $ git clone https://github.com/di-uni/CS492_Team4_Web_SSR_with_Server_Driven_UI.git
 $ cd CS492_Team4_Web_SSR_with_Server_Driven_UI
-$ npm install 
 ```
 Clone the project and install all packages required for this project   
 
+### Run web server
+```
+$ cd web_server
+$ npm install 
+$ npm run web
+```
 ### Run db server
 ```
 $ cd ..
 $ cd db_server
+$ npm install 
 $ npm run json
 ```
 
@@ -30,6 +36,7 @@ $ npm run json
 ```
 $ cd ..
 $ cd render_server
+$ npm install 
 $ npm run dev
 ```
 Runs the project in the development mode.   
