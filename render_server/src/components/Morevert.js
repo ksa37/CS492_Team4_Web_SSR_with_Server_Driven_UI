@@ -10,7 +10,7 @@ import ForwardIcon from '../../public/icons/forward.svg';
 import { IconButton, Box } from '@mui/material';
 
 export default function MoreVert({props}) {  
-    const { open, anchorEl, handleClick, handleClose, url, title, activeColor='#9FA4AA', inactiveColor='#D1D3D6' } = props
+    const { open, anchorEl, handleClick, handleClose, url, title, activeColor='#9FA4AA', inactiveColor='#D1D3D6', id="MoreVertIcon" } = props
     const [keep, setKeep] = React.useState(true);
     const setKeepClick = (event) => {
         setKeep(!keep);
@@ -24,8 +24,8 @@ export default function MoreVert({props}) {
                 disableRipple
             >
                 { open
-                ? <MoreVertIcon style={{color: activeColor}}/>
-                : <MoreVertIcon style={{color: inactiveColor}}/>
+                ? <MoreVertIcon data-testid={id + ' button'} style={{color: activeColor}}/>
+                : <MoreVertIcon data-testid={id + ' button'} style={{color: inactiveColor}}/>
                 }   
             </IconButton>
             <Menu

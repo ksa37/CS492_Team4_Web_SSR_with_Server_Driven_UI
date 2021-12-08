@@ -95,7 +95,7 @@ const Gallery = React.memo(function Gallery({
     <div className="react-photo-gallery--gallery">
       <div ref={galleryEl} style={galleryStyle}>
         {thumbs.map((thumb, index) => {
-          const { left, top, containerHeight, href, ...photo } = thumb;
+          const { left, top, containerHeight, href, lindex, ...photo } = thumb;
           return renderComponent({
             left,
             top,
@@ -106,7 +106,8 @@ const Gallery = React.memo(function Gallery({
             direction,
             onClick: onClick ? handleClick : null,
             photo,
-            href
+            href,
+            lindex
           });
         })}
       </div>

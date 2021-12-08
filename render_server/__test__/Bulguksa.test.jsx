@@ -158,6 +158,8 @@ describe('Bulguksa', () => {
     expect(button3).toBeInTheDocument()
     expect(button4).toBeInTheDocument()
     expect(link0).toHaveAttribute('href', bulguksa.header.href)
+    expect(button3.closest('a')).toHaveAttribute('href', bulguksa.header.tablisthref[3])
+    expect(button4.closest('a')).toHaveAttribute('href', bulguksa.header.tablisthref[4])
 
     //Case for Bulguksa page0
     const img0 = screen.getByAltText(/num/i)
@@ -180,7 +182,6 @@ describe('Bulguksa', () => {
     expect(h30).toBeInTheDocument()
     expect(img2).toBeInTheDocument()
     expect(h30.closest('a')).toHaveAttribute('href', bulguksa.first_card.middletitle.href)
-    expect(img2.closest('a')).toHaveAttribute('href', bulguksa.first_card.middletitle.href)
 
     for(var i = 0; i < bulguksa.first_card.detailinfo.length; i++)
     {
@@ -211,7 +212,6 @@ describe('Bulguksa', () => {
     expect(img4).toBeInTheDocument()
     expect(div2).toBeInTheDocument()
     expect(img3.closest('a')).toHaveAttribute('href', bulguksa.first_card.buttonarea.mapURL)
-    expect(div2.closest('a')).toHaveAttribute('href', bulguksa.first_card.buttonarea.mapURL)
 
     const h31 = screen.getByRole('heading', {
       level: 3,
@@ -221,7 +221,6 @@ describe('Bulguksa', () => {
     expect(h31).toBeInTheDocument()
     expect(img5).toBeInTheDocument()
     expect(h31.closest('a')).toHaveAttribute('href', bulguksa.second_card_whole.middletitle.href)
-    expect(img5.closest('a')).toHaveAttribute('href', bulguksa.second_card_whole.middletitle.href)
 
     for(var i = 0; i < bulguksa.second_card_whole.scrollbox.length; i++)
     {
@@ -236,10 +235,125 @@ describe('Bulguksa', () => {
     }
 
     //Case for Bulguksa page1
-    userEvent.click(button1)
+    const button10 = screen.getByRole('button', {
+      name: RegExp(`(?<!.)${bulguksa.header.tablist[1]}(?!.)`, "i"),
+    })
+    userEvent.click(button10)
     const img10 = screen.getByAltText(/video/i)
+    const img11 = screen.getByAltText(/icon/i)
+    const span10 = screen.getByText(bulguksa.first_card.video.time)
     expect(img10).toBeInTheDocument()
+    expect(img11).toBeInTheDocument()
+    expect(span10).toBeInTheDocument()
+    expect(img10.closest('div').closest('a')).toHaveAttribute('href', bulguksa.first_card.video.href)
 
+    for(var i = 0; i < bulguksa.first_card.detailinfo.length; i++)
+    {
+      if (bulguksa.first_card.detailinfo[i].length === 2)
+      {
+        const dt1 = screen.getByText(RegExp(`(?<!.)${replace_text(bulguksa.first_card.detailinfo[i][0])}(?!.)`, "i"))
+        const dd1 = screen.getByText(RegExp(`(?<!.)${replace_text(bulguksa.first_card.detailinfo[i][1])}(?!.)`, "i"))
+        expect(dt1).toBeInTheDocument()
+        expect(dd1).toBeInTheDocument()
+      }
+      else
+      {
+        const dt1 = screen.getByText(RegExp(`(?<!.)${replace_text(bulguksa.first_card.detailinfo[i][0])}(?!.)`, "i"))
+        const dd1 = screen.getByText(RegExp(`(?<!.)${replace_text(bulguksa.first_card.detailinfo[i][1][0])}(?!.)`, "i"))
+        expect(dt1).toBeInTheDocument()
+        expect(dd1).toBeInTheDocument()
+        expect(dd1).toHaveAttribute('href', bulguksa.first_card.detailinfo[i][1][1])
+      }
+    }
+
+    const img12 = screen.getByAltText(/map_button/i)
+    const img13 = screen.getByAltText(/share_button/i)
+    const div10 = screen.getByText(/지도/i)
+    expect(img12).toBeInTheDocument()
+    expect(img13).toBeInTheDocument()
+    expect(div10).toBeInTheDocument()
+    expect(img12.closest('a')).toHaveAttribute('href', bulguksa.first_card.buttonarea.mapURL)
+
+    const h310 = screen.getByRole('heading', {
+      level: 3,
+      name: RegExp(`(?<!.)${bulguksa.second_card_basic.text}(?!.)`, "i"),
+    })
+    expect(h310).toBeInTheDocument()
+
+    const div11 = screen.getByText(RegExp(`(?<!.)${replace_text(bulguksa.second_card_basic.description)}(?!.)`, "i"))
+    expect(div11).toBeInTheDocument()
+
+    const div12 = screen.getByText(/(?<!.)지식백과 더보기(?!.)/i)
+    const img14 = screen.getByAltText(/arrow/i)
+    expect(div12).toBeInTheDocument()
+    expect(img14).toBeInTheDocument()
+    expect(div12.closest('div').closest('a')).toHaveAttribute('href', bulguksa.second_card_basic.dict_more)
+
+    const h311 = screen.getByRole('heading', {
+      level: 3,
+      name: RegExp(`(?<!.)${bulguksa.third_card_basic.text}(?!.)`, "i"),
+    })
+    expect(h311).toBeInTheDocument()
+
+    for(var i = 0; i < bulguksa.third_card_basic.detailinfo.length; i++)
+    {
+      const dt2 = screen.getByText(RegExp(`(?<!.)${bulguksa.third_card_basic.detailinfo[i][0]}(?!.)`, "i"))
+      expect(dt2).toBeInTheDocument()
+      for(var j = 0; j < bulguksa.third_card_basic.detailinfo[1].length; j++)
+      {
+        const dd2 = screen.getByText(RegExp(`(?<!.)${bulguksa.third_card_basic.detailinfo[i][1][j]}`, "i"))
+        expect(dd2).toBeInTheDocument()
+        expect(dd2).toHaveAttribute('href', bulguksa.third_card_basic.detailinfo[i][2][j])
+      }
+    }
+
+    //Case for Bulguksa page2
+    const button20 = screen.getByRole('button', {
+        name: RegExp(`(?<!.)${bulguksa.header.tablist[2]}(?!.)`, "i"),
+    })
+    userEvent.click(button20)
+    /*for(var i = 0; i < 12; i++)
+    {
+      const img20 = screen.getByAltText(RegExp(`(?<!.)${i} photo(?!.)`, "i"))
+      expect(img20).toBeInTheDocument()
+      expect(img20.closest('a')).toHaveAttribute('href', replace_text(bulguksa.first_card.relimg.hrefs[i]))
+    }*/
+    const div20 = screen.getByText(/(?<!.)펼쳐보기/i)
+    expect(div20).toBeInTheDocument()
+    const svg20 = screen.getByTestId('down')
+    expect(svg20).toBeInTheDocument()
+    userEvent.click(div20)
+    /*for(var i = 0; i < 24; i++)
+    {
+      const img21 = screen.getByAltText(RegExp(`(?<!.)${i} photo(?!.)`, "i"))
+      expect(img21).toBeInTheDocument()
+      expect(img21.closest('a')).toHaveAttribute('href', replace_text(bulguksa.first_card.relimg.hrefs[i]))
+    }*/
+    const div21 = screen.getByText(/(?<!.)펼쳐보기/i)
+    expect(div21).toBeInTheDocument()
+    const svg21 = screen.getByTestId('down')
+    expect(svg21).toBeInTheDocument()
+    userEvent.click(div21)
+    /*for(var i = 0; i < 30; i++)
+    {
+      const img22 = screen.getByAltText(RegExp(`(?<!.)${i} photo(?!.)`, "i"))
+      expect(img22).toBeInTheDocument()
+      expect(img22.closest('a')).toHaveAttribute('href', replace_text(bulguksa.first_card.relimg.hrefs[i]))
+    }*/
+    const div22 = screen.getByText(/(?<!.)접기/i)
+    expect(div22).toBeInTheDocument()
+    const svg22 = screen.getByTestId('up')
+    expect(svg22).toBeInTheDocument()
+    userEvent.click(div22)
+    /*for(var i = 0; i < 12; i++)
+    {
+      const img23 = screen.getByAltText(RegExp(`(?<!.)${i} photo(?!.)`, "i"))
+      expect(img23).toBeInTheDocument()
+      expect(img23.closest('a')).toHaveAttribute('href', replace_text(bulguksa.first_card.relimg.hrefs[i]))
+    }*/
+    const div23 = screen.getByText(/(?<!.)펼쳐보기/i)
+    expect(div23).toBeInTheDocument()
+    const svg23 = screen.getByTestId('down')
+    expect(svg23).toBeInTheDocument()
   })
 })
- 
