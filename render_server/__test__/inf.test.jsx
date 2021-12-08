@@ -1,9 +1,10 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Influencer from '../src/components/influencer'
- 
+import userEvent from '@testing-library/user-event'
+
 describe('Inf', () => {
-  it('renders Inf', () => {
+  it('renders Influencer page', () => {
     const influencer = { 
       "data": [
       {
@@ -19,7 +20,6 @@ describe('Inf', () => {
         "title_content_url":"https://in.naver.com/soltmon/contents/367697143409280?query=%EB%B6%88%EA%B5%AD%EC%82%AC",
         "date": "2021.11.05",
         "contentsImgURL": ["/images/Bulguksa/influencer/3/1.PNG","/images/Bulguksa/influencer/3/2.PNG","/images/Bulguksa/influencer/3/3.PNG","/images/Bulguksa/influencer/3/4.PNG","/images/Bulguksa/influencer/3/5.PNG","/images/Bulguksa/influencer/3/6.PNG","/images/Bulguksa/influencer/3/7.PNG","/images/Bulguksa/influencer/3/8.PNG","/images/Bulguksa/influencer/3/9.PNG","/images/Bulguksa/influencer/3/10.PNG","/images/Bulguksa/influencer/3/11.PNG"],
-        
         "key" : "1"
       },
       {
@@ -56,58 +56,53 @@ describe('Inf', () => {
       "keyword": "bulguksa"
   }
     render(<Influencer props={influencer}/>)
- 
-    const img0 = screen.getByAltText(/publisher/i)
-    const link0 = screen.getByRole('link', {
-      name: /www.bulguksa.or.kr/i,
-    })
-    const button0 = screen.getByRole('button')
-    const link1 = screen.getByRole('link', {
-      name: /세계문화유산 불국사/i,
-    })
-    const hr0 = screen.getByRole('separator')
-    const link2 = screen.getByRole('link', {
-      name: /관람안내/i,
-    })
-    const link3 = screen.getByRole('link', {
-      name: /전각\/성보문화재/i,
-    })
-    const link4 = screen.getByRole('link', {
-      name: /(?<!\/)성보문화재/i,
-    })
-    const link5 = screen.getByRole('link', {
-      name: /(?<!.)불국사/i,
-    })
-    const link6 = screen.getByRole('link', {
-      name: /찾아오시는 길/i,
-    })
-    const link7 = screen.getByRole('link', {
-      name: /지대방/i,
-    })
-    const link8 = screen.getByText(/1…/i)
- 
-    expect(img0).toBeInTheDocument()
-    expect(button0).toBeInTheDocument()
-    expect(hr0).toBeInTheDocument()
-    expect(link0).toBeInTheDocument()
-    expect(link1).toBeInTheDocument()
-    expect(link2).toBeInTheDocument()
-    expect(link3).toBeInTheDocument()
-    expect(link4).toBeInTheDocument()
-    expect(link5).toBeInTheDocument()
-    expect(link6).toBeInTheDocument()
-    expect(link7).toBeInTheDocument()
-    expect(link8).toBeInTheDocument()
-    expect(img0.closest('div').closest('div').closest('a')).toHaveAttribute('href', 'http://www.bulguksa.or.kr/')
-    expect(link0.closest('a')).toHaveAttribute('href', 'http://www.bulguksa.or.kr/')
-    expect(link1.closest('a')).toHaveAttribute('href', 'http://www.bulguksa.or.kr/')
-    expect(link2).toHaveAttribute('href', 'http://www.bulguksa.or.kr/bbs/content.php?co_id=application')
-    expect(link3).toHaveAttribute('href', 'http://www.bulguksa.or.kr/bbs/content.php?co_id=palace')
-    expect(link4).toHaveAttribute('href', 'http://www.bulguksa.or.kr/bbs/content.php?co_id=treasure')
-    expect(link5).toHaveAttribute('href', 'http://www.bulguksa.or.kr/bbs/content.php?co_id=history')
-    expect(link6).toHaveAttribute('href', 'http://www.bulguksa.or.kr/bbs/content.php?co_id=location')
-    expect(link7).toHaveAttribute('href', 'http://www.bulguksa.or.kr/bbs/board.php?bo_table=notice')
-    expect(link8.closest('div').closest('a')).toHaveAttribute('href', 'http://www.bulguksa.or.kr/')
+    for (var i = 1; i < influencer['data'].length + 1; i++)
+    {
+      const img0 = screen.getByAltText(`${i}avatar`)
+      expect(img0).toBeInTheDocument()
+      const img1 = screen.getByAltText(`${i}icon`)
+      expect(img1).toBeInTheDocument()
+    }
+    const header = screen.getByAltText(`header_icon`)
+    expect(header).toBeInTheDocument()
+    const div11 = screen.getByText(/(?<!.)쏠트몬(?!.)/i)
+    expect(div11).toBeInTheDocument()
+    const div12 = screen.getByText(/(?<!.)어람(?!.)/i)
+    expect(div12).toBeInTheDocument()
+    const div13 = screen.getByText(/(?<!.)쩡유의트래블라이프(?!.)/i)
+    expect(div13).toBeInTheDocument()
+    const div14 = screen.getByText(/(?<!.)여행 전문작가(?!.)/i)
+    expect(div14).toBeInTheDocument()
+    const button20 = screen.getByAltText(`1fan`)
+    expect(button20).toBeInTheDocument()
+    const button21 = screen.getByAltText(`2fan`)
+    expect(button21).toBeInTheDocument()
+    const button22 = screen.getByAltText(`3fan`)
+    expect(button22).toBeInTheDocument()
+    userEvent.click(button20)
+    const button23 = screen.getByAltText(`1unfan`)
+    expect(button23).toBeInTheDocument()
+    userEvent.click(button21)
+    const button24 = screen.getByAltText(`2unfan`)
+    expect(button24).toBeInTheDocument()
+    userEvent.click(button22)
+    const button25 = screen.getByAltText(`3unfan`)
+    expect(button25).toBeInTheDocument()
+    const before1 = screen.getByAltText(`1before`)
+    expect(before1).toBeInTheDocument()
+    userEvent.click(before1)
+    const after1 = screen.getByAltText(`1after`)
+    expect(after1).toBeInTheDocument()
+    const before2 = screen.getByAltText(`2before`)
+    expect(before2).toBeInTheDocument()
+    userEvent.click(before2)
+    const after2 = screen.getByAltText(`2after`)
+    expect(after2).toBeInTheDocument()
+    const before3 = screen.getByAltText(`3before`)
+    expect(before3).toBeInTheDocument()
+    userEvent.click(before3)
+    const after3 = screen.getByAltText(`3after`)
+    expect(after3).toBeInTheDocument()
   })
 })
  
