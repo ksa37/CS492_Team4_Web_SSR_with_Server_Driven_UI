@@ -126,7 +126,8 @@
 }
 
 .relimg .imgscroll{
-    overflow: auto;
+    overflow: hidden;
+    overflow-x: auto;
     padding-bottom: 10px;
     margin-bottom: -10px;
     display: block;
@@ -165,7 +166,8 @@
 
 .relimg .imgscroll .imglist .imgli .thumb{
     position: relative;
-    overflow: auto;
+    overflow: hidden;
+    overflow-x: auto;
     height: 168px;
     vertical-align: top;
 }
@@ -398,7 +400,8 @@
 }
 
 .scrollbox .listinfo{
-    overflow: auto;
+    overflow: hidden;
+    overflow-x: auto;
     padding-bottom: 10px;
     margin-bottom: -10px;
 }

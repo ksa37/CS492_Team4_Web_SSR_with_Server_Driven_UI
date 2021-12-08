@@ -1,0 +1,996 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+Array [
+  <div>
+    <div
+      className="MuiBox-root css-1r2f04i"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiCard-root css-1xdevdl-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          className="MuiCardHeader-root css-cva3as-MuiCardHeader-root"
+          variant="contained"
+        >
+          <div
+            className="MuiCardHeader-avatar css-1ssile9-MuiCardHeader-avatar"
+          >
+            <a
+              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              href="http://www.bulguksa.or.kr/"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                className="publisherImgBoarder"
+              >
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "#fff",
+                      "height": "100%",
+                      "objectFit": "contain",
+                      "paddingTop": "calc(1 / 1 * 100%)",
+                      "position": "relative",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <img
+                    alt="0 thumb"
+                    className="publisherImg"
+                    onError={[Function]}
+                    onLoad={[Function]}
+                    src="/images/Bulguksa/wiki/1.png"
+                    style={
+                      Object {
+                        "filterBrightness": 0,
+                        "filterSaturate": 20,
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": "inherit",
+                        "opacity": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "transition": "
+        filterBrightness 2250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        filterSaturate 3000ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <div
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "display": "flex",
+                        "height": "100%",
+                        "justifyContent": "center",
+                        "left": 0,
+                        "pointerEvents": "none",
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <div
+                      className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                      role="progressbar"
+                      style={
+                        Object {
+                          "height": 48,
+                          "width": 48,
+                        }
+                      }
+                    >
+                      <svg
+                        className="MuiCircularProgress-svg"
+                        viewBox="22 22 44 44"
+                      >
+                        <circle
+                          className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                          cx={44}
+                          cy={44}
+                          fill="none"
+                          r={20.2}
+                          strokeWidth={3.6}
+                          style={Object {}}
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            className="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <span
+              className="MuiTypography-root MuiTypography-body2 MuiCardHeader-title css-et1ao3-MuiTypography-root"
+            >
+              <div
+                className="publishInfo"
+              >
+                <a
+                  className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                  href="http://www.bulguksa.or.kr/"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    className="publisher"
+                  >
+                    www.bulguksa.or.kr
+                  </div>
+                </a>
+              </div>
+            </span>
+          </div>
+          <div
+            className="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+          >
+            <div>
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-bnzas2-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="0 button"
+                  focusable="false"
+                  style={
+                    Object {
+                      "color": "#D1D3D6",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiCardContent-root css-n7ubfh-MuiCardContent-root"
+          variant="contained"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+            href="http://www.bulguksa.or.kr/"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              className="title"
+            >
+              세계문화유산 불국사
+            </div>
+          </a>
+          <hr
+            className="MuiDivider-root MuiDivider-fullWidth css-12kcjl3-MuiDivider-root"
+            data-testid="0 divider"
+          />
+          <div
+            className="contentsInfo_wiki"
+          >
+            <div
+              className="contents_wiki"
+            >
+              <span>
+                <a
+                  className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                  href="http://www.bulguksa.or.kr/bbs/content.php?co_id=application"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  관람안내
+                </a>
+                <span
+                  className="MuiBox-root css-4hdk6n"
+                >
+                  •
+                </span>
+              </span>
+              <span>
+                <a
+                  className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                  href="http://www.bulguksa.or.kr/bbs/content.php?co_id=palace"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  전각/성보문화재
+                </a>
+                <span
+                  className="MuiBox-root css-4hdk6n"
+                >
+                  •
+                </span>
+              </span>
+              <span>
+                <a
+                  className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                  href="http://www.bulguksa.or.kr/bbs/content.php?co_id=treasure"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  성보문화재
+                </a>
+                <span
+                  className="MuiBox-root css-4hdk6n"
+                >
+                  •
+                </span>
+              </span>
+              <span>
+                <a
+                  className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                  href="http://www.bulguksa.or.kr/bbs/content.php?co_id=history"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  불국사
+                </a>
+                <span
+                  className="MuiBox-root css-4hdk6n"
+                >
+                  •
+                </span>
+              </span>
+              <span>
+                <a
+                  className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                  href="http://www.bulguksa.or.kr/bbs/content.php?co_id=location"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  찾아오시는 길
+                </a>
+                <span
+                  className="MuiBox-root css-4hdk6n"
+                >
+                  •
+                </span>
+              </span>
+              <span>
+                <a
+                  className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                  href="http://www.bulguksa.or.kr/bbs/board.php?bo_table=notice"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  지대방
+                </a>
+              </span>
+            </div>
+            <a
+              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+              href="http://www.bulguksa.or.kr/"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                className="contents"
+              >
+                <p>
+                  1… 행사 사진 BULGUK GALLERY 제49회 신라문화 영산대재와 천… 오시는 길 개인정보처리방침 서비스이용약관 경상북도 경주시 불국로 385 (진현동 15-1) l Tel. 054)746-9913 ㅣ FAX 054)746-1476 ㅣ Email ************@*******.*** 불국사 템플스테이 Tel. 054)746-0983 bulguksa...
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div>
+    <div
+      className="MuiBox-root css-1r2f04i"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiCard-root css-1xdevdl-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          className="MuiCardHeader-root css-cva3as-MuiCardHeader-root"
+          variant="contained"
+        >
+          <div
+            className="MuiCardHeader-avatar css-1ssile9-MuiCardHeader-avatar"
+          >
+            <a
+              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              href="http://encykorea.aks.ac.kr/Contents/Item/E0024933"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                className="publisherImgBoarder"
+              >
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "#fff",
+                      "height": "100%",
+                      "objectFit": "contain",
+                      "paddingTop": "calc(1 / 1 * 100%)",
+                      "position": "relative",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <img
+                    alt="1 thumb"
+                    className="publisherImg"
+                    onError={[Function]}
+                    onLoad={[Function]}
+                    src="/images/Bulguksa/wiki/2.png"
+                    style={
+                      Object {
+                        "filterBrightness": 0,
+                        "filterSaturate": 20,
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": "inherit",
+                        "opacity": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "transition": "
+        filterBrightness 2250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        filterSaturate 3000ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <div
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "display": "flex",
+                        "height": "100%",
+                        "justifyContent": "center",
+                        "left": 0,
+                        "pointerEvents": "none",
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <div
+                      className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                      role="progressbar"
+                      style={
+                        Object {
+                          "height": 48,
+                          "width": 48,
+                        }
+                      }
+                    >
+                      <svg
+                        className="MuiCircularProgress-svg"
+                        viewBox="22 22 44 44"
+                      >
+                        <circle
+                          className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                          cx={44}
+                          cy={44}
+                          fill="none"
+                          r={20.2}
+                          strokeWidth={3.6}
+                          style={Object {}}
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            className="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <span
+              className="MuiTypography-root MuiTypography-body2 MuiCardHeader-title css-et1ao3-MuiTypography-root"
+            >
+              <div
+                className="publishInfo"
+              >
+                <a
+                  className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                  href="http://encykorea.aks.ac.kr/Contents/Item/E0024933"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    className="publisher"
+                  >
+                    encykorea.aks.ac.kr › contents
+                  </div>
+                </a>
+              </div>
+            </span>
+          </div>
+          <div
+            className="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+          >
+            <div>
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-bnzas2-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="1 button"
+                  focusable="false"
+                  style={
+                    Object {
+                      "color": "#D1D3D6",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiCardContent-root css-n7ubfh-MuiCardContent-root"
+          variant="contained"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+            href="http://encykorea.aks.ac.kr/Contents/Item/E0024933"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              className="title"
+            >
+              경주 불국사(慶州 佛國寺) - 한국민족문화대백과사전
+            </div>
+          </a>
+          <hr
+            className="MuiDivider-root MuiDivider-fullWidth css-12kcjl3-MuiDivider-root"
+            data-testid="1 divider"
+          />
+          <div
+            className="contentsInfo_wiki"
+          >
+            <a
+              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+              href="http://encykorea.aks.ac.kr/Contents/Item/E0024933"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                className="contents"
+              >
+                <p>
+                  경상북도 경주시 토함산(吐含山) 서쪽 중턱에 있는 남북국시대 통일신라 김대성의 발원으로 창건한 사찰. 사적.대한불교조계종 제11교구 본사이다.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div>
+    <div
+      className="MuiBox-root css-1r2f04i"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiCard-root css-1xdevdl-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          className="MuiCardHeader-root css-cva3as-MuiCardHeader-root"
+          variant="contained"
+        >
+          <div
+            className="MuiCardHeader-avatar css-1ssile9-MuiCardHeader-avatar"
+          >
+            <a
+              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              href="https://namu.wiki/w/%EB%B6%88%EA%B5%AD%EC%82%AC"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                className="publisherImgBoarder"
+              >
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "#fff",
+                      "height": "100%",
+                      "objectFit": "contain",
+                      "paddingTop": "calc(1 / 1 * 100%)",
+                      "position": "relative",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <img
+                    alt="2 thumb"
+                    className="publisherImg"
+                    onError={[Function]}
+                    onLoad={[Function]}
+                    src="/images/Bulguksa/wiki/3.png"
+                    style={
+                      Object {
+                        "filterBrightness": 0,
+                        "filterSaturate": 20,
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": "inherit",
+                        "opacity": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "transition": "
+        filterBrightness 2250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        filterSaturate 3000ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <div
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "display": "flex",
+                        "height": "100%",
+                        "justifyContent": "center",
+                        "left": 0,
+                        "pointerEvents": "none",
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <div
+                      className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                      role="progressbar"
+                      style={
+                        Object {
+                          "height": 48,
+                          "width": 48,
+                        }
+                      }
+                    >
+                      <svg
+                        className="MuiCircularProgress-svg"
+                        viewBox="22 22 44 44"
+                      >
+                        <circle
+                          className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                          cx={44}
+                          cy={44}
+                          fill="none"
+                          r={20.2}
+                          strokeWidth={3.6}
+                          style={Object {}}
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            className="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <span
+              className="MuiTypography-root MuiTypography-body2 MuiCardHeader-title css-et1ao3-MuiTypography-root"
+            >
+              <div
+                className="publishInfo"
+              >
+                <a
+                  className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                  href="https://namu.wiki/w/%EB%B6%88%EA%B5%AD%EC%82%AC"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    className="publisher"
+                  >
+                    namu.wiki › 불국사
+                  </div>
+                </a>
+              </div>
+            </span>
+          </div>
+          <div
+            className="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+          >
+            <div>
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-bnzas2-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="2 button"
+                  focusable="false"
+                  style={
+                    Object {
+                      "color": "#D1D3D6",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiCardContent-root css-n7ubfh-MuiCardContent-root"
+          variant="contained"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+            href="https://namu.wiki/w/%EB%B6%88%EA%B5%AD%EC%82%AC"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              className="title"
+            >
+              불국사 - 나무위키
+            </div>
+          </a>
+          <hr
+            className="MuiDivider-root MuiDivider-fullWidth css-12kcjl3-MuiDivider-root"
+            data-testid="2 divider"
+          />
+          <div
+            className="contentsInfo_wiki"
+          >
+            <a
+              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+              href="https://namu.wiki/w/%EB%B6%88%EA%B5%AD%EC%82%AC"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                className="contents"
+              >
+                <p>
+                  경상북도경주시불국로 385 (진현동) 토함산 기슭에 위치한 신라 연간을 기원으로 하는 사찰. 1995년 12월에 토함산 중턱의 암자 석굴암과 공동으로 유네스코 세계문화유산으로 지정되었다.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div>
+    <div
+      className="MuiBox-root css-1r2f04i"
+    >
+      <div
+        className="MuiPaper-root MuiPaper-elevation MuiPaper-elevation1 MuiCard-root css-1xdevdl-MuiPaper-root-MuiCard-root"
+      >
+        <div
+          className="MuiCardHeader-root css-cva3as-MuiCardHeader-root"
+          variant="contained"
+        >
+          <div
+            className="MuiCardHeader-avatar css-1ssile9-MuiCardHeader-avatar"
+          >
+            <a
+              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1iwtne7-MuiTypography-root-MuiLink-root"
+              href="https://www.gyeongju.go.kr/tour/page.do?mnu_uid=2349&area_uid=260&cmd=2"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                className="publisherImgBoarder"
+              >
+                <div
+                  style={
+                    Object {
+                      "backgroundColor": "#fff",
+                      "height": "100%",
+                      "objectFit": "contain",
+                      "paddingTop": "calc(1 / 1 * 100%)",
+                      "position": "relative",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <img
+                    alt="3 thumb"
+                    className="publisherImg"
+                    onError={[Function]}
+                    onLoad={[Function]}
+                    src="/images/Bulguksa/wiki/1.png"
+                    style={
+                      Object {
+                        "filterBrightness": 0,
+                        "filterSaturate": 20,
+                        "height": "100%",
+                        "left": 0,
+                        "objectFit": "inherit",
+                        "opacity": 0,
+                        "position": "absolute",
+                        "top": 0,
+                        "transition": "
+        filterBrightness 2250ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        filterSaturate 3000ms cubic-bezier(0.4, 0.0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0.0, 0.2, 1)",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <div
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "display": "flex",
+                        "height": "100%",
+                        "justifyContent": "center",
+                        "left": 0,
+                        "pointerEvents": "none",
+                        "position": "absolute",
+                        "top": 0,
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <div
+                      className="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                      role="progressbar"
+                      style={
+                        Object {
+                          "height": 48,
+                          "width": 48,
+                        }
+                      }
+                    >
+                      <svg
+                        className="MuiCircularProgress-svg"
+                        viewBox="22 22 44 44"
+                      >
+                        <circle
+                          className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                          cx={44}
+                          cy={44}
+                          fill="none"
+                          r={20.2}
+                          strokeWidth={3.6}
+                          style={Object {}}
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            className="MuiCardHeader-content css-1qbkelo-MuiCardHeader-content"
+          >
+            <span
+              className="MuiTypography-root MuiTypography-body2 MuiCardHeader-title css-et1ao3-MuiTypography-root"
+            >
+              <div
+                className="publishInfo"
+              >
+                <a
+                  className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+                  href="https://www.gyeongju.go.kr/tour/page.do?mnu_uid=2349&area_uid=260&cmd=2"
+                  onBlur={[Function]}
+                  onFocus={[Function]}
+                >
+                  <div
+                    className="publisher"
+                  >
+                    www.gyeongju.go.kr›tour
+                  </div>
+                </a>
+              </div>
+            </span>
+          </div>
+          <div
+            className="MuiCardHeader-action css-sgoict-MuiCardHeader-action"
+          >
+            <div>
+              <button
+                className="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-bnzas2-MuiButtonBase-root-MuiIconButton-root"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onContextMenu={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <svg
+                  aria-hidden={true}
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="3 button"
+                  focusable="false"
+                  style={
+                    Object {
+                      "color": "#D1D3D6",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="MuiCardContent-root css-n7ubfh-MuiCardContent-root"
+          variant="contained"
+        >
+          <a
+            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+            href="https://www.gyeongju.go.kr/tour/page.do?mnu_uid=2349&area_uid=260&cmd=2"
+            onBlur={[Function]}
+            onFocus={[Function]}
+          >
+            <div
+              className="title"
+            >
+              경주 불국사 | 불국사·석굴암 | 세계문화유산 | 문화재·역사 | 경주문화관광 - 경주시청
+            </div>
+          </a>
+          <hr
+            className="MuiDivider-root MuiDivider-fullWidth css-12kcjl3-MuiDivider-root"
+            data-testid="3 divider"
+          />
+          <div
+            className="contentsInfo_wiki"
+          >
+            <a
+              className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+              href="https://www.gyeongju.go.kr/tour/page.do?mnu_uid=2349&area_uid=260&cmd=2"
+              onBlur={[Function]}
+              onFocus={[Function]}
+            >
+              <div
+                className="contents"
+              >
+                <p>
+                  경주 불국사 慶州 佛國寺 기본정보 종목 사적 제502호 분류 유적건조물 수량/면적 409,315㎡ 지정(등록)일 2009년 12월 21일 소재지 경북 경주시 불국로 385, 등 (진현동) 소유자 불국사 외 관리자 불국사 길찾기 좋아요 3 스크랩 9 목록 경주시청이 창작한 불국사·석굴암 저작물은 “공공누리...
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <a
+    className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineNone css-1oaaite-MuiTypography-root-MuiLink-root"
+    href="https://m.search.naver.com/search.naver?page=2&query=%EA%B2%BD%EC%A3%BC+%EB%B6%88%EA%B5%AD%EC%82%AC&sm=mtb_pge&start=1&where=m_web"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    <div
+      className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-96237p-MuiPaper-root"
+      style={
+        Object {
+          "backgroundColor": "#f4f7f8",
+          "borderRadius": 0,
+          "height": 50,
+        }
+      }
+    >
+      <div
+        className="moreContentInfo"
+      >
+        
+         더보기
+        <img
+          alt="arrow"
+          className="img"
+          src="/icons/forward_arrow.svg"
+        />
+      </div>
+    </div>
+  </a>,
+]
+`;
