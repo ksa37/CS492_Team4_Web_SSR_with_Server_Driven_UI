@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const imgWithClick = { cursor: 'pointer' };
 
-const Photo = ({ index, onClick, photo, margin, direction, top, left, key, href }) => {
+const Photo = ({ index, onClick, photo, margin, direction, top, left, key, href, lindex }) => {
   const imgStyle = { margin: margin, display: 'block' };
   if (direction === 'column') {
     imgStyle.position = 'absolute';
@@ -22,7 +22,7 @@ const Photo = ({ index, onClick, photo, margin, direction, top, left, key, href 
         style={onClick ? { ...imgStyle, ...imgWithClick } : imgStyle}
         {...photo}
         onClick={onClick ? handleClick : null}
-        alt={key}
+        alt={lindex + index+' photo'}
       />
       :
       <a href={href}>
@@ -31,7 +31,7 @@ const Photo = ({ index, onClick, photo, margin, direction, top, left, key, href 
           style={onClick ? { ...imgStyle, ...imgWithClick } : imgStyle}
           {...photo}
           onClick={onClick ? handleClick : null}
-          alt={key}
+          alt={lindex + index+' photo'}
         />
       </a>
   );
@@ -46,7 +46,8 @@ export const photoPropType = PropTypes.shape({
   title: PropTypes.string,
   srcSet: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   sizes: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
-  href: PropTypes.string
+  href: PropTypes.string,
+  lindex: PropTypes.number
 });
 
 Photo.propTypes = {
@@ -65,7 +66,8 @@ Photo.propTypes = {
     }
   },
   direction: PropTypes.string,
-  href: PropTypes.string
+  href: PropTypes.string,
+  lindex: PropTypes.number
 };
 
 export default Photo;
