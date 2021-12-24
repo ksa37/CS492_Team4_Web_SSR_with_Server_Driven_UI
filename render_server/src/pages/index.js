@@ -39,10 +39,11 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min; 
 }
 
-const random_keywords = ['Bulguksa','Paris']
+const random_keywords = ['Bulguksa','Paris','WorkLaterDrinkNow'];
 
 export async function getServerSideProps(context) {
   const {req, } = context
+  console.log(req); 
   const props = {data: '', views: []}
   if (req.method === "POST") {
     const streamPromise = new Promise((resolve, reject) => {
@@ -60,7 +61,10 @@ export async function getServerSideProps(context) {
   }
   else
   {
-    const res = await fetch('http://localhost:5000/Bulguksa')
+    const random_keyword = random_keywords[getRandomIntInclusive(0,2)];
+    // 'http://localhost:5000/'+random_keyword
+    console.log("hello!!!")
+    const res = await fetch('http://localhost:5000/'+random_keyword)
     const data = await res.json()
     const string_data = JSON.stringify(data)
     props.data = string_data
