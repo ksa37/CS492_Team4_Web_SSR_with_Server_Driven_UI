@@ -6,8 +6,17 @@ const app = express();
 app.use('/_next', express.static(path.join(__dirname, '../render_server/.next')));
 app.use(express.static(path.join(__dirname, '../render_server/public')));
 app.use(handleRender);
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min; 
+}
+
+const random_keywords = ['Bulguksa','Paris','WorkLaterDrinkNow'];
+
 function handleRender(req, res) {
-  const id = req.query.id ? req.query.id : 'Bulguksa';
+  const id = req.query.id ? req.query.id : random_keywords[getRandomIntInclusive(0,random_keywords.length-1)];
   if ((id === "Paris") || (id === "Bulguksa") || (id === "WorkLaterDrinkNow"))
   {
     const views_input = req.query.views ?  req.query.views : ["basic", "influencer", "review", "wiki", "photo", "news"];

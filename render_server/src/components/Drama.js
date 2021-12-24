@@ -15,7 +15,7 @@ export default function Drama({props}) {
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
-        console.log(event.currentTarget)
+        // console.log(event.currentTarget)
     };
     const handleClose = () => {
         setAnchorEl(null);

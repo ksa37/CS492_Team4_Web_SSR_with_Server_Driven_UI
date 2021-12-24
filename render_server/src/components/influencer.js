@@ -14,7 +14,7 @@ export default function Influencer(props) {
   const Blogfan = (props) => {
     const [showResults, setShowResults] = useState(false)
     const onClick = () => setShowResults(!showResults)
-    console.log(props, props.props + 'unfan', 'props for blog fan2')
+    // console.log(props, props.props + 'unfan', 'props for blog fan2')
     return (
       <div data-testid = {(props.props) + "button"}>
         { showResults ? 
@@ -27,7 +27,7 @@ export default function Influencer(props) {
   const Search = (props) => {
     const [showResults, setShowResults] = useState(false)
     const onClick = () => setShowResults(!showResults)
-    console.log(props.props.id, 'search props')
+    // console.log(props.props.id, 'search props')
     return (
       <div>
         { showResults ? 
@@ -51,7 +51,7 @@ export default function Influencer(props) {
   }
   const [showResults, setShowResults] = useState(false)
   const { data, keyword, morecontent, contentsImgURL } = props.props
-  console.log(data, 'dataaaa')
+  // console.log(data, 'dataaaa')
   return (
     <>    
     <Card sx={{ maxWidth: 768}} variant='outlined' square>
